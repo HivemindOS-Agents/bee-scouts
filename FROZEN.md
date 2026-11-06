@@ -134,7 +134,7 @@ action that logs a run copies the runner's own output, never a typed one.
 - Next action: Nothing for you to write. RUN-LOG.md already holds the real dated exit-0 block: do not replace it with
   a template again. HivemindOS marks the two side datasets superseded by issue-watch and lists update-index as parked
   in ARTIFACTS.md. Start no other tool until this block is lifted.
-- Parked: update-index - parked until issue-watch is clean; not published
+- Parked: update-index - parked until issue-watch is clean
 - Parked: card-claims-fetch - started while issue-watch was open; parked until issue-watch is clean
 - Parked: open-weight-model-card-claims - started while issue-watch was open; parked until issue-watch is clean
 - Parked: public-ai-model-release-pages - started while issue-watch was open; parked until issue-watch is clean
