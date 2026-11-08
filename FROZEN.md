@@ -33,6 +33,7 @@ Format, one block per agent:
 - Ignored: <scans in a row that gave the same next action>
 - Next action: <the exact step, in plain words; may run on over lines indented two spaces, code kept as written>
 - Parked: <tool> - <one-line reason>
+- Reproduce: <how to reproduce the published target; shown under it in ARTIFACTS.md>
 ```
 
 An agent cannot run a command itself: only the self-test runner (HivemindOS-Agents/bee-self-test) does. So a next
@@ -109,6 +110,7 @@ action that logs a run copies the runner's own output, never a typed one.
 - Superseded: hivepunk-632-4934c76e/hf-hub-dataset-publishing-documented-steps-and-sources
 - Since: Hive scan, Fri Nov 6 2026 (ONE EDIT AWAY: the frozen id is public but holds only a README and 3 rows)
 - Ignored: 0
+- Reproduce: repo folder self_test.py passes 8/8. A bare Hub download lacks fixtures_source/ and exits 1; in a scratch download, copy fixtures/ to fixtures_source/ before python3 self_test.py (verified exit 0). Frozen Hub files unchanged.
 - Next action: Two edits in tools/attribution-docs-check-fixtures/ and nothing else.
 
   1. Add LICENSE: the CC0-1.0 public domain dedication that DATASET_CARD.md already names ("See LICENSE").
