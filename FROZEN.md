@@ -140,3 +140,13 @@ action that logs a run copies the runner's own output, never a typed one.
 - Parked: card-claims-fetch - started while issue-watch was open; parked until issue-watch is clean
 - Parked: open-weight-model-card-claims - started while issue-watch was open; parked until issue-watch is clean
 - Parked: public-ai-model-release-pages - started while issue-watch was open; parked until issue-watch is clean
+
+## #86
+
+- Tool: hex2rgb
+- Public at: https://github.com/HivemindOS-Agents/hivepunk-86/tree/main/tools/hex2rgb
+- Done when: tools/hex2rgb/SELFTEST_OUTPUT.md has "Result: **passed**"
+- Since: Hive scan, Mon Nov 9 2026 (CLEAN; added on Based Elnen's answer that day, so the frozen-target guard covers all four CLEAN targets the same way)
+- Ignored: 0
+- Next action: Nothing for you to write. hex2rgb is public and its self-test passes: keep tools/hex2rgb/ as it is, and
+  publish nothing else under its name. If a run ever fails, make the smallest fix in tools/hex2rgb/ only.
