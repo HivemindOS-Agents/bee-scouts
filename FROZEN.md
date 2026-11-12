@@ -67,7 +67,7 @@ pass on what is there before anything is uploaded.
 - Superseded: hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow
 - Superseded: hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
-- Delivery: pending (set to this commit once it lands)
+- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
 - Next action: Nothing for you to write. HivemindOS restores README.md and self_test.py in
   tools/agent-memory-lint-fixtures/ byte for byte from Hub revision 302476d, and then puts them back on the Hub once the
   self-test runner passes them. Do not take README.md from git 0d0c2b0: its sha256 is
@@ -104,7 +104,7 @@ pass on what is there before anything is uploaded.
 - Superseded: hivepunk-632-4934c76e/hivemindos-run-record-lint-self-test-capture-requests
 - Superseded: hivepunk-632-4934c76e/bee-scouts-self-testpy-requests-read-live-on-github
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrite left the Hub README saying "4 failed" and a self_test.py that is not git b73db3d779's)
-- Delivery: pending (set to this commit once it lands)
+- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
 - Reproduce: repo folder self_test.py passes 8/8. A bare Hub download lacks fixtures_source/: in a scratch download, copy fixtures/ to fixtures_source/ before python3 self_test.py (verified exit 0, ending "self_test: 8 check(s), 0 failed").
 - Next action: Nothing for you to run or write. HivemindOS restores self_test.py and DATASET_CARD.md in
   tools/attribution-docs-check-fixtures/ byte for byte from git b73db3d779, and once the self-test runner passes them
@@ -122,7 +122,7 @@ pass on what is there before anything is uploaded.
 - Done when: tools/provenance-row/SELFTEST_OUTPUT.md has "ok: Issue cell is example-repo/issues#58"
 - Done when: tools/issue-watch/self_test.py sha256 a68594ee21d2ad2c5295db50d5ee308eaaab77665d620a09a6f7647dafde6edf
 - Since: GitChecker scan, 12 Nov 2026 (issue-watch CLEAN: 20 ok lines, exit 0; provenance-row failing since 00:40:40 UTC 30 Oct, latest seen 04:12:17 UTC 11 Nov)
-- Delivery: pending (set to this commit once it lands)
+- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
 - Next action: One edit, in tools/provenance-row/self_test.py only. build_row takes the fixture's path, not its text,
   which is why the runner fails with FileNotFoundError. Replace main() so it calls
 
@@ -143,7 +143,7 @@ pass on what is there before anything is uploaded.
 - Done when: tools/hex2rgb/SELFTEST_OUTPUT.md has "Result: **passed**"
 - Done when: tools/hex2rgb/self_test.py sha256 1aa3acb14cae7a6a4ff79da36aa5874d2afc98c41157e66d3505825721bc589b
 - Since: Hive scan, Mon Nov 9 2026 (CLEAN; GitChecker scan, 12 Nov 2026: still CLEAN, no open repair)
-- Delivery: pending (set to this commit once it lands)
+- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
 - Next action: Nothing for you to write. hex2rgb is public and its self-test passes: keep tools/hex2rgb/ as it is, and
   publish nothing else under its name. Go on to your next approved task.
 
@@ -167,7 +167,7 @@ pass on what is there before anything is uploaded.
 - Restore: data.csv from git db3c565996:tools/cardkeys/cardkeys/data.csv
 - Restore: self_test.py from git db3c565996:tools/cardkeys/cardkeys/self_test.py
 - Since: GitChecker scan, 12 Nov 2026 (new block: the runner finds no tools/cardkeys/self_test.py, since the tool sits one folder down, in tools/cardkeys/cardkeys/)
-- Delivery: pending (set to this commit once it lands)
+- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
 - Next action: Nothing for you to write. HivemindOS moves the contents of tools/cardkeys/cardkeys/ up into
   tools/cardkeys/ byte for byte, and the runner then tests tools/cardkeys/self_test.py itself. Write nothing more into
   tools/cardkeys/cardkeys/.
