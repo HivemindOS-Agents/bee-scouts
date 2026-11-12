@@ -1,18 +1,46 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-11T06:00:20.315Z",
+  "at": "2026-11-12T06:00:20.645Z",
   "step": {
-    "id": "hl-1071-t-aec35061",
+    "id": "hl-1071-t-578f76d7",
     "kind": "selfTest",
-    "tool": "glb-structure-check",
+    "tool": "provenance-row",
     "play": "build",
-    "action": "Make the self-test of tools/glb-structure-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-10T14:01:19.041Z"
+    "action": "Make the self-test of tools/provenance-row/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-12T04:02:33.824Z"
   },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
-  "ticket": null
+  "ticket": null,
+  "repairs": [
+    {
+      "id": "rp-1071-t-provenance-row",
+      "artifact": "provenance-row",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "Traceback (most recent call last):",
+      "firstFailureAt": "2026-10-30T00:40:40.000Z",
+      "lastObservedAt": "2026-11-11T04:12:17.000Z",
+      "counters": {
+        "observations": 8,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null
+    }
+  ]
 }
