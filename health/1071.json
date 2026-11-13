@@ -1,15 +1,8 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-12T06:00:20.645Z",
-  "step": {
-    "id": "hl-1071-t-578f76d7",
-    "kind": "selfTest",
-    "tool": "provenance-row",
-    "play": "build",
-    "action": "Make the self-test of tools/provenance-row/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-12T04:02:33.824Z"
-  },
+  "at": "2026-11-13T06:00:20.630Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -20,27 +13,55 @@
       "id": "rp-1071-t-provenance-row",
       "artifact": "provenance-row",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "Traceback (most recent call last):",
       "firstFailureAt": "2026-10-30T00:40:40.000Z",
-      "lastObservedAt": "2026-11-11T04:12:17.000Z",
+      "lastObservedAt": "2026-11-12T09:28:44.000Z",
       "counters": {
-        "observations": 8,
+        "observations": 23,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-12T09:28:24.946Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
-      "escalation": null
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43191777633)",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T09:28:44.000Z"
+    },
+    {
+      "id": "rp-1071-f-provenance-row",
+      "artifact": "provenance-row",
+      "kind": "frozen",
+      "state": "RELEASED",
+      "failureClass": "PERMISSION_OR_POLICY_BLOCK",
+      "runner": null,
+      "cause": "Its frozen target is not clean yet.",
+      "firstFailureAt": "2026-11-12T09:27:18.823Z",
+      "lastObservedAt": "2026-11-12T10:01:13.995Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T09:45:34.490Z"
+      },
+      "proof": "Its public page read back with every file the block names, each its folder's copy, its conditions met and its side datasets marked.",
+      "closedBy": "publication: the frozen gate read its public page back clean",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T10:01:13.995Z"
     }
   ]
 }
