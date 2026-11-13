@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "ok",
-  "at": "2026-11-13T06:00:20.630Z",
+  "at": "2026-11-13T13:14:16.679Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -62,6 +62,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43276291798)",
       "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/fixture-card-web/. Latest cause: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data\n- 2026-11-12T12:18:00.000Z failed (not yet delivered): FAIL verify command not found [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43216592478]\n- 2026-11-12T12:51:50.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43221778879]\n- 2026-11-12T13:32:12.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43228200342]\n- 2026-11-12T14:07:48.000Z failed: FAIL fixture_card.py exited 1 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43233960617]",
       "lastTryAt": "2026-11-12T18:06:14.000Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint",
+      "artifact": "run-record-lint",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL missing-why.txt exit code != 0 (got 0)",
+      "firstFailureAt": "2026-11-13T09:50:44.000Z",
+      "lastObservedAt": "2026-11-13T10:32:10.000Z",
+      "counters": {
+        "observations": 3,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-13T10:13:34.498Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43409772380)",
+      "escalation": null,
+      "lastTryAt": "2026-11-13T10:32:10.000Z"
     }
   ]
 }
