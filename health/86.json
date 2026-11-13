@@ -1,15 +1,8 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-13T15:50:40.420Z",
-  "step": {
-    "id": "hl-86-t-d60299d2",
-    "kind": "selfTest",
-    "tool": "issue-triage-selftest-check",
-    "play": "build",
-    "action": "Make the self-test of tools/issue-triage-selftest-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-13T15:50:40.420Z"
-  },
+  "at": "2026-11-13T16:53:53.958Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -116,13 +109,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-13T15:53:03.079Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-13T13:47:29.000Z"
+      "lastTryAt": "2026-11-13T15:53:03.079Z"
     }
   ]
 }
