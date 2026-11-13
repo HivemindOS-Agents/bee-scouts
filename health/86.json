@@ -1,8 +1,15 @@
 {
   "agent": "86",
-  "status": "ok",
-  "at": "2026-11-13T13:43:32.409Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-13T15:50:40.420Z",
+  "step": {
+    "id": "hl-86-t-d60299d2",
+    "kind": "selfTest",
+    "tool": "issue-triage-selftest-check",
+    "play": "build",
+    "action": "Make the self-test of tools/issue-triage-selftest-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-13T15:50:40.420Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -89,6 +96,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43410015743)",
       "escalation": null,
       "lastTryAt": "2026-11-13T10:34:03.000Z"
+    },
+    {
+      "id": "rp-86-t-issue-triage-selftest-check",
+      "artifact": "issue-triage-selftest-check",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL 4a. good fixture --check exits 0 -- got exit 1",
+      "firstFailureAt": "2026-11-13T13:47:29.000Z",
+      "lastObservedAt": "2026-11-13T13:47:29.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-13T13:47:29.000Z"
     }
   ]
 }
