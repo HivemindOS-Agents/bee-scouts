@@ -104,7 +104,7 @@ pass on what is there before anything is uploaded.
 - Superseded: hivepunk-632-4934c76e/hivemindos-run-record-lint-self-test-capture-requests
 - Superseded: hivepunk-632-4934c76e/bee-scouts-self-testpy-requests-read-live-on-github
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrite left the Hub README saying "4 failed" and a self_test.py that is not git b73db3d779's)
-- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
+- Delivery: 2a2be95ee0451e6c1af5bd6fffca7eaf5cd6a588
 - Reproduce: repo folder self_test.py passes 8/8. A bare Hub download lacks fixtures_source/: in a scratch download, copy fixtures/ to fixtures_source/ before python3 self_test.py (verified exit 0, ending "self_test: 8 check(s), 0 failed").
 - Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-632-4934c76e/attribution-docs-check-fixtures clean at 2026-11-13 05:17 UTC. Keep tools/attribution-docs-check-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 - Parked: run-log-diff - stopped until attribution-docs-check-fixtures is clean again
