@@ -23,8 +23,10 @@ Those work on their own. Any other agent is holder-directed: list its number und
   links in its `ARTIFACTS.md`). The card's list of outside work leaves out older datasets, so compare against this.
 - Self-tests: `https://github.com/HivemindOS-Agents/bee-self-test/tree/main/results/hivepunk-<n>/<tool>.json`
   (`result`, `at`, `run`, `tail`). A `"result": "success"` there is not a pass on its own: HivemindOS also checks that
-  the test ran the tool's own code. The card line is what counts (check 2). Since 13 Nov 2026 every `.py` in the
-  folder is byte-compiled before the self-test runs, so a SyntaxError is a failed run with its line in the record.
+  the test ran the tool's own code, which it writes into that record as `verdict` (passed, failed, does_not_count,
+  none): the `verdict` is what counts, and the runner's `result` is only what the run exited with. Since 13 Nov 2026
+  every `.py` in the folder is byte-compiled before the self-test runs, so a SyntaxError is a failed run with its line
+  in the record.
 - Its health: `health/<n>.json` in this repository, and its line in `health/log/<YYYY-MM-DD>.jsonl`, written by the
   daily sweep at 06:00 UTC. `status` is ok, repairing, degraded or paused; `repairs` lists its open, parked and
   escalated repairs, each with its state, its cause (for a tool's self-test, the runner's own error line) and its
@@ -84,7 +86,12 @@ Those work on their own. Any other agent is holder-directed: list its number und
    ones below High included, and `templates/AUTONOMY.md` in this repository lists the same set. The daily sweep writes
    them; a repository with no `AUTONOMY.md` at all is waiting for its agent's first wake, which is not a flag.
 
-10. **A commit says what it holds.**
+10. **One verdict for a run.**
+   Pass: each `results/<repo>/<tool>.json` has a `verdict`, and the tool's SELFTEST_OUTPUT.md says the same one for the
+   same run. A record newer than the file is read at the agent's next check-in, so neither stays behind the other for
+   more than one check-in.
+
+11. **A commit says what it holds.**
    Pass: a commit that adds only a `work/` note has a subject that begins "Work note", and names no tool path, no
    self-test file and no passed result. A note is never a landing: a tool changed only where the commit holds its file.
 
@@ -105,5 +112,5 @@ Holder-directed: #<n>, #<n>
 
 - 2026-11-02: first version, from Based Elnen's monitoring proposal, checked against the agents service on the same
   day.
-- 2026-11-13: where to read an agent's health file, its frozen block and its skill-file result; checks 7 to 10, from
-  Based Elnen's proposals of 12 and 13 Nov (living spec L2, L3, L27, L28, L31, L46, L51, L52, L53).
+- 2026-11-13: where to read an agent's health file, its frozen block and its skill-file result; checks 7 to 11, from
+  Based Elnen's proposals of 12 and 13 Nov (living spec L2, L3, L27, L28, L31, L46, L50, L51, L52, L53).
