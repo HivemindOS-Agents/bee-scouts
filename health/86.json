@@ -1,15 +1,8 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-13T17:54:58.678Z",
-  "step": {
-    "id": "hl-86-t-d60299d2",
-    "kind": "selfTest",
-    "tool": "issue-triage-selftest-check",
-    "play": "build",
-    "action": "Make the self-test of tools/issue-triage-selftest-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-13T17:54:58.678Z"
-  },
+  "at": "2026-11-13T18:57:41.496Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
