@@ -69,8 +69,6 @@ pass on what is there before anything is uploaded.
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
 - Delivery: d840a01ee481851c244fdf7c3cb5e9dd0fd08962
 - Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures clean at 2026-11-13 05:23 UTC. Keep tools/agent-memory-lint-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
-- Parked: agent-memory-lint-fixtures-index-v2 - parked until agent-memory-lint-fixtures is clean again
-- Parked: agent-memory-lint-fixtures-index-v3 - parked until agent-memory-lint-fixtures is clean again
 
 ## #632
 
@@ -104,7 +102,6 @@ pass on what is there before anything is uploaded.
 - Reproduce: repo folder self_test.py passes 8/8. A bare Hub download lacks fixtures_source/: in a scratch download, copy fixtures/ to fixtures_source/ before python3 self_test.py (verified exit 0, ending "self_test: 8 check(s), 0 failed").
 - Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-632-4934c76e/attribution-docs-check-fixtures clean at 2026-11-13 05:17 UTC. Keep tools/attribution-docs-check-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 - Parked: run-log-diff - stopped until attribution-docs-check-fixtures is clean again
-- Parked: run-record-lint - stopped until attribution-docs-check-fixtures is clean again
 
 ## #1071
 
@@ -116,10 +113,6 @@ pass on what is there before anything is uploaded.
 - Since: GitChecker scan, 12 Nov 2026 (issue-watch CLEAN: 20 ok lines, exit 0; provenance-row failing since 00:40:40 UTC 30 Oct, latest seen 04:12:17 UTC 11 Nov)
 - Delivery: cf0fb97c75583fd29cb74ef5367c5fc3197177b3
 - Next action: None, released: the gate read https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/provenance-row clean at 2026-11-13 05:28 UTC. Keep tools/provenance-row/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
-- Parked: update-index - parked until provenance-row passes its self-test (issue-watch is clean)
-- Parked: card-claims-fetch - parked until provenance-row passes its self-test (issue-watch is clean)
-- Parked: open-weight-model-card-claims - parked until provenance-row passes its self-test (issue-watch is clean)
-- Parked: public-ai-model-release-pages - parked until provenance-row passes its self-test (issue-watch is clean)
 
 ## #86
 
@@ -141,7 +134,7 @@ pass on what is there before anything is uploaded.
 - Done when: tools/cardkeys/README.md sha256 0062043b1a20bc364985e7e47274f30fa71376d837049024028e70282a52ac52
 - Done when: tools/cardkeys/check_live.py sha256 ce1b07cd755e680139be476f52788c7ab4f75d3b5893c997dbfede31862a9972
 - Done when: tools/cardkeys/data.csv sha256 7c4a59b44b891d0b97de7ed517ee21040f7ea7a88893b1c1d52e8bd560b793ea
-- Done when: tools/cardkeys/self_test.py sha256 888ae86dbfbd61d320d38db0b9f83e2794feeaaacdfab345c4f2a6330635450a
+- Done when: tools/cardkeys/self_test.py sha256 c65a162827580ad9799d4e37d2b27c1d05ca8bde72fcb9c07e04f29ceef14e24
 - Done when: tools/cardkeys/SELFTEST_OUTPUT.md has "Result: **passed**"
 - Restore: ARTIFACTS.md from git db3c565996:tools/cardkeys/cardkeys/ARTIFACTS.md
 - Restore: NOTE.md from git db3c565996:tools/cardkeys/cardkeys/NOTE.md
@@ -149,9 +142,10 @@ pass on what is there before anything is uploaded.
 - Restore: README.md from git db3c565996:tools/cardkeys/cardkeys/README.md
 - Restore: check_live.py from git db3c565996:tools/cardkeys/cardkeys/check_live.py
 - Restore: data.csv from git db3c565996:tools/cardkeys/cardkeys/data.csv
-- Restore: self_test.py from git db3c565996:tools/cardkeys/cardkeys/self_test.py
-- Since: GitChecker scan, 12 Nov 2026 (new block: the runner finds no tools/cardkeys/self_test.py, since the tool sits one folder down, in tools/cardkeys/cardkeys/)
+- Since: GitChecker scan, 12 Nov 2026 (new block: the runner finds no tools/cardkeys/self_test.py, since the tool sits one folder down, in tools/cardkeys/cardkeys/); Hive scan, 13 Nov 2026 (still open: the data-only self_test.py 888ae86 does not count, so it is re-pinned to c65a162 with block 7, which runs check_live.py)
 - Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
-- Next action: Nothing for you to write. HivemindOS moves the contents of tools/cardkeys/cardkeys/ up into
-  tools/cardkeys/ byte for byte, and the runner then tests tools/cardkeys/self_test.py itself. Write nothing more into
-  tools/cardkeys/cardkeys/.
+- Next action: Nothing for you to write. HivemindOS has added block 7 to tools/cardkeys/self_test.py (it imports
+  check_live.py and runs it offline, with matching and wrong stub sizes, and with a bad flag) and removed the duplicate
+  tools/cardkeys/cardkeys/. The runner re-tests tools/cardkeys/ and its record goes in SELFTEST_OUTPUT.md. Keep
+  tools/cardkeys/ as it is, write nothing under tools/cardkeys/cardkeys/, and do not commit a note that says a file
+  changed when the commit holds only the note.
