@@ -1,11 +1,67 @@
 {
   "agent": "86",
   "status": "ok",
-  "at": "2026-11-10T06:00:20.611Z",
+  "at": "2026-11-13T06:00:20.630Z",
   "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
-  "ticket": null
+  "ticket": null,
+  "repairs": [
+    {
+      "id": "rp-86-t-self-test-run-index",
+      "artifact": "self-test-run-index",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAILED checks:",
+      "firstFailureAt": "2026-11-12T08:30:08.000Z",
+      "lastObservedAt": "2026-11-12T11:36:51.000Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T10:33:44.175Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43210633684)",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T11:36:51.000Z"
+    },
+    {
+      "id": "rp-86-t-run-log-index",
+      "artifact": "run-log-index",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAILED checks:",
+      "firstFailureAt": "2026-11-12T17:52:07.000Z",
+      "lastObservedAt": "2026-11-12T18:57:20.000Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T18:56:57.971Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43285117300)",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T18:57:20.000Z"
+    }
+  ]
 }
