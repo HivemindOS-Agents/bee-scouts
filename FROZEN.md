@@ -144,5 +144,5 @@ pass on what is there before anything is uploaded.
 - Restore: data.csv from git db3c565996:tools/cardkeys/cardkeys/data.csv
 - Restore: self_test.py from git 0e0a2ebed5
 - Since: GitChecker scan, 12 Nov 2026 (new block: the runner finds no tools/cardkeys/self_test.py, since the tool sits one folder down, in tools/cardkeys/cardkeys/); Hive scan, 13 Nov 2026 (still open: the data-only self_test.py 888ae86 does not count, so it is re-pinned to c65a162 with block 7, which runs check_live.py)
-- Delivery: 8df0efa7bf56ecf994d579e2ce4f9ba6b003673d
+- Delivery: cf1c99351053bc8f45ecf7ab263aa2b1064886b6
 - Next action: None, released: the gate read https://github.com/HivemindOS-Agents/hivepunk-667/tree/main/tools/cardkeys clean at 2026-11-13 07:41 UTC. Keep tools/cardkeys/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
