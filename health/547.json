@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-13T18:00:29.677Z",
-  "step": null,
+  "at": "2026-11-13T18:02:17.317Z",
+  "step": {
+    "id": "hl-547-t-71501468",
+    "kind": "selfTest",
+    "tool": "agent-memory-lint-fixtures-index-v4",
+    "play": "build",
+    "action": "Make the self-test of tools/agent-memory-lint-fixtures-index-v4/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-13T18:02:17.317Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -70,15 +77,15 @@
       "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FAIL: readback: extra row count not flagged; issues=[\"unexpected row on the page: 'LICENSE'\", 'a LICENSE row is present; the licence field must stay unknown']",
+      "cause": "FAIL: readback: extra row count not flagged with 'row count differs: expected 5, found 6 (tolerated extras: .gitattributes)'; issues=[\"unexpected row on the page: 'LICENSE'\", 'a LICENSE row is present",
       "firstFailureAt": "2026-11-13T13:23:24.000Z",
-      "lastObservedAt": "2026-11-13T16:51:55.000Z",
+      "lastObservedAt": "2026-11-13T17:45:13.000Z",
       "counters": {
-        "observations": 13,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 14,
+        "failedAttempts": 3,
+        "consecutive": 3,
         "sameCause": 1,
-        "acknowledgedFailed": 1,
+        "acknowledgedFailed": 2,
         "recurrences": 1
       },
       "delivery": {
@@ -88,7 +95,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-13T16:51:55.000Z"
+      "lastTryAt": "2026-11-13T17:45:13.000Z"
     }
   ]
 }
