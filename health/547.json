@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-13T17:25:16.364Z",
-  "step": {
-    "id": "hl-547-t-71501468",
-    "kind": "selfTest",
-    "tool": "agent-memory-lint-fixtures-index-v4",
-    "play": "build",
-    "action": "Make the self-test of tools/agent-memory-lint-fixtures-index-v4/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-13T17:25:16.364Z"
-  },
+  "at": "2026-11-13T18:00:29.677Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -81,7 +74,7 @@
       "firstFailureAt": "2026-11-13T13:23:24.000Z",
       "lastObservedAt": "2026-11-13T16:51:55.000Z",
       "counters": {
-        "observations": 12,
+        "observations": 13,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
