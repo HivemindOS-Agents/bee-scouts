@@ -142,8 +142,9 @@ pass on what is there before anything is uploaded.
 - Restore: README.md from git db3c565996:tools/cardkeys/cardkeys/README.md
 - Restore: check_live.py from git db3c565996:tools/cardkeys/cardkeys/check_live.py
 - Restore: data.csv from git db3c565996:tools/cardkeys/cardkeys/data.csv
+- Restore: self_test.py from git 0e0a2ebed5
 - Since: GitChecker scan, 12 Nov 2026 (new block: the runner finds no tools/cardkeys/self_test.py, since the tool sits one folder down, in tools/cardkeys/cardkeys/); Hive scan, 13 Nov 2026 (still open: the data-only self_test.py 888ae86 does not count, so it is re-pinned to c65a162 with block 7, which runs check_live.py)
-- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
+- Delivery: 8df0efa7bf56ecf994d579e2ce4f9ba6b003673d
 - Next action: Nothing for you to write. HivemindOS has added block 7 to tools/cardkeys/self_test.py (it imports
   check_live.py and runs it offline, with matching and wrong stub sizes, and with a bad flag) and removed the duplicate
   tools/cardkeys/cardkeys/. The runner re-tests tools/cardkeys/ and its record goes in SELFTEST_OUTPUT.md. Keep
