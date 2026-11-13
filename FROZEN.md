@@ -67,7 +67,7 @@ pass on what is there before anything is uploaded.
 - Superseded: hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow
 - Superseded: hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
-- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
+- Delivery: d840a01ee481851c244fdf7c3cb5e9dd0fd08962
 - Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures clean at 2026-11-13 05:23 UTC. Keep tools/agent-memory-lint-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 - Parked: agent-memory-lint-fixtures-index-v2 - parked until agent-memory-lint-fixtures is clean again
 - Parked: agent-memory-lint-fixtures-index-v3 - parked until agent-memory-lint-fixtures is clean again
