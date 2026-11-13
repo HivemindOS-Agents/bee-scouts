@@ -1,11 +1,74 @@
 {
   "agent": "667",
-  "status": "ok",
-  "at": "2026-11-10T06:00:20.611Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-13T06:00:20.630Z",
+  "step": {
+    "id": "hl-667-f-090a3be7",
+    "kind": "frozen",
+    "tool": "cardkeys",
+    "play": "build",
+    "action": "Nothing for you to write. HivemindOS moves the contents of tools/cardkeys/cardkeys/ up into\ntools/cardkeys/ byte for byte, and the runner then tests tools/cardkeys/self_test.py itself. Write nothing more into\ntools/cardkeys/cardkeys/.",
+    "openedAt": "2026-11-12T10:32:15.421Z"
+  },
   "reasons": [],
-  "failures": 0,
+  "failures": 1,
   "ignored": 0,
   "pausedAt": null,
-  "ticket": null
+  "ticket": null,
+  "repairs": [
+    {
+      "id": "rp-667-t-cardkeys",
+      "artifact": "cardkeys",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "runner": "assertion_failure",
+      "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
+      "firstFailureAt": "2026-11-12T09:31:27.000Z",
+      "lastObservedAt": "2026-11-12T12:40:09.000Z",
+      "counters": {
+        "observations": 20,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
+        "acknowledgedFailed": 1,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T10:34:24.910Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-12T12:40:09.000Z"
+    },
+    {
+      "id": "rp-667-f-cardkeys",
+      "artifact": "cardkeys",
+      "kind": "frozen",
+      "state": "OPEN",
+      "failureClass": "PERMISSION_OR_POLICY_BLOCK",
+      "runner": null,
+      "cause": "Its frozen target is not clean yet.",
+      "firstFailureAt": "2026-11-12T10:32:15.421Z",
+      "lastObservedAt": "2026-11-13T05:36:04.937Z",
+      "counters": {
+        "observations": 20,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T11:36:48.749Z"
+      },
+      "proof": "Its public page read back with every file the block names, each its folder's copy, its conditions met and its side datasets marked.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-12T11:36:48.749Z"
+    }
+  ]
 }
