@@ -1,11 +1,94 @@
 {
   "agent": "547",
   "status": "ok",
-  "at": "2026-11-10T06:00:20.611Z",
+  "at": "2026-11-13T06:00:20.630Z",
   "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
-  "ticket": null
+  "ticket": null,
+  "repairs": [
+    {
+      "id": "rp-547-t-agent-memory-lint-fixtures-index-v3",
+      "artifact": "agent-memory-lint-fixtures-index-v3",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: clean sample: expected 0 issues, got 1",
+      "firstFailureAt": "2026-11-12T07:42:05.000Z",
+      "lastObservedAt": "2026-11-12T08:51:44.000Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 2,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 1,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T08:15:44.369Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43186401037)",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T08:51:44.000Z"
+    },
+    {
+      "id": "rp-547-f-agent-memory-lint-fixtures",
+      "artifact": "agent-memory-lint-fixtures",
+      "kind": "frozen",
+      "state": "RELEASED",
+      "failureClass": "PERMISSION_OR_POLICY_BLOCK",
+      "runner": null,
+      "cause": "Its frozen target is not clean yet.",
+      "firstFailureAt": "2026-11-12T09:43:10.132Z",
+      "lastObservedAt": "2026-11-12T09:58:53.547Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T09:43:14.571Z"
+      },
+      "proof": "Its public page read back with every file the block names, each its folder's copy, its conditions met and its side datasets marked.",
+      "closedBy": "publication: the frozen gate read its public page back clean",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T09:58:53.547Z"
+    },
+    {
+      "id": "rp-547-t-agent-memory-lint-fixtures-index-v4",
+      "artifact": "agent-memory-lint-fixtures-index-v4",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'bad-card' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/fixtur",
+      "firstFailureAt": "2026-11-13T02:50:24.000Z",
+      "lastObservedAt": "2026-11-13T03:44:18.000Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 2,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 1,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-13T03:24:36.036Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43360906657)",
+      "escalation": null,
+      "lastTryAt": "2026-11-13T03:44:18.000Z"
+    }
+  ]
 }
