@@ -1,17 +1,10 @@
 {
   "agent": "667",
-  "status": "repairing",
-  "at": "2026-11-13T06:00:20.630Z",
-  "step": {
-    "id": "hl-667-f-090a3be7",
-    "kind": "frozen",
-    "tool": "cardkeys",
-    "play": "build",
-    "action": "Nothing for you to write. HivemindOS moves the contents of tools/cardkeys/cardkeys/ up into\ntools/cardkeys/ byte for byte, and the runner then tests tools/cardkeys/self_test.py itself. Write nothing more into\ntools/cardkeys/cardkeys/.",
-    "openedAt": "2026-11-12T10:32:15.421Z"
-  },
+  "status": "ok",
+  "at": "2026-11-13T14:02:40.646Z",
+  "step": null,
   "reasons": [],
-  "failures": 1,
+  "failures": 0,
   "ignored": 0,
   "pausedAt": null,
   "ticket": null,
@@ -20,16 +13,16 @@
       "id": "rp-667-t-cardkeys",
       "artifact": "cardkeys",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
       "firstFailureAt": "2026-11-12T09:31:27.000Z",
-      "lastObservedAt": "2026-11-12T12:40:09.000Z",
+      "lastObservedAt": "2026-11-13T05:44:50.000Z",
       "counters": {
-        "observations": 20,
+        "observations": 21,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 1,
         "recurrences": 0
@@ -39,22 +32,22 @@
         "at": "2026-11-12T10:34:24.910Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43373990882)",
       "escalation": null,
-      "lastTryAt": "2026-11-12T12:40:09.000Z"
+      "lastTryAt": "2026-11-13T05:44:50.000Z"
     },
     {
       "id": "rp-667-f-cardkeys",
       "artifact": "cardkeys",
       "kind": "frozen",
-      "state": "OPEN",
+      "state": "RELEASED",
       "failureClass": "PERMISSION_OR_POLICY_BLOCK",
       "runner": null,
       "cause": "Its frozen target is not clean yet.",
       "firstFailureAt": "2026-11-12T10:32:15.421Z",
-      "lastObservedAt": "2026-11-13T05:36:04.937Z",
+      "lastObservedAt": "2026-11-13T07:41:22.338Z",
       "counters": {
-        "observations": 20,
+        "observations": 21,
         "failedAttempts": 0,
         "consecutive": 0,
         "sameCause": 0,
@@ -66,9 +59,9 @@
         "at": "2026-11-12T11:36:48.749Z"
       },
       "proof": "Its public page read back with every file the block names, each its folder's copy, its conditions met and its side datasets marked.",
-      "closedBy": null,
+      "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
-      "lastTryAt": "2026-11-12T11:36:48.749Z"
+      "lastTryAt": "2026-11-13T07:41:22.338Z"
     }
   ]
 }
