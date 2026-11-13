@@ -1,11 +1,67 @@
 {
   "agent": "632",
   "status": "ok",
-  "at": "2026-11-10T06:00:20.611Z",
+  "at": "2026-11-13T06:00:20.630Z",
   "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
-  "ticket": null
+  "ticket": null,
+  "repairs": [
+    {
+      "id": "rp-632-f-attribution-docs-check-fixtures",
+      "artifact": "attribution-docs-check-fixtures",
+      "kind": "frozen",
+      "state": "RELEASED",
+      "failureClass": "PERMISSION_OR_POLICY_BLOCK",
+      "runner": null,
+      "cause": "Its frozen target is not clean yet.",
+      "firstFailureAt": "2026-11-12T09:50:03.006Z",
+      "lastObservedAt": "2026-11-12T10:05:17.691Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T09:50:10.235Z"
+      },
+      "proof": "Its public page read back with every file the block names, each its folder's copy, its conditions met and its side datasets marked.",
+      "closedBy": "publication: the frozen gate read its public page back clean",
+      "escalation": null,
+      "lastTryAt": "2026-11-12T10:05:17.691Z"
+    },
+    {
+      "id": "rp-632-t-fixture-card-web",
+      "artifact": "fixture-card-web",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL fixture_card.py exited 1",
+      "firstFailureAt": "2026-11-12T12:18:00.000Z",
+      "lastObservedAt": "2026-11-12T18:06:14.000Z",
+      "counters": {
+        "observations": 22,
+        "failedAttempts": 4,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 3,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-12T12:51:28.127Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43276291798)",
+      "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/fixture-card-web/. Latest cause: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data\n- 2026-11-12T12:18:00.000Z failed (not yet delivered): FAIL verify command not found [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43216592478]\n- 2026-11-12T12:51:50.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43221778879]\n- 2026-11-12T13:32:12.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43228200342]\n- 2026-11-12T14:07:48.000Z failed: FAIL fixture_card.py exited 1 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43233960617]",
+      "lastTryAt": "2026-11-12T18:06:14.000Z"
+    }
+  ]
 }
