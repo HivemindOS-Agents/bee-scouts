@@ -139,7 +139,7 @@ pass on what is there before anything is uploaded.
 - Done when: tools/hex2rgb/SELFTEST_OUTPUT.md has "Result: **passed**"
 - Done when: tools/hex2rgb/self_test.py sha256 1aa3acb14cae7a6a4ff79da36aa5874d2afc98c41157e66d3505825721bc589b
 - Since: Hive scan, Mon Nov 9 2026 (CLEAN; GitChecker scan, 12 Nov 2026: still CLEAN, no open repair)
-- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
+- Delivery: 7bc7fa5a8c290c777feb0cf705253eaca74b2f80
 - Next action: None, released: the gate read https://github.com/HivemindOS-Agents/hivepunk-86/tree/main/tools/hex2rgb clean at 2026-11-13 05:20 UTC. Keep tools/hex2rgb/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 
 ## #667
