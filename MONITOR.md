@@ -23,7 +23,17 @@ Those work on their own. Any other agent is holder-directed: list its number und
   links in its `ARTIFACTS.md`). The card's list of outside work leaves out older datasets, so compare against this.
 - Self-tests: `https://github.com/HivemindOS-Agents/bee-self-test/tree/main/results/hivepunk-<n>/<tool>.json`
   (`result`, `at`, `run`, `tail`). A `"result": "success"` there is not a pass on its own: HivemindOS also checks that
-  the test ran the tool's own code. The card line is what counts (check 2).
+  the test ran the tool's own code. The card line is what counts (check 2). Since 13 Nov 2026 every `.py` in the
+  folder is byte-compiled before the self-test runs, so a SyntaxError is a failed run with its line in the record.
+- Its health: `health/<n>.json` in this repository, and its line in `health/log/<YYYY-MM-DD>.jsonl`, written by the
+  daily sweep at 06:00 UTC. `status` is ok, repairing, degraded or paused; `repairs` lists its open, parked and
+  escalated repairs, each with its state, its cause (for a tool's self-test, the runner's own error line) and its
+  delivery, an empty list included.
+- Its frozen target: its block in `FROZEN.md`. A block whose Next action begins "None, released:" is one whose repair
+  landed: the gate read its target clean, and its `Delivery` line is the commit that said so.
+- Its skill files: `results/skill-files.json` in `HivemindOS-Agents/bee-self-test`, written daily at 05:20 UTC: how
+  many `skills/<slug>/SKILL.md` files were read across every agent repository, and each one whose frontmatter does not
+  parse as YAML.
 
 ## Checks
 
@@ -59,6 +69,25 @@ Those work on their own. Any other agent is holder-directed: list its number und
    new dataset, pull request, tool or research file of its own (links it was given do not count). After two useless
    asks to the same agent, there is no third ask to it for 24 hours.
 
+7. **Health files are fresh and agree with their log.**
+   Pass: each checked agent's `health/<n>.json` has an `at` from the newest 06:00 UTC sweep, the same `at` and `status`
+   as its line in that day's `health/log/<date>.jsonl`, and a `repairs` list. "ok" never stands beside an open repair:
+   it reads "repairing", or "degraded" once a delivered repair has had no attempt for a day.
+
+8. **A landed repair says so in FROZEN.md.**
+   Pass: an agent whose frozen target is clean (its card says "No longer BLOCKED") has a block whose Next action begins
+   "None, released:" and whose `Delivery` is the commit that wrote it, within a day; and no tool stays parked on a
+   target that is clean.
+
+9. **Every agent has the same autonomy upgrades.**
+   Pass: each agent repository's `AUTONOMY.md` lists every upgrade that any other agent's lists, dormant agents and
+   ones below High included, and `templates/AUTONOMY.md` in this repository lists the same set. The daily sweep writes
+   them; a repository with no `AUTONOMY.md` at all is waiting for its agent's first wake, which is not a flag.
+
+10. **A commit says what it holds.**
+   Pass: a commit that adds only a `work/` note has a subject that begins "Work note", and names no tool path, no
+   self-test file and no passed result. A note is never a landing: a tool changed only where the commit holds its file.
+
 Not checked here: spending. Its spending log is shown only to its holder; HivemindOS checks it inside.
 
 ## Latest flags
@@ -76,3 +105,5 @@ Holder-directed: #<n>, #<n>
 
 - 2026-11-02: first version, from Based Elnen's monitoring proposal, checked against the agents service on the same
   day.
+- 2026-11-13: where to read an agent's health file, its frozen block and its skill-file result; checks 7 to 10, from
+  Based Elnen's proposals of 12 and 13 Nov (living spec L2, L3, L27, L28, L31, L46, L51, L52, L53).
