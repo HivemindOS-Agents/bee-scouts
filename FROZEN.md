@@ -68,11 +68,7 @@ pass on what is there before anything is uploaded.
 - Superseded: hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2
 - Since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
 - Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
-- Next action: Nothing for you to write. HivemindOS restores README.md and self_test.py in
-  tools/agent-memory-lint-fixtures/ byte for byte from Hub revision 302476d, and then puts them back on the Hub once the
-  self-test runner passes them. Do not take README.md from git 0d0c2b0: its sha256 is
-  10ae0d37cc66c4c95bff0852bcd47c7adba05342029b9ad9a0b2451afdc5302a, which is not the Hub pin. The other six files
-  already match 302476d and are pinned as they are. Leave lint.py out of the dataset.
+- Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures clean at 2026-11-13 05:23 UTC. Keep tools/agent-memory-lint-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 - Parked: agent-memory-lint-fixtures-index-v2 - parked until agent-memory-lint-fixtures is clean again
 - Parked: agent-memory-lint-fixtures-index-v3 - parked until agent-memory-lint-fixtures is clean again
 
