@@ -1,7 +1,7 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-13T22:11:58.915Z",
+  "status": "ok",
+  "at": "2026-11-13T22:13:44.898Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -67,16 +67,16 @@
       "id": "rp-547-t-agent-memory-lint-fixtures-index-v4",
       "artifact": "agent-memory-lint-fixtures-index-v4",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: readback: extra row count not flagged with 'row count differs: expected 5, found 6 (tolerated extras: .gitattributes)'; issues=[\"unexpected row on the page: 'LICENSE'\", 'a LICENSE row is present",
       "firstFailureAt": "2026-11-13T13:23:24.000Z",
-      "lastObservedAt": "2026-11-13T17:45:13.000Z",
+      "lastObservedAt": "2026-11-13T21:56:17.000Z",
       "counters": {
         "observations": 27,
         "failedAttempts": 3,
-        "consecutive": 3,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 2,
         "recurrences": 1
@@ -86,9 +86,9 @@
         "at": "2026-11-13T13:59:55.415Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43515011698)",
       "escalation": null,
-      "lastTryAt": "2026-11-13T17:45:13.000Z"
+      "lastTryAt": "2026-11-13T21:56:17.000Z"
     }
   ]
 }
