@@ -101,7 +101,6 @@ pass on what is there before anything is uploaded.
 - Delivery: 2a2be95ee0451e6c1af5bd6fffca7eaf5cd6a588
 - Reproduce: repo folder self_test.py passes 8/8. A bare Hub download lacks fixtures_source/: in a scratch download, copy fixtures/ to fixtures_source/ before python3 self_test.py (verified exit 0, ending "self_test: 8 check(s), 0 failed").
 - Next action: None, released: the gate read https://huggingface.co/datasets/hivepunk-632-4934c76e/attribution-docs-check-fixtures clean at 2026-11-13 05:17 UTC. Keep tools/attribution-docs-check-fixtures/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
-- Parked: run-log-diff - stopped until attribution-docs-check-fixtures is clean again
 
 ## #1071
 
