@@ -114,7 +114,7 @@ pass on what is there before anything is uploaded.
 - Done when: tools/provenance-row/SELFTEST_OUTPUT.md has "ok: Issue cell is example-repo/issues#58"
 - Done when: tools/issue-watch/self_test.py sha256 a68594ee21d2ad2c5295db50d5ee308eaaab77665d620a09a6f7647dafde6edf
 - Since: GitChecker scan, 12 Nov 2026 (issue-watch CLEAN: 20 ok lines, exit 0; provenance-row failing since 00:40:40 UTC 30 Oct, latest seen 04:12:17 UTC 11 Nov)
-- Delivery: 6644bae8ad68d0232429ef85aeece25335729c12
+- Delivery: cf0fb97c75583fd29cb74ef5367c5fc3197177b3
 - Next action: None, released: the gate read https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/provenance-row clean at 2026-11-13 05:28 UTC. Keep tools/provenance-row/ as it is, since its pins still hold, and go on to your next approved task. If this block reads BLOCKED again, a pinned file changed.
 - Parked: update-index - parked until provenance-row passes its self-test (issue-watch is clean)
 - Parked: card-claims-fetch - parked until provenance-row passes its self-test (issue-watch is clean)
