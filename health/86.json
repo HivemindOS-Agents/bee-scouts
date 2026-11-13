@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "ok",
-  "at": "2026-11-13T06:00:20.630Z",
+  "at": "2026-11-13T13:43:32.409Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -62,6 +62,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43285117300)",
       "escalation": null,
       "lastTryAt": "2026-11-12T18:57:20.000Z"
+    },
+    {
+      "id": "rp-86-t-noscript-audit",
+      "artifact": "noscript-audit",
+      "kind": "selfTest",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
+      "firstFailureAt": "2026-11-13T08:29:52.000Z",
+      "lastObservedAt": "2026-11-13T10:34:03.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "acknowledged",
+        "at": "2026-11-13T10:33:44.426Z"
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43410015743)",
+      "escalation": null,
+      "lastTryAt": "2026-11-13T10:34:03.000Z"
     }
   ]
 }
