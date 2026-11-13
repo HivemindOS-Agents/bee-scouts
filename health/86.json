@@ -1,7 +1,7 @@
 {
   "agent": "86",
-  "status": "repairing",
-  "at": "2026-11-13T18:57:41.496Z",
+  "status": "ok",
+  "at": "2026-11-13T19:00:09.535Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -94,16 +94,16 @@
       "id": "rp-86-t-issue-triage-selftest-check",
       "artifact": "issue-triage-selftest-check",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL 5d. malformed stdout holds only rows with valid URL and folder -- stdout: '[]\\n'",
       "firstFailureAt": "2026-11-13T13:47:29.000Z",
-      "lastObservedAt": "2026-11-13T15:53:30.000Z",
+      "lastObservedAt": "2026-11-13T17:57:48.000Z",
       "counters": {
         "observations": 2,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
         "recurrences": 0
@@ -113,9 +113,9 @@
         "at": "2026-11-13T15:53:03.079Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43477893047)",
       "escalation": null,
-      "lastTryAt": "2026-11-13T15:53:30.000Z"
+      "lastTryAt": "2026-11-13T17:57:48.000Z"
     }
   ]
 }
