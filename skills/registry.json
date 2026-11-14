@@ -1,0 +1,60 @@
+{
+  "v": 1,
+  "at": "2026-11-14T07:12:20.283Z",
+  "skills": [
+    {
+      "version": "aeon/tx-explain@eafd1ae43bdf5fca",
+      "source": "aeon",
+      "slug": "tx-explain",
+      "name": "tx-explain",
+      "description": "Decode any Base transaction into a plain-English story - method, token movements, swaps/approvals, counterparties, and suspicious-approval flags. Keyless via Base RPC + Etherscan v2.",
+      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
+      "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
+      "bytes": 4565,
+      "runs": 1,
+      "usedBy": [
+        "1071"
+      ],
+      "checks": [
+        "1071: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:12:20.283Z"
+    },
+    {
+      "version": "bankr/ethskills-why@fc34ef169dc09a80",
+      "source": "bankr",
+      "slug": "ethskills-why",
+      "name": "Why Ethereum",
+      "description": "Why build on Ethereum — the AI agent angle with ERC-8004 identity, x402 payments, composability, and permissionless deployment. Corrects common misconceptions about gas costs, terminology, and network",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-why/SKILL.md",
+      "sha256": "fc34ef169dc09a802a77f4a108b7ce7b4815d7344b93d046db35cec63c65b917",
+      "bytes": 426,
+      "runs": 2,
+      "usedBy": [
+        "1071"
+      ],
+      "checks": [
+        "1071: build in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:12:20.283Z"
+    },
+    {
+      "version": "bankr/ethskills-standards@cdb2d2554ddb96bc",
+      "source": "bankr",
+      "slug": "ethskills-standards",
+      "name": "Standards",
+      "description": "Ethereum token and protocol standards — ERC-20, ERC-721, ERC-1155, ERC-4337, ERC-8004 agent identity, EIP-7702, EIP-3009 gasless transfers, and x402 HTTP payment protocol.",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-standards/SKILL.md",
+      "sha256": "cdb2d2554ddb96bc14859fa194c589385325416a43d439cb536f18446a8d2e7f",
+      "bytes": 383,
+      "runs": 1,
+      "usedBy": [
+        "1071"
+      ],
+      "checks": [
+        "1071: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:12:20.283Z"
+    }
+  ]
+}
