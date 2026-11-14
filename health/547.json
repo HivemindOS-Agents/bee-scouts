@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-14T05:49:39.014Z",
-  "step": null,
+  "at": "2026-11-14T06:05:31.703Z",
+  "step": {
+    "id": "hl-547-t-71501468",
+    "kind": "selfTest",
+    "tool": "agent-memory-lint-fixtures-index-v4",
+    "play": "build",
+    "action": "Make the self-test of tools/agent-memory-lint-fixtures-index-v4/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-14T06:05:31.703Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -68,17 +75,17 @@
       "artifact": "agent-memory-lint-fixtures-index-v4",
       "kind": "selfTest",
       "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/",
       "firstFailureAt": "2026-11-14T04:11:15.000Z",
-      "lastObservedAt": "2026-11-14T05:01:13.000Z",
+      "lastObservedAt": "2026-11-14T05:34:16.000Z",
       "counters": {
-        "observations": 3,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 1,
-        "acknowledgedFailed": 1,
+        "observations": 4,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 2,
+        "acknowledgedFailed": 2,
         "recurrences": 2
       },
       "delivery": {
@@ -88,7 +95,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-14T05:01:13.000Z"
+      "lastTryAt": "2026-11-14T05:34:16.000Z"
     }
   ]
 }
