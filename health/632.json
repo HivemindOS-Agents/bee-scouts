@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-14T09:56:40.275Z",
+  "at": "2026-11-14T10:13:51.971Z",
   "step": {
     "id": "hl-632-t-c167b123",
     "kind": "selfTest",
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-14T03:19:30.000Z",
       "lastObservedAt": "2026-11-14T03:19:30.000Z",
       "counters": {
-        "observations": 28,
+        "observations": 29,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -123,6 +123,33 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-14T03:19:30.000Z"
+    },
+    {
+      "id": "rp-632-t-hf-trending-models",
+      "artifact": "hf-trending-models",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6",
+      "firstFailureAt": "2026-11-14T09:41:08.000Z",
+      "lastObservedAt": "2026-11-14T09:41:08.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-14T09:41:08.000Z"
     }
   ]
 }
