@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "at": "2026-11-14T07:16:22.647Z",
+  "at": "2026-11-14T07:25:04.874Z",
   "skills": [
     {
       "version": "aeon/you-web-search@fc67463359781e88",
@@ -13,12 +13,106 @@
       "bytes": 12762,
       "runs": 1,
       "usedBy": [
-        "547"
+        "547",
+        "632"
       ],
       "checks": [
+        "632: build in hivepunkz-agents prompt",
         "547: proposal in hivepunkz-agents prompt"
       ],
-      "at": "2026-11-14T07:16:22.647Z"
+      "at": "2026-11-14T07:25:04.874Z"
+    },
+    {
+      "version": "aeon/tx-explain@eafd1ae43bdf5fca",
+      "source": "aeon",
+      "slug": "tx-explain",
+      "name": "tx-explain",
+      "description": "Decode any Base transaction into a plain-English story - method, token movements, swaps/approvals, counterparties, and suspicious-approval flags. Keyless via Base RPC + Etherscan v2.",
+      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
+      "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
+      "bytes": 4565,
+      "runs": 7,
+      "usedBy": [
+        "1071",
+        "632"
+      ],
+      "checks": [
+        "632: media in hivepunkz-agents prompt",
+        "1071: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:25:04.874Z"
+    },
+    {
+      "version": "bankr/aeon-huggingface-trending@3ab8867027a3bf03",
+      "source": "bankr",
+      "slug": "aeon-huggingface-trending",
+      "name": "aeon-huggingface-trending",
+      "description": "Trending Hugging Face models, datasets, and spaces — filtered by license sanity, dedup vs same-week quantizations, with a \"why notable\" line per pick (architecture shift, size step, license change, no",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-huggingface-trending/SKILL.md",
+      "sha256": "3ab8867027a3bf03501760611e261ce207555ee60ea1f66731e512e36d6129e6",
+      "bytes": 2009,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: proposal in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:25:04.874Z"
+    },
+    {
+      "version": "huggingface/huggingface-spaces@efa6506be823aaea",
+      "source": "huggingface",
+      "slug": "huggingface-spaces",
+      "name": "huggingface-spaces",
+      "description": "Build, deploy, and maintain applications on Hugging Face Spaces — Gradio / Docker / Static SDKs, ZeroGPU and dedicated hardware, model loading, debugging, buckets, inference providers, community grant",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-spaces/SKILL.md",
+      "sha256": "efa6506be823aaea03c31ef6cd06734485f7c451065aab43cfa5b5053c0df82b",
+      "bytes": 17903,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: build in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:25:04.874Z"
+    },
+    {
+      "version": "huggingface/train-sentence-transformers@9bd098d81049fc24",
+      "source": "huggingface",
+      "slug": "train-sentence-transformers",
+      "name": "train-sentence-transformers",
+      "description": "Train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder, dense or static embedding model for retrieval, similarity, clustering, classification, paraphrase mining, dedu",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/train-sentence-transformers/SKILL.md",
+      "sha256": "9bd098d81049fc245032ee4f97cf5d9de906d726731ace4a6df0bad6d9dcd182",
+      "bytes": 10502,
+      "runs": 3,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:25:04.874Z"
+    },
+    {
+      "version": "bankr/ethskills-building-blocks@0b083f49d33842e6",
+      "source": "bankr",
+      "slug": "ethskills-building-blocks",
+      "name": "Building Blocks",
+      "description": "DeFi legos and protocol composability — Uniswap V4 hooks, Aave flash loans, ERC-4626 vaults, Aerodrome on Base, GMX/Pendle on Arbitrum. Dominant DEX per L2 and how to combine protocols safely.",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-building-blocks/SKILL.md",
+      "sha256": "0b083f49d33842e6f67d5cd0902c1768365abcd7cd47a9309528e03a8b01cb1e",
+      "bytes": 416,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:25:04.874Z"
     },
     {
       "version": "bankr/aeon-deep-research@157901b3f27c9398",
@@ -61,7 +155,7 @@
       "source": "huggingface",
       "slug": "huggingface-tool-builder",
       "name": "huggingface-tool-builder",
-      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the ",
+      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the",
       "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md",
       "sha256": "2846b591259b134a5978073e4da477a06275d7a10893ce1383a0a3920c3ff1e1",
       "bytes": 5905,
@@ -73,24 +167,6 @@
         "547: build in hivepunkz-agents prompt"
       ],
       "at": "2026-11-14T07:16:22.647Z"
-    },
-    {
-      "version": "aeon/tx-explain@eafd1ae43bdf5fca",
-      "source": "aeon",
-      "slug": "tx-explain",
-      "name": "tx-explain",
-      "description": "Decode any Base transaction into a plain-English story - method, token movements, swaps/approvals, counterparties, and suspicious-approval flags. Keyless via Base RPC + Etherscan v2.",
-      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
-      "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
-      "bytes": 4565,
-      "runs": 1,
-      "usedBy": [
-        "1071"
-      ],
-      "checks": [
-        "1071: media in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:12:20.283Z"
     },
     {
       "version": "bankr/ethskills-why@fc34ef169dc09a80",
