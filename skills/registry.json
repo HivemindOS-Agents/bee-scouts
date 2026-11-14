@@ -1,7 +1,79 @@
 {
   "v": 1,
-  "at": "2026-11-14T07:12:20.283Z",
+  "at": "2026-11-14T07:16:22.647Z",
   "skills": [
+    {
+      "version": "aeon/you-web-search@fc67463359781e88",
+      "source": "aeon",
+      "slug": "you-web-search",
+      "name": "you-web-search",
+      "description": "Web search using You.com Search API with high-quality, cited results — runs keyless out of the box; YDC_API_KEY unlocks higher limits and real-time web crawling",
+      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/you-web-search/SKILL.md",
+      "sha256": "fc67463359781e886f3743e7f2ed6cd563c1eb74eba2ebb81195a793d4ac655e",
+      "bytes": 12762,
+      "runs": 1,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: proposal in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:16:22.647Z"
+    },
+    {
+      "version": "bankr/aeon-deep-research@157901b3f27c9398",
+      "source": "bankr",
+      "slug": "aeon-deep-research",
+      "name": "aeon-deep-research",
+      "description": "Exhaustive multi-source research on a topic with attributed claims, a mandatory adversarial counterpoint, and an open-questions list. Analyst-grade — claims are tagged with source class (primary / exp",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-deep-research/SKILL.md",
+      "sha256": "157901b3f27c93989dc1320a52f52362d26659abbb00be3b9d66964e35d6bfe4",
+      "bytes": 1831,
+      "runs": 2,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:16:22.647Z"
+    },
+    {
+      "version": "huggingface/hf-cloud-serving-image-selection@6af6adfe1cdcf7bc",
+      "source": "huggingface",
+      "slug": "hf-cloud-serving-image-selection",
+      "name": "hf-cloud-serving-image-selection",
+      "description": "Pick the right serving container for a SageMaker model deployment and find its current image URI. Use this skill whenever about to deploy a model to a SageMaker endpoint and an image URI needs to be c",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-serving-image-selection/SKILL.md",
+      "sha256": "6af6adfe1cdcf7bcc061ee11e1e2cf88bae9fbb08bf79d16945ce748839c1d76",
+      "bytes": 18539,
+      "runs": 2,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:16:22.647Z"
+    },
+    {
+      "version": "huggingface/huggingface-tool-builder@2846b591259b134a",
+      "source": "huggingface",
+      "slug": "huggingface-tool-builder",
+      "name": "huggingface-tool-builder",
+      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the ",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md",
+      "sha256": "2846b591259b134a5978073e4da477a06275d7a10893ce1383a0a3920c3ff1e1",
+      "bytes": 5905,
+      "runs": 5,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: build in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:16:22.647Z"
+    },
     {
       "version": "aeon/tx-explain@eafd1ae43bdf5fca",
       "source": "aeon",
