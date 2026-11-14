@@ -1,7 +1,7 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-14T06:22:51.620Z",
+  "status": "ok",
+  "at": "2026-11-14T06:38:30.243Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -67,18 +67,18 @@
       "id": "rp-547-t-agent-memory-lint-fixtures-index-v4",
       "artifact": "agent-memory-lint-fixtures-index-v4",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/",
       "firstFailureAt": "2026-11-14T04:11:15.000Z",
-      "lastObservedAt": "2026-11-14T05:34:16.000Z",
+      "lastObservedAt": "2026-11-14T06:07:31.000Z",
       "counters": {
-        "observations": 4,
-        "failedAttempts": 3,
-        "consecutive": 3,
-        "sameCause": 2,
-        "acknowledgedFailed": 2,
+        "observations": 5,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 3,
+        "acknowledgedFailed": 3,
         "recurrences": 2
       },
       "delivery": {
@@ -87,8 +87,8 @@
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-14T05:34:16.000Z"
+      "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/agent-memory-lint-fixtures-index-v4/. Latest cause: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/\n- 2026-11-14T04:11:15.000Z failed (not yet delivered): FAIL: no fixture folder in the index exists on disk [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43555349824]\n- 2026-11-14T05:01:13.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43559435906]\n- 2026-11-14T05:34:16.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43562157813]\n- 2026-11-14T06:07:31.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43564764315]",
+      "lastTryAt": "2026-11-14T06:07:31.000Z"
     }
   ]
 }
