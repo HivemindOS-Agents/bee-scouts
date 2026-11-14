@@ -1,8 +1,15 @@
 {
   "agent": "632",
-  "status": "ok",
-  "at": "2026-11-13T13:14:16.679Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-14T03:51:31.197Z",
+  "step": {
+    "id": "hl-632-t-c167b123",
+    "kind": "selfTest",
+    "tool": "run-record-lint-fixtures",
+    "play": "build",
+    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-14T03:51:31.197Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -89,6 +96,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43409772380)",
       "escalation": null,
       "lastTryAt": "2026-11-13T10:32:10.000Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint-fixtures",
+      "artifact": "run-record-lint-fixtures",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL rules.csv missing from this folder",
+      "firstFailureAt": "2026-11-14T03:19:30.000Z",
+      "lastObservedAt": "2026-11-14T03:19:30.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-14T03:19:30.000Z"
     }
   ]
 }
