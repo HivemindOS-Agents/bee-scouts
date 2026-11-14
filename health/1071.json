@@ -1,8 +1,15 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-14T06:00:20.569Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-14T07:12:17.083Z",
+  "step": {
+    "id": "hl-1071-t-e4b12a5d",
+    "kind": "selfTest",
+    "tool": "glb-pad-cases",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-pad-cases/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-14T07:12:17.083Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -89,6 +96,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43398181419)",
       "escalation": null,
       "lastTryAt": "2026-11-13T09:04:01.000Z"
+    },
+    {
+      "id": "rp-1071-t-glb-pad-cases",
+      "artifact": "glb-pad-cases",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bee-self-test/bee-self-test/work/tools/glb-pad-cases/sample_readback.csv'",
+      "firstFailureAt": "2026-11-14T06:41:34.000Z",
+      "lastObservedAt": "2026-11-14T06:41:34.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-14T06:41:34.000Z"
     }
   ]
 }
