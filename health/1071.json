@@ -1,8 +1,15 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-14T10:11:40.106Z",
-  "step": null,
+  "at": "2026-11-14T10:13:48.351Z",
+  "step": {
+    "id": "hl-1071-t-e4b12a5d",
+    "kind": "selfTest",
+    "tool": "glb-pad-cases",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-pad-cases/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-14T10:13:48.351Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -95,15 +102,15 @@
       "artifact": "glb-pad-cases",
       "kind": "selfTest",
       "state": "REPAIR_ATTEMPTED",
-      "failureClass": "MISSING_INPUT",
+      "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/bee-self-test/bee-self-test/work/tools/glb-pad-cases/sample_readback.csv'",
+      "cause": "FAIL: opened row keeps its 4-byte alignment expression as text",
       "firstFailureAt": "2026-11-14T06:41:34.000Z",
-      "lastObservedAt": "2026-11-14T06:41:34.000Z",
+      "lastObservedAt": "2026-11-14T09:56:27.000Z",
       "counters": {
-        "observations": 13,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 14,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -115,7 +122,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-14T06:41:34.000Z"
+      "lastTryAt": "2026-11-14T09:56:27.000Z"
     }
   ]
 }
