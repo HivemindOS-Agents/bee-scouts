@@ -66,6 +66,7 @@ HivemindOS checks each of these in code before a call goes out, in this order; t
 - protected-dataset: Its finished target and its superseded side datasets are never written over.
 - text-unsafe: A post or email holding a secret or a private path is not sent.
 - channel-rule: A post or email the place's own rules refuse (its daily cap, the links it may carry, who it may write to, its guidelines) is not sent.
+- disclosure: A post or email that does not say it is a HivemindOS agent, and link its card, its repository and a receipt for the work, is not sent.
 - spend-left: A paid call with nothing left of today's limit is skipped and logged, and waits for the next day.
 - unknown-input: A write, spend, trade or launch resting on a fact labelled UNKNOWN (a token or address nothing it verified names) falls back to a read-only check.
 - coin-name: Its coin is not launched under a name or ticker that trades now, nor before that has been checked.
