@@ -1,8 +1,15 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-13T22:13:44.898Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-14T04:42:16.952Z",
+  "step": {
+    "id": "hl-547-t-71501468",
+    "kind": "selfTest",
+    "tool": "agent-memory-lint-fixtures-index-v4",
+    "play": "build",
+    "action": "Make the self-test of tools/agent-memory-lint-fixtures-index-v4/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-14T04:42:16.952Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -67,28 +74,28 @@
       "id": "rp-547-t-agent-memory-lint-fixtures-index-v4",
       "artifact": "agent-memory-lint-fixtures-index-v4",
       "kind": "selfTest",
-      "state": "RELEASED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FAIL: readback: extra row count not flagged with 'row count differs: expected 5, found 6 (tolerated extras: .gitattributes)'; issues=[\"unexpected row on the page: 'LICENSE'\", 'a LICENSE row is present",
-      "firstFailureAt": "2026-11-13T13:23:24.000Z",
-      "lastObservedAt": "2026-11-13T21:56:17.000Z",
+      "cause": "FAIL: no fixture folder in the index exists on disk",
+      "firstFailureAt": "2026-11-14T04:11:15.000Z",
+      "lastObservedAt": "2026-11-14T04:11:15.000Z",
       "counters": {
-        "observations": 27,
-        "failedAttempts": 3,
-        "consecutive": 0,
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
         "sameCause": 1,
-        "acknowledgedFailed": 2,
-        "recurrences": 1
+        "acknowledgedFailed": 0,
+        "recurrences": 2
       },
       "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-13T13:59:55.415Z"
+        "state": "unknown",
+        "at": null
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43515011698)",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-13T21:56:17.000Z"
+      "lastTryAt": "2026-11-14T04:11:15.000Z"
     }
   ]
 }
