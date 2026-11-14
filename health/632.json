@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-14T03:51:31.197Z",
-  "step": {
-    "id": "hl-632-t-c167b123",
-    "kind": "selfTest",
-    "tool": "run-record-lint-fixtures",
-    "play": "build",
-    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-14T03:51:31.197Z"
-  },
+  "at": "2026-11-14T05:14:12.522Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -108,7 +101,7 @@
       "firstFailureAt": "2026-11-14T03:19:30.000Z",
       "lastObservedAt": "2026-11-14T03:19:30.000Z",
       "counters": {
-        "observations": 1,
+        "observations": 7,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
