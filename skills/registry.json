@@ -1,7 +1,101 @@
 {
   "v": 1,
-  "at": "2026-11-14T07:25:04.874Z",
+  "at": "2026-11-14T07:40:46.639Z",
   "skills": [
+    {
+      "version": "aeon/tx-explain@eafd1ae43bdf5fca",
+      "source": "aeon",
+      "slug": "tx-explain",
+      "name": "tx-explain",
+      "description": "Decode any Base transaction into a plain-English story - method, token movements, swaps/approvals, counterparties, and suspicious-approval flags. Keyless via Base RPC + Etherscan v2.",
+      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
+      "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
+      "bytes": 4565,
+      "runs": 7,
+      "usedBy": [
+        "1071",
+        "632",
+        "86"
+      ],
+      "checks": [
+        "86: media in hivepunkz-agents prompt",
+        "632: media in hivepunkz-agents prompt",
+        "1071: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:40:46.639Z"
+    },
+    {
+      "version": "huggingface/huggingface-community-evals@a97f1c703f55b724",
+      "source": "huggingface",
+      "slug": "huggingface-community-evals",
+      "name": "huggingface-community-evals",
+      "description": "Run evaluations for Hugging Face Hub models using inspect-ai and lighteval on local hardware. Use for backend selection, local GPU evals, and choosing between vLLM / Transformers / accelerate. Not for",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md",
+      "sha256": "a97f1c703f55b72427453a76af858237e6392a447fcafa9eeb85f7ac67f0155d",
+      "bytes": 6552,
+      "runs": 1,
+      "usedBy": [
+        "86"
+      ],
+      "checks": [
+        "86: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:40:46.639Z"
+    },
+    {
+      "version": "huggingface/huggingface-datasets@eeca50adf211ea64",
+      "source": "huggingface",
+      "slug": "huggingface-datasets",
+      "name": "huggingface-datasets",
+      "description": "Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics.",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md",
+      "sha256": "eeca50adf211ea64a288b852938f85a5183b045c720dc696b62db9aa2ea8deb2",
+      "bytes": 4671,
+      "runs": 2,
+      "usedBy": [
+        "86"
+      ],
+      "checks": [
+        "86: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:40:46.639Z"
+    },
+    {
+      "version": "bankr/ethskills-security@fe19de9dbf0bcd04",
+      "source": "bankr",
+      "slug": "ethskills-security",
+      "name": "Security",
+      "description": "Solidity vulnerabilities, defensive code patterns, and a pre-deployment audit checklist. Covers reentrancy, oracle manipulation, token decimals, SafeERC20, ERC-4626 inflation, infinite approvals, and ",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-security/SKILL.md",
+      "sha256": "fe19de9dbf0bcd04787b58a2c3d8b97cf706b517c7521852fd84b1a75e3382e9",
+      "bytes": 412,
+      "runs": 1,
+      "usedBy": [
+        "86"
+      ],
+      "checks": [
+        "86: proposal in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:40:46.639Z"
+    },
+    {
+      "version": "bankr/bankr-token-scam-analysis@91ec6366decd7b5b",
+      "source": "bankr",
+      "slug": "bankr-token-scam-analysis",
+      "name": "token-scam-analysis",
+      "description": "Deep on-chain scam / rug / soft-rug analysis for EVM tokens (especially Clanker, Doppler, Bankr-style single-admin ERC-20s). Use when the user asks to \"analyze this token for scam\", \"is this a rug\", \"",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/bankr-token-scam-analysis/SKILL.md",
+      "sha256": "91ec6366decd7b5b0cd6b56ea98021c3d7152203e4fe93adb47ba09b843be475",
+      "bytes": 23068,
+      "runs": 1,
+      "usedBy": [
+        "86"
+      ],
+      "checks": [
+        "86: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-14T07:40:46.639Z"
+    },
     {
       "version": "aeon/you-web-search@fc67463359781e88",
       "source": "aeon",
@@ -19,26 +113,6 @@
       "checks": [
         "632: build in hivepunkz-agents prompt",
         "547: proposal in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:25:04.874Z"
-    },
-    {
-      "version": "aeon/tx-explain@eafd1ae43bdf5fca",
-      "source": "aeon",
-      "slug": "tx-explain",
-      "name": "tx-explain",
-      "description": "Decode any Base transaction into a plain-English story - method, token movements, swaps/approvals, counterparties, and suspicious-approval flags. Keyless via Base RPC + Etherscan v2.",
-      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
-      "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
-      "bytes": 4565,
-      "runs": 7,
-      "usedBy": [
-        "1071",
-        "632"
-      ],
-      "checks": [
-        "632: media in hivepunkz-agents prompt",
-        "1071: media in hivepunkz-agents prompt"
       ],
       "at": "2026-11-14T07:25:04.874Z"
     },
