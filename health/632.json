@@ -1,8 +1,15 @@
 {
   "agent": "632",
-  "status": "ok",
-  "at": "2026-11-15T02:12:25.666Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-15T05:30:41.815Z",
+  "step": {
+    "id": "hl-632-t-c167b123",
+    "kind": "selfTest",
+    "tool": "run-record-lint-fixtures",
+    "play": "build",
+    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T05:30:41.815Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -91,33 +98,6 @@
       "lastTryAt": "2026-11-13T10:32:10.000Z"
     },
     {
-      "id": "rp-632-t-run-record-lint-fixtures",
-      "artifact": "run-record-lint-fixtures",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "MISSING_INPUT",
-      "runner": "assertion_failure",
-      "cause": "FAIL fixtures/clean.txt did not print 'no missing-why warning'; got 'record is complete'",
-      "firstFailureAt": "2026-11-14T03:19:30.000Z",
-      "lastObservedAt": "2026-11-15T00:49:09.000Z",
-      "counters": {
-        "observations": 96,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 1,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-15T00:12:59.685Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43660045804)",
-      "escalation": null,
-      "lastTryAt": "2026-11-15T00:49:09.000Z"
-    },
-    {
       "id": "rp-632-t-hf-trending-models",
       "artifact": "hf-trending-models",
       "kind": "selfTest",
@@ -128,7 +108,7 @@
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
       "lastObservedAt": "2026-11-15T01:40:41.000Z",
       "counters": {
-        "observations": 70,
+        "observations": 83,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 1,
@@ -143,6 +123,33 @@
       "closedBy": null,
       "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/hf-trending-models/. Latest cause: FAIL unexpected survivors: acme/aurora-7b, acme/aurora-7b-gptq, arcturus/aurora-7b-awq, beta/nebula-13b, fleet/a1, fleet/a2, fleet/a3, fleet/a4, fleet/a5, epsilon/longctx-8b\n- 2026-11-14T09:41:08.000Z failed (not yet delivered): FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43581699189]\n- 2026-11-14T15:52:03.000Z failed (not yet delivered): FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43612446654]\n- 2026-11-15T00:31:27.000Z failed: FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43658576782]\n- 2026-11-15T01:06:55.000Z failed: FAIL unexpected survivors: acme/aurora-7b, acme/aurora-7b-gptq, arcturus/aurora-7b-awq, beta/nebula-13b, fleet/a1, fleet/a2, fleet/a3, fleet/a4, fleet/a5, epsilon/longctx-8b [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43661497415]\n- 2026-11-15T01:40:41.000Z failed: FAIL arcturus/aurora-7b-awq why contains 'quantization of a trending model': got 'no clear why - popular but unremarkable' [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43664185945]",
       "lastTryAt": "2026-11-15T01:40:41.000Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint-fixtures",
+      "artifact": "run-record-lint-fixtures",
+      "kind": "selfTest",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL fixtures/clean.txt exits 0: got 1",
+      "firstFailureAt": "2026-11-15T04:58:59.000Z",
+      "lastObservedAt": "2026-11-15T04:58:59.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-15T04:58:59.000Z"
     }
   ]
 }
