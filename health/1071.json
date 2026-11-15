@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-15T16:03:44.429Z",
+  "at": "2026-11-15T16:37:11.853Z",
   "step": {
     "id": "hl-1071-t-e4b12a5d",
     "kind": "selfTest",
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-15T15:17:43.000Z",
       "lastObservedAt": "2026-11-15T15:17:43.000Z",
       "counters": {
-        "observations": 2,
+        "observations": 4,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -116,13 +116,13 @@
         "recurrences": 1
       },
       "delivery": {
-        "state": "delivered",
-        "at": "2026-11-15T15:48:14.288Z"
+        "state": "acknowledged",
+        "at": "2026-11-15T16:21:42.746Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T15:48:14.288Z"
+      "lastTryAt": "2026-11-15T16:21:42.746Z"
     }
   ]
 }
