@@ -1,7 +1,7 @@
 {
   "agent": "1071",
-  "status": "repairing",
-  "at": "2026-11-15T17:59:51.181Z",
+  "status": "ok",
+  "at": "2026-11-15T18:15:32.930Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -94,16 +94,16 @@
       "id": "rp-1071-t-glb-pad-cases",
       "artifact": "glb-pad-cases",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "ValueError: card carries a 64-char hex hash 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb' that no opened read-back row supplied",
       "firstFailureAt": "2026-11-15T15:17:43.000Z",
-      "lastObservedAt": "2026-11-15T16:55:34.000Z",
+      "lastObservedAt": "2026-11-15T17:44:34.000Z",
       "counters": {
         "observations": 7,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
         "recurrences": 1
@@ -113,9 +113,9 @@
         "at": "2026-11-15T16:21:42.746Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43742786108)",
       "escalation": null,
-      "lastTryAt": "2026-11-15T16:55:34.000Z"
+      "lastTryAt": "2026-11-15T17:44:34.000Z"
     }
   ]
 }
