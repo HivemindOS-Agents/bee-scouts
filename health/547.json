@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-15T00:52:29.635Z",
-  "step": null,
+  "at": "2026-11-15T01:08:35.268Z",
+  "step": {
+    "id": "hl-547-t-e58ee9c8",
+    "kind": "selfTest",
+    "tool": "hf-publish-check",
+    "play": "build",
+    "action": "Make the self-test of tools/hf-publish-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T01:08:35.268Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -122,17 +129,17 @@
       "artifact": "hf-publish-check",
       "kind": "selfTest",
       "state": "REPAIR_ATTEMPTED",
-      "failureClass": "MISSING_INPUT",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: good folder: expected ok, got ['README.md front matter: ok (keys: description)', 'referenced paths: 1 missing: data/rows.csv']",
       "firstFailureAt": "2026-11-14T15:33:46.000Z",
-      "lastObservedAt": "2026-11-14T15:33:46.000Z",
+      "lastObservedAt": "2026-11-15T00:37:08.000Z",
       "counters": {
-        "observations": 38,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
+        "observations": 39,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
+        "acknowledgedFailed": 1,
         "recurrences": 0
       },
       "delivery": {
@@ -142,7 +149,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:20:17.059Z"
+      "lastTryAt": "2026-11-15T00:37:08.000Z"
     }
   ]
 }
