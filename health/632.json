@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T01:04:24.810Z",
-  "step": {
-    "id": "hl-632-t-242f6961",
-    "kind": "selfTest",
-    "tool": "hf-trending-models",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-trending-models/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T01:04:24.810Z"
-  },
+  "at": "2026-11-15T01:22:08.899Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -101,16 +94,16 @@
       "id": "rp-632-t-run-record-lint-fixtures",
       "artifact": "run-record-lint-fixtures",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL fixtures/clean.txt did not print 'no missing-why warning'; got 'record is complete'",
       "firstFailureAt": "2026-11-14T03:19:30.000Z",
-      "lastObservedAt": "2026-11-15T00:13:14.000Z",
+      "lastObservedAt": "2026-11-15T00:49:09.000Z",
       "counters": {
         "observations": 96,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
         "recurrences": 0
@@ -120,9 +113,9 @@
         "at": "2026-11-15T00:12:59.685Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43660045804)",
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:13:14.000Z"
+      "lastTryAt": "2026-11-15T00:49:09.000Z"
     },
     {
       "id": "rp-632-t-hf-trending-models",
