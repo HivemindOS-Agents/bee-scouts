@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-15T22:38:30.323Z",
+  "at": "2026-11-15T22:54:27.955Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -121,18 +121,18 @@
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: this folder has at least data/ files plus README.md",
       "firstFailureAt": "2026-11-15T21:18:52.000Z",
-      "lastObservedAt": "2026-11-15T21:18:52.000Z",
+      "lastObservedAt": "2026-11-15T22:23:16.000Z",
       "counters": {
-        "observations": 3,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
+        "observations": 4,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
+        "acknowledgedFailed": 1,
         "recurrences": 0
       },
       "delivery": {
@@ -141,8 +141,8 @@
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-15T22:22:58.440Z"
+      "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/glb-fixture-byte-layouts/. It stays parked until its files change. Latest cause: FAIL: this folder has at least data/ files plus README.md\n- 2026-11-15T21:18:52.000Z failed (not yet delivered): FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43762965435]\n- 2026-11-15T22:23:16.000Z failed: FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43768990561]",
+      "lastTryAt": "2026-11-15T22:23:16.000Z"
     }
   ]
 }
