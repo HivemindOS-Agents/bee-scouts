@@ -1,15 +1,8 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-15T22:05:16.760Z",
-  "step": {
-    "id": "hl-1071-t-634706f7",
-    "kind": "selfTest",
-    "tool": "glb-fixture-byte-layouts",
-    "play": "build",
-    "action": "Make the self-test of tools/glb-fixture-byte-layouts/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T21:49:40.608Z"
-  },
+  "at": "2026-11-15T22:38:30.323Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -135,7 +128,7 @@
       "firstFailureAt": "2026-11-15T21:18:52.000Z",
       "lastObservedAt": "2026-11-15T21:18:52.000Z",
       "counters": {
-        "observations": 2,
+        "observations": 3,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -143,13 +136,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "delivered",
-        "at": "2026-11-15T21:49:46.852Z"
+        "state": "acknowledged",
+        "at": "2026-11-15T22:22:58.440Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T21:49:46.852Z"
+      "lastTryAt": "2026-11-15T22:22:58.440Z"
     }
   ]
 }
