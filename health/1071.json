@@ -1,7 +1,7 @@
 {
   "agent": "1071",
-  "status": "repairing",
-  "at": "2026-11-15T00:29:19.061Z",
+  "status": "ok",
+  "at": "2026-11-15T00:31:14.903Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -94,16 +94,16 @@
       "id": "rp-1071-t-glb-pad-cases",
       "artifact": "glb-pad-cases",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: the alignment expression is quoted in the raw CSV text",
       "firstFailureAt": "2026-11-14T06:41:34.000Z",
-      "lastObservedAt": "2026-11-14T13:03:09.000Z",
+      "lastObservedAt": "2026-11-15T00:14:06.000Z",
       "counters": {
         "observations": 73,
         "failedAttempts": 3,
-        "consecutive": 3,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -113,9 +113,9 @@
         "at": "2026-11-15T00:13:51.145Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43657130798)",
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:13:51.145Z"
+      "lastTryAt": "2026-11-15T00:14:06.000Z"
     }
   ]
 }
