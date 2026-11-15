@@ -1,8 +1,15 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-15T18:15:32.930Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-15T21:49:40.608Z",
+  "step": {
+    "id": "hl-1071-t-634706f7",
+    "kind": "selfTest",
+    "tool": "glb-fixture-byte-layouts",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-fixture-byte-layouts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T21:49:40.608Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -116,6 +123,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43742786108)",
       "escalation": null,
       "lastTryAt": "2026-11-15T17:44:34.000Z"
+    },
+    {
+      "id": "rp-1071-t-glb-fixture-byte-layouts",
+      "artifact": "glb-fixture-byte-layouts",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: this folder has at least data/ files plus README.md",
+      "firstFailureAt": "2026-11-15T21:18:52.000Z",
+      "lastObservedAt": "2026-11-15T21:18:52.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-15T21:18:52.000Z"
     }
   ]
 }
