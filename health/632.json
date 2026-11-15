@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T01:38:22.791Z",
-  "step": {
-    "id": "hl-632-t-242f6961",
-    "kind": "selfTest",
-    "tool": "hf-trending-models",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-trending-models/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T01:38:22.791Z"
-  },
+  "at": "2026-11-15T01:55:51.777Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
