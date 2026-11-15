@@ -1,8 +1,15 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-15T00:31:14.903Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-15T15:48:09.274Z",
+  "step": {
+    "id": "hl-1071-t-e4b12a5d",
+    "kind": "selfTest",
+    "tool": "glb-pad-cases",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-pad-cases/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T15:48:09.274Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -94,28 +101,28 @@
       "id": "rp-1071-t-glb-pad-cases",
       "artifact": "glb-pad-cases",
       "kind": "selfTest",
-      "state": "RELEASED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FAIL: the alignment expression is quoted in the raw CSV text",
-      "firstFailureAt": "2026-11-14T06:41:34.000Z",
-      "lastObservedAt": "2026-11-15T00:14:06.000Z",
+      "cause": "FAIL: card carries no long hex hash when none was read back",
+      "firstFailureAt": "2026-11-15T15:17:43.000Z",
+      "lastObservedAt": "2026-11-15T15:17:43.000Z",
       "counters": {
-        "observations": 73,
-        "failedAttempts": 3,
-        "consecutive": 0,
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 1
       },
       "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-15T00:13:51.145Z"
+        "state": "unknown",
+        "at": null
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43657130798)",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:14:06.000Z"
+      "lastTryAt": "2026-11-15T15:17:43.000Z"
     }
   ]
 }
