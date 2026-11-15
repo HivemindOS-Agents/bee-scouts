@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-15T08:04:37.593Z",
-  "step": {
-    "id": "hl-547-t-f52f33f0",
-    "kind": "selfTest",
-    "tool": "hf-publish-check-fixtures-cases",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-publish-check-fixtures-cases/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T08:04:37.593Z"
-  },
+  "at": "2026-11-15T08:22:00.554Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -170,13 +163,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-15T08:06:20.833Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T07:33:46.000Z"
+      "lastTryAt": "2026-11-15T08:06:20.833Z"
     }
   ]
 }
