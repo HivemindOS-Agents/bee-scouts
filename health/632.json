@@ -1,14 +1,14 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-14T10:13:51.971Z",
+  "at": "2026-11-15T00:28:31.405Z",
   "step": {
-    "id": "hl-632-t-c167b123",
+    "id": "hl-632-t-242f6961",
     "kind": "selfTest",
-    "tool": "run-record-lint-fixtures",
+    "tool": "hf-trending-models",
     "play": "build",
-    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-14T09:56:40.275Z"
+    "action": "Make the self-test of tools/hf-trending-models/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T00:28:31.405Z"
   },
   "reasons": [],
   "failures": 0,
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-14T03:19:30.000Z",
       "lastObservedAt": "2026-11-14T03:19:30.000Z",
       "counters": {
-        "observations": 29,
+        "observations": 95,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -116,29 +116,29 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-15T00:12:59.685Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-14T03:19:30.000Z"
+      "lastTryAt": "2026-11-15T00:12:59.685Z"
     },
     {
       "id": "rp-632-t-hf-trending-models",
       "artifact": "hf-trending-models",
       "kind": "selfTest",
       "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6",
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
-      "lastObservedAt": "2026-11-14T09:41:08.000Z",
+      "lastObservedAt": "2026-11-14T15:52:03.000Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 67,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -149,7 +149,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-14T09:41:08.000Z"
+      "lastTryAt": "2026-11-14T15:52:03.000Z"
     }
   ]
 }
