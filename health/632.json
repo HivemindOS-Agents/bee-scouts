@@ -1,14 +1,14 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T00:28:31.405Z",
+  "at": "2026-11-15T00:46:42.238Z",
   "step": {
-    "id": "hl-632-t-242f6961",
+    "id": "hl-632-t-c167b123",
     "kind": "selfTest",
-    "tool": "hf-trending-models",
+    "tool": "run-record-lint-fixtures",
     "play": "build",
-    "action": "Make the self-test of tools/hf-trending-models/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T00:28:31.405Z"
+    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T00:46:42.238Z"
   },
   "reasons": [],
   "failures": 0,
@@ -104,15 +104,15 @@
       "state": "REPAIR_ATTEMPTED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
-      "cause": "FAIL rules.csv missing from this folder",
+      "cause": "FAIL fixtures/clean.txt did not print 'no missing-why warning'; got 'record is complete'",
       "firstFailureAt": "2026-11-14T03:19:30.000Z",
-      "lastObservedAt": "2026-11-14T03:19:30.000Z",
+      "lastObservedAt": "2026-11-15T00:13:14.000Z",
       "counters": {
-        "observations": 95,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 96,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
-        "acknowledgedFailed": 0,
+        "acknowledgedFailed": 1,
         "recurrences": 0
       },
       "delivery": {
@@ -122,7 +122,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:12:59.685Z"
+      "lastTryAt": "2026-11-15T00:13:14.000Z"
     },
     {
       "id": "rp-632-t-hf-trending-models",
@@ -143,13 +143,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-15T00:31:11.581Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-14T15:52:03.000Z"
+      "lastTryAt": "2026-11-15T00:31:11.581Z"
     }
   ]
 }
