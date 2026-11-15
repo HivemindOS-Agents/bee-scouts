@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T06:00:20.485Z",
+  "at": "2026-11-15T14:53:36.526Z",
   "step": {
     "id": "hl-632-t-c167b123",
     "kind": "selfTest",
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
       "lastObservedAt": "2026-11-15T01:40:41.000Z",
       "counters": {
-        "observations": 84,
+        "observations": 118,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 1,
@@ -135,7 +135,7 @@
       "firstFailureAt": "2026-11-15T04:58:59.000Z",
       "lastObservedAt": "2026-11-15T04:58:59.000Z",
       "counters": {
-        "observations": 2,
+        "observations": 36,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -150,6 +150,47 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-15T04:58:59.000Z"
+    },
+    {
+      "id": "rp-632-t-hf-run-lint-fixture-card",
+      "artifact": "hf-run-lint-fixture-card",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "NameError: name 'k' is not defined",
+      "firstFailureAt": "2026-11-15T14:22:37.000Z",
+      "lastObservedAt": "2026-11-15T14:22:37.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-15T14:22:37.000Z"
     }
-  ]
+  ],
+  "watchdog": {
+    "at": "2026-11-15T13:48:48.674Z",
+    "version": "watchdog-v1",
+    "mode": "report",
+    "findingsOpen": 27,
+    "top": {
+      "check": "D1",
+      "subject": "tools/run-record-lint-fixtures",
+      "detail": "missing in commit: fixtures/missing-why.txt, fixtures/unlabelled-claim.txt (named in self_test.py)"
+    },
+    "notChecked": [],
+    "requests": 24,
+    "elapsedMs": 2472
+  }
 }
