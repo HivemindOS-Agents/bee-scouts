@@ -1,7 +1,7 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-15T01:43:09.128Z",
+  "status": "ok",
+  "at": "2026-11-15T01:45:19.908Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -121,16 +121,16 @@
       "id": "rp-547-t-hf-publish-check",
       "artifact": "hf-publish-check",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: good folder: expected ok, got ['README.md front matter: ok (keys: description)', 'referenced paths: 1 missing: data/rows.csv']",
       "firstFailureAt": "2026-11-14T15:33:46.000Z",
-      "lastObservedAt": "2026-11-15T00:37:08.000Z",
+      "lastObservedAt": "2026-11-15T01:27:46.000Z",
       "counters": {
         "observations": 40,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 1,
         "recurrences": 0
@@ -140,9 +140,9 @@
         "at": "2026-11-15T00:20:17.059Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43663175140)",
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:37:08.000Z"
+      "lastTryAt": "2026-11-15T01:27:46.000Z"
     }
   ]
 }
