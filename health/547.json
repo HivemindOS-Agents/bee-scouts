@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-15T00:35:28.613Z",
-  "step": {
-    "id": "hl-547-t-e58ee9c8",
-    "kind": "selfTest",
-    "tool": "hf-publish-check",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-publish-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T00:18:32.650Z"
-  },
+  "at": "2026-11-15T00:52:29.635Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
