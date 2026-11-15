@@ -1,14 +1,14 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T14:53:36.526Z",
+  "at": "2026-11-15T17:43:54.869Z",
   "step": {
-    "id": "hl-632-t-c167b123",
+    "id": "hl-632-t-cb4cee45",
     "kind": "selfTest",
-    "tool": "run-record-lint-fixtures",
+    "tool": "hf-run-lint-fixture-card",
     "play": "build",
-    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T05:30:41.815Z"
+    "action": "Make the self-test of tools/hf-run-lint-fixture-card/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T17:43:54.869Z"
   },
   "reasons": [],
   "failures": 0,
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
       "lastObservedAt": "2026-11-15T01:40:41.000Z",
       "counters": {
-        "observations": 118,
+        "observations": 133,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 1,
@@ -135,7 +135,7 @@
       "firstFailureAt": "2026-11-15T04:58:59.000Z",
       "lastObservedAt": "2026-11-15T04:58:59.000Z",
       "counters": {
-        "observations": 36,
+        "observations": 50,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -162,7 +162,7 @@
       "firstFailureAt": "2026-11-15T14:22:37.000Z",
       "lastObservedAt": "2026-11-15T14:22:37.000Z",
       "counters": {
-        "observations": 1,
+        "observations": 16,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
