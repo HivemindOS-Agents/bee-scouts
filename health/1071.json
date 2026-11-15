@@ -1,15 +1,8 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-15T16:37:11.853Z",
-  "step": {
-    "id": "hl-1071-t-e4b12a5d",
-    "kind": "selfTest",
-    "tool": "glb-pad-cases",
-    "play": "build",
-    "action": "Make the self-test of tools/glb-pad-cases/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T15:48:09.274Z"
-  },
+  "at": "2026-11-15T17:10:56.585Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -108,7 +101,7 @@
       "firstFailureAt": "2026-11-15T15:17:43.000Z",
       "lastObservedAt": "2026-11-15T15:17:43.000Z",
       "counters": {
-        "observations": 4,
+        "observations": 5,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
