@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "at": "2026-11-15T07:22:44.223Z",
+  "at": "2026-11-15T07:31:07.185Z",
   "skills": [
     {
       "version": "aeon/tx-explain@eafd1ae43bdf5fca",
@@ -14,15 +14,91 @@
       "runs": 7,
       "usedBy": [
         "1071",
+        "547",
         "632",
         "86"
       ],
       "checks": [
+        "547: media in hivepunkz-agents prompt",
         "1071: media in hivepunkz-agents prompt",
         "86: media in hivepunkz-agents prompt",
         "632: media in hivepunkz-agents prompt"
       ],
-      "at": "2026-11-15T07:22:44.223Z"
+      "at": "2026-11-15T07:31:07.185Z"
+    },
+    {
+      "version": "aeon/you-web-search@fc67463359781e88",
+      "source": "aeon",
+      "slug": "you-web-search",
+      "name": "you-web-search",
+      "description": "Web search using You.com Search API with high-quality, cited results — runs keyless out of the box; YDC_API_KEY unlocks higher limits and real-time web crawling",
+      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/you-web-search/SKILL.md",
+      "sha256": "fc67463359781e886f3743e7f2ed6cd563c1eb74eba2ebb81195a793d4ac655e",
+      "bytes": 12762,
+      "runs": 1,
+      "usedBy": [
+        "547",
+        "632"
+      ],
+      "checks": [
+        "547: proposal in hivepunkz-agents prompt",
+        "632: build in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:31:07.185Z"
+    },
+    {
+      "version": "huggingface/hf-cloud-serving-image-selection@6af6adfe1cdcf7bc",
+      "source": "huggingface",
+      "slug": "hf-cloud-serving-image-selection",
+      "name": "hf-cloud-serving-image-selection",
+      "description": "Pick the right serving container for a SageMaker model deployment and find its current image URI. Use this skill whenever about to deploy a model to a SageMaker endpoint and an image URI needs to be c",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-serving-image-selection/SKILL.md",
+      "sha256": "6af6adfe1cdcf7bcc061ee11e1e2cf88bae9fbb08bf79d16945ce748839c1d76",
+      "bytes": 18539,
+      "runs": 2,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:31:07.185Z"
+    },
+    {
+      "version": "huggingface/huggingface-tool-builder@2846b591259b134a",
+      "source": "huggingface",
+      "slug": "huggingface-tool-builder",
+      "name": "huggingface-tool-builder",
+      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md",
+      "sha256": "2846b591259b134a5978073e4da477a06275d7a10893ce1383a0a3920c3ff1e1",
+      "bytes": 5905,
+      "runs": 5,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: build in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:31:07.185Z"
+    },
+    {
+      "version": "huggingface/hf-cloud-python-env-setup@c5d108b134dc5237",
+      "source": "huggingface",
+      "slug": "hf-cloud-python-env-setup",
+      "name": "hf-cloud-python-env-setup",
+      "description": "Set up an isolated Python environment for SageMaker / AWS work, with the right Python version and current boto3. Use this skill whenever Python code will be executed for a SageMaker deployment, traini",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-python-env-setup/SKILL.md",
+      "sha256": "c5d108b134dc5237ec63fbbb3200717853f2c5281ab33b7a2f1576b46a4d0fe8",
+      "bytes": 6723,
+      "runs": 2,
+      "usedBy": [
+        "547"
+      ],
+      "checks": [
+        "547: media in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:31:07.185Z"
     },
     {
       "version": "bankr/ethskills-why@fc34ef169dc09a80",
@@ -133,26 +209,6 @@
       "at": "2026-11-14T07:40:46.639Z"
     },
     {
-      "version": "aeon/you-web-search@fc67463359781e88",
-      "source": "aeon",
-      "slug": "you-web-search",
-      "name": "you-web-search",
-      "description": "Web search using You.com Search API with high-quality, cited results — runs keyless out of the box; YDC_API_KEY unlocks higher limits and real-time web crawling",
-      "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/you-web-search/SKILL.md",
-      "sha256": "fc67463359781e886f3743e7f2ed6cd563c1eb74eba2ebb81195a793d4ac655e",
-      "bytes": 12762,
-      "runs": 1,
-      "usedBy": [
-        "547",
-        "632"
-      ],
-      "checks": [
-        "632: build in hivepunkz-agents prompt",
-        "547: proposal in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:25:04.874Z"
-    },
-    {
       "version": "bankr/aeon-huggingface-trending@3ab8867027a3bf03",
       "source": "bankr",
       "slug": "aeon-huggingface-trending",
@@ -239,42 +295,6 @@
       ],
       "checks": [
         "547: research in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:16:22.647Z"
-    },
-    {
-      "version": "huggingface/hf-cloud-serving-image-selection@6af6adfe1cdcf7bc",
-      "source": "huggingface",
-      "slug": "hf-cloud-serving-image-selection",
-      "name": "hf-cloud-serving-image-selection",
-      "description": "Pick the right serving container for a SageMaker model deployment and find its current image URI. Use this skill whenever about to deploy a model to a SageMaker endpoint and an image URI needs to be c",
-      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-serving-image-selection/SKILL.md",
-      "sha256": "6af6adfe1cdcf7bcc061ee11e1e2cf88bae9fbb08bf79d16945ce748839c1d76",
-      "bytes": 18539,
-      "runs": 2,
-      "usedBy": [
-        "547"
-      ],
-      "checks": [
-        "547: media in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:16:22.647Z"
-    },
-    {
-      "version": "huggingface/huggingface-tool-builder@2846b591259b134a",
-      "source": "huggingface",
-      "slug": "huggingface-tool-builder",
-      "name": "huggingface-tool-builder",
-      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the",
-      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md",
-      "sha256": "2846b591259b134a5978073e4da477a06275d7a10893ce1383a0a3920c3ff1e1",
-      "bytes": 5905,
-      "runs": 5,
-      "usedBy": [
-        "547"
-      ],
-      "checks": [
-        "547: build in hivepunkz-agents prompt"
       ],
       "at": "2026-11-14T07:16:22.647Z"
     }
