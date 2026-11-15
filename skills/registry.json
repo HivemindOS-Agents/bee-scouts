@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "at": "2026-11-15T07:31:07.185Z",
+  "at": "2026-11-15T07:43:05.158Z",
   "skills": [
     {
       "version": "aeon/tx-explain@eafd1ae43bdf5fca",
@@ -11,7 +11,7 @@
       "url": "https://raw.githubusercontent.com/aeonfun/aeon/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/tx-explain/SKILL.md",
       "sha256": "eafd1ae43bdf5fcacc8c5c02bcb6f7848eb533c34bfeb3e7f2b06dbf9bf4df94",
       "bytes": 4565,
-      "runs": 7,
+      "runs": 8,
       "usedBy": [
         "1071",
         "547",
@@ -19,12 +19,12 @@
         "86"
       ],
       "checks": [
+        "632: media in hivepunkz-agents prompt",
         "547: media in hivepunkz-agents prompt",
         "1071: media in hivepunkz-agents prompt",
-        "86: media in hivepunkz-agents prompt",
-        "632: media in hivepunkz-agents prompt"
+        "86: media in hivepunkz-agents prompt"
       ],
-      "at": "2026-11-15T07:31:07.185Z"
+      "at": "2026-11-15T07:43:05.158Z"
     },
     {
       "version": "aeon/you-web-search@fc67463359781e88",
@@ -41,10 +41,100 @@
         "632"
       ],
       "checks": [
-        "547: proposal in hivepunkz-agents prompt",
+        "632: build in hivepunkz-agents prompt",
+        "547: proposal in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:43:05.158Z"
+    },
+    {
+      "version": "huggingface/huggingface-spaces@efa6506be823aaea",
+      "source": "huggingface",
+      "slug": "huggingface-spaces",
+      "name": "huggingface-spaces",
+      "description": "Build, deploy, and maintain applications on Hugging Face Spaces — Gradio / Docker / Static SDKs, ZeroGPU and dedicated hardware, model loading, debugging, buckets, inference providers, community grant",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-spaces/SKILL.md",
+      "sha256": "efa6506be823aaea03c31ef6cd06734485f7c451065aab43cfa5b5053c0df82b",
+      "bytes": 17903,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
         "632: build in hivepunkz-agents prompt"
       ],
-      "at": "2026-11-15T07:31:07.185Z"
+      "at": "2026-11-15T07:43:05.158Z"
+    },
+    {
+      "version": "huggingface/train-sentence-transformers@9bd098d81049fc24",
+      "source": "huggingface",
+      "slug": "train-sentence-transformers",
+      "name": "train-sentence-transformers",
+      "description": "Train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder, dense or static embedding model for retrieval, similarity, clustering, classification, paraphrase mining, dedu",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/train-sentence-transformers/SKILL.md",
+      "sha256": "9bd098d81049fc245032ee4f97cf5d9de906d726731ace4a6df0bad6d9dcd182",
+      "bytes": 10502,
+      "runs": 3,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:43:05.158Z"
+    },
+    {
+      "version": "bankr/ethskills-building-blocks@0b083f49d33842e6",
+      "source": "bankr",
+      "slug": "ethskills-building-blocks",
+      "name": "Building Blocks",
+      "description": "DeFi legos and protocol composability — Uniswap V4 hooks, Aave flash loans, ERC-4626 vaults, Aerodrome on Base, GMX/Pendle on Arbitrum. Dominant DEX per L2 and how to combine protocols safely.",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-building-blocks/SKILL.md",
+      "sha256": "0b083f49d33842e6f67d5cd0902c1768365abcd7cd47a9309528e03a8b01cb1e",
+      "bytes": 416,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:43:05.158Z"
+    },
+    {
+      "version": "bankr/aeon-paper-pick@e6552098f8bd7517",
+      "source": "bankr",
+      "slug": "aeon-paper-pick",
+      "name": "aeon-paper-pick",
+      "description": "Surface the one AI / ML paper to read today from Hugging Face Papers, with the central claim, why it's worth an hour, where it might be wrong, and a time-budgeted read order. Filters out pure benchmar",
+      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-paper-pick/SKILL.md",
+      "sha256": "e6552098f8bd7517e70d00e3894c816830662f383fa0f5941e5311fac1ef2360",
+      "bytes": 2243,
+      "runs": 1,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: research in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:43:05.158Z"
+    },
+    {
+      "version": "huggingface/huggingface-local-models@814640db1d5f2f27",
+      "source": "huggingface",
+      "slug": "huggingface-local-models",
+      "name": "huggingface-local-models",
+      "description": "Use to select models to run locally with llama.cpp and GGUF on CPU, Mac Metal, CUDA, or ROCm. Covers finding GGUFs, quant selection, running servers, exact GGUF file lookup, conversion, and OpenAI-com",
+      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-local-models/SKILL.md",
+      "sha256": "814640db1d5f2f274aec09d66b3589ed5a0fdcfaf536afd508b1d757dcae1534",
+      "bytes": 3780,
+      "runs": 4,
+      "usedBy": [
+        "632"
+      ],
+      "checks": [
+        "632: agents in hivepunkz-agents prompt"
+      ],
+      "at": "2026-11-15T07:43:05.158Z"
     },
     {
       "version": "huggingface/hf-cloud-serving-image-selection@6af6adfe1cdcf7bc",
@@ -223,60 +313,6 @@
       ],
       "checks": [
         "632: proposal in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:25:04.874Z"
-    },
-    {
-      "version": "huggingface/huggingface-spaces@efa6506be823aaea",
-      "source": "huggingface",
-      "slug": "huggingface-spaces",
-      "name": "huggingface-spaces",
-      "description": "Build, deploy, and maintain applications on Hugging Face Spaces — Gradio / Docker / Static SDKs, ZeroGPU and dedicated hardware, model loading, debugging, buckets, inference providers, community grant",
-      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-spaces/SKILL.md",
-      "sha256": "efa6506be823aaea03c31ef6cd06734485f7c451065aab43cfa5b5053c0df82b",
-      "bytes": 17903,
-      "runs": 1,
-      "usedBy": [
-        "632"
-      ],
-      "checks": [
-        "632: build in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:25:04.874Z"
-    },
-    {
-      "version": "huggingface/train-sentence-transformers@9bd098d81049fc24",
-      "source": "huggingface",
-      "slug": "train-sentence-transformers",
-      "name": "train-sentence-transformers",
-      "description": "Train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder, dense or static embedding model for retrieval, similarity, clustering, classification, paraphrase mining, dedu",
-      "url": "https://raw.githubusercontent.com/huggingface/skills/fabc634a893f62ad5c2039830397efa35fa62715/skills/train-sentence-transformers/SKILL.md",
-      "sha256": "9bd098d81049fc245032ee4f97cf5d9de906d726731ace4a6df0bad6d9dcd182",
-      "bytes": 10502,
-      "runs": 3,
-      "usedBy": [
-        "632"
-      ],
-      "checks": [
-        "632: research in hivepunkz-agents prompt"
-      ],
-      "at": "2026-11-14T07:25:04.874Z"
-    },
-    {
-      "version": "bankr/ethskills-building-blocks@0b083f49d33842e6",
-      "source": "bankr",
-      "slug": "ethskills-building-blocks",
-      "name": "Building Blocks",
-      "description": "DeFi legos and protocol composability — Uniswap V4 hooks, Aave flash loans, ERC-4626 vaults, Aerodrome on Base, GMX/Pendle on Arbitrum. Dominant DEX per L2 and how to combine protocols safely.",
-      "url": "https://raw.githubusercontent.com/BankrBot/skills/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-building-blocks/SKILL.md",
-      "sha256": "0b083f49d33842e6f67d5cd0902c1768365abcd7cd47a9309528e03a8b01cb1e",
-      "bytes": 416,
-      "runs": 1,
-      "usedBy": [
-        "632"
-      ],
-      "checks": [
-        "632: research in hivepunkz-agents prompt"
       ],
       "at": "2026-11-14T07:25:04.874Z"
     },
