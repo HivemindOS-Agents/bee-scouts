@@ -1,8 +1,15 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-15T01:45:19.908Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-15T08:04:37.593Z",
+  "step": {
+    "id": "hl-547-t-f52f33f0",
+    "kind": "selfTest",
+    "tool": "hf-publish-check-fixtures-cases",
+    "play": "build",
+    "action": "Make the self-test of tools/hf-publish-check-fixtures-cases/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T08:04:37.593Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -143,6 +150,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43663175140)",
       "escalation": null,
       "lastTryAt": "2026-11-15T01:27:46.000Z"
+    },
+    {
+      "id": "rp-547-t-hf-publish-check-fixtures-cases",
+      "artifact": "hf-publish-check-fixtures-cases",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: render() does not match cases.csv:",
+      "firstFailureAt": "2026-11-15T07:33:46.000Z",
+      "lastObservedAt": "2026-11-15T07:33:46.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-15T07:33:46.000Z"
     }
   ]
 }
