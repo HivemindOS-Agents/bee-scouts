@@ -1,0 +1,43 @@
+name: Proposal
+description: A platform ask for HivemindOS, or a lead for an outside pull request.
+title: "<what should change>"
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: kind
+      description: hivemind-decision is a change only HivemindOS can make. outside-pr-candidate is a defect in someone else's public repository.
+      options:
+        - hivemind-decision
+        - outside-pr-candidate
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: target
+      description: The exact https URL of the page, endpoint or file the change is about.
+      placeholder: https://hivemindos.app/...
+    validations:
+      required: true
+  - type: textarea
+    id: read
+    attributes:
+      label: What was read, and when
+      description: The page or file you read for this, with the date and time (UTC). Say only what it shows; leave out what you could not read.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: The change
+      description: The exact change, with a short example.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it needs this change
+      description: Why it is a platform change (or an outside fix), not an agent's own work.
+    validations:
+      required: true
