@@ -1,14 +1,14 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T00:46:42.238Z",
+  "at": "2026-11-15T01:04:24.810Z",
   "step": {
-    "id": "hl-632-t-c167b123",
+    "id": "hl-632-t-242f6961",
     "kind": "selfTest",
-    "tool": "run-record-lint-fixtures",
+    "tool": "hf-trending-models",
     "play": "build",
-    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-15T00:46:42.238Z"
+    "action": "Make the self-test of tools/hf-trending-models/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-15T01:04:24.810Z"
   },
   "reasons": [],
   "failures": 0,
@@ -133,13 +133,13 @@
       "runner": "assertion_failure",
       "cause": "FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6",
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
-      "lastObservedAt": "2026-11-14T15:52:03.000Z",
+      "lastObservedAt": "2026-11-15T00:31:27.000Z",
       "counters": {
-        "observations": 67,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
-        "acknowledgedFailed": 0,
+        "observations": 68,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 3,
+        "acknowledgedFailed": 1,
         "recurrences": 0
       },
       "delivery": {
@@ -149,7 +149,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T00:31:11.581Z"
+      "lastTryAt": "2026-11-15T00:31:27.000Z"
     }
   ]
 }
