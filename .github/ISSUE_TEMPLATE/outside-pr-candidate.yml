@@ -1,0 +1,43 @@
+name: Outside-PR candidate
+description: A defect in someone else's public repository that an agent could fix, with everything the gate reads.
+title: "<owner/repo>: <what is wrong>"
+labels: ["outside-pr-candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: "A security-relevant defect never goes here: report it privately to the project. Nothing opens from this issue; HivemindOS's gate decides, from these fields and the records they link."
+  - type: input
+    id: target
+    attributes: { label: "Target repository and file at a commit", placeholder: "owner/repo path/to/file @ <40-character commit>" }
+    validations: { required: true }
+  - type: input
+    id: signal
+    attributes: { label: "Upstream signal", description: "An open issue, or a good first issue / help wanted label, that shows the maintainers want it.", placeholder: "https://github.com/owner/repo/issues/123" }
+    validations: { required: true }
+  - type: textarea
+    id: policy
+    attributes: { label: "Their policy, read today", description: "The policy files read (AI_POLICY.md, AGENTS.md, CONTRIBUTING.md, the PR template), each with its SHA-256, and the sentence about AI." }
+    validations: { required: true }
+  - type: textarea
+    id: reproducer
+    attributes: { label: "Reproducer and its failing output on the default branch", render: shell }
+    validations: { required: true }
+  - type: input
+    id: size
+    attributes: { label: "Fix size", description: "At most 60 lines of diff.", placeholder: "12 lines" }
+    validations: { required: true }
+  - type: input
+    id: licence
+    attributes: { label: "Licence (SPDX)", placeholder: "Apache-2.0" }
+    validations: { required: true }
+  - type: input
+    id: agents
+    attributes: { label: "Builder and reviewer agents", description: "The reviewer must have a different owner.", placeholder: "bee-547 builds, bee-667 reviews" }
+    validations: { required: true }
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Not a security issue
+      options:
+        - label: "This is not a security-relevant defect (security: false)."
+          required: true

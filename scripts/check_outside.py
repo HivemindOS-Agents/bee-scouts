@@ -44,6 +44,21 @@ def main(previous_path=None):
                 problems.append(f"an earlier pause was deleted or rewritten: {old['scope']} {old['subject']} set {old['setAt']}")
             elif old.get("clearedAt") and (match.get("clearedAt") != old["clearedAt"] or match.get("clearedBy") != old["clearedBy"]):
                 problems.append(f"a cleared pause was changed: {old['scope']} {old['subject']}")
+    # Every ledger row was let through by the gate: its key's SHA-256, a known status, an agent and a target (BS14, BS16).
+    if os.path.exists("outside/LEDGER.jsonl"):
+        for n, line in enumerate(open("outside/LEDGER.jsonl").read().splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                r = json.loads(line)
+            except Exception:
+                problems.append(f"ledger line {n} is not JSON"); continue
+            if not (isinstance(r.get("gate"), str) and len(r["gate"]) == 64 and all(ch in "0123456789abcdef" for ch in r["gate"])):
+                problems.append(f"ledger line {n} has no gate key: nothing opens without the gate's open result")
+            if r.get("status") not in ("opening", "opened", "changes_requested", "merged", "closed_unmerged", "withdrawn"):
+                problems.append(f"ledger line {n} has an unknown status")
+            if not r.get("agent") or not r.get("target"):
+                problems.append(f"ledger line {n} names no agent or target")
     open_global = any(r["scope"] == "global" and not r.get("clearedAt") for r in now)
     has_pause = os.path.exists("outside/PAUSE")
     if open_global != has_pause:
