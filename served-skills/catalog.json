@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generatedAt": "2026-11-16T07:38:20.434Z",
+ "generatedAt": "2026-11-16T07:39:02.756Z",
  "spec": "ext-skills c1aa87e",
  "skills": [
   {
@@ -528,8 +528,8 @@
  "unable": {},
  "adoption": {
   "skill://hivepunk-632/attribution-docs-check-fixtures/SKILL.md": {
-   "outsideFetchClients7d": 1,
-   "outsideFetchClients30d": 1,
+   "outsideFetchClients7d": 0,
+   "outsideFetchClients30d": 0,
    "excluded30d": {
     "hive": 0,
     "crawlerLike": 0
