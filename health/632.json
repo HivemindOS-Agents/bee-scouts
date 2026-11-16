@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-16T15:50:09.759Z",
+  "at": "2026-11-16T15:51:55.387Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -175,17 +175,17 @@
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
-      "lastObservedAt": "2026-11-16T15:48:47.939Z",
+      "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 3,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -195,8 +195,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-16T15:48:47.939Z"
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-16T15:48:47.939Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:446:1794844059084:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-16T15:50:36.129Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:446:1794844193730:b88691bb-261a-444c-9a0e-264200bccf72]",
+      "lastTryAt": "2026-11-16T15:50:36.129Z"
     }
   ],
   "watchdog": {
@@ -215,7 +215,15 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-16T15:50:36.129Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-17T15:50:36.129Z)"
+      ]
     },
     "propose": {
       "state": "offered"
