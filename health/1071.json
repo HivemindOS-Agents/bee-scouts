@@ -1,8 +1,15 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-15T22:54:27.955Z",
-  "step": null,
+  "at": "2026-11-16T01:44:04.476Z",
+  "step": {
+    "id": "hl-1071-t-634706f7",
+    "kind": "selfTest",
+    "tool": "glb-fixture-byte-layouts",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-fixture-byte-layouts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-16T01:44:04.476Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -121,18 +128,18 @@
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
-      "state": "PARKED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: this folder has at least data/ files plus README.md",
       "firstFailureAt": "2026-11-15T21:18:52.000Z",
-      "lastObservedAt": "2026-11-15T22:23:16.000Z",
+      "lastObservedAt": "2026-11-16T01:26:43.000Z",
       "counters": {
-        "observations": 4,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
-        "acknowledgedFailed": 1,
+        "observations": 18,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 1,
+        "acknowledgedFailed": 2,
         "recurrences": 0
       },
       "delivery": {
@@ -142,7 +149,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/glb-fixture-byte-layouts/. It stays parked until its files change. Latest cause: FAIL: this folder has at least data/ files plus README.md\n- 2026-11-15T21:18:52.000Z failed (not yet delivered): FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43762965435]\n- 2026-11-15T22:23:16.000Z failed: FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43768990561]",
-      "lastTryAt": "2026-11-15T22:23:16.000Z"
+      "lastTryAt": "2026-11-16T01:26:43.000Z"
     }
   ]
 }
