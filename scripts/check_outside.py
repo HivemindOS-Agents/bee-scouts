@@ -59,6 +59,26 @@ def main(previous_path=None):
                 problems.append(f"ledger line {n} has an unknown status")
             if not r.get("agent") or not r.get("target"):
                 problems.append(f"ledger line {n} names no agent or target")
+    # The trend board (BS10): every row has its licence, its AI policy and when it was checked, within 14 days.
+    if os.path.exists("outside/trends.jsonl"):
+        from datetime import datetime, timezone
+        today = datetime.now(timezone.utc)
+        for n, line in enumerate(open("outside/trends.jsonl").read().splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                r = json.loads(line)
+            except Exception:
+                problems.append(f"trends line {n} is not JSON"); continue
+            for field in ("license", "ai_policy", "checked_at"):
+                if not r.get(field):
+                    problems.append(f"trends line {n} ({r.get('id')}) has no {field}")
+            try:
+                age = (today - datetime.fromisoformat(str(r.get("checked_at")).replace("Z", "+00:00"))).days
+                if age > 14:
+                    problems.append(f"trends line {n} ({r.get('id')}) was checked {age} days ago")
+            except ValueError:
+                pass
     open_global = any(r["scope"] == "global" and not r.get("clearedAt") for r in now)
     has_pause = os.path.exists("outside/PAUSE")
     if open_global != has_pause:
