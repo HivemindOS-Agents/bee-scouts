@@ -1,7 +1,7 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-16T05:11:07.081Z",
+  "status": "repairing",
+  "at": "2026-11-16T18:56:39.768Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -143,6 +143,67 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43805475122)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/glb-fixture-byte-layouts/. It stays parked until its files change. Latest cause: FAIL: this folder has at least data/ files plus README.md\n- 2026-11-15T21:18:52.000Z failed (not yet delivered): FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43762965435]\n- 2026-11-15T22:23:16.000Z failed: FAIL: this folder has at least data/ files plus README.md [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43768990561]",
       "lastTryAt": "2026-11-16T04:40:22.000Z"
+    },
+    {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "firstFailureAt": "2026-11-16T18:55:26.488Z",
+      "lastObservedAt": "2026-11-16T18:55:26.488Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-16T18:55:26.488Z"
     }
-  ]
+  ],
+  "plays": {
+    "publish-dataset": {
+      "state": "offered"
+    },
+    "propose": {
+      "state": "offered"
+    },
+    "research": {
+      "state": "offered"
+    },
+    "tell-agents": {
+      "state": "offered"
+    },
+    "build-tool": {
+      "state": "offered"
+    },
+    "media": {
+      "state": "offered"
+    },
+    "pay-outside": {
+      "state": "precondition_unmet",
+      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reopenOn": [
+        "payer added",
+        "allow-list commit"
+      ]
+    },
+    "routine": {
+      "state": "offered"
+    },
+    "agents": {
+      "state": "offered"
+    }
+  }
 }
