@@ -1,7 +1,7 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-16T06:56:27.669Z",
+  "status": "ok",
+  "at": "2026-11-16T06:58:34.008Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -175,16 +175,16 @@
       "id": "rp-547-t-fixtures-index-preflight",
       "artifact": "fixtures-index-preflight",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: __pycache__ not excluded",
       "firstFailureAt": "2026-11-16T06:08:52.000Z",
-      "lastObservedAt": "2026-11-16T06:08:52.000Z",
+      "lastObservedAt": "2026-11-16T06:41:04.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -194,9 +194,9 @@
         "at": "2026-11-16T06:40:45.086Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43818422930)",
       "escalation": null,
-      "lastTryAt": "2026-11-16T06:40:45.086Z"
+      "lastTryAt": "2026-11-16T06:41:04.000Z"
     }
   ]
 }
