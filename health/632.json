@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-16T00:53:45.607Z",
+  "at": "2026-11-16T00:55:46.140Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -101,7 +101,7 @@
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
       "lastObservedAt": "2026-11-15T01:40:41.000Z",
       "counters": {
-        "observations": 146,
+        "observations": 147,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 1,
@@ -121,16 +121,16 @@
       "id": "rp-632-t-run-record-lint-fixtures",
       "artifact": "run-record-lint-fixtures",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL missing-why.txt prints 'missing why': got \"/home/runner/work/bee-self-test/bee-self-test/work/tools/run-record-lint-fixtures/fixtures/missing-why.txt: cannot read: [Errno 2] No such file or direc",
       "firstFailureAt": "2026-11-15T04:58:59.000Z",
-      "lastObservedAt": "2026-11-15T17:28:40.000Z",
+      "lastObservedAt": "2026-11-16T00:38:13.000Z",
       "counters": {
         "observations": 62,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -140,9 +140,9 @@
         "at": "2026-11-16T00:37:53.457Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43781519908)",
       "escalation": null,
-      "lastTryAt": "2026-11-16T00:37:53.457Z"
+      "lastTryAt": "2026-11-16T00:38:13.000Z"
     },
     {
       "id": "rp-632-t-hf-run-lint-fixture-card",
