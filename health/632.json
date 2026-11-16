@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-15T17:43:54.869Z",
+  "at": "2026-11-16T00:16:32.050Z",
   "step": {
     "id": "hl-632-t-cb4cee45",
     "kind": "selfTest",
@@ -108,7 +108,7 @@
       "firstFailureAt": "2026-11-14T09:41:08.000Z",
       "lastObservedAt": "2026-11-15T01:40:41.000Z",
       "counters": {
-        "observations": 133,
+        "observations": 144,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 1,
@@ -129,15 +129,15 @@
       "artifact": "run-record-lint-fixtures",
       "kind": "selfTest",
       "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
-      "cause": "FAIL fixtures/clean.txt exits 0: got 1",
+      "cause": "FAIL missing-why.txt prints 'missing why': got \"/home/runner/work/bee-self-test/bee-self-test/work/tools/run-record-lint-fixtures/fixtures/missing-why.txt: cannot read: [Errno 2] No such file or direc",
       "firstFailureAt": "2026-11-15T04:58:59.000Z",
-      "lastObservedAt": "2026-11-15T04:58:59.000Z",
+      "lastObservedAt": "2026-11-15T17:28:40.000Z",
       "counters": {
-        "observations": 50,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 61,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -149,7 +149,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T04:58:59.000Z"
+      "lastTryAt": "2026-11-15T17:28:40.000Z"
     },
     {
       "id": "rp-632-t-hf-run-lint-fixture-card",
@@ -162,7 +162,7 @@
       "firstFailureAt": "2026-11-15T14:22:37.000Z",
       "lastObservedAt": "2026-11-15T14:22:37.000Z",
       "counters": {
-        "observations": 16,
+        "observations": 27,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -170,27 +170,27 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "delivered",
+        "at": "2026-11-16T00:00:40.225Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-15T14:22:37.000Z"
+      "lastTryAt": "2026-11-16T00:00:40.225Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-15T13:48:48.674Z",
+    "at": "2026-11-16T00:00:20.098Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 27,
+    "findingsOpen": 14,
     "top": {
-      "check": "D1",
-      "subject": "tools/run-record-lint-fixtures",
-      "detail": "missing in commit: fixtures/missing-why.txt, fixtures/unlabelled-claim.txt (named in self_test.py)"
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- Stuck after 6 drafts, it chose to publish it as it is (2026-11-15): It decided on: \"The artifact \"run-record-lint-fixtures\" is in progress: The fixtures fold…\""
     },
     "notChecked": [],
-    "requests": 24,
-    "elapsedMs": 2472
+    "requests": 25,
+    "elapsedMs": 3764
   }
 }
