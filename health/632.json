@@ -1,8 +1,15 @@
 {
   "agent": "632",
-  "status": "ok",
-  "at": "2026-11-16T06:52:00.471Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-16T09:52:51.300Z",
+  "step": {
+    "id": "hl-632-t-c167b123",
+    "kind": "selfTest",
+    "tool": "run-record-lint-fixtures",
+    "play": "build",
+    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-16T09:52:51.300Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -118,33 +125,6 @@
       "lastTryAt": "2026-11-16T06:21:12.000Z"
     },
     {
-      "id": "rp-632-t-run-record-lint-fixtures",
-      "artifact": "run-record-lint-fixtures",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "MISSING_INPUT",
-      "runner": "assertion_failure",
-      "cause": "FAIL missing-why.txt prints 'missing why': got \"/home/runner/work/bee-self-test/bee-self-test/work/tools/run-record-lint-fixtures/fixtures/missing-why.txt: cannot read: [Errno 2] No such file or direc",
-      "firstFailureAt": "2026-11-15T04:58:59.000Z",
-      "lastObservedAt": "2026-11-16T00:38:13.000Z",
-      "counters": {
-        "observations": 62,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 1
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-16T00:37:53.457Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43781519908)",
-      "escalation": null,
-      "lastTryAt": "2026-11-16T00:38:13.000Z"
-    },
-    {
       "id": "rp-632-t-hf-run-lint-fixture-card",
       "artifact": "hf-run-lint-fixture-card",
       "kind": "selfTest",
@@ -170,6 +150,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43779789413)",
       "escalation": null,
       "lastTryAt": "2026-11-16T00:20:47.000Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint-fixtures",
+      "artifact": "run-record-lint-fixtures",
+      "kind": "selfTest",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL missing-why.txt prints 'missing-why': got ['unlabelled-claim', 'unlabelled-claim', 'unlabelled-claim']",
+      "firstFailureAt": "2026-11-16T09:21:58.000Z",
+      "lastObservedAt": "2026-11-16T09:21:58.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 2
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-16T09:21:58.000Z"
     }
   ],
   "watchdog": {
