@@ -1,0 +1,23 @@
+# outside/ keeps its rules (the 15 Nov proposal bundle, BS18): pauses in one format, never deleted or rewritten,
+# a global one cleared by the host only, and outside/PAUSE present exactly while a global pause is open.
+# Reads the files only; no secrets.
+name: outside
+on:
+  push:
+    branches: [main]
+    paths: ["outside/**", "scripts/check_outside.py", ".github/workflows/outside.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: The rules
+        run: |
+          git show HEAD~1:outside/pauses.jsonl > "$RUNNER_TEMP/before.jsonl" 2>/dev/null || : > "$RUNNER_TEMP/before.jsonl"
+          python3 scripts/check_outside.py "$RUNNER_TEMP/before.jsonl"
