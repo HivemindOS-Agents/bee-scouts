@@ -1,7 +1,7 @@
 {
   "agent": "632",
-  "status": "repairing",
-  "at": "2026-11-16T10:08:43.984Z",
+  "status": "ok",
+  "at": "2026-11-16T10:24:21.792Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -148,16 +148,16 @@
       "id": "rp-632-t-run-record-lint-fixtures",
       "artifact": "run-record-lint-fixtures",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL missing-why.txt prints 'missing-why': got ['unlabelled-claim', 'unlabelled-claim', 'unlabelled-claim']",
       "firstFailureAt": "2026-11-16T09:21:58.000Z",
-      "lastObservedAt": "2026-11-16T09:21:58.000Z",
+      "lastObservedAt": "2026-11-16T09:53:47.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2
@@ -167,9 +167,9 @@
         "at": "2026-11-16T09:53:30.085Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43843857328)",
       "escalation": null,
-      "lastTryAt": "2026-11-16T09:53:30.085Z"
+      "lastTryAt": "2026-11-16T09:53:47.000Z"
     }
   ],
   "watchdog": {
