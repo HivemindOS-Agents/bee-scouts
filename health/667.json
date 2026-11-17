@@ -1,7 +1,7 @@
 {
   "agent": "667",
-  "status": "ok",
-  "at": "2026-11-16T06:00:20.174Z",
+  "status": "repairing",
+  "at": "2026-11-17T00:08:26.240Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -62,6 +62,67 @@
       "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
       "lastTryAt": "2026-11-13T07:41:22.338Z"
+    },
+    {
+      "id": "rp-667-s-propose",
+      "artifact": "propose",
+      "kind": "step:propose",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "INVALID_FORMAT",
+      "runner": null,
+      "cause": "its answer could not be read (cut off or not JSON)",
+      "firstFailureAt": "2026-11-17T00:07:13.747Z",
+      "lastObservedAt": "2026-11-17T00:07:13.747Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-17T00:07:13.747Z"
     }
-  ]
+  ],
+  "plays": {
+    "publish-dataset": {
+      "state": "offered"
+    },
+    "propose": {
+      "state": "offered"
+    },
+    "research": {
+      "state": "offered"
+    },
+    "tell-agents": {
+      "state": "offered"
+    },
+    "build-tool": {
+      "state": "offered"
+    },
+    "media": {
+      "state": "offered"
+    },
+    "pay-outside": {
+      "state": "precondition_unmet",
+      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reopenOn": [
+        "payer added",
+        "allow-list commit"
+      ]
+    },
+    "routine": {
+      "state": "offered"
+    },
+    "agents": {
+      "state": "offered"
+    }
+  }
 }
