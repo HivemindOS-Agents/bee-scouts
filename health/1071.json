@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-17T06:00:20.642Z",
+  "at": "2026-11-17T14:30:54.600Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -128,7 +128,7 @@
       "firstFailureAt": "2026-11-16T18:55:26.488Z",
       "lastObservedAt": "2026-11-16T22:10:45.946Z",
       "counters": {
-        "observations": 95,
+        "observations": 243,
         "failedAttempts": 4,
         "consecutive": 4,
         "sameCause": 2,
@@ -170,33 +170,6 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44012872339)",
       "escalation": null,
       "lastTryAt": "2026-11-17T03:49:46.000Z"
-    },
-    {
-      "id": "rp-1071-s-propose",
-      "artifact": "propose",
-      "kind": "step:propose",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "Skipped a proposal issue #1 already covers: Add isolated self-test run note to SuperAgent API quickstart",
-      "firstFailureAt": "2026-11-17T00:54:57.917Z",
-      "lastObservedAt": "2026-11-17T00:54:57.917Z",
-      "counters": {
-        "observations": 7,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-17T00:54:57.917Z"
     }
   ],
   "plays": {
