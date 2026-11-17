@@ -2,7 +2,8 @@
 """outside/ keeps its own rules (the 15 Nov proposal bundle, BS18 and review note 19). The rules' home is HivemindOS's
 core/agent-outside-desk.ts; this is the check anyone can run on the repository:
 
-  - every line of outside/pauses.jsonl is a pause in the one format;
+  - every line of outside/pauses.jsonl is a pause in the one format. Its scope is a target (a repository or an
+    organisation: the venue), an agent, an app, a coin, the launch path, or global (CR-10, CR-34);
   - no row is deleted or rewritten: against the previous commit, every earlier row is still there with the same
     scope, channel, subject, trigger, setAt and setBy, and only an open row may gain clearedBy and clearedAt;
   - a global pause is cleared by the host only;
@@ -11,7 +12,7 @@ core/agent-outside-desk.ts; this is the check anyone can run on the repository:
   check_outside.py [PREVIOUS_PAUSES_FILE]     prints what it found; exits 1 on any problem. Reads files only."""
 import json, os, sys
 
-SCOPES, CHANNELS = {"target", "agent", "app", "global"}, {"prs", "apps", "all"}
+SCOPES, CHANNELS = {"target", "agent", "app", "coin", "launch", "global"}, {"prs", "apps", "all"}
 KEEP = ("scope", "channel", "subject", "trigger", "setAt", "setBy")
 
 def rows(text):
