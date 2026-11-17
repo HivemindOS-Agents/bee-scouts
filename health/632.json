@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-17T06:00:20.642Z",
+  "at": "2026-11-17T14:28:50.938Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -155,7 +155,7 @@
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
       "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 128,
+        "observations": 233,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -209,7 +209,7 @@
       "firstFailureAt": "2026-11-17T03:26:45.397Z",
       "lastObservedAt": "2026-11-17T03:26:45.397Z",
       "counters": {
-        "observations": 7,
+        "observations": 42,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -224,33 +224,6 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-17T03:26:45.397Z"
-    },
-    {
-      "id": "rp-632-s-propose",
-      "artifact": "propose",
-      "kind": "step:propose",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "Skipped: it already opened its bee-scouts issue today.",
-      "firstFailureAt": "2026-11-17T03:34:53.118Z",
-      "lastObservedAt": "2026-11-17T03:34:53.118Z",
-      "counters": {
-        "observations": 7,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-17T03:34:53.118Z"
     }
   ],
   "watchdog": {
