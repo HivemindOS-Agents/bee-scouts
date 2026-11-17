@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-16T15:55:30.724Z",
-  "step": null,
+  "at": "2026-11-17T01:55:09.559Z",
+  "step": {
+    "id": "hl-547-t-232019ae",
+    "kind": "selfTest",
+    "tool": "fixtures-index-v4-card-check",
+    "play": "build",
+    "action": "Make the self-test of tools/fixtures-index-v4-card-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-17T01:55:09.559Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -205,9 +212,36 @@
       "state": "REPAIR_ATTEMPTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
-      "lastObservedAt": "2026-11-16T15:54:13.330Z",
+      "lastObservedAt": "2026-11-16T21:21:48.813Z",
+      "counters": {
+        "observations": 59,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-16T21:21:48.813Z"
+    },
+    {
+      "id": "rp-547-t-fixtures-index-v4-card-check",
+      "artifact": "fixtures-index-v4-card-check",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: unexpected AttributeError: 'str' object has no attribute 'append'",
+      "firstFailureAt": "2026-11-17T01:24:05.000Z",
+      "lastObservedAt": "2026-11-17T01:24:05.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
@@ -220,10 +254,10 @@
         "state": "unknown",
         "at": null
       },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-16T15:54:13.330Z"
+      "lastTryAt": "2026-11-17T01:24:05.000Z"
     }
   ],
   "plays": {
