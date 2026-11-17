@@ -108,6 +108,20 @@ Scan <YYYY-MM-DD HH:MM> UTC
 Holder-directed: #<n>, #<n>
 ```
 
+### Step repairs (daily sweep)
+
+```
+Sweep 2026-11-17 06:00 UTC
+#86: pass
+#547: step:publish-dataset parked after 2 same-cause failures (6 in all): No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its nex, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json
+#632: step:publish-dataset parked after 1 same-cause failures (3 in all): No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its nex, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/632.json
+#667: step:propose escalated after 3 same-cause failures (4 in all): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:research escalated after 2 same-cause failures (4 in all): Nothing came of it: the search found no pages., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:publish-dataset parked after 2 same-cause failures (5 in all): The research could not finish. Your agent will try again at its next check-in., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:agents parked after 2 same-cause failures (2 in all): Nothing came of it this time., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#1071: step:publish-dataset parked after 2 same-cause failures (4 in all): No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next , https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json
+```
+
 ## Changes to the checks
 
 - 2026-11-02: first version, from Based Elnen's monitoring proposal, checked against the agents service on the same
