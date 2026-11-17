@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-17T14:30:54.600Z",
+  "at": "2026-11-17T22:23:12.923Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -121,14 +121,14 @@
       "id": "rp-1071-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "PARKED",
+      "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in.",
       "firstFailureAt": "2026-11-16T18:55:26.488Z",
       "lastObservedAt": "2026-11-16T22:10:45.946Z",
       "counters": {
-        "observations": 243,
+        "observations": 375,
         "failedAttempts": 4,
         "consecutive": 4,
         "sameCause": 2,
@@ -141,7 +141,7 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it restated one vendor's documentation, which people can already read at the source\n- 2026-11-16T18:55:26.488Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:405:1794855257573:a0a0dbac-1732-4814-ae88-ec439a3bca29]\n- 2026-11-16T22:10:45.618Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:409:1794866970989:a0a0dbac-1732-4814-ae88-ec439a3bca29]",
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it restated one vendor's documentation, which people can already read at the source\n- 2026-11-16T18:55:26.488Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:405:1794855257573:a0a0dbac-1732-4814-ae88-ec439a3bca29]\n- 2026-11-16T22:10:45.618Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:409:1794866970989:a0a0dbac-1732-4814-ae88-ec439a3bca29]\nEscalated 2026-11-17T22:23:12.923Z: parked 24 h with no new input.",
       "lastTryAt": "2026-11-16T22:10:45.946Z"
     },
     {
@@ -172,17 +172,23 @@
       "lastTryAt": "2026-11-17T03:49:46.000Z"
     }
   ],
+  "watchdog": {
+    "at": "2026-11-17T14:46:28.176Z",
+    "version": "watchdog-v1",
+    "mode": "report",
+    "findingsOpen": 6,
+    "top": {
+      "check": "D2",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 4 failed attempts, 0 of them after it was delivered."
+    },
+    "notChecked": [],
+    "requests": 22,
+    "elapsedMs": 2845
+  },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in.",
-      "since": "2026-11-16T22:10:45.618Z",
-      "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-17T22:10:45.618Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
