@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-17T02:54:46.016Z",
+  "at": "2026-11-17T04:23:25.531Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -149,16 +149,16 @@
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
       "state": "PARKED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "cause": "No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in.",
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
       "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 93,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
+        "observations": 110,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -197,6 +197,60 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44002668951)",
       "escalation": null,
       "lastTryAt": "2026-11-17T02:24:04.000Z"
+    },
+    {
+      "id": "rp-632-s-media",
+      "artifact": "media",
+      "kind": "step:media",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Use Media Studio to make one standard-tier 16:9 image explaining my finished run-record-lint fixture exporter: clean abstract flat-vector diagram, off-white background, no people, faces, logos or par…",
+      "firstFailureAt": "2026-11-17T03:26:45.397Z",
+      "lastObservedAt": "2026-11-17T03:26:45.397Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-17T03:26:45.397Z"
+    },
+    {
+      "id": "rp-632-s-propose",
+      "artifact": "propose",
+      "kind": "step:propose",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Skipped: it already opened its bee-scouts issue today.",
+      "firstFailureAt": "2026-11-17T03:34:53.118Z",
+      "lastObservedAt": "2026-11-17T03:34:53.118Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-17T03:34:53.118Z"
     }
   ],
   "watchdog": {
@@ -216,7 +270,7 @@
   "plays": {
     "publish-dataset": {
       "state": "parked",
-      "reason": "2 failures with the same cause: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "reason": "2 failures with the same cause: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in.",
       "since": "2026-11-16T15:50:36.129Z",
       "reopenOn": [
         "host check or prompt change",
