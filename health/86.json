@@ -1,8 +1,15 @@
 {
   "agent": "86",
-  "status": "ok",
-  "at": "2026-11-17T06:00:20.642Z",
-  "step": null,
+  "status": "repairing",
+  "at": "2026-11-17T08:13:33.113Z",
+  "step": {
+    "id": "hl-86-t-584917ca",
+    "kind": "selfTest",
+    "tool": "run-and-record",
+    "play": "build",
+    "action": "Make the self-test of tools/run-and-record/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-17T08:13:33.113Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -116,6 +123,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43477893047)",
       "escalation": null,
       "lastTryAt": "2026-11-13T17:57:48.000Z"
+    },
+    {
+      "id": "rp-86-t-run-and-record",
+      "artifact": "run-and-record",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL verify: stored record differs from a fresh run",
+      "firstFailureAt": "2026-11-17T06:09:43.000Z",
+      "lastObservedAt": "2026-11-17T06:09:43.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-17T06:09:43.000Z"
     }
   ],
   "plays": {
