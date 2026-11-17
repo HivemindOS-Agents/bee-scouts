@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "repairing",
-  "at": "2026-11-17T00:08:26.240Z",
+  "at": "2026-11-17T04:18:29.237Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -67,17 +67,17 @@
       "id": "rp-667-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "INVALID_FORMAT",
+      "state": "ESCALATED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "its answer could not be read (cut off or not JSON)",
+      "cause": "No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
-      "lastObservedAt": "2026-11-17T00:07:13.747Z",
+      "lastObservedAt": "2026-11-17T00:07:14.090Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 11,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 3,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -87,13 +87,102 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-17T00:07:13.747Z"
+      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-17T04:18:29.237Z: parked 27 h with no new input.",
+      "lastTryAt": "2026-11-17T00:07:14.090Z"
+    },
+    {
+      "id": "rp-667-s-research",
+      "artifact": "research",
+      "kind": "step:research",
+      "state": "ESCALATED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "runner": null,
+      "cause": "Nothing came of it: the search found no pages.",
+      "firstFailureAt": "2026-11-14T08:58:15.038Z",
+      "lastObservedAt": "2026-11-17T00:08:43.501Z",
+      "counters": {
+        "observations": 4,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 2,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": "Parked after 2 failed steps of its research play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it: its answer could not be read (cut off or not JSON).\n- 2026-11-14T08:58:15.038Z failed (not yet delivered): Nothing came of it: its answer could not be read (cut off or not JSON). [step:backfill:research:1794646695038]\n- 2026-11-15T02:18:41.748Z failed (not yet delivered): Nothing came of it: its answer could not be read (cut off or not JSON). [step:backfill:research:1794709121748]\nEscalated 2026-11-17T04:18:29.237Z: parked 49 h with no new input.",
+      "lastTryAt": "2026-11-17T00:08:43.501Z"
+    },
+    {
+      "id": "rp-667-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "runner": null,
+      "cause": "The research could not finish. Your agent will try again at its next check-in.",
+      "firstFailureAt": "2026-11-14T10:02:56.430Z",
+      "lastObservedAt": "2026-11-17T00:05:46.850Z",
+      "counters": {
+        "observations": 5,
+        "failedAttempts": 5,
+        "consecutive": 5,
+        "sameCause": 2,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (5 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The research could not finish. Your agent will try again at its next check-in.\n- 2026-11-14T10:02:56.430Z failed (not yet delivered): No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794650576430]\n- 2026-11-15T01:16:34.072Z failed (not yet delivered): Your agent could not finish writing the dataset: its answer was cut off. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794705394072]\n- 2026-11-15T08:27:45.016Z failed (not yet delivered): Your agent could not finish writing the dataset: the thinking call failed. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794731265016]\n- 2026-11-16T00:15:21.919Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794788121919]\n- 2026-11-17T00:05:46.850Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794873946850]",
+      "lastTryAt": "2026-11-17T00:05:46.850Z"
+    },
+    {
+      "id": "rp-667-s-agents",
+      "artifact": "agents",
+      "kind": "step:agents",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "runner": null,
+      "cause": "Nothing came of it this time.",
+      "firstFailureAt": "2026-11-16T00:20:50.997Z",
+      "lastObservedAt": "2026-11-17T00:10:07.475Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": "Parked after 2 failed steps of its agents play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it this time.\n- 2026-11-16T00:20:50.997Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794788450997]\n- 2026-11-17T00:10:07.475Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794874207475]",
+      "lastTryAt": "2026-11-17T00:10:07.475Z"
     }
   ],
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: The research could not finish. Your agent will try again at its next check-in.",
+      "since": "2026-11-17T00:05:46.850Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-18T00:05:46.850Z)"
+      ]
     },
     "propose": {
       "state": "offered"
@@ -122,7 +211,15 @@
       "state": "offered"
     },
     "agents": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: Nothing came of it this time.",
+      "since": "2026-11-17T00:10:07.475Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-18T00:10:07.475Z)"
+      ]
     }
   }
 }
