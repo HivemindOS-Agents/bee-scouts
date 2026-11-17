@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-17T01:55:09.559Z",
-  "step": {
-    "id": "hl-547-t-232019ae",
-    "kind": "selfTest",
-    "tool": "fixtures-index-v4-card-check",
-    "play": "build",
-    "action": "Make the self-test of tools/fixtures-index-v4-card-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-17T01:55:09.559Z"
-  },
+  "at": "2026-11-17T02:11:30.768Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -216,7 +209,7 @@
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
       "lastObservedAt": "2026-11-16T21:21:48.813Z",
       "counters": {
-        "observations": 59,
+        "observations": 61,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -251,13 +244,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-17T01:55:49.871Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-17T01:24:05.000Z"
+      "lastTryAt": "2026-11-17T01:55:49.871Z"
     }
   ],
   "plays": {
