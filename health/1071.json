@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-17T04:05:05.360Z",
+  "at": "2026-11-17T04:22:28.956Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -124,13 +124,13 @@
       "state": "PARKED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "cause": "No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in.",
       "firstFailureAt": "2026-11-16T18:55:26.488Z",
-      "lastObservedAt": "2026-11-16T22:10:45.618Z",
+      "lastObservedAt": "2026-11-16T22:10:45.946Z",
       "counters": {
-        "observations": 67,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 71,
+        "failedAttempts": 4,
+        "consecutive": 4,
         "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -142,22 +142,22 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it restated one vendor's documentation, which people can already read at the source\n- 2026-11-16T18:55:26.488Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:405:1794855257573:a0a0dbac-1732-4814-ae88-ec439a3bca29]\n- 2026-11-16T22:10:45.618Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:409:1794866970989:a0a0dbac-1732-4814-ae88-ec439a3bca29]",
-      "lastTryAt": "2026-11-16T22:10:45.618Z"
+      "lastTryAt": "2026-11-16T22:10:45.946Z"
     },
     {
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
       "firstFailureAt": "2026-11-17T03:17:24.000Z",
-      "lastObservedAt": "2026-11-17T03:17:24.000Z",
+      "lastObservedAt": "2026-11-17T03:49:46.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -167,15 +167,42 @@
         "at": "2026-11-17T03:49:20.989Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44012872339)",
+      "escalation": null,
+      "lastTryAt": "2026-11-17T03:49:46.000Z"
+    },
+    {
+      "id": "rp-1071-s-propose",
+      "artifact": "propose",
+      "kind": "step:propose",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Skipped a proposal issue #1 already covers: Add isolated self-test run note to SuperAgent API quickstart",
+      "firstFailureAt": "2026-11-17T00:54:57.917Z",
+      "lastObservedAt": "2026-11-17T00:54:57.917Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-17T03:49:20.989Z"
+      "lastTryAt": "2026-11-17T00:54:57.917Z"
     }
   ],
   "plays": {
     "publish-dataset": {
       "state": "parked",
-      "reason": "2 failures with the same cause: it restated one vendor's documentation, which people can already read at the source",
+      "reason": "2 failures with the same cause: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in.",
       "since": "2026-11-16T22:10:45.618Z",
       "reopenOn": [
         "host check or prompt change",
