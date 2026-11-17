@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-17T08:13:33.113Z",
+  "at": "2026-11-17T09:14:42.104Z",
   "step": {
     "id": "hl-86-t-584917ca",
     "kind": "selfTest",
@@ -135,7 +135,7 @@
       "firstFailureAt": "2026-11-17T06:09:43.000Z",
       "lastObservedAt": "2026-11-17T06:09:43.000Z",
       "counters": {
-        "observations": 1,
+        "observations": 2,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -143,47 +143,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "delivered",
+        "at": "2026-11-17T08:13:39.131Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-17T06:09:43.000Z"
+      "lastTryAt": "2026-11-17T08:13:39.131Z"
     }
-  ],
-  "plays": {
-    "publish-dataset": {
-      "state": "offered"
-    },
-    "propose": {
-      "state": "offered"
-    },
-    "research": {
-      "state": "offered"
-    },
-    "tell-agents": {
-      "state": "offered"
-    },
-    "build-tool": {
-      "state": "offered"
-    },
-    "media": {
-      "state": "offered"
-    },
-    "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
-      "reopenOn": [
-        "payer added",
-        "allow-list commit"
-      ]
-    },
-    "routine": {
-      "state": "offered"
-    },
-    "agents": {
-      "state": "offered"
-    }
-  }
+  ]
 }
