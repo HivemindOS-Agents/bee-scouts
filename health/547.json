@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-17T07:22:40.422Z",
+  "at": "2026-11-17T13:48:27.775Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -209,7 +209,7 @@
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
       "lastObservedAt": "2026-11-17T03:34:17.325Z",
       "counters": {
-        "observations": 158,
+        "observations": 308,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 2,
@@ -256,16 +256,16 @@
       "id": "rp-547-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "it linked a page it did not read",
       "firstFailureAt": "2026-11-17T07:21:19.461Z",
-      "lastObservedAt": "2026-11-17T07:21:19.461Z",
+      "lastObservedAt": "2026-11-17T13:33:52.981Z",
       "counters": {
-        "observations": 1,
+        "observations": 26,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -275,9 +275,9 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a research step ended done (research-20774:9edd7884-dd64-454b-8073-29a7d3cf2ae5:545:1794922345494:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
-      "lastTryAt": "2026-11-17T07:21:19.461Z"
+      "lastTryAt": "2026-11-17T13:33:52.981Z"
     }
   ],
   "plays": {
