@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-17T04:23:25.531Z",
+  "at": "2026-11-17T06:00:20.642Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -155,7 +155,7 @@
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
       "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 110,
+        "observations": 128,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -209,7 +209,7 @@
       "firstFailureAt": "2026-11-17T03:26:45.397Z",
       "lastObservedAt": "2026-11-17T03:26:45.397Z",
       "counters": {
-        "observations": 1,
+        "observations": 7,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -236,7 +236,7 @@
       "firstFailureAt": "2026-11-17T03:34:53.118Z",
       "lastObservedAt": "2026-11-17T03:34:53.118Z",
       "counters": {
-        "observations": 1,
+        "observations": 7,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
