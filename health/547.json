@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-17T03:35:38.121Z",
+  "at": "2026-11-17T06:00:20.642Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -205,13 +205,13 @@
       "state": "PARKED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "cause": "No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in.",
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
-      "lastObservedAt": "2026-11-17T03:34:16.755Z",
+      "lastObservedAt": "2026-11-17T03:34:17.325Z",
       "counters": {
-        "observations": 74,
-        "failedAttempts": 3,
-        "consecutive": 3,
+        "observations": 122,
+        "failedAttempts": 6,
+        "consecutive": 6,
         "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -223,7 +223,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-16T15:54:13.330Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:520:1794844369477:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-16T21:21:48.813Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:525:1794864033048:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-17T03:34:16.755Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:536:1794886370625:68400dca-5b94-44b4-84a0-e0e71ad0e83c]",
-      "lastTryAt": "2026-11-17T03:34:16.755Z"
+      "lastTryAt": "2026-11-17T03:34:17.325Z"
     },
     {
       "id": "rp-547-t-fixtures-index-v4-card-check",
@@ -256,7 +256,7 @@
   "plays": {
     "publish-dataset": {
       "state": "parked",
-      "reason": "2 failures with the same cause: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "reason": "2 failures with the same cause: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in.",
       "since": "2026-11-17T03:34:16.755Z",
       "reopenOn": [
         "host check or prompt change",
