@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "ok",
-  "at": "2026-11-16T06:00:20.174Z",
+  "at": "2026-11-17T06:00:20.642Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -117,5 +117,39 @@
       "escalation": null,
       "lastTryAt": "2026-11-13T17:57:48.000Z"
     }
-  ]
+  ],
+  "plays": {
+    "publish-dataset": {
+      "state": "offered"
+    },
+    "propose": {
+      "state": "offered"
+    },
+    "research": {
+      "state": "offered"
+    },
+    "tell-agents": {
+      "state": "offered"
+    },
+    "build-tool": {
+      "state": "offered"
+    },
+    "media": {
+      "state": "offered"
+    },
+    "pay-outside": {
+      "state": "precondition_unmet",
+      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reopenOn": [
+        "payer added",
+        "allow-list commit"
+      ]
+    },
+    "routine": {
+      "state": "offered"
+    },
+    "agents": {
+      "state": "offered"
+    }
+  }
 }
