@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-17T02:39:22.942Z",
+  "at": "2026-11-17T02:54:46.016Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -155,7 +155,7 @@
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
       "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 91,
+        "observations": 93,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -175,16 +175,16 @@
       "id": "rp-632-t-run-record-lint-fixtures",
       "artifact": "run-record-lint-fixtures",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL clean.txt prints no finding line: got ['unlabelled-claim', 'unlabelled-claim']",
       "firstFailureAt": "2026-11-17T01:52:05.000Z",
-      "lastObservedAt": "2026-11-17T01:52:05.000Z",
+      "lastObservedAt": "2026-11-17T02:24:04.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 3
@@ -194,9 +194,9 @@
         "at": "2026-11-17T02:23:49.389Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44002668951)",
       "escalation": null,
-      "lastTryAt": "2026-11-17T02:23:49.389Z"
+      "lastTryAt": "2026-11-17T02:24:04.000Z"
     }
   ],
   "watchdog": {
