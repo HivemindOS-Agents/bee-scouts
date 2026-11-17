@@ -1,8 +1,15 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-16T15:51:55.387Z",
-  "step": null,
+  "at": "2026-11-17T02:23:09.345Z",
+  "step": {
+    "id": "hl-632-t-c167b123",
+    "kind": "selfTest",
+    "tool": "run-record-lint-fixtures",
+    "play": "build",
+    "action": "Make the self-test of tools/run-record-lint-fixtures/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-17T02:23:09.345Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -145,33 +152,6 @@
       "lastTryAt": "2026-11-16T00:20:47.000Z"
     },
     {
-      "id": "rp-632-t-run-record-lint-fixtures",
-      "artifact": "run-record-lint-fixtures",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "MISSING_INPUT",
-      "runner": "assertion_failure",
-      "cause": "FAIL missing-why.txt prints 'missing-why': got ['unlabelled-claim', 'unlabelled-claim', 'unlabelled-claim']",
-      "firstFailureAt": "2026-11-16T09:21:58.000Z",
-      "lastObservedAt": "2026-11-16T09:53:47.000Z",
-      "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 2
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-16T09:53:30.085Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43843857328)",
-      "escalation": null,
-      "lastTryAt": "2026-11-16T09:53:47.000Z"
-    },
-    {
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
@@ -182,7 +162,7 @@
       "firstFailureAt": "2026-11-16T15:48:47.939Z",
       "lastObservedAt": "2026-11-16T15:50:36.129Z",
       "counters": {
-        "observations": 3,
+        "observations": 89,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -197,21 +177,48 @@
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-16T15:48:47.939Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:446:1794844059084:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-16T15:50:36.129Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:446:1794844193730:b88691bb-261a-444c-9a0e-264200bccf72]",
       "lastTryAt": "2026-11-16T15:50:36.129Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint-fixtures",
+      "artifact": "run-record-lint-fixtures",
+      "kind": "selfTest",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL clean.txt prints no finding line: got ['unlabelled-claim', 'unlabelled-claim']",
+      "firstFailureAt": "2026-11-17T01:52:05.000Z",
+      "lastObservedAt": "2026-11-17T01:52:05.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 3
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-17T01:52:05.000Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-16T00:00:20.098Z",
+    "at": "2026-11-17T00:11:44.663Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 14,
+    "findingsOpen": 12,
     "top": {
-      "check": "D17",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- Stuck after 6 drafts, it chose to publish it as it is (2026-11-15): It decided on: \"The artifact \"run-record-lint-fixtures\" is in progress: The fixtures fold…\""
+      "check": "D2",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
-    "requests": 25,
-    "elapsedMs": 3764
+    "requests": 22,
+    "elapsedMs": 2588
   },
   "plays": {
     "publish-dataset": {
