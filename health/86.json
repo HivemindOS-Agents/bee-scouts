@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-18T10:54:19.970Z",
+  "at": "2026-11-18T11:56:36.678Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -155,7 +155,7 @@
       "firstFailureAt": "2026-11-18T10:53:05.524Z",
       "lastObservedAt": "2026-11-18T10:53:05.524Z",
       "counters": {
-        "observations": 1,
+        "observations": 3,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -170,6 +170,33 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-18T10:53:05.524Z"
+    },
+    {
+      "id": "rp-86-s-propose",
+      "artifact": "propose",
+      "kind": "step:propose",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "INVALID_FORMAT",
+      "runner": null,
+      "cause": "its answer could not be read (cut off or not JSON)",
+      "firstFailureAt": "2026-11-18T11:55:31.455Z",
+      "lastObservedAt": "2026-11-18T11:55:31.455Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-18T11:55:31.455Z"
     }
   ],
   "watchdog": {
