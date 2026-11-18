@@ -1,9 +1,11 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-18T14:56:22.031Z",
+  "status": "repairing",
+  "at": "2026-11-18T16:00:31.084Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-547-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -199,33 +201,6 @@
       "lastTryAt": "2026-11-16T06:41:04.000Z"
     },
     {
-      "id": "rp-547-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-16T15:54:13.330Z",
-      "lastObservedAt": "2026-11-18T06:31:43.990Z",
-      "counters": {
-        "observations": 722,
-        "failedAttempts": 7,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:559:1794983433461:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-16T15:54:13.330Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:520:1794844369477:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-16T21:21:48.813Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:525:1794864033048:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-17T03:34:16.755Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:536:1794886370625:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\nEscalated 2026-11-18T03:48:46.324Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-18T06:31:43.990Z"
-    },
-    {
       "id": "rp-547-t-fixtures-index-v4-card-check",
       "artifact": "fixtures-index-v4-card-check",
       "kind": "selfTest",
@@ -332,6 +307,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44324058479)",
       "escalation": null,
       "lastTryAt": "2026-11-18T14:25:35.000Z"
+    },
+    {
+      "id": "rp-547-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "firstFailureAt": "2026-11-18T15:59:13.288Z",
+      "lastObservedAt": "2026-11-18T15:59:13.288Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-18T15:59:13.288Z"
     }
   ],
   "watchdog": {
