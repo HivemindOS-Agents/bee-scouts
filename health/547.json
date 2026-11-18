@@ -1,11 +1,9 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-18T14:40:34.180Z",
+  "status": "ok",
+  "at": "2026-11-18T14:56:22.031Z",
   "step": null,
-  "reasons": [
-    "rp-547-t-dataset-manifest-check"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -312,16 +310,16 @@
       "id": "rp-547-t-dataset-manifest-check",
       "artifact": "dataset-manifest-check",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL: valid json: ['/tmp/tmptxxblgav/data/manifest.json: unlisted file: manifest.txt'] {'listed': 3, 'present': 3, 'missing': 0, 'unlisted': 1}",
       "firstFailureAt": "2026-11-18T13:52:18.000Z",
-      "lastObservedAt": "2026-11-18T13:52:18.000Z",
+      "lastObservedAt": "2026-11-18T14:25:35.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -331,9 +329,9 @@
         "at": "2026-11-18T14:25:07.312Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44324058479)",
       "escalation": null,
-      "lastTryAt": "2026-11-18T14:25:07.312Z"
+      "lastTryAt": "2026-11-18T14:25:35.000Z"
     }
   ],
   "watchdog": {
