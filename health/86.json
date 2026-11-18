@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-18T11:56:36.678Z",
+  "at": "2026-11-18T11:57:50.046Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -155,7 +155,7 @@
       "firstFailureAt": "2026-11-18T10:53:05.524Z",
       "lastObservedAt": "2026-11-18T10:53:05.524Z",
       "counters": {
-        "observations": 3,
+        "observations": 4,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -175,17 +175,17 @@
       "id": "rp-86-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "INVALID_FORMAT",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-18T11:55:31.455Z",
-      "lastObservedAt": "2026-11-18T11:55:31.455Z",
+      "lastObservedAt": "2026-11-18T11:56:45.423Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 3,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -195,8 +195,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-18T11:55:31.455Z"
+      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]",
+      "lastTryAt": "2026-11-18T11:56:45.423Z"
     }
   ],
   "watchdog": {
@@ -218,7 +218,15 @@
       "state": "offered"
     },
     "propose": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: its answer could not be read (cut off or not JSON)",
+      "since": "2026-11-18T11:56:45.423Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-19T11:56:45.423Z)"
+      ]
     },
     "research": {
       "state": "offered"
