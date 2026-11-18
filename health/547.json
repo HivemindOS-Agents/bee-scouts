@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-18T03:48:46.324Z",
-  "step": null,
+  "at": "2026-11-18T04:24:13.473Z",
+  "step": {
+    "id": "hl-547-t-c8d04748",
+    "kind": "selfTest",
+    "tool": "artifacts-index-check",
+    "play": "build",
+    "action": "Make the self-test of tools/artifacts-index-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-18T04:24:13.473Z"
+  },
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -203,16 +210,16 @@
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
       "state": "ESCALATED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in.",
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
-      "lastObservedAt": "2026-11-17T03:34:17.325Z",
+      "lastObservedAt": "2026-11-18T03:50:46.079Z",
       "counters": {
-        "observations": 638,
-        "failedAttempts": 6,
-        "consecutive": 6,
-        "sameCause": 2,
+        "observations": 659,
+        "failedAttempts": 7,
+        "consecutive": 7,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -223,7 +230,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-16T15:54:13.330Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:520:1794844369477:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-16T21:21:48.813Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:525:1794864033048:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-17T03:34:16.755Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:536:1794886370625:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\nEscalated 2026-11-18T03:48:46.324Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-17T03:34:17.325Z"
+      "lastTryAt": "2026-11-18T03:50:46.079Z"
     },
     {
       "id": "rp-547-t-fixtures-index-v4-card-check",
@@ -278,6 +285,33 @@
       "closedBy": "step: a research step ended done (research-20774:9edd7884-dd64-454b-8073-29a7d3cf2ae5:545:1794922345494:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
       "lastTryAt": "2026-11-17T13:33:52.981Z"
+    },
+    {
+      "id": "rp-547-t-artifacts-index-check",
+      "artifact": "artifacts-index-check",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL: valid index: ['/tmp/tmp263mb317/ARTIFACTS.md: line 6: listed local file not found: `tools/check.py`']",
+      "firstFailureAt": "2026-11-18T03:53:17.000Z",
+      "lastObservedAt": "2026-11-18T03:53:17.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-18T03:53:17.000Z"
     }
   ],
   "watchdog": {
