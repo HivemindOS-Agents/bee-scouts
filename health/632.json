@@ -1,9 +1,11 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-18T12:48:42.085Z",
+  "at": "2026-11-18T13:04:17.703Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-632-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -175,16 +177,16 @@
       "id": "rp-632-s-media",
       "artifact": "media",
       "kind": "step:media",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "Use Media Studio to make one standard-tier 16:9 image explaining my finished run-record-lint fixture exporter: clean abstract flat-vector diagram, off-white background, no people, faces, logos or par…",
       "firstFailureAt": "2026-11-17T03:26:45.397Z",
       "lastObservedAt": "2026-11-17T03:26:45.397Z",
       "counters": {
-        "observations": 132,
+        "observations": 133,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -194,7 +196,7 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "host: play paused (B-51: no picture before launch)",
       "escalation": null,
       "lastTryAt": "2026-11-17T03:26:45.397Z"
     },
@@ -209,7 +211,7 @@
       "firstFailureAt": "2026-11-18T12:47:20.633Z",
       "lastObservedAt": "2026-11-18T12:47:20.633Z",
       "counters": {
-        "observations": 1,
+        "observations": 9,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -257,7 +259,11 @@
       "state": "offered"
     },
     "media": {
-      "state": "offered"
+      "state": "paused",
+      "reason": "B-51: no picture before launch",
+      "reopenOn": [
+        "MEDIA_PLAY set to proven at launch, after B-67 and B-68"
+      ]
     },
     "pay-outside": {
       "state": "precondition_unmet",
