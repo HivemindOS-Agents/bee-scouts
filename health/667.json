@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "repairing",
-  "at": "2026-11-17T06:00:20.642Z",
+  "at": "2026-11-18T01:06:22.820Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -74,7 +74,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-17T00:07:14.090Z",
       "counters": {
-        "observations": 35,
+        "observations": 323,
         "failedAttempts": 4,
         "consecutive": 4,
         "sameCause": 3,
@@ -101,7 +101,7 @@
       "firstFailureAt": "2026-11-14T08:58:15.038Z",
       "lastObservedAt": "2026-11-17T00:08:43.501Z",
       "counters": {
-        "observations": 28,
+        "observations": 316,
         "failedAttempts": 4,
         "consecutive": 4,
         "sameCause": 2,
@@ -121,14 +121,14 @@
       "id": "rp-667-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "PARKED",
+      "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "The research could not finish. Your agent will try again at its next check-in.",
       "firstFailureAt": "2026-11-14T10:02:56.430Z",
       "lastObservedAt": "2026-11-17T00:05:46.850Z",
       "counters": {
-        "observations": 35,
+        "observations": 395,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 2,
@@ -141,21 +141,21 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (5 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The research could not finish. Your agent will try again at its next check-in.\n- 2026-11-14T10:02:56.430Z failed (not yet delivered): No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794650576430]\n- 2026-11-15T01:16:34.072Z failed (not yet delivered): Your agent could not finish writing the dataset: its answer was cut off. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794705394072]\n- 2026-11-15T08:27:45.016Z failed (not yet delivered): Your agent could not finish writing the dataset: the thinking call failed. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794731265016]\n- 2026-11-16T00:15:21.919Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794788121919]\n- 2026-11-17T00:05:46.850Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794873946850]",
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (5 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The research could not finish. Your agent will try again at its next check-in.\n- 2026-11-14T10:02:56.430Z failed (not yet delivered): No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794650576430]\n- 2026-11-15T01:16:34.072Z failed (not yet delivered): Your agent could not finish writing the dataset: its answer was cut off. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794705394072]\n- 2026-11-15T08:27:45.016Z failed (not yet delivered): Your agent could not finish writing the dataset: the thinking call failed. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794731265016]\n- 2026-11-16T00:15:21.919Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794788121919]\n- 2026-11-17T00:05:46.850Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794873946850]\nEscalated 2026-11-18T01:06:22.820Z: parked 25 h with no new input.",
       "lastTryAt": "2026-11-17T00:05:46.850Z"
     },
     {
       "id": "rp-667-s-agents",
       "artifact": "agents",
       "kind": "step:agents",
-      "state": "PARKED",
+      "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "Nothing came of it this time.",
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-17T00:10:07.475Z",
       "counters": {
-        "observations": 14,
+        "observations": 158,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -168,58 +168,22 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its agents play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it this time.\n- 2026-11-16T00:20:50.997Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794788450997]\n- 2026-11-17T00:10:07.475Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794874207475]",
+      "escalation": "Parked after 2 failed steps of its agents play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it this time.\n- 2026-11-16T00:20:50.997Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794788450997]\n- 2026-11-17T00:10:07.475Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794874207475]\nEscalated 2026-11-18T01:06:22.820Z: parked 24 h with no new input.",
       "lastTryAt": "2026-11-17T00:10:07.475Z"
     }
   ],
-  "plays": {
-    "publish-dataset": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: The research could not finish. Your agent will try again at its next check-in.",
-      "since": "2026-11-17T00:05:46.850Z",
-      "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-18T00:05:46.850Z)"
-      ]
+  "watchdog": {
+    "at": "2026-11-18T00:02:26.989Z",
+    "version": "watchdog-v1",
+    "mode": "report",
+    "findingsOpen": 11,
+    "top": {
+      "check": "D2",
+      "subject": "propose",
+      "detail": "Its repair of propose has 4 failed attempts, 0 of them after it was delivered."
     },
-    "propose": {
-      "state": "offered"
-    },
-    "research": {
-      "state": "offered"
-    },
-    "tell-agents": {
-      "state": "offered"
-    },
-    "build-tool": {
-      "state": "offered"
-    },
-    "media": {
-      "state": "offered"
-    },
-    "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
-      "reopenOn": [
-        "payer added",
-        "allow-list commit"
-      ]
-    },
-    "routine": {
-      "state": "offered"
-    },
-    "agents": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: Nothing came of it this time.",
-      "since": "2026-11-17T00:10:07.475Z",
-      "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-18T00:10:07.475Z)"
-      ]
-    }
+    "notChecked": [],
+    "requests": 15,
+    "elapsedMs": 2830
   }
 }
