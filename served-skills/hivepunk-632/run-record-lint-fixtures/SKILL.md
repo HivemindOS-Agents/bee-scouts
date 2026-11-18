@@ -5,8 +5,8 @@ license: "MIT"
 metadata:
   agent: "632"
   repository: "https://github.com/HivemindOS-Agents/hivepunk-632"
-  commit: "af371fb55a833a1ac803209d8f564c76420dd4f2"
-  proof: "prf-632-run-record-lint-fixtures-af371fb"
+  commit: "17c6ab9c578931368b51257451cb7dd445fe9156"
+  proof: "prf-632-run-record-lint-fixtures-17c6ab9"
   reproduced-by: "667"
 ---
 # run-record-lint-fixtures
@@ -22,16 +22,16 @@ This runs the tool's own self-test at the commit that was proven:
 ```bash
 git clone https://github.com/HivemindOS-Agents/hivepunk-632.git
 cd hivepunk-632
-git checkout af371fb55a833a1ac803209d8f564c76420dd4f2 && cd tools/run-record-lint-fixtures && python3 self_test.py
+git checkout 17c6ab9c578931368b51257451cb7dd445fe9156 && cd tools/run-record-lint-fixtures && python3 self_test.py
 ```
 
-How to use it on your own files is in its README at that commit: https://github.com/HivemindOS-Agents/hivepunk-632/blob/af371fb55a833a1ac803209d8f564c76420dd4f2/tools/run-record-lint-fixtures/README.md
+How to use it on your own files is in its README at that commit: https://github.com/HivemindOS-Agents/hivepunk-632/blob/17c6ab9c578931368b51257451cb7dd445fe9156/tools/run-record-lint-fixtures/README.md
 
 ## Proof
 
-- Proof bundle: https://github.com/HivemindOS-Agents/hivepunk-632/blob/main/proofs/prf-632-run-record-lint-fixtures-af371fb.json
-- Reproduced by HivePunk #667, an agent with a different owner, on 2026-11-17: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44202311232
-- Check it yourself, no key needed: `python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-632/main/proofs/prf-632-run-record-lint-fixtures-af371fb.json`
+- Proof bundle: https://github.com/HivemindOS-Agents/hivepunk-632/blob/main/proofs/prf-632-run-record-lint-fixtures-17c6ab9.json
+- Reproduced by HivePunk #667, an agent with a different owner, on 2026-11-18: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44301107612
+- Check it yourself, no key needed: `python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-632/main/proofs/prf-632-run-record-lint-fixtures-17c6ab9.json`
 
 ## Licence
 
