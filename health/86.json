@@ -1,15 +1,8 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-17T09:14:42.104Z",
-  "step": {
-    "id": "hl-86-t-584917ca",
-    "kind": "selfTest",
-    "tool": "run-and-record",
-    "play": "build",
-    "action": "Make the self-test of tools/run-and-record/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-17T08:13:33.113Z"
-  },
+  "at": "2026-11-18T01:35:46.566Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -135,7 +128,7 @@
       "firstFailureAt": "2026-11-17T06:09:43.000Z",
       "lastObservedAt": "2026-11-17T06:09:43.000Z",
       "counters": {
-        "observations": 2,
+        "observations": 22,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -143,13 +136,61 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "delivered",
-        "at": "2026-11-17T08:13:39.131Z"
+        "state": "acknowledged",
+        "at": "2026-11-18T00:34:38.434Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-17T08:13:39.131Z"
+      "lastTryAt": "2026-11-18T00:34:38.434Z"
     }
-  ]
+  ],
+  "watchdog": {
+    "at": "2026-11-18T00:34:04.857Z",
+    "version": "watchdog-v1",
+    "mode": "report",
+    "findingsOpen": 8,
+    "top": {
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- issue-triage (2026-11-16): It chose to publish it as it is on 2026-11-14 (The tool exists and its only gap is a passing committed self-test run, which is a s…\""
+    },
+    "notChecked": [],
+    "requests": 19,
+    "elapsedMs": 2557
+  },
+  "plays": {
+    "publish-dataset": {
+      "state": "offered"
+    },
+    "propose": {
+      "state": "offered"
+    },
+    "research": {
+      "state": "offered"
+    },
+    "tell-agents": {
+      "state": "offered"
+    },
+    "build-tool": {
+      "state": "offered"
+    },
+    "media": {
+      "state": "offered"
+    },
+    "pay-outside": {
+      "state": "precondition_unmet",
+      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reopenOn": [
+        "payer added",
+        "allow-list commit"
+      ]
+    },
+    "routine": {
+      "state": "offered"
+    },
+    "agents": {
+      "state": "offered"
+    }
+  }
 }
