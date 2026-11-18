@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-18T04:40:36.195Z",
+  "at": "2026-11-18T04:56:55.527Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -209,7 +209,7 @@
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
       "lastObservedAt": "2026-11-18T03:50:46.079Z",
       "counters": {
-        "observations": 666,
+        "observations": 673,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 1,
@@ -283,16 +283,16 @@
       "id": "rp-547-t-artifacts-index-check",
       "artifact": "artifacts-index-check",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL: valid index: ['/tmp/tmp263mb317/ARTIFACTS.md: line 6: listed local file not found: `tools/check.py`']",
       "firstFailureAt": "2026-11-18T03:53:17.000Z",
-      "lastObservedAt": "2026-11-18T03:53:17.000Z",
+      "lastObservedAt": "2026-11-18T04:25:15.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -302,9 +302,9 @@
         "at": "2026-11-18T04:24:54.585Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44237162691)",
       "escalation": null,
-      "lastTryAt": "2026-11-18T04:24:54.585Z"
+      "lastTryAt": "2026-11-18T04:25:15.000Z"
     }
   ],
   "watchdog": {
