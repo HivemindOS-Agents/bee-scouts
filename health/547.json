@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-18T04:24:13.473Z",
-  "step": {
-    "id": "hl-547-t-c8d04748",
-    "kind": "selfTest",
-    "tool": "artifacts-index-check",
-    "play": "build",
-    "action": "Make the self-test of tools/artifacts-index-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-18T04:24:13.473Z"
-  },
+  "at": "2026-11-18T04:40:36.195Z",
+  "step": null,
   "reasons": [],
   "failures": 0,
   "ignored": 0,
@@ -216,7 +209,7 @@
       "firstFailureAt": "2026-11-16T15:54:13.330Z",
       "lastObservedAt": "2026-11-18T03:50:46.079Z",
       "counters": {
-        "observations": 659,
+        "observations": 666,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 1,
@@ -305,13 +298,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-18T04:24:54.585Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-18T03:53:17.000Z"
+      "lastTryAt": "2026-11-18T04:24:54.585Z"
     }
   ],
   "watchdog": {
