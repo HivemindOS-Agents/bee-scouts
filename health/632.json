@@ -1,11 +1,19 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-18T23:22:02.597Z",
-  "step": null,
+  "at": "2026-11-19T00:58:24.893Z",
+  "step": {
+    "id": "hl-632-t-380ece35",
+    "kind": "selfTest",
+    "tool": "run-record-lint-dataset-export",
+    "play": "build",
+    "action": "Make the self-test of tools/run-record-lint-dataset-export/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T00:58:24.893Z"
+  },
   "reasons": [
     "rp-632-s-publish-dataset",
-    "rp-632-s-research"
+    "rp-632-s-research",
+    "rp-632-t-run-record-lint-dataset-export"
   ],
   "failures": 0,
   "ignored": 0,
@@ -212,7 +220,7 @@
       "firstFailureAt": "2026-11-18T12:47:20.633Z",
       "lastObservedAt": "2026-11-18T15:58:22.556Z",
       "counters": {
-        "observations": 367,
+        "observations": 421,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -239,7 +247,7 @@
       "firstFailureAt": "2026-11-18T23:20:44.576Z",
       "lastObservedAt": "2026-11-18T23:20:44.576Z",
       "counters": {
-        "observations": 1,
+        "observations": 7,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -254,21 +262,48 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-18T23:20:44.576Z"
+    },
+    {
+      "id": "rp-632-t-run-record-lint-dataset-export",
+      "artifact": "run-record-lint-dataset-export",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL self_test.py source contains no network string: ['urllib', 'requests', 'socket']",
+      "firstFailureAt": "2026-11-19T00:26:48.000Z",
+      "lastObservedAt": "2026-11-19T00:26:48.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T00:26:48.000Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-18T00:08:36.968Z",
+    "at": "2026-11-19T00:09:00.581Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 7,
+    "findingsOpen": 16,
     "top": {
       "check": "D2",
       "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 3 failed attempts, 0 of them after it was delivered."
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3605
+    "elapsedMs": 2113
   },
   "plays": {
     "publish-dataset": {
