@@ -1,9 +1,18 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-19T00:17:41.595Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-19T03:33:28.635Z",
+  "step": {
+    "id": "hl-1071-t-634706f7",
+    "kind": "selfTest",
+    "tool": "glb-fixture-byte-layouts",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-fixture-byte-layouts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T03:33:28.635Z"
+  },
+  "reasons": [
+    "rp-1071-t-glb-fixture-byte-layouts"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -148,28 +157,28 @@
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
-      "state": "RELEASED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
-      "firstFailureAt": "2026-11-17T03:17:24.000Z",
-      "lastObservedAt": "2026-11-17T03:49:46.000Z",
+      "cause": "IndexError: index out of range",
+      "firstFailureAt": "2026-11-19T03:02:15.000Z",
+      "lastObservedAt": "2026-11-19T03:02:15.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 0,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 2
       },
       "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-17T03:49:20.989Z"
+        "state": "unknown",
+        "at": null
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44012872339)",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-17T03:49:46.000Z"
+      "lastTryAt": "2026-11-19T03:02:15.000Z"
     }
   ],
   "watchdog": {
