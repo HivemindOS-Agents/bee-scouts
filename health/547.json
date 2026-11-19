@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T07:09:13.637Z",
-  "step": {
-    "id": "hl-547-t-8eeb7698",
-    "kind": "selfTest",
-    "tool": "hf-listing-to-text",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-listing-to-text/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T07:09:13.637Z"
-  },
+  "at": "2026-11-19T07:25:39.519Z",
+  "step": null,
   "reasons": [
     "rp-547-t-hf-listing-to-text"
   ],
@@ -361,13 +354,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T07:09:58.086Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T06:38:34.000Z"
+      "lastTryAt": "2026-11-19T07:09:58.086Z"
     }
   ],
   "watchdog": {
