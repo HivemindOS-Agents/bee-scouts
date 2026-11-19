@@ -1,10 +1,10 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T18:02:34.914Z",
+  "at": "2026-11-19T18:05:12.214Z",
   "step": null,
   "reasons": [
-    "rp-547-t-dataset-card-licence"
+    "rp-547-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -282,33 +282,6 @@
       "lastTryAt": "2026-11-18T04:25:15.000Z"
     },
     {
-      "id": "rp-547-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "it described a dataset instead of holding its rows",
-      "firstFailureAt": "2026-11-18T15:59:13.288Z",
-      "lastObservedAt": "2026-11-18T22:40:24.039Z",
-      "counters": {
-        "observations": 249,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:574:1795041544412:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
-      "escalation": null,
-      "lastTryAt": "2026-11-18T22:40:24.039Z"
-    },
-    {
       "id": "rp-547-t-dataset-manifest-check",
       "artifact": "dataset-manifest-check",
       "kind": "selfTest",
@@ -420,16 +393,16 @@
       "id": "rp-547-t-dataset-card-licence",
       "artifact": "dataset-card-licence",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: add lic: [\"unparsed front-matter line: '- csv'\"]",
       "firstFailureAt": "2026-11-19T17:15:44.000Z",
-      "lastObservedAt": "2026-11-19T17:15:44.000Z",
+      "lastObservedAt": "2026-11-19T17:47:39.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -439,9 +412,36 @@
         "at": "2026-11-19T17:47:15.998Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028)",
+      "escalation": null,
+      "lastTryAt": "2026-11-19T17:47:39.000Z"
+    },
+    {
+      "id": "rp-547-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "firstFailureAt": "2026-11-19T18:03:59.108Z",
+      "lastObservedAt": "2026-11-19T18:03:59.108Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 2
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T17:47:15.998Z"
+      "lastTryAt": "2026-11-19T18:03:59.108Z"
     }
   ],
   "watchdog": {
