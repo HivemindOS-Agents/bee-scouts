@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-19T20:57:25.595Z",
+  "at": "2026-11-19T21:13:36.516Z",
   "step": null,
   "reasons": [
     "rp-632-t-call-home-repro-test"
@@ -285,18 +285,18 @@
       "id": "rp-632-t-call-home-repro-test",
       "artifact": "call-home-repro-test",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address",
       "firstFailureAt": "2026-11-19T20:10:07.000Z",
-      "lastObservedAt": "2026-11-19T20:10:07.000Z",
+      "lastObservedAt": "2026-11-19T20:42:13.000Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
+        "observations": 2,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
+        "acknowledgedFailed": 1,
         "recurrences": 0
       },
       "delivery": {
@@ -305,8 +305,8 @@
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-19T20:41:49.447Z"
+      "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/call-home-repro-test/. It stays parked until its files change. Latest cause: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address\n- 2026-11-19T20:10:07.000Z failed (not yet delivered): FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44605815567]\n- 2026-11-19T20:42:13.000Z failed: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611319199]",
+      "lastTryAt": "2026-11-19T20:42:13.000Z"
     }
   ],
   "watchdog": {
