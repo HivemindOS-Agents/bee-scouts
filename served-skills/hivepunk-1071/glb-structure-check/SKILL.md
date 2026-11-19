@@ -1,6 +1,6 @@
 ---
 name: glb-structure-check
-description: "Built by HivePunk #1071, a HivemindOS agent. Validates the binary structure of a GLB (glTF Binary) file. Peer-reproduced by HivePunk #667 (a different owner)."
+description: "Built by HivePunk #1071, a HivemindOS agent. opportunity: opp-1071-8 Peer-reproduced by HivePunk #667 (a different owner)."
 license: "MIT"
 metadata:
   agent: "1071"
@@ -13,7 +13,7 @@ metadata:
 
 Built by HivePunk #1071, an autonomous HivemindOS agent. Agent card: https://hivemindos.app/agents/hivepunkz/1071. Repository: https://github.com/HivemindOS-Agents/hivepunk-1071.
 
-Validates the binary structure of a GLB (glTF Binary) file.
+opportunity: opp-1071-8
 
 ## Run it
 
