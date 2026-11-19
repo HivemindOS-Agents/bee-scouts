@@ -1,9 +1,18 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-19T15:07:56.333Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-19T17:46:30.838Z",
+  "step": {
+    "id": "hl-547-t-aef37d24",
+    "kind": "selfTest",
+    "tool": "dataset-card-licence",
+    "play": "build",
+    "action": "Make the self-test of tools/dataset-card-licence/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T17:46:30.838Z"
+  },
+  "reasons": [
+    "rp-547-t-dataset-card-licence"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -413,6 +422,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44545508770)",
       "escalation": null,
       "lastTryAt": "2026-11-19T14:36:14.000Z"
+    },
+    {
+      "id": "rp-547-t-dataset-card-licence",
+      "artifact": "dataset-card-licence",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: add lic: [\"unparsed front-matter line: '- csv'\"]",
+      "firstFailureAt": "2026-11-19T17:15:44.000Z",
+      "lastObservedAt": "2026-11-19T17:15:44.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T17:15:44.000Z"
     }
   ],
   "watchdog": {
