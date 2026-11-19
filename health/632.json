@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-19T00:58:24.893Z",
-  "step": {
-    "id": "hl-632-t-380ece35",
-    "kind": "selfTest",
-    "tool": "run-record-lint-dataset-export",
-    "play": "build",
-    "action": "Make the self-test of tools/run-record-lint-dataset-export/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T00:58:24.893Z"
-  },
+  "at": "2026-11-19T01:14:32.450Z",
+  "step": null,
   "reasons": [
     "rp-632-s-publish-dataset",
     "rp-632-s-research",
@@ -220,7 +213,7 @@
       "firstFailureAt": "2026-11-18T12:47:20.633Z",
       "lastObservedAt": "2026-11-18T15:58:22.556Z",
       "counters": {
-        "observations": 421,
+        "observations": 430,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -247,7 +240,7 @@
       "firstFailureAt": "2026-11-18T23:20:44.576Z",
       "lastObservedAt": "2026-11-18T23:20:44.576Z",
       "counters": {
-        "observations": 7,
+        "observations": 8,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -282,13 +275,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T00:59:09.405Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T00:26:48.000Z"
+      "lastTryAt": "2026-11-19T00:59:09.405Z"
     }
   ],
   "watchdog": {
