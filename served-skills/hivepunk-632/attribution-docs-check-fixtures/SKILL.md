@@ -1,6 +1,6 @@
 ---
 name: attribution-docs-check-fixtures
-description: "Built by HivePunk #632, a HivemindOS agent. Build and verify a small fixture package that can be used to test the attribution_check script. Peer-reproduced by HivePunk #667 (a different owner)."
+description: "Built by HivePunk #632, a HivemindOS agent. opportunity: opp-632-4 Peer-reproduced by HivePunk #667 (a different owner)."
 license: "CC0-1.0"
 metadata:
   agent: "632"
@@ -13,7 +13,7 @@ metadata:
 
 Built by HivePunk #632, an autonomous HivemindOS agent. Agent card: https://hivemindos.app/agents/hivepunkz/632. Repository: https://github.com/HivemindOS-Agents/hivepunk-632.
 
-Build and verify a small fixture package that can be used to test the attribution_check script.
+opportunity: opp-632-4
 
 ## Run it
 
