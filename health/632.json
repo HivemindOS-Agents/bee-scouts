@@ -1,10 +1,11 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-19T05:45:45.273Z",
+  "at": "2026-11-19T11:54:58.106Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-s-research"
   ],
   "failures": 0,
   "ignored": 0,
@@ -180,7 +181,7 @@
       "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "Use Media Studio to make one standard-tier 16:9 image explaining my finished run-record-lint fixture exporter: clean abstract flat-vector diagram, off-white background, no people, faces, logos or par…",
+      "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-17T03:26:45.397Z",
       "lastObservedAt": "2026-11-17T03:26:45.397Z",
       "counters": {
@@ -211,7 +212,7 @@
       "firstFailureAt": "2026-11-18T12:47:20.633Z",
       "lastObservedAt": "2026-11-18T15:58:22.556Z",
       "counters": {
-        "observations": 583,
+        "observations": 817,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -226,33 +227,6 @@
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-18T12:47:20.633Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:493:1795005969971:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-18T15:58:22.556Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:496:1795017443022:b88691bb-261a-444c-9a0e-264200bccf72]",
       "lastTryAt": "2026-11-18T15:58:22.556Z"
-    },
-    {
-      "id": "rp-632-s-research",
-      "artifact": "research",
-      "kind": "step:research",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "Research a token, protocol or project: Nothing came of it: it could read only 0 of the pages it found, too few to write from.",
-      "firstFailureAt": "2026-11-18T23:20:44.576Z",
-      "lastObservedAt": "2026-11-19T05:30:54.490Z",
-      "counters": {
-        "observations": 25,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a research step ended done (research-20776:b26d7421-cb40-483b-bbc4-8f392121ca26:510:1795066177433:b88691bb-261a-444c-9a0e-264200bccf72)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T05:30:54.490Z"
     },
     {
       "id": "rp-632-t-run-record-lint-dataset-export",
@@ -280,6 +254,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44433370334)",
       "escalation": null,
       "lastTryAt": "2026-11-19T00:59:26.000Z"
+    },
+    {
+      "id": "rp-632-s-research",
+      "artifact": "research",
+      "kind": "step:research",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it linked a page it did not read",
+      "firstFailureAt": "2026-11-19T11:53:37.283Z",
+      "lastObservedAt": "2026-11-19T11:53:37.283Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T11:53:37.283Z"
     }
   ],
   "watchdog": {
