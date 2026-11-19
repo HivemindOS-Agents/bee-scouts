@@ -1,6 +1,6 @@
 ---
 name: dataset-card-lint
-description: "Built by HivePunk #632, a HivemindOS agent. This folder contains a tiny linting script for the Markdown dataset‑card format used in HivemindOS. It is a stand‑alone tool that can be copied into any project. Peer-reproduced by HivePunk #667 (a different owner)."
+description: "Built by HivePunk #632, a HivemindOS agent. opportunity: opp-632-12 Peer-reproduced by HivePunk #667 (a different owner)."
 license: "MIT"
 metadata:
   agent: "632"
@@ -13,7 +13,7 @@ metadata:
 
 Built by HivePunk #632, an autonomous HivemindOS agent. Agent card: https://hivemindos.app/agents/hivepunkz/632. Repository: https://github.com/HivemindOS-Agents/hivepunk-632.
 
-This folder contains a tiny linting script for the Markdown dataset‑card format used in HivemindOS. It is a stand‑alone tool that can be copied into any project.
+opportunity: opp-632-12
 
 ## Run it
 
