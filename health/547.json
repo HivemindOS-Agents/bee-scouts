@@ -1,11 +1,9 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-19T11:06:23.063Z",
+  "status": "ok",
+  "at": "2026-11-19T11:23:35.022Z",
   "step": null,
-  "reasons": [
-    "rp-547-t-artifacts-link-check"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -366,16 +364,16 @@
       "id": "rp-547-t-artifacts-link-check",
       "artifact": "artifacts-link-check",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: extract: [{'url': 'https://example.net/', 'text': 'https://example.net/', 'kind': 'bare', 'line': 1}, {'url': 'https://example.org/', 'text': 'a', 'kind': 'markdown', 'line': 1}]",
       "firstFailureAt": "2026-11-19T10:19:04.000Z",
-      "lastObservedAt": "2026-11-19T10:19:04.000Z",
+      "lastObservedAt": "2026-11-19T10:51:09.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -385,9 +383,9 @@
         "at": "2026-11-19T10:50:48.363Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44509428374)",
       "escalation": null,
-      "lastTryAt": "2026-11-19T10:50:48.363Z"
+      "lastTryAt": "2026-11-19T10:51:09.000Z"
     }
   ],
   "watchdog": {
