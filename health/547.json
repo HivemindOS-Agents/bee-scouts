@@ -1,9 +1,18 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-18T22:55:19.175Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-19T03:27:33.910Z",
+  "step": {
+    "id": "hl-547-t-1a247538",
+    "kind": "selfTest",
+    "tool": "dataset-manifest-check",
+    "play": "build",
+    "action": "Make the self-test of tools/dataset-manifest-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T03:27:33.910Z"
+  },
+  "reasons": [
+    "rp-547-t-dataset-manifest-check"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -280,33 +289,6 @@
       "lastTryAt": "2026-11-18T04:25:15.000Z"
     },
     {
-      "id": "rp-547-t-dataset-manifest-check",
-      "artifact": "dataset-manifest-check",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "MISSING_INPUT",
-      "runner": "assertion_failure",
-      "cause": "FAIL: valid json: ['/tmp/tmptxxblgav/data/manifest.json: unlisted file: manifest.txt'] {'listed': 3, 'present': 3, 'missing': 0, 'unlisted': 1}",
-      "firstFailureAt": "2026-11-18T13:52:18.000Z",
-      "lastObservedAt": "2026-11-18T14:25:35.000Z",
-      "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-18T14:25:07.312Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44324058479)",
-      "escalation": null,
-      "lastTryAt": "2026-11-18T14:25:35.000Z"
-    },
-    {
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
@@ -332,21 +314,48 @@
       "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:574:1795041544412:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
       "lastTryAt": "2026-11-18T22:40:24.039Z"
+    },
+    {
+      "id": "rp-547-t-dataset-manifest-check",
+      "artifact": "dataset-manifest-check",
+      "kind": "selfTest",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: prefix: [] {'manifest_count': 2, 'listing_count': 2, 'manifest_total': 2, 'listing_total': 2, 'common': 1, 'only_in_manifest': ['a.csv'], 'only_in_listing': ['dataset/a.csv'], 'duplicates_in_man",
+      "firstFailureAt": "2026-11-19T02:56:01.000Z",
+      "lastObservedAt": "2026-11-19T02:56:01.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T02:56:01.000Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-18T00:07:38.311Z",
+    "at": "2026-11-19T00:15:26.725Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 9,
+    "findingsOpen": 7,
     "top": {
-      "check": "D2",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 6 failed attempts, 0 of them after it was delivered."
+      "check": "D22",
+      "subject": "tools/artifacts-index-check/check.py",
+      "detail": "A step said it built tools/artifacts-index-check/check.py; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3539
+    "elapsedMs": 2744
   },
   "plays": {
     "publish-dataset": {
