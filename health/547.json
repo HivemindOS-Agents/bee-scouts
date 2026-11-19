@@ -1,9 +1,18 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-19T11:23:35.022Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-19T14:35:09.350Z",
+  "step": {
+    "id": "hl-547-t-74242cde",
+    "kind": "selfTest",
+    "tool": "stated-facts-check",
+    "play": "build",
+    "action": "Make the self-test of tools/stated-facts-check/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T14:35:09.350Z"
+  },
+  "reasons": [
+    "rp-547-t-stated-facts-check"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -386,6 +395,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44509428374)",
       "escalation": null,
       "lastTryAt": "2026-11-19T10:51:09.000Z"
+    },
+    {
+      "id": "rp-547-t-stated-facts-check",
+      "artifact": "stated-facts-check",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: blank skipped: 0",
+      "firstFailureAt": "2026-11-19T14:03:18.000Z",
+      "lastObservedAt": "2026-11-19T14:03:18.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T14:03:18.000Z"
     }
   ],
   "watchdog": {
