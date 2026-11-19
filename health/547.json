@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T03:27:33.910Z",
-  "step": {
-    "id": "hl-547-t-1a247538",
-    "kind": "selfTest",
-    "tool": "dataset-manifest-check",
-    "play": "build",
-    "action": "Make the self-test of tools/dataset-manifest-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T03:27:33.910Z"
-  },
+  "at": "2026-11-19T03:44:03.028Z",
+  "step": null,
   "reasons": [
     "rp-547-t-dataset-manifest-check"
   ],
@@ -334,13 +327,13 @@
         "recurrences": 1
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T03:28:19.951Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T02:56:01.000Z"
+      "lastTryAt": "2026-11-19T03:28:19.951Z"
     }
   ],
   "watchdog": {
