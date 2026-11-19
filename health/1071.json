@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-19T13:46:37.204Z",
+  "at": "2026-11-19T14:21:31.724Z",
   "step": null,
   "reasons": [
     "rp-1071-s-publish-dataset"
@@ -150,17 +150,17 @@
       "id": "rp-1071-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "firstFailureAt": "2026-11-19T08:25:52.521Z",
-      "lastObservedAt": "2026-11-19T08:25:52.521Z",
+      "lastObservedAt": "2026-11-19T14:19:34.684Z",
       "counters": {
-        "observations": 155,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 177,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 1
       },
@@ -170,8 +170,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-19T08:25:52.521Z"
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-19T08:25:52.521Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:448:1795076666750:a0a0dbac-1732-4814-ae88-ec439a3bca29]\n- 2026-11-19T14:19:34.684Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:451:1795097895720:a0a0dbac-1732-4814-ae88-ec439a3bca29]",
+      "lastTryAt": "2026-11-19T14:19:34.684Z"
     },
     {
       "id": "rp-1071-t-glb-fixture-byte-layouts",
@@ -217,7 +217,15 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-19T14:19:34.684Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-20T14:19:34.684Z)"
+      ]
     },
     "propose": {
       "state": "offered"
