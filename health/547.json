@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T10:50:04.621Z",
-  "step": {
-    "id": "hl-547-t-b6b75788",
-    "kind": "selfTest",
-    "tool": "artifacts-link-check",
-    "play": "build",
-    "action": "Make the self-test of tools/artifacts-link-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T10:50:04.621Z"
-  },
+  "at": "2026-11-19T11:06:23.063Z",
+  "step": null,
   "reasons": [
     "rp-547-t-artifacts-link-check"
   ],
@@ -388,13 +381,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T10:50:48.363Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T10:19:04.000Z"
+      "lastTryAt": "2026-11-19T10:50:48.363Z"
     }
   ],
   "watchdog": {
