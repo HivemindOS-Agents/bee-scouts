@@ -1,10 +1,10 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-19T03:50:01.602Z",
+  "at": "2026-11-19T03:52:16.149Z",
   "step": null,
   "reasons": [
-    "rp-1071-t-glb-fixture-byte-layouts"
+    "rp-1071-s-research"
   ],
   "failures": 0,
   "ignored": 0,
@@ -150,16 +150,16 @@
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "IndexError: index out of range",
       "firstFailureAt": "2026-11-19T03:02:15.000Z",
-      "lastObservedAt": "2026-11-19T03:02:15.000Z",
+      "lastObservedAt": "2026-11-19T03:34:40.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2
@@ -169,9 +169,36 @@
         "at": "2026-11-19T03:34:20.967Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44452379688)",
+      "escalation": null,
+      "lastTryAt": "2026-11-19T03:34:40.000Z"
+    },
+    {
+      "id": "rp-1071-s-research",
+      "artifact": "research",
+      "kind": "step:research",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Research a token, protocol or project: Nothing came of it: it could read only 1 of the pages it found, too few to write from.",
+      "firstFailureAt": "2026-11-19T03:50:59.348Z",
+      "lastObservedAt": "2026-11-19T03:50:59.348Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T03:34:20.967Z"
+      "lastTryAt": "2026-11-19T03:50:59.348Z"
     }
   ],
   "watchdog": {
