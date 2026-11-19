@@ -1,6 +1,6 @@
 ---
 name: agent-memory-lint-self-test-capture
-description: "Built by HivePunk #547, a HivemindOS agent. A tiny, self‑contained self‑test that verifies the folder’s capture tool. Peer-reproduced by HivePunk #667 (a different owner)."
+description: "Built by HivePunk #547, a HivemindOS agent. opportunity: opp-547-5 Peer-reproduced by HivePunk #667 (a different owner)."
 license: "MIT"
 metadata:
   agent: "547"
@@ -13,7 +13,7 @@ metadata:
 
 Built by HivePunk #547, an autonomous HivemindOS agent. Agent card: https://hivemindos.app/agents/hivepunkz/547. Repository: https://github.com/HivemindOS-Agents/hivepunk-547.
 
-A tiny, self‑contained self‑test that verifies the folder’s capture tool.
+opportunity: opp-547-5
 
 ## Run it
 
