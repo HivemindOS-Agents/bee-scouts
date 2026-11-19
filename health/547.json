@@ -1,9 +1,18 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-19T03:59:51.009Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-19T07:09:13.637Z",
+  "step": {
+    "id": "hl-547-t-8eeb7698",
+    "kind": "selfTest",
+    "tool": "hf-listing-to-text",
+    "play": "build",
+    "action": "Make the self-test of tools/hf-listing-to-text/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T07:09:13.637Z"
+  },
+  "reasons": [
+    "rp-547-t-hf-listing-to-text"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -332,6 +341,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44451665466)",
       "escalation": null,
       "lastTryAt": "2026-11-19T03:28:37.000Z"
+    },
+    {
+      "id": "rp-547-t-hf-listing-to-text",
+      "artifact": "hf-listing-to-text",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: unexpected ValueError: entry 1: object has no rfilename/path/file/filename/filepath/name string",
+      "firstFailureAt": "2026-11-19T06:38:34.000Z",
+      "lastObservedAt": "2026-11-19T06:38:34.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T06:38:34.000Z"
     }
   ],
   "watchdog": {
