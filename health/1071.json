@@ -1,10 +1,18 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-19T08:27:10.445Z",
-  "step": null,
+  "at": "2026-11-19T13:14:27.082Z",
+  "step": {
+    "id": "hl-1071-t-634706f7",
+    "kind": "selfTest",
+    "tool": "glb-fixture-byte-layouts",
+    "play": "build",
+    "action": "Make the self-test of tools/glb-fixture-byte-layouts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-19T13:14:27.082Z"
+  },
   "reasons": [
-    "rp-1071-s-publish-dataset"
+    "rp-1071-s-publish-dataset",
+    "rp-1071-t-glb-fixture-byte-layouts"
   ],
   "failures": 0,
   "ignored": 0,
@@ -120,40 +128,13 @@
       "lastTryAt": "2026-11-15T17:44:34.000Z"
     },
     {
-      "id": "rp-1071-t-glb-fixture-byte-layouts",
-      "artifact": "glb-fixture-byte-layouts",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": "assertion_failure",
-      "cause": "IndexError: index out of range",
-      "firstFailureAt": "2026-11-19T03:02:15.000Z",
-      "lastObservedAt": "2026-11-19T03:34:40.000Z",
-      "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 2
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-19T03:34:20.967Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44452379688)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T03:34:40.000Z"
-    },
-    {
       "id": "rp-1071-s-research",
       "artifact": "research",
       "kind": "step:research",
       "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "Research a token, protocol or project: Nothing came of it: it could read only 1 of the pages it found, too few to write from.",
+      "cause": "Nothing came of it: it could read only 1 of the pages it found, too few to write from.",
       "firstFailureAt": "2026-11-19T03:50:59.348Z",
       "lastObservedAt": "2026-11-19T07:19:43.322Z",
       "counters": {
@@ -184,7 +165,7 @@
       "firstFailureAt": "2026-11-19T08:25:52.521Z",
       "lastObservedAt": "2026-11-19T08:25:52.521Z",
       "counters": {
-        "observations": 1,
+        "observations": 141,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -199,6 +180,33 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-19T08:25:52.521Z"
+    },
+    {
+      "id": "rp-1071-t-glb-fixture-byte-layouts",
+      "artifact": "glb-fixture-byte-layouts",
+      "kind": "selfTest",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: shipped MANIFEST.txt claims no published values",
+      "firstFailureAt": "2026-11-19T12:42:53.000Z",
+      "lastObservedAt": "2026-11-19T12:42:53.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 3
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T12:42:53.000Z"
     }
   ],
   "watchdog": {
