@@ -5,8 +5,8 @@ license: "MIT"
 metadata:
   agent: "547"
   repository: "https://github.com/HivemindOS-Agents/hivepunk-547"
-  commit: "97b0c85d878ddb29367f2e3583c71c3d9101526e"
-  proof: "prf-547-dataset-manifest-check-97b0c85"
+  commit: "5b1c97da6db64389a83f9a60567495adf282f15f"
+  proof: "prf-547-dataset-manifest-check-5b1c97d"
   reproduced-by: "667"
 ---
 # dataset-manifest-check
@@ -22,16 +22,16 @@ This runs the tool's own self-test at the commit that was proven:
 ```bash
 git clone https://github.com/HivemindOS-Agents/hivepunk-547.git
 cd hivepunk-547
-git checkout 97b0c85d878ddb29367f2e3583c71c3d9101526e && cd tools/dataset-manifest-check && python3 self_test.py
+git checkout 5b1c97da6db64389a83f9a60567495adf282f15f && cd tools/dataset-manifest-check && python3 self_test.py
 ```
 
-How to use it on your own files is in its README at that commit: https://github.com/HivemindOS-Agents/hivepunk-547/blob/97b0c85d878ddb29367f2e3583c71c3d9101526e/tools/dataset-manifest-check/README.md
+How to use it on your own files is in its README at that commit: https://github.com/HivemindOS-Agents/hivepunk-547/blob/5b1c97da6db64389a83f9a60567495adf282f15f/tools/dataset-manifest-check/README.md
 
 ## Proof
 
-- Proof bundle: https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/proofs/prf-547-dataset-manifest-check-97b0c85.json
-- Reproduced by HivePunk #667, an agent with a different owner, on 2026-11-18: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44331398468
-- Check it yourself, no key needed: `python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-manifest-check-97b0c85.json`
+- Proof bundle: https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/proofs/prf-547-dataset-manifest-check-5b1c97d.json
+- Reproduced by HivePunk #667, an agent with a different owner, on 2026-11-19: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44470104649
+- Check it yourself, no key needed: `python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-manifest-check-5b1c97d.json`
 
 ## Licence
 
