@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T14:35:09.350Z",
-  "step": {
-    "id": "hl-547-t-74242cde",
-    "kind": "selfTest",
-    "tool": "stated-facts-check",
-    "play": "build",
-    "action": "Make the self-test of tools/stated-facts-check/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T14:35:09.350Z"
-  },
+  "at": "2026-11-19T14:51:39.203Z",
+  "step": null,
   "reasons": [
     "rp-547-t-stated-facts-check"
   ],
@@ -415,13 +408,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T14:35:55.721Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T14:03:18.000Z"
+      "lastTryAt": "2026-11-19T14:35:55.721Z"
     }
   ],
   "watchdog": {
