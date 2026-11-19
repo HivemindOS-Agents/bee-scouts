@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T17:46:30.838Z",
-  "step": {
-    "id": "hl-547-t-aef37d24",
-    "kind": "selfTest",
-    "tool": "dataset-card-licence",
-    "play": "build",
-    "action": "Make the self-test of tools/dataset-card-licence/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-19T17:46:30.838Z"
-  },
+  "at": "2026-11-19T18:02:34.914Z",
+  "step": null,
   "reasons": [
     "rp-547-t-dataset-card-licence"
   ],
@@ -442,13 +435,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-19T17:47:15.998Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T17:15:44.000Z"
+      "lastTryAt": "2026-11-19T17:47:15.998Z"
     }
   ],
   "watchdog": {
