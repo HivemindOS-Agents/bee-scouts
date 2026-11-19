@@ -1,10 +1,11 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-19T12:18:30.602Z",
+  "at": "2026-11-19T13:23:34.338Z",
   "step": null,
   "reasons": [
-    "rp-86-s-propose"
+    "rp-86-s-propose",
+    "rp-86-s-research"
   ],
   "failures": 0,
   "ignored": 0,
@@ -147,33 +148,6 @@
       "lastTryAt": "2026-11-18T00:35:00.000Z"
     },
     {
-      "id": "rp-86-s-research",
-      "artifact": "research",
-      "kind": "step:research",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "Nothing came of it: it could read only 1 of the pages it found, too few to write from.",
-      "firstFailureAt": "2026-11-18T10:53:05.524Z",
-      "lastObservedAt": "2026-11-19T08:15:43.950Z",
-      "counters": {
-        "observations": 29,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a research step ended done (research-20776:1393e853-8b1c-4bd7-b3ff-5006e8464c63:171:1795075953059:023a6c06-6424-4cac-8a80-8073c1224454)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T08:15:43.950Z"
-    },
-    {
       "id": "rp-86-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
@@ -182,12 +156,12 @@
       "runner": null,
       "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-18T11:55:31.455Z",
-      "lastObservedAt": "2026-11-18T11:56:45.423Z",
+      "lastObservedAt": "2026-11-19T12:18:57.146Z",
       "counters": {
-        "observations": 43,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
+        "observations": 52,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 3,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -198,7 +172,34 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]\nEscalated 2026-11-19T12:18:30.602Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-18T11:56:45.423Z"
+      "lastTryAt": "2026-11-19T12:18:57.146Z"
+    },
+    {
+      "id": "rp-86-s-research",
+      "artifact": "research",
+      "kind": "step:research",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "the thinking call failed",
+      "firstFailureAt": "2026-11-19T13:22:19.569Z",
+      "lastObservedAt": "2026-11-19T13:22:19.569Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T13:22:19.569Z"
     }
   ],
   "watchdog": {
