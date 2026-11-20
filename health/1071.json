@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-20T19:05:07.062Z",
+  "at": "2026-11-20T19:22:27.696Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -170,33 +170,6 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370)",
       "escalation": null,
       "lastTryAt": "2026-11-19T13:15:48.000Z"
-    },
-    {
-      "id": "rp-1071-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
-      "firstFailureAt": "2026-11-16T18:55:26.488Z",
-      "lastObservedAt": "2026-11-19T00:02:52.230Z",
-      "counters": {
-        "observations": 4,
-        "failedAttempts": 4,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:437:1795046400000:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T00:02:52.230Z"
     },
     {
       "id": "rp-1071-s-publish-dataset",
