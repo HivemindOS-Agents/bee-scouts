@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-20T20:10:41.516Z",
-  "step": {
-    "id": "hl-547-t-79d6f5e8",
-    "kind": "selfTest",
-    "tool": "microduck-stated-facts",
-    "play": "build",
-    "action": "Make the self-test of tools/microduck-stated-facts/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-20T20:10:41.516Z"
-  },
+  "at": "2026-11-20T20:27:02.345Z",
+  "step": null,
   "reasons": [
     "rp-547-t-microduck-stated-facts"
   ],
@@ -469,13 +462,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-20T20:11:28.327Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-20T19:40:09.000Z"
+      "lastTryAt": "2026-11-20T20:11:28.327Z"
     },
     {
       "id": "rp-547-s-publish-dataset",
