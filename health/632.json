@@ -1,9 +1,11 @@
 {
   "agent": "632",
-  "status": "ok",
-  "at": "2026-11-20T00:26:07.896Z",
+  "status": "repairing",
+  "at": "2026-11-20T03:06:30.580Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-632-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -199,33 +201,6 @@
       "lastTryAt": "2026-11-17T03:26:45.397Z"
     },
     {
-      "id": "rp-632-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-18T12:47:20.633Z",
-      "lastObservedAt": "2026-11-19T16:09:48.725Z",
-      "counters": {
-        "observations": 979,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 2,
-        "acknowledgedFailed": 0,
-        "recurrences": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:517:1795104494877:b88691bb-261a-444c-9a0e-264200bccf72)",
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-18T12:47:20.633Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:493:1795005969971:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-18T15:58:22.556Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:496:1795017443022:b88691bb-261a-444c-9a0e-264200bccf72]\nEscalated 2026-11-19T16:08:59.099Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-19T16:09:48.725Z"
-    },
-    {
       "id": "rp-632-t-run-record-lint-dataset-export",
       "artifact": "run-record-lint-dataset-export",
       "kind": "selfTest",
@@ -305,6 +280,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44643498759)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/call-home-repro-test/. It stays parked until its files change. Latest cause: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address\n- 2026-11-19T20:10:07.000Z failed (not yet delivered): FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44605815567]\n- 2026-11-19T20:42:13.000Z failed: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611319199]",
       "lastTryAt": "2026-11-20T00:09:20.000Z"
+    },
+    {
+      "id": "rp-632-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it described a dataset instead of holding its rows",
+      "firstFailureAt": "2026-11-20T03:05:16.688Z",
+      "lastObservedAt": "2026-11-20T03:05:16.688Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 2
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-20T03:05:16.688Z"
     }
   ],
   "watchdog": {
