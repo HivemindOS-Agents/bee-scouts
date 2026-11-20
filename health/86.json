@@ -1,11 +1,10 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-19T13:23:34.338Z",
+  "at": "2026-11-20T05:01:26.640Z",
   "step": null,
   "reasons": [
-    "rp-86-s-propose",
-    "rp-86-s-research"
+    "rp-86-s-propose"
   ],
   "failures": 0,
   "ignored": 0,
@@ -156,12 +155,12 @@
       "runner": null,
       "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-18T11:55:31.455Z",
-      "lastObservedAt": "2026-11-19T12:18:57.146Z",
+      "lastObservedAt": "2026-11-19T14:24:30.739Z",
       "counters": {
-        "observations": 52,
-        "failedAttempts": 3,
-        "consecutive": 3,
-        "sameCause": 3,
+        "observations": 127,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 4,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -172,22 +171,22 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]\nEscalated 2026-11-19T12:18:30.602Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-19T12:18:57.146Z"
+      "lastTryAt": "2026-11-19T14:24:30.739Z"
     },
     {
       "id": "rp-86-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "the thinking call failed",
       "firstFailureAt": "2026-11-19T13:22:19.569Z",
-      "lastObservedAt": "2026-11-19T13:22:19.569Z",
+      "lastObservedAt": "2026-11-20T04:01:53.313Z",
       "counters": {
-        "observations": 1,
+        "observations": 58,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -197,13 +196,13 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a research step ended done (research-20777:1393e853-8b1c-4bd7-b3ff-5006e8464c63:178:1795147181096:023a6c06-6424-4cac-8a80-8073c1224454)",
       "escalation": null,
-      "lastTryAt": "2026-11-19T13:22:19.569Z"
+      "lastTryAt": "2026-11-20T04:01:53.313Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-19T00:00:58.034Z",
+    "at": "2026-11-20T00:55:48.954Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 7,
@@ -214,7 +213,7 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 2643
+    "elapsedMs": 2660
   },
   "plays": {
     "publish-dataset": {
