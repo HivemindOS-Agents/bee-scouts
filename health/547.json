@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-20T20:43:11.800Z",
-  "step": {
-    "id": "hl-547-t-79d6f5e8",
-    "kind": "selfTest",
-    "tool": "microduck-stated-facts",
-    "play": "build",
-    "action": "Make the self-test of tools/microduck-stated-facts/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-20T20:43:11.800Z"
-  },
+  "at": "2026-11-20T21:00:10.745Z",
+  "step": null,
   "reasons": [
     "rp-547-t-microduck-stated-facts"
   ],
