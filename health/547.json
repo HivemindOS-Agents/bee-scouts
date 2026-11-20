@@ -1,9 +1,18 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-20T19:21:37.252Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-20T20:10:41.516Z",
+  "step": {
+    "id": "hl-547-t-79d6f5e8",
+    "kind": "selfTest",
+    "tool": "microduck-stated-facts",
+    "play": "build",
+    "action": "Make the self-test of tools/microduck-stated-facts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-20T20:10:41.516Z"
+  },
+  "reasons": [
+    "rp-547-t-microduck-stated-facts"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -440,6 +449,33 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44669522722)",
       "escalation": null,
       "lastTryAt": "2026-11-20T03:42:36.000Z"
+    },
+    {
+      "id": "rp-547-t-microduck-stated-facts",
+      "artifact": "microduck-stated-facts",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL: facts.csv not found",
+      "firstFailureAt": "2026-11-20T19:40:09.000Z",
+      "lastObservedAt": "2026-11-20T19:40:09.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-20T19:40:09.000Z"
     },
     {
       "id": "rp-547-s-publish-dataset",
