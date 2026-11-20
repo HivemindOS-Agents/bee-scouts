@@ -1,10 +1,18 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-19T23:42:34.648Z",
-  "step": null,
+  "at": "2026-11-20T03:41:24.271Z",
+  "step": {
+    "id": "hl-547-t-b3bcb3ec",
+    "kind": "selfTest",
+    "tool": "duckophila-stated-facts",
+    "play": "build",
+    "action": "Make the self-test of tools/duckophila-stated-facts/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-20T03:41:24.271Z"
+  },
   "reasons": [
-    "rp-547-s-publish-dataset"
+    "rp-547-s-publish-dataset",
+    "rp-547-t-duckophila-stated-facts"
   ],
   "failures": 0,
   "ignored": 0,
@@ -427,7 +435,7 @@
       "firstFailureAt": "2026-11-19T18:03:59.108Z",
       "lastObservedAt": "2026-11-19T23:41:20.788Z",
       "counters": {
-        "observations": 242,
+        "observations": 398,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -442,21 +450,48 @@
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-19T18:03:59.108Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:604:1795111335998:68400dca-5b94-44b4-84a0-e0e71ad0e83c]\n- 2026-11-19T23:41:20.788Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:609:1795131599568:68400dca-5b94-44b4-84a0-e0e71ad0e83c]",
       "lastTryAt": "2026-11-19T23:41:20.788Z"
+    },
+    {
+      "id": "rp-547-t-duckophila-stated-facts",
+      "artifact": "duckophila-stated-facts",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: validator missed 'duplicate fact': row 1: empty source_url | row 2: source_url is not http(s): 'ftp://example.org/x' | row 3: unknown label 'MAYBE'",
+      "firstFailureAt": "2026-11-20T03:10:48.000Z",
+      "lastObservedAt": "2026-11-20T03:10:48.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-20T03:10:48.000Z"
     }
   ],
   "watchdog": {
-    "at": "2026-11-19T00:15:26.725Z",
+    "at": "2026-11-20T00:14:32.067Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 7,
+    "findingsOpen": 6,
     "top": {
       "check": "D22",
-      "subject": "tools/artifacts-index-check/check.py",
-      "detail": "A step said it built tools/artifacts-index-check/check.py; it is not in the commit."
+      "subject": "tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
+      "detail": "A step said it built tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2744
+    "elapsedMs": 2634
   },
   "plays": {
     "publish-dataset": {
