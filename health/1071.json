@@ -1,11 +1,9 @@
 {
   "agent": "1071",
-  "status": "repairing",
-  "at": "2026-11-20T14:30:25.413Z",
+  "status": "ok",
+  "at": "2026-11-20T19:05:07.062Z",
   "step": null,
-  "reasons": [
-    "rp-1071-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -147,33 +145,6 @@
       "lastTryAt": "2026-11-19T07:19:43.322Z"
     },
     {
-      "id": "rp-1071-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "ESCALATED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-19T08:25:52.521Z",
-      "lastObservedAt": "2026-11-19T14:19:34.684Z",
-      "counters": {
-        "observations": 969,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
-        "acknowledgedFailed": 0,
-        "recurrences": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it was about HivemindOS's own issues or self-tests, not something people outside need\n- 2026-11-19T08:25:52.521Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:448:1795076666750:a0a0dbac-1732-4814-ae88-ec439a3bca29]\n- 2026-11-19T14:19:34.684Z failed (not yet delivered): it was about HivemindOS's own issues or self-tests, not something people outside need [step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:451:1795097895720:a0a0dbac-1732-4814-ae88-ec439a3bca29]\nEscalated 2026-11-20T14:30:25.413Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-19T14:19:34.684Z"
-    },
-    {
       "id": "rp-1071-t-glb-fixture-byte-layouts",
       "artifact": "glb-fixture-byte-layouts",
       "kind": "selfTest",
@@ -199,8 +170,81 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370)",
       "escalation": null,
       "lastTryAt": "2026-11-19T13:15:48.000Z"
+    },
+    {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-16T18:55:26.488Z",
+      "lastObservedAt": "2026-11-19T00:02:52.230Z",
+      "counters": {
+        "observations": 4,
+        "failedAttempts": 4,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": "step: a publish-dataset step ended done (dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:437:1795046400000:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
+      "escalation": null,
+      "lastTryAt": "2026-11-19T00:02:52.230Z"
+    },
+    {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "SKIPPED_POLICY",
+      "failureClass": "POLICY_SKIP",
+      "runner": null,
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "firstFailureAt": "2026-11-19T08:25:52.521Z",
+      "lastObservedAt": "2026-11-19T14:19:34.684Z",
+      "counters": {
+        "observations": 2,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "policySkips": 2
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of this play that ends done.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-19T14:19:34.684Z",
+      "hb062": "visible, not blocking until 2026-11-21T08:25:52.521Z"
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-1071-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-19T08:25:52.521Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-1071-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-19T14:19:34.684Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-20T00:04:08.934Z",
     "version": "watchdog-v1",
