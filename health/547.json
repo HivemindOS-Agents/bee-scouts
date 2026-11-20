@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-20T03:41:24.271Z",
-  "step": {
-    "id": "hl-547-t-b3bcb3ec",
-    "kind": "selfTest",
-    "tool": "duckophila-stated-facts",
-    "play": "build",
-    "action": "Make the self-test of tools/duckophila-stated-facts/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-20T03:41:24.271Z"
-  },
+  "at": "2026-11-20T03:58:05.876Z",
+  "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
     "rp-547-t-duckophila-stated-facts"
@@ -435,7 +428,7 @@
       "firstFailureAt": "2026-11-19T18:03:59.108Z",
       "lastObservedAt": "2026-11-19T23:41:20.788Z",
       "counters": {
-        "observations": 398,
+        "observations": 408,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -470,13 +463,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-20T03:42:15.899Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-20T03:10:48.000Z"
+      "lastTryAt": "2026-11-20T03:42:15.899Z"
     }
   ],
   "watchdog": {
