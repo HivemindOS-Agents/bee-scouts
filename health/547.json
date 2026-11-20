@@ -1,9 +1,11 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-20T21:16:38.171Z",
+  "status": "repairing",
+  "at": "2026-11-20T23:58:15.436Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-547-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -472,30 +474,29 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "SKIPPED_POLICY",
-      "failureClass": "POLICY_SKIP",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-19T18:03:59.108Z",
-      "lastObservedAt": "2026-11-19T23:41:20.788Z",
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-20T23:57:05.729Z",
+      "lastObservedAt": "2026-11-20T23:57:05.729Z",
       "counters": {
-        "observations": 2,
-        "failedAttempts": 0,
-        "consecutive": 0,
-        "sameCause": 0,
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0,
+        "recurrences": 2,
         "policySkips": 2
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
-      "proof": "A later step of this play that ends done.",
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-19T23:41:20.788Z",
-      "hb062": "visible, not blocking until 2026-11-21T18:03:59.108Z"
+      "lastTryAt": "2026-11-20T23:57:05.729Z"
     }
   ],
   "policySkips": [
@@ -531,13 +532,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "2 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-19T23:41:20.788Z",
-      "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-20T23:41:20.788Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
