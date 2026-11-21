@@ -111,15 +111,15 @@ Holder-directed: #<n>, #<n>
 ### Step repairs (daily sweep)
 
 ```
-Sweep 2026-11-20 06:00 UTC
-#86: step:propose escalated after 4 same-cause failures (4 in all): its answer could not be read (cut off or not JSON), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/86.json
-#547: step:publish-dataset parked after 2 same-cause failures (2 in all): it was about HivemindOS's own issues or self-tests, not something people outside need, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json
+Sweep 2026-11-21 06:00 UTC
+#86: pass
+#547: pass
 #632: pass
-#667: step:propose escalated after 2 same-cause failures (6 in all): its answer could not be read (cut off or not JSON), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:propose escalated after 3 same-cause failures (7 in all): its answer could not be read (cut off or not JSON), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #667: step:research escalated after 2 same-cause failures (4 in all): Nothing came of it: the search found no pages., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #667: step:publish-dataset escalated after 2 same-cause failures (5 in all): The research could not finish., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #667: step:agents escalated after 2 same-cause failures (2 in all): Nothing came of it this time., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#1071: step:publish-dataset parked after 2 same-cause failures (2 in all): it was about HivemindOS's own issues or self-tests, not something people outside need, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json
+#1071: pass
 ```
 
 ## Changes to the checks
