@@ -1,9 +1,18 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-21T06:00:20.266Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-21T08:10:49.240Z",
+  "step": {
+    "id": "hl-1071-t-92db6733",
+    "kind": "selfTest",
+    "tool": "fixprotocol-modifyliquidities-reentrancy-cases",
+    "play": "build",
+    "action": "Make the self-test of tools/fixprotocol-modifyliquidities-reentrancy-cases/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-21T08:10:49.240Z"
+  },
+  "reasons": [
+    "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -197,6 +206,33 @@
       "closedBy": "step: a publish-dataset step ended done (dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:437:1795046400000:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
       "escalation": null,
       "lastTryAt": "2026-11-19T00:02:52.230Z"
+    },
+    {
+      "id": "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases",
+      "artifact": "fixprotocol-modifyliquidities-reentrancy-cases",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: no exploit or payload instructions in records",
+      "firstFailureAt": "2026-11-21T07:40:17.000Z",
+      "lastObservedAt": "2026-11-21T07:40:17.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-21T07:40:17.000Z"
     }
   ],
   "watchdog": {
