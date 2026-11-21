@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-21T04:07:24.197Z",
+  "at": "2026-11-21T06:00:20.266Z",
   "step": null,
   "reasons": [
     "rp-86-s-research"
@@ -184,7 +184,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 1,
+        "observations": 5,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
