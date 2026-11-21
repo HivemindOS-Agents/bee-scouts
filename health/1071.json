@@ -1,11 +1,9 @@
 {
   "agent": "1071",
-  "status": "repairing",
-  "at": "2026-11-21T08:45:07.678Z",
+  "status": "ok",
+  "at": "2026-11-21T09:00:25.960Z",
   "step": null,
-  "reasons": [
-    "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -204,16 +202,16 @@
       "id": "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases",
       "artifact": "fixprotocol-modifyliquidities-reentrancy-cases",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: no invented URLs in records",
       "firstFailureAt": "2026-11-21T07:40:17.000Z",
-      "lastObservedAt": "2026-11-21T08:11:46.000Z",
+      "lastObservedAt": "2026-11-21T08:30:00.000Z",
       "counters": {
         "observations": 2,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
         "recurrences": 0
@@ -223,9 +221,9 @@
         "at": "2026-11-21T08:11:27.282Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44885139037)",
       "escalation": null,
-      "lastTryAt": "2026-11-21T08:11:46.000Z"
+      "lastTryAt": "2026-11-21T08:30:00.000Z"
     }
   ],
   "watchdog": {
