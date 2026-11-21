@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-21T04:14:04.723Z",
+  "at": "2026-11-21T06:00:20.266Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -482,7 +482,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-20T23:57:05.729Z",
       "counters": {
-        "observations": 54,
+        "observations": 75,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -510,7 +510,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-21T03:43:22.000Z",
       "counters": {
-        "observations": 2,
+        "observations": 9,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
