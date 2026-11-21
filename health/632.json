@@ -1,10 +1,11 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-20T19:03:05.254Z",
+  "at": "2026-11-21T05:04:47.367Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-s-research"
   ],
   "failures": 0,
   "ignored": 0,
@@ -228,33 +229,6 @@
       "lastTryAt": "2026-11-19T00:59:26.000Z"
     },
     {
-      "id": "rp-632-s-research",
-      "artifact": "research",
-      "kind": "step:research",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "it linked a page it did not read",
-      "firstFailureAt": "2026-11-19T11:53:37.283Z",
-      "lastObservedAt": "2026-11-19T11:55:30.569Z",
-      "counters": {
-        "observations": 3,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a research step ended done (research-20776:b26d7421-cb40-483b-bbc4-8f392121ca26:514:1795089281356:b88691bb-261a-444c-9a0e-264200bccf72)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T11:55:30.569Z"
-    },
-    {
       "id": "rp-632-t-call-home-repro-test",
       "artifact": "call-home-repro-test",
       "kind": "selfTest",
@@ -292,7 +266,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-20T03:05:16.688Z",
       "counters": {
-        "observations": 3,
+        "observations": 86,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -308,6 +282,33 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-20T03:05:16.688Z"
+    },
+    {
+      "id": "rp-632-s-research",
+      "artifact": "research",
+      "kind": "step:research",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Nothing came of it: it could read only 1 of the pages it found, too few to write from.",
+      "firstFailureAt": "2026-11-21T05:03:33.615Z",
+      "lastObservedAt": "2026-11-21T05:03:33.615Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 2
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-21T05:03:33.615Z"
     }
   ],
   "policySkips": [
@@ -328,18 +329,18 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-20T00:08:10.995Z",
+    "at": "2026-11-21T00:01:40.189Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 10,
     "top": {
       "check": "D22",
-      "subject": "tools/run-record-lint-dataset-card/self_test.py",
-      "detail": "A step said it built tools/run-record-lint-dataset-card/self_test.py; it is not in the commit."
+      "subject": "tools/attribution-docs-check-fixtures/fixtures.csv",
+      "detail": "A step said it built tools/attribution-docs-check-fixtures/fixtures.csv; it is not in the commit."
     },
     "notChecked": [],
-    "requests": 23,
-    "elapsedMs": 3125
+    "requests": 22,
+    "elapsedMs": 2848
   },
   "plays": {
     "publish-dataset": {
