@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-21T11:22:10.328Z",
+  "at": "2026-11-21T13:13:12.440Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -274,13 +274,13 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 122,
+        "observations": 138,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
-        "policySkips": 2
+        "policySkips": 3
       },
       "delivery": {
         "state": "unknown",
@@ -335,9 +335,18 @@
       "at": "2026-11-20T09:08:12.947Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-632-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-21T13:11:59.536Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
     }
   ],
-  "notices": [],
+  "notices": [
+    "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
+  ],
   "watchdog": {
     "at": "2026-11-21T00:01:40.189Z",
     "version": "watchdog-v1",
@@ -350,11 +359,31 @@
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2848
+    "elapsedMs": 2848,
+    "intake": {
+      "mode": "observe",
+      "noRepair": [],
+      "contradictions": [
+        {
+          "finding": "wd-632-D22-tools/attribution-docs-check-fixtures/fixtures.csv",
+          "released": "rp-632-f-attribution-docs-check-fixtures"
+        },
+        {
+          "finding": "wd-632-D22-tools/attribution-docs-check-fixtures/checksums.txt",
+          "released": "rp-632-f-attribution-docs-check-fixtures"
+        }
+      ]
+    }
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "3 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-21T13:11:59.536Z",
+      "reopenOn": [
+        "a later step of this play that ends done",
+        "24 h (2026-11-22T13:11:59.536Z)"
+      ]
     },
     "propose": {
       "state": "offered"
