@@ -1,9 +1,11 @@
 {
   "agent": "86",
-  "status": "ok",
-  "at": "2026-11-21T01:02:59.325Z",
+  "status": "repairing",
+  "at": "2026-11-21T04:07:24.197Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-86-s-research"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -175,28 +177,28 @@
       "id": "rp-86-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "RELEASED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "the thinking call failed",
-      "firstFailureAt": "2026-11-19T13:22:19.569Z",
-      "lastObservedAt": "2026-11-20T04:01:53.313Z",
+      "firstFailureAt": "2026-11-21T04:06:13.032Z",
+      "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 58,
+        "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 0,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 2
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a research step ended done (research-20777:1393e853-8b1c-4bd7-b3ff-5006e8464c63:178:1795147181096:023a6c06-6424-4cac-8a80-8073c1224454)",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-20T04:01:53.313Z"
+      "lastTryAt": "2026-11-21T04:06:13.032Z"
     }
   ],
   "watchdog": {
