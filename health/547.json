@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-21T03:42:13.800Z",
-  "step": {
-    "id": "hl-547-t-e82a568c",
-    "kind": "selfTest",
-    "tool": "fixprotocol-modifyliquidities-nonreentrant",
-    "play": "build",
-    "action": "Make the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-21T03:42:13.800Z"
-  },
+  "at": "2026-11-21T03:58:29.619Z",
+  "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
     "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
@@ -489,7 +482,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-20T23:57:05.729Z",
       "counters": {
-        "observations": 48,
+        "observations": 51,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -525,13 +518,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-21T03:42:53.331Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-21T03:11:27.000Z"
+      "lastTryAt": "2026-11-21T03:42:53.331Z"
     }
   ],
   "policySkips": [
