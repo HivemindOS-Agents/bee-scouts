@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generatedAt": "2026-11-20T18:15:20.281Z",
+ "generatedAt": "2026-11-21T00:15:20.267Z",
  "spec": "ext-skills c1aa87e",
  "skills": [
   {
@@ -2490,6 +2490,13 @@
    "tool": "hf-publish-check-fixtures-cases",
    "reasons": [
     "quickStart"
+   ]
+  },
+  {
+   "agent": "547",
+   "tool": "microduck-stated-facts",
+   "reasons": [
+    "reproduced"
    ]
   },
   {
