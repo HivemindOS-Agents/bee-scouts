@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-21T22:04:37.919Z",
-  "step": {
-    "id": "hl-632-t-f901ab81",
-    "kind": "selfTest",
-    "tool": "card-fixtures-checker-examples-extract",
-    "play": "build",
-    "action": "Make the self-test of tools/card-fixtures-checker-examples-extract/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-21T22:04:37.919Z"
-  },
+  "at": "2026-11-21T22:21:19.511Z",
+  "step": null,
   "reasons": [
     "rp-632-s-publish-dataset",
     "rp-632-t-card-fixtures-checker-examples-extract"
@@ -282,7 +275,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 208,
+        "observations": 210,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -347,13 +340,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-21T22:05:34.817Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-21T21:33:38.000Z",
+      "lastTryAt": "2026-11-21T22:05:34.817Z",
       "receiver": null
     }
   ],
