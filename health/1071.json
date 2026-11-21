@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-20T20:58:00.466Z",
+  "at": "2026-11-21T06:00:20.266Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -200,18 +200,18 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-20T00:04:08.934Z",
+    "at": "2026-11-21T00:12:09.297Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 9,
+    "findingsOpen": 8,
     "top": {
-      "check": "D2",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
+      "check": "D0",
+      "subject": "bee-scouts MONITOR.md",
+      "detail": "MONITOR.md's Latest flags still says no scan has written there."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2860
+    "elapsedMs": 3197
   },
   "plays": {
     "publish-dataset": {
