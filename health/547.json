@@ -1,8 +1,15 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-21T06:00:20.266Z",
-  "step": null,
+  "at": "2026-11-21T10:30:59.916Z",
+  "step": {
+    "id": "hl-547-t-e82a568c",
+    "kind": "selfTest",
+    "tool": "fixprotocol-modifyliquidities-nonreentrant",
+    "play": "build",
+    "action": "Make the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-21T10:30:59.916Z"
+  },
   "reasons": [
     "rp-547-s-publish-dataset",
     "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
@@ -482,7 +489,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-20T23:57:05.729Z",
       "counters": {
-        "observations": 75,
+        "observations": 129,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -503,18 +510,18 @@
       "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
       "artifact": "fixprotocol-modifyliquidities-nonreentrant",
       "kind": "selfTest",
-      "state": "PARKED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
       "runner": "assertion_failure",
       "cause": "FAIL: missing modifyLiquidities-nonReentrant.patch",
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
-      "lastObservedAt": "2026-11-21T03:43:22.000Z",
+      "lastObservedAt": "2026-11-21T10:00:04.000Z",
       "counters": {
-        "observations": 9,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
-        "acknowledgedFailed": 1,
+        "observations": 26,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 1,
+        "acknowledgedFailed": 2,
         "recurrences": 0
       },
       "delivery": {
@@ -524,7 +531,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T03:11:27.000Z failed (not yet delivered): FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44859797362]\n- 2026-11-21T03:43:22.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44862537980]",
-      "lastTryAt": "2026-11-21T03:43:22.000Z"
+      "lastTryAt": "2026-11-21T10:00:04.000Z"
     }
   ],
   "policySkips": [
