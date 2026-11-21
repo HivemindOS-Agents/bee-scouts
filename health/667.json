@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "repairing",
-  "at": "2026-11-20T06:00:20.689Z",
+  "at": "2026-11-21T06:00:20.266Z",
   "step": null,
   "reasons": [
     "rp-667-s-propose",
@@ -77,12 +77,12 @@
       "runner": null,
       "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
-      "lastObservedAt": "2026-11-19T06:10:56.849Z",
+      "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 1210,
-        "failedAttempts": 6,
-        "consecutive": 6,
-        "sameCause": 2,
+        "observations": 1753,
+        "failedAttempts": 7,
+        "consecutive": 7,
+        "sameCause": 3,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -93,7 +93,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-17T04:18:29.237Z: parked 27 h with no new input.",
-      "lastTryAt": "2026-11-19T06:10:56.849Z"
+      "lastTryAt": "2026-11-20T06:17:44.280Z"
     },
     {
       "id": "rp-667-s-research",
@@ -106,7 +106,7 @@
       "firstFailureAt": "2026-11-14T08:58:15.038Z",
       "lastObservedAt": "2026-11-17T00:08:43.501Z",
       "counters": {
-        "observations": 968,
+        "observations": 1280,
         "failedAttempts": 4,
         "consecutive": 4,
         "sameCause": 2,
@@ -133,7 +133,7 @@
       "firstFailureAt": "2026-11-14T10:02:56.430Z",
       "lastObservedAt": "2026-11-17T00:05:46.850Z",
       "counters": {
-        "observations": 1210,
+        "observations": 1600,
         "failedAttempts": 5,
         "consecutive": 5,
         "sameCause": 2,
@@ -160,7 +160,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-17T00:10:07.475Z",
       "counters": {
-        "observations": 484,
+        "observations": 640,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -178,18 +178,18 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-20T00:06:50.477Z",
+    "at": "2026-11-21T00:06:58.636Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 10,
     "top": {
       "check": "D2",
       "subject": "propose",
-      "detail": "Its repair of propose has 5 failed attempts, 0 of them after it was delivered."
+      "detail": "Its repair of propose has 6 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 1898
+    "elapsedMs": 3001
   },
   "plays": {
     "publish-dataset": {
