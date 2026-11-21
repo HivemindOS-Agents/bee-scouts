@@ -1,11 +1,9 @@
 {
   "agent": "1071",
-  "status": "repairing",
-  "at": "2026-11-21T16:44:57.841Z",
+  "status": "ok",
+  "at": "2026-11-21T20:11:28.632Z",
   "step": null,
-  "reasons": [
-    "rp-1071-s-research"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -211,16 +209,16 @@
       "id": "rp-1071-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "it linked a page it did not read",
       "firstFailureAt": "2026-11-21T16:43:45.726Z",
-      "lastObservedAt": "2026-11-21T16:43:45.726Z",
+      "lastObservedAt": "2026-11-21T19:56:34.736Z",
       "counters": {
-        "observations": 1,
+        "observations": 31,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -230,9 +228,9 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a research step ended done (research-20778:249d8303-5ff6-48c6-b83f-19bf1802ab5d:482:1795290928639:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
       "escalation": null,
-      "lastTryAt": "2026-11-21T16:43:45.726Z",
+      "lastTryAt": "2026-11-21T19:56:34.736Z",
       "receiver": null
     }
   ],
