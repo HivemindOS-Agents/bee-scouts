@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "hash": "sha256 of the day file's exact bytes",
+  "days": [
+    {
+      "day": "2026-11-21",
+      "sha256": "8d4179faaa15bdb5e99b3a77fea6dae3c3af1a39a86c5c0403e05bfa4cab167c",
+      "rows": 18,
+      "outcomes": {
+        "PIN_OK_UPSTREAM_CHANGED": 2,
+        "PIN_OK": 16
+      },
+      "findings": 0
+    }
+  ]
+}
