@@ -1,10 +1,18 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-21T02:54:32.463Z",
-  "step": null,
+  "at": "2026-11-21T03:42:13.800Z",
+  "step": {
+    "id": "hl-547-t-e82a568c",
+    "kind": "selfTest",
+    "tool": "fixprotocol-modifyliquidities-nonreentrant",
+    "play": "build",
+    "action": "Make the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-21T03:42:13.800Z"
+  },
   "reasons": [
-    "rp-547-s-publish-dataset"
+    "rp-547-s-publish-dataset",
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
   ],
   "failures": 0,
   "ignored": 0,
@@ -481,7 +489,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-20T23:57:05.729Z",
       "counters": {
-        "observations": 39,
+        "observations": 48,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -497,6 +505,33 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-20T23:57:05.729Z"
+    },
+    {
+      "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+      "artifact": "fixprotocol-modifyliquidities-nonreentrant",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
+      "runner": "assertion_failure",
+      "cause": "FAIL: missing modifyLiquidities-nonReentrant.patch",
+      "firstFailureAt": "2026-11-21T03:11:27.000Z",
+      "lastObservedAt": "2026-11-21T03:11:27.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-21T03:11:27.000Z"
     }
   ],
   "policySkips": [
