@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-22T00:16:50.210Z",
+  "at": "2026-11-22T00:18:00.684Z",
   "step": null,
   "reasons": [
     "rp-86-s-research",
@@ -163,7 +163,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 229,
+        "observations": 233,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -184,17 +184,17 @@
       "id": "rp-86-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
-      "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-22T00:15:40.772Z",
-      "lastObservedAt": "2026-11-22T00:15:40.772Z",
+      "lastObservedAt": "2026-11-22T00:16:57.018Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 7,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 1
       },
@@ -204,8 +204,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-22T00:15:40.772Z",
+      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The step came to nothing, and no reason was recorded.\n- 2026-11-22T00:15:40.772Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:185:1795306496986:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-22T00:16:57.018Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:185:1795306602515:023a6c06-6424-4cac-8a80-8073c1224454]",
+      "lastTryAt": "2026-11-22T00:16:57.018Z",
       "receiver": null
     }
   ],
@@ -235,7 +235,15 @@
       "state": "offered"
     },
     "propose": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: The step came to nothing, and no reason was recorded.",
+      "since": "2026-11-22T00:16:57.018Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-23T00:16:57.018Z)"
+      ]
     },
     "research": {
       "state": "offered"
