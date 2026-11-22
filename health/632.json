@@ -1,11 +1,10 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-22T11:49:33.949Z",
+  "at": "2026-11-22T12:06:03.088Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset",
-    "rp-632-t-fastify-decorators-maintenance-status"
+    "rp-632-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -275,7 +274,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 316,
+        "observations": 318,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -353,16 +352,16 @@
       "id": "rp-632-t-fastify-decorators-maintenance-status",
       "artifact": "fastify-decorators-maintenance-status",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL days_since computes 2 for sample",
       "firstFailureAt": "2026-11-22T11:01:58.000Z",
-      "lastObservedAt": "2026-11-22T11:01:58.000Z",
+      "lastObservedAt": "2026-11-22T11:34:12.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -372,9 +371,9 @@
         "at": "2026-11-22T11:33:49.428Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45017951152)",
       "escalation": null,
-      "lastTryAt": "2026-11-22T11:33:49.428Z",
+      "lastTryAt": "2026-11-22T11:34:12.000Z",
       "receiver": null
     }
   ],
