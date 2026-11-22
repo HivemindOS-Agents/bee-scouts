@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "repairing",
-  "at": "2026-11-21T11:28:40.205Z",
+  "at": "2026-11-22T06:00:20.365Z",
   "step": null,
   "reasons": [
     "rp-667-s-propose",
@@ -77,14 +77,14 @@
       "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "its answer could not be read (cut off or not JSON)",
+      "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
-      "lastObservedAt": "2026-11-20T06:17:44.280Z",
+      "lastObservedAt": "2026-11-22T00:16:34.957Z",
       "counters": {
-        "observations": 1872,
-        "failedAttempts": 7,
-        "consecutive": 7,
-        "sameCause": 3,
+        "observations": 2288,
+        "failedAttempts": 9,
+        "consecutive": 9,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -95,7 +95,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-17T04:18:29.237Z: parked 27 h with no new input.",
-      "lastTryAt": "2026-11-20T06:17:44.280Z",
+      "lastTryAt": "2026-11-22T00:16:34.957Z",
       "receiver": {
         "who": "HivemindOS host (dev, 21 Nov 2026)",
         "by": "operator",
@@ -115,7 +115,7 @@
       "firstFailureAt": "2026-11-14T08:58:15.038Z",
       "lastObservedAt": "2026-11-21T06:14:08.559Z",
       "counters": {
-        "observations": 1352,
+        "observations": 1580,
         "failedAttempts": 8,
         "consecutive": 8,
         "sameCause": 6,
@@ -149,7 +149,7 @@
       "firstFailureAt": "2026-11-14T10:02:56.430Z",
       "lastObservedAt": "2026-11-21T09:19:25.857Z",
       "counters": {
-        "observations": 1689,
+        "observations": 1974,
         "failedAttempts": 9,
         "consecutive": 9,
         "sameCause": 4,
@@ -181,12 +181,12 @@
       "runner": null,
       "cause": "Nothing came of it this time.",
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
-      "lastObservedAt": "2026-11-20T06:19:08.291Z",
+      "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 677,
-        "failedAttempts": 5,
-        "consecutive": 5,
-        "sameCause": 5,
+        "observations": 792,
+        "failedAttempts": 6,
+        "consecutive": 6,
+        "sameCause": 6,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -197,7 +197,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its agents play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it this time.\n- 2026-11-16T00:20:50.997Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794788450997]\n- 2026-11-17T00:10:07.475Z failed (not yet delivered): Nothing came of it this time. [step:backfill:agents:1794874207475]\nEscalated 2026-11-18T01:06:22.820Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-20T06:19:08.291Z",
+      "lastTryAt": "2026-11-22T00:17:57.425Z",
       "receiver": {
         "who": "HivemindOS host (dev, 21 Nov 2026)",
         "by": "operator",
@@ -208,18 +208,27 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-21T00:06:58.636Z",
+    "at": "2026-11-22T00:15:00.136Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 10,
     "top": {
       "check": "D2",
       "subject": "propose",
-      "detail": "Its repair of propose has 6 failed attempts, 0 of them after it was delivered."
+      "detail": "Its repair of propose has 7 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 3001
+    "elapsedMs": 1757,
+    "intake": {
+      "mode": "observe",
+      "noRepair": [
+        "wd-667-D17---cardkeys:-YAML-keys-in-3-dataset-cards-at-https://github.com/HivemindOS-Agent-",
+        "wd-667-D17---cardkeys-dataset-44-rows-2026-11-14-:-It-chose-to-publish-it-as-it-is-on-2-",
+        "wd-667-D17---cardkeys-44-row-YAML-keys-dataset-2026-11-18-:-It-chose-to-publish-it-as-it-"
+      ],
+      "contradictions": []
+    }
   },
   "plays": {
     "publish-dataset": {
