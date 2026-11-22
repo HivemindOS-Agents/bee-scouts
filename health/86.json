@@ -1,10 +1,11 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-21T06:00:20.266Z",
+  "at": "2026-11-22T00:16:50.210Z",
   "step": null,
   "reasons": [
-    "rp-86-s-research"
+    "rp-86-s-research",
+    "rp-86-s-propose"
   ],
   "failures": 0,
   "ignored": 0,
@@ -36,7 +37,8 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43210633684)",
       "escalation": null,
-      "lastTryAt": "2026-11-12T11:36:51.000Z"
+      "lastTryAt": "2026-11-12T11:36:51.000Z",
+      "receiver": null
     },
     {
       "id": "rp-86-t-run-log-index",
@@ -63,7 +65,8 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43285117300)",
       "escalation": null,
-      "lastTryAt": "2026-11-12T18:57:20.000Z"
+      "lastTryAt": "2026-11-12T18:57:20.000Z",
+      "receiver": null
     },
     {
       "id": "rp-86-t-noscript-audit",
@@ -90,7 +93,8 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43410015743)",
       "escalation": null,
-      "lastTryAt": "2026-11-13T10:34:03.000Z"
+      "lastTryAt": "2026-11-13T10:34:03.000Z",
+      "receiver": null
     },
     {
       "id": "rp-86-t-issue-triage-selftest-check",
@@ -117,7 +121,8 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43477893047)",
       "escalation": null,
-      "lastTryAt": "2026-11-13T17:57:48.000Z"
+      "lastTryAt": "2026-11-13T17:57:48.000Z",
+      "receiver": null
     },
     {
       "id": "rp-86-t-run-and-record",
@@ -144,34 +149,8 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44208969610)",
       "escalation": null,
-      "lastTryAt": "2026-11-18T00:35:00.000Z"
-    },
-    {
-      "id": "rp-86-s-propose",
-      "artifact": "propose",
-      "kind": "step:propose",
-      "state": "RELEASED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": null,
-      "cause": "its answer could not be read (cut off or not JSON)",
-      "firstFailureAt": "2026-11-18T11:55:31.455Z",
-      "lastObservedAt": "2026-11-21T00:02:12.568Z",
-      "counters": {
-        "observations": 151,
-        "failedAttempts": 4,
-        "consecutive": 0,
-        "sameCause": 4,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a propose step ended done (scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:181:1795219274740:023a6c06-6424-4cac-8a80-8073c1224454)",
-      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]\nEscalated 2026-11-19T12:18:30.602Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-21T00:02:12.568Z"
+      "lastTryAt": "2026-11-18T00:35:00.000Z",
+      "receiver": null
     },
     {
       "id": "rp-86-s-research",
@@ -184,7 +163,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 5,
+        "observations": 229,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -198,14 +177,43 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-21T04:06:13.032Z"
+      "lastTryAt": "2026-11-21T04:06:13.032Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-86-s-propose",
+      "artifact": "propose",
+      "kind": "step:propose",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-22T00:15:40.772Z",
+      "lastObservedAt": "2026-11-22T00:15:40.772Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-22T00:15:40.772Z",
+      "receiver": null
     }
   ],
   "watchdog": {
-    "at": "2026-11-21T00:00:08.458Z",
+    "at": "2026-11-22T00:15:17.440Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 11,
+    "findingsOpen": 4,
     "top": {
       "check": "D17",
       "subject": "ARTIFACTS.md",
@@ -213,7 +221,14 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 3069
+    "elapsedMs": 2896,
+    "intake": {
+      "mode": "observe",
+      "noRepair": [
+        "wd-86-D17---issue-triage-2026-11-16-:-It-chose-to-publish-it-as-it-is-on-2026-11-14-The-"
+      ],
+      "contradictions": []
+    }
   },
   "plays": {
     "publish-dataset": {
