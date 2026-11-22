@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-22T06:00:20.365Z",
+  "at": "2026-11-22T06:46:08.301Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -499,13 +499,13 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-22T03:47:35.117Z",
       "counters": {
-        "observations": 369,
+        "observations": 385,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
-        "policySkips": 3
+        "policySkips": 4
       },
       "delivery": {
         "state": "unknown",
@@ -528,7 +528,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-22T02:09:42.000Z",
       "counters": {
-        "observations": 94,
+        "observations": 98,
         "failedAttempts": 12,
         "consecutive": 12,
         "sameCause": 2,
@@ -567,10 +567,17 @@
       "at": "2026-11-21T02:53:17.049Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-547-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-22T06:44:52.646Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
     }
   ],
   "notices": [
-    "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
+    "stuck play: 4 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
     "at": "2026-11-22T00:01:03.695Z",
@@ -593,7 +600,13 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "4 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-22T06:44:52.646Z",
+      "reopenOn": [
+        "a later step of this play that ends done",
+        "24 h (2026-11-23T06:44:52.646Z)"
+      ]
     },
     "propose": {
       "state": "offered"
