@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-22T00:03:40.532Z",
+  "at": "2026-11-22T06:21:54.493Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -150,6 +150,34 @@
       "receiver": null
     },
     {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-16T18:55:26.488Z",
+      "lastObservedAt": "2026-11-19T00:02:52.230Z",
+      "counters": {
+        "observations": 4,
+        "failedAttempts": 4,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": "step: a publish-dataset step ended done (dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:437:1795046400000:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
+      "escalation": null,
+      "lastTryAt": "2026-11-19T00:02:52.230Z",
+      "receiver": null
+    },
+    {
       "id": "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases",
       "artifact": "fixprotocol-modifyliquidities-reentrancy-cases",
       "kind": "selfTest",
@@ -204,47 +232,8 @@
       "escalation": null,
       "lastTryAt": "2026-11-21T19:56:34.736Z",
       "receiver": null
-    },
-    {
-      "id": "rp-1071-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "SKIPPED_POLICY",
-      "failureClass": "POLICY_SKIP",
-      "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-22T00:02:29.289Z",
-      "lastObservedAt": "2026-11-22T00:02:29.289Z",
-      "counters": {
-        "observations": 1,
-        "failedAttempts": 0,
-        "consecutive": 0,
-        "sameCause": 0,
-        "acknowledgedFailed": 0,
-        "recurrences": 0,
-        "policySkips": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of this play that ends done.",
-      "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-22T00:02:29.289Z",
-      "hb062": "visible, not blocking until 2026-11-24T00:02:29.289Z"
     }
   ],
-  "policySkips": [
-    {
-      "repair": "rp-1071-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-22T00:02:29.289Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [],
   "watchdog": {
     "at": "2026-11-22T00:01:44.673Z",
     "version": "watchdog-v1",
