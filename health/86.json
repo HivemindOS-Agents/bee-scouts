@@ -1,11 +1,11 @@
 {
   "agent": "86",
-  "status": "repairing",
-  "at": "2026-11-22T06:00:20.365Z",
+  "status": "needs_funding",
+  "at": "2026-11-22T12:15:19.381Z",
   "step": null,
   "reasons": [
-    "rp-86-s-research",
-    "rp-86-s-propose"
+    "no_funds",
+    "rp-86-s-research"
   ],
   "failures": 0,
   "ignored": 0,
@@ -156,16 +156,16 @@
       "id": "rp-86-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "RECURRENCE_DETECTED",
+      "state": "REPAIR_ATTEMPTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "Nothing came of it: it had no funds to pay for the search (the service answered 402).",
+      "cause": "the thinking call failed",
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
-      "lastObservedAt": "2026-11-22T01:20:30.973Z",
+      "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 318,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 5,
+        "failedAttempts": 1,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2
@@ -177,35 +177,35 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-22T01:20:30.973Z",
+      "lastTryAt": "2026-11-21T04:06:13.032Z",
       "receiver": null
     },
     {
       "id": "rp-86-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
-      "state": "PARKED",
+      "state": "RELEASED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
-      "firstFailureAt": "2026-11-22T00:15:40.772Z",
-      "lastObservedAt": "2026-11-22T00:16:57.018Z",
+      "cause": "its answer could not be read (cut off or not JSON)",
+      "firstFailureAt": "2026-11-18T11:55:31.455Z",
+      "lastObservedAt": "2026-11-21T00:02:12.568Z",
       "counters": {
-        "observations": 133,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
+        "observations": 4,
+        "failedAttempts": 4,
+        "consecutive": 0,
+        "sameCause": 4,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 0
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The step came to nothing, and no reason was recorded.\n- 2026-11-22T00:15:40.772Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:185:1795306496986:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-22T00:16:57.018Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:185:1795306602515:023a6c06-6424-4cac-8a80-8073c1224454]",
-      "lastTryAt": "2026-11-22T00:16:57.018Z",
+      "closedBy": "step: a propose step ended done (scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:181:1795219274740:023a6c06-6424-4cac-8a80-8073c1224454)",
+      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]",
+      "lastTryAt": "2026-11-21T00:02:12.568Z",
       "receiver": null
     }
   ],
@@ -232,21 +232,28 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 6270 < quote 110000 micro-USDC",
+      "since": "2026-11-22T00:16:58.208Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "propose": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: The step came to nothing, and no reason was recorded.",
-      "since": "2026-11-22T00:16:57.018Z",
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 6270 < quote 110000 micro-USDC",
+      "since": "2026-11-22T00:16:58.208Z",
       "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-23T00:16:57.018Z)"
+        "balance covers quote"
       ]
     },
     "research": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 6270 < quote 110000 micro-USDC",
+      "since": "2026-11-22T00:16:58.208Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "tell-agents": {
       "state": "offered"
@@ -275,5 +282,22 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "label": "paused: needs funding",
+  "funding": {
+    "state": "needs_funding",
+    "label": "paused: needs funding",
+    "since": "2026-11-22T00:16:58.208Z",
+    "balance": 6270,
+    "smallestQuote": 110000,
+    "heldPlays": [
+      "publish-dataset",
+      "propose",
+      "research"
+    ],
+    "skips": 2,
+    "refusals": 2,
+    "resumedAt": null,
+    "unit": "micro-USDC"
   }
 }
