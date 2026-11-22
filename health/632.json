@@ -1,10 +1,18 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-22T06:00:20.365Z",
-  "step": null,
+  "at": "2026-11-22T11:33:01.379Z",
+  "step": {
+    "id": "hl-632-t-57336221",
+    "kind": "selfTest",
+    "tool": "fastify-decorators-maintenance-status",
+    "play": "build",
+    "action": "Make the self-test of tools/fastify-decorators-maintenance-status/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-22T11:33:01.379Z"
+  },
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-t-fastify-decorators-maintenance-status"
   ],
   "failures": 0,
   "ignored": 0,
@@ -274,7 +282,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 268,
+        "observations": 314,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -347,6 +355,34 @@
       "escalation": null,
       "lastTryAt": "2026-11-21T22:06:01.000Z",
       "receiver": null
+    },
+    {
+      "id": "rp-632-t-fastify-decorators-maintenance-status",
+      "artifact": "fastify-decorators-maintenance-status",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL days_since computes 2 for sample",
+      "firstFailureAt": "2026-11-22T11:01:58.000Z",
+      "lastObservedAt": "2026-11-22T11:01:58.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-22T11:01:58.000Z",
+      "receiver": null
     }
   ],
   "policySkips": [
@@ -398,12 +434,11 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "3 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-21T13:11:59.536Z",
+      "state": "rested",
+      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/selftest-outputmd-capture-requests-for-repo-tools-folders",
+      "since": "2026-11-22T07:34:03.842Z",
       "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-22T13:11:59.536Z)"
+        "outside need link (a public ask by a non-Hive account)"
       ]
     },
     "propose": {
