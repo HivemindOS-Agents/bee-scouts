@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-22T12:04:41.120Z",
+  "at": "2026-11-22T12:20:51.400Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -76,13 +76,13 @@
       "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
+      "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
-      "lastObservedAt": "2026-11-22T06:26:22.947Z",
+      "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 2533,
-        "failedAttempts": 10,
-        "consecutive": 10,
+        "observations": 14,
+        "failedAttempts": 7,
+        "consecutive": 7,
         "sameCause": 3,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -93,14 +93,14 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-17T04:18:29.237Z: parked 27 h with no new input.",
-      "lastTryAt": "2026-11-22T06:26:22.947Z",
+      "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-22T12:20:50.093Z: parked 156 h with no new input.",
+      "lastTryAt": "2026-11-20T06:17:44.280Z",
       "receiver": {
-        "who": "HivemindOS host (dev, 21 Nov 2026)",
-        "by": "operator",
-        "at": "2026-11-21T11:17:11.788Z",
-        "returned": "Read in the agents service's log on 21 Nov: its proposal step of 06:17 UTC 20 Nov failed with class OTHER, which is neither a cut-off answer nor unreadable JSON, nine seconds after its planning call answered 402. Until 21 Nov any failed thinking call was worded 'cut off or not JSON'. That this one was a 402 is inferred, not logged. The host now words a refused call as what it is. It closes on a proposal step that ends done.",
-        "returnedAt": "2026-11-21T11:17:11.788Z"
+        "who": "HivemindOS host: HB-041, answers cut off or unreadable",
+        "by": "rule",
+        "at": "2026-11-22T12:20:50.093Z",
+        "returned": "An answer that is cut off or cannot be read is the host's to fix (HB-041). Nothing the agent changes closes this. It closes on this play's next done step.",
+        "returnedAt": "2026-11-22T12:20:50.093Z"
       }
     },
     {
@@ -114,7 +114,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 842,
+        "observations": 844,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -228,7 +228,7 @@
       "propose",
       "research"
     ],
-    "skips": 5,
+    "skips": 6,
     "refusals": 5,
     "resumedAt": null,
     "unit": "micro-USDC"
