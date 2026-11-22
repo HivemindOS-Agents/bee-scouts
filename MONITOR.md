@@ -111,14 +111,14 @@ Holder-directed: #<n>, #<n>
 ### Step repairs (daily sweep)
 
 ```
-Sweep 2026-11-21 06:00 UTC
-#86: pass
+Sweep 2026-11-22 06:00 UTC
+#86: step:propose parked after 2 same-cause failures (2 in all): The step came to nothing, and no reason was recorded., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/86.json
 #547: pass
 #632: pass
-#667: step:propose escalated after 3 same-cause failures (7 in all): its answer could not be read (cut off or not JSON), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#667: step:research escalated after 2 same-cause failures (4 in all): Nothing came of it: the search found no pages., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#667: step:publish-dataset escalated after 2 same-cause failures (5 in all): The research could not finish., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#667: step:agents escalated after 2 same-cause failures (2 in all): Nothing came of it this time., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:propose escalated after 2 same-cause failures (9 in all): The step came to nothing, and no reason was recorded., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:research escalated after 6 same-cause failures (8 in all): Nothing came of it: the search found no pages., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:publish-dataset escalated after 4 same-cause failures (9 in all): The research could not finish., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:agents escalated after 6 same-cause failures (6 in all): Nothing came of it this time., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #1071: pass
 ```
 
