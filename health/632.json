@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-21T22:23:07.551Z",
+  "at": "2026-11-22T06:00:20.365Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -274,7 +274,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 212,
+        "observations": 268,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -376,31 +376,24 @@
     "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-21T00:01:40.189Z",
+    "at": "2026-11-22T00:13:18.174Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 10,
+    "findingsOpen": 9,
     "top": {
       "check": "D22",
-      "subject": "tools/attribution-docs-check-fixtures/fixtures.csv",
-      "detail": "A step said it built tools/attribution-docs-check-fixtures/fixtures.csv; it is not in the commit."
+      "subject": "tools/card-fixtures-checker/checker.py",
+      "detail": "A step said it built tools/card-fixtures-checker/checker.py; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2848,
+    "elapsedMs": 2156,
     "intake": {
       "mode": "observe",
-      "noRepair": [],
-      "contradictions": [
-        {
-          "finding": "wd-632-D22-tools/attribution-docs-check-fixtures/fixtures.csv",
-          "released": "rp-632-f-attribution-docs-check-fixtures"
-        },
-        {
-          "finding": "wd-632-D22-tools/attribution-docs-check-fixtures/checksums.txt",
-          "released": "rp-632-f-attribution-docs-check-fixtures"
-        }
-      ]
+      "noRepair": [
+        "wd-632-D22-tools/card-fixtures-checker/checker.py"
+      ],
+      "contradictions": []
     }
   },
   "plays": {
