@@ -1,10 +1,18 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-22T12:06:03.088Z",
-  "step": null,
+  "at": "2026-11-22T21:35:54.026Z",
+  "step": {
+    "id": "hl-632-t-044937ed",
+    "kind": "selfTest",
+    "tool": "uniswap-v4-core-release-watch",
+    "play": "build",
+    "action": "Make the self-test of tools/uniswap-v4-core-release-watch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-22T21:35:54.026Z"
+  },
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-t-uniswap-v4-core-release-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -274,7 +282,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 318,
+        "observations": 394,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -374,6 +382,34 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45017951152)",
       "escalation": null,
       "lastTryAt": "2026-11-22T11:34:12.000Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-632-t-uniswap-v4-core-release-watch",
+      "artifact": "uniswap-v4-core-release-watch",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL README covers: Could not confirm",
+      "firstFailureAt": "2026-11-22T21:05:16.000Z",
+      "lastObservedAt": "2026-11-22T21:05:16.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-22T21:05:16.000Z",
       "receiver": null
     }
   ],
