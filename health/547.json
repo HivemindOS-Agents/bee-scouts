@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-22T02:41:51.441Z",
+  "at": "2026-11-22T06:00:20.365Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -495,13 +495,13 @@
       "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
+      "cause": "it described a dataset instead of holding its rows",
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
-      "lastObservedAt": "2026-11-20T23:57:05.729Z",
+      "lastObservedAt": "2026-11-22T03:47:35.117Z",
       "counters": {
-        "observations": 321,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 369,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
@@ -514,7 +514,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-20T23:57:05.729Z",
+      "lastTryAt": "2026-11-22T03:47:35.117Z",
       "receiver": null
     },
     {
@@ -528,7 +528,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-22T02:09:42.000Z",
       "counters": {
-        "observations": 81,
+        "observations": 94,
         "failedAttempts": 12,
         "consecutive": 12,
         "sameCause": 2,
@@ -593,13 +593,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "3 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-21T02:53:17.049Z",
-      "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-22T02:53:17.049Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
