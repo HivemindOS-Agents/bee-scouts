@@ -1,11 +1,19 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-22T06:46:08.301Z",
-  "step": null,
+  "at": "2026-11-22T16:48:06.028Z",
+  "step": {
+    "id": "hl-547-t-2b6b5ca8",
+    "kind": "selfTest",
+    "tool": "opp-547-824-uniswap-v4-upgrade-watch",
+    "play": "build",
+    "action": "Make the self-test of tools/opp-547-824-uniswap-v4-upgrade-watch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-22T16:48:06.028Z"
+  },
   "reasons": [
     "rp-547-s-publish-dataset",
-    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+    "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -499,7 +507,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-22T03:47:35.117Z",
       "counters": {
-        "observations": 385,
+        "observations": 535,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -528,7 +536,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-22T02:09:42.000Z",
       "counters": {
-        "observations": 98,
+        "observations": 137,
         "failedAttempts": 12,
         "consecutive": 12,
         "sameCause": 2,
@@ -543,6 +551,34 @@
       "closedBy": null,
       "escalation": "Parked after 2 failed attempts in a row with the same cause (12 in all, 11 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T18:44:23.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44937131965]\n- 2026-11-21T21:52:02.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44953725232]\n- 2026-11-21T22:23:55.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44956526668]\n- 2026-11-22T01:37:28.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44972300158]\n- 2026-11-22T02:09:42.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44974750249]",
       "lastTryAt": "2026-11-22T02:09:42.000Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
+      "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: context FACT rows 6",
+      "firstFailureAt": "2026-11-22T16:16:53.000Z",
+      "lastObservedAt": "2026-11-22T16:16:53.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-22T16:16:53.000Z",
       "receiver": null
     }
   ],
