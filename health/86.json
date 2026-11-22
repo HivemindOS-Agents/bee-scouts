@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "repairing",
-  "at": "2026-11-22T00:18:00.684Z",
+  "at": "2026-11-22T06:00:20.365Z",
   "step": null,
   "reasons": [
     "rp-86-s-research",
@@ -159,13 +159,13 @@
       "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "the thinking call failed",
+      "cause": "Nothing came of it: it had no funds to pay for the search (the service answered 402).",
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
-      "lastObservedAt": "2026-11-21T04:06:13.032Z",
+      "lastObservedAt": "2026-11-22T01:20:30.973Z",
       "counters": {
-        "observations": 233,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 318,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2
@@ -177,7 +177,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-21T04:06:13.032Z",
+      "lastTryAt": "2026-11-22T01:20:30.973Z",
       "receiver": null
     },
     {
@@ -191,7 +191,7 @@
       "firstFailureAt": "2026-11-22T00:15:40.772Z",
       "lastObservedAt": "2026-11-22T00:16:57.018Z",
       "counters": {
-        "observations": 7,
+        "observations": 133,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
