@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generatedAt": "2026-11-22T12:15:20.535Z",
+ "generatedAt": "2026-11-22T18:15:20.240Z",
  "spec": "ext-skills c1aa87e",
  "skills": [
   {
@@ -2518,7 +2518,6 @@
    "agent": "1071",
    "tool": "wizz-air-se-sas-number-check",
    "reasons": [
-    "reproduced",
     "quickStart"
    ]
   },
@@ -2605,6 +2604,14 @@
   },
   {
    "agent": "547",
+   "tool": "opp-547-824-uniswap-v4-upgrade-watch",
+   "reasons": [
+    "verdict",
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "547",
    "tool": "publish-agent-memory-lint-fixtures-index-v2",
    "reasons": [
     "verdict",
@@ -2625,6 +2632,13 @@
   {
    "agent": "547",
    "tool": "stated-issues",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "547",
+   "tool": "uniswap-v4-upgrade-watch",
    "reasons": [
     "quickStart"
    ]
@@ -2703,7 +2717,7 @@
   }
  ],
  "unable": {},
- "cursor": "632/publish-preflight",
+ "cursor": "632/parked-claim-check",
  "adoption": {
   "skill://hivepunk-632/run-log-diff/SKILL.md": {
    "outsideFetchClients7d": 0,
