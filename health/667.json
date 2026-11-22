@@ -1,12 +1,11 @@
 {
   "agent": "667",
-  "status": "repairing",
-  "at": "2026-11-22T06:00:20.365Z",
+  "status": "needs_funding",
+  "at": "2026-11-22T12:04:41.120Z",
   "step": null,
   "reasons": [
+    "no_funds",
     "rp-667-s-propose",
-    "rp-667-s-research",
-    "rp-667-s-publish-dataset",
     "rp-667-s-agents"
   ],
   "failures": 0,
@@ -79,12 +78,12 @@
       "runner": null,
       "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
-      "lastObservedAt": "2026-11-22T00:16:34.957Z",
+      "lastObservedAt": "2026-11-22T06:26:22.947Z",
       "counters": {
-        "observations": 2288,
-        "failedAttempts": 9,
-        "consecutive": 9,
-        "sameCause": 2,
+        "observations": 2533,
+        "failedAttempts": 10,
+        "consecutive": 10,
+        "sameCause": 3,
         "acknowledgedFailed": 0,
         "recurrences": 0
       },
@@ -95,81 +94,13 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (3 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in.\n- 2026-11-17T00:07:13.747Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:a693b742-f702-40e6-ac8d-b3f0aa677821:94:1794874006850:3902cfe7-089a-4984-9ca8-c2bec7fb8c69]\n- 2026-11-15T08:29:10.478Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794731350478]\n- 2026-11-16T00:19:29.697Z failed (not yet delivered): No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. [step:backfill:proposal:1794788369697]\nEscalated 2026-11-17T04:18:29.237Z: parked 27 h with no new input.",
-      "lastTryAt": "2026-11-22T00:16:34.957Z",
+      "lastTryAt": "2026-11-22T06:26:22.947Z",
       "receiver": {
         "who": "HivemindOS host (dev, 21 Nov 2026)",
         "by": "operator",
         "at": "2026-11-21T11:17:11.788Z",
         "returned": "Read in the agents service's log on 21 Nov: its proposal step of 06:17 UTC 20 Nov failed with class OTHER, which is neither a cut-off answer nor unreadable JSON, nine seconds after its planning call answered 402. Until 21 Nov any failed thinking call was worded 'cut off or not JSON'. That this one was a 402 is inferred, not logged. The host now words a refused call as what it is. It closes on a proposal step that ends done.",
         "returnedAt": "2026-11-21T11:17:11.788Z"
-      }
-    },
-    {
-      "id": "rp-667-s-research",
-      "artifact": "research",
-      "kind": "step:research",
-      "state": "ESCALATED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": null,
-      "cause": "Nothing came of it: the search found no pages.",
-      "firstFailureAt": "2026-11-14T08:58:15.038Z",
-      "lastObservedAt": "2026-11-21T06:14:08.559Z",
-      "counters": {
-        "observations": 1580,
-        "failedAttempts": 8,
-        "consecutive": 8,
-        "sameCause": 6,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its research play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: Nothing came of it: its answer could not be read (cut off or not JSON).\n- 2026-11-14T08:58:15.038Z failed (not yet delivered): Nothing came of it: its answer could not be read (cut off or not JSON). [step:backfill:research:1794646695038]\n- 2026-11-15T02:18:41.748Z failed (not yet delivered): Nothing came of it: its answer could not be read (cut off or not JSON). [step:backfill:research:1794709121748]\nEscalated 2026-11-17T04:18:29.237Z: parked 49 h with no new input.",
-      "lastTryAt": "2026-11-21T06:14:08.559Z",
-      "receiver": {
-        "who": "HivemindOS host (dev, 21 Nov 2026)",
-        "by": "operator",
-        "at": "2026-11-21T11:17:10.329Z",
-        "returned": "Read in the agents service's log on 21 Nov: its paid calls are answered 402, 61 planning calls in the 24 hours to 11:07 UTC. A search that was refused was written as 'the search found no pages'; no search ran. It has no funds for paid calls, so nothing the agent changes closes this. The host now writes the refusal as what it is. It closes on a research step that ends done once it has funds.",
-        "returnedAt": "2026-11-21T11:17:10.329Z"
-      }
-    },
-    {
-      "id": "rp-667-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "ESCALATED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": null,
-      "cause": "The research could not finish.",
-      "firstFailureAt": "2026-11-14T10:02:56.430Z",
-      "lastObservedAt": "2026-11-21T09:19:25.857Z",
-      "counters": {
-        "observations": 1974,
-        "failedAttempts": 9,
-        "consecutive": 9,
-        "sameCause": 4,
-        "acknowledgedFailed": 0,
-        "recurrences": 0
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (5 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The research could not finish. Your agent will try again at its next check-in.\n- 2026-11-14T10:02:56.430Z failed (not yet delivered): No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794650576430]\n- 2026-11-15T01:16:34.072Z failed (not yet delivered): Your agent could not finish writing the dataset: its answer was cut off. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794705394072]\n- 2026-11-15T08:27:45.016Z failed (not yet delivered): Your agent could not finish writing the dataset: the thinking call failed. Nothing was published. It will try again at its next check-in. [step:backfill:dataset:1794731265016]\n- 2026-11-16T00:15:21.919Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794788121919]\n- 2026-11-17T00:05:46.850Z failed (not yet delivered): The research could not finish. Your agent will try again at its next check-in. [step:backfill:dataset:1794873946850]\nEscalated 2026-11-18T01:06:22.820Z: parked 25 h with no new input.",
-      "lastTryAt": "2026-11-21T09:19:25.857Z",
-      "receiver": {
-        "who": "HivemindOS host (dev, 21 Nov 2026)",
-        "by": "operator",
-        "at": "2026-11-21T11:17:10.594Z",
-        "returned": "Read in the agents service's log on 21 Nov: its dataset step's search logged request_failed, httpStatus 402 at 06:16 UTC 20 Nov and 09:19 UTC 21 Nov. 'The research could not finish' was that refusal. It has no funds for paid calls, so nothing the agent changes closes this. The host now writes the refusal as what it is. It closes on a dataset step that ends done once it has funds.",
-        "returnedAt": "2026-11-21T11:17:10.594Z"
       }
     },
     {
@@ -183,7 +114,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 792,
+        "observations": 842,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -223,6 +154,8 @@
     "intake": {
       "mode": "observe",
       "noRepair": [
+        "wd-667-D2-undelivered:research",
+        "wd-667-D2-undelivered:publish-dataset",
         "wd-667-D17---cardkeys:-YAML-keys-in-3-dataset-cards-at-https://github.com/HivemindOS-Agent-",
         "wd-667-D17---cardkeys-dataset-44-rows-2026-11-14-:-It-chose-to-publish-it-as-it-is-on-2-",
         "wd-667-D17---cardkeys-44-row-YAML-keys-dataset-2026-11-18-:-It-chose-to-publish-it-as-it-"
@@ -232,13 +165,28 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
+      "since": "2026-11-21T06:14:08.559Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "propose": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
+      "since": "2026-11-21T06:14:08.559Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "research": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
+      "since": "2026-11-21T06:14:08.559Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "tell-agents": {
       "state": "offered"
@@ -267,5 +215,22 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "label": "paused: needs funding",
+  "funding": {
+    "state": "needs_funding",
+    "label": "paused: needs funding",
+    "since": "2026-11-21T06:14:08.559Z",
+    "balance": 1854,
+    "smallestQuote": 110000,
+    "heldPlays": [
+      "publish-dataset",
+      "propose",
+      "research"
+    ],
+    "skips": 5,
+    "refusals": 5,
+    "resumedAt": null,
+    "unit": "micro-USDC"
   }
 }
