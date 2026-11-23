@@ -1,10 +1,9 @@
 {
   "agent": "667",
-  "status": "needs_funding",
-  "at": "2026-11-22T12:20:51.400Z",
+  "status": "repairing",
+  "at": "2026-11-23T01:17:33.331Z",
   "step": null,
   "reasons": [
-    "no_funds",
     "rp-667-s-propose",
     "rp-667-s-agents"
   ],
@@ -80,7 +79,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 14,
+        "observations": 217,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -114,7 +113,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 844,
+        "observations": 902,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -139,10 +138,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-22T00:15:00.136Z",
+    "at": "2026-11-23T00:16:39.038Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 10,
+    "findingsOpen": 8,
     "top": {
       "check": "D2",
       "subject": "propose",
@@ -150,87 +149,15 @@
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 1757,
+    "elapsedMs": 1789,
     "intake": {
       "mode": "observe",
       "noRepair": [
-        "wd-667-D2-undelivered:research",
-        "wd-667-D2-undelivered:publish-dataset",
         "wd-667-D17---cardkeys:-YAML-keys-in-3-dataset-cards-at-https://github.com/HivemindOS-Agent-",
         "wd-667-D17---cardkeys-dataset-44-rows-2026-11-14-:-It-chose-to-publish-it-as-it-is-on-2-",
         "wd-667-D17---cardkeys-44-row-YAML-keys-dataset-2026-11-18-:-It-chose-to-publish-it-as-it-"
       ],
       "contradictions": []
     }
-  },
-  "plays": {
-    "publish-dataset": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
-      "since": "2026-11-21T06:14:08.559Z",
-      "reopenOn": [
-        "balance covers quote"
-      ]
-    },
-    "propose": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
-      "since": "2026-11-21T06:14:08.559Z",
-      "reopenOn": [
-        "balance covers quote"
-      ]
-    },
-    "research": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 1854 < quote 110000 micro-USDC",
-      "since": "2026-11-21T06:14:08.559Z",
-      "reopenOn": [
-        "balance covers quote"
-      ]
-    },
-    "tell-agents": {
-      "state": "offered"
-    },
-    "build-tool": {
-      "state": "offered"
-    },
-    "media": {
-      "state": "paused",
-      "reason": "B-51: no picture before launch",
-      "reopenOn": [
-        "MEDIA_PLAY set to proven at launch, after B-67 and B-68"
-      ]
-    },
-    "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
-      "reopenOn": [
-        "payer added",
-        "allow-list commit"
-      ]
-    },
-    "routine": {
-      "state": "offered"
-    },
-    "agents": {
-      "state": "offered"
-    }
-  },
-  "label": "paused: needs funding",
-  "funding": {
-    "state": "needs_funding",
-    "label": "paused: needs funding",
-    "since": "2026-11-21T06:14:08.559Z",
-    "balance": 1854,
-    "smallestQuote": 110000,
-    "heldPlays": [
-      "publish-dataset",
-      "propose",
-      "research"
-    ],
-    "skips": 6,
-    "refusals": 5,
-    "resumedAt": null,
-    "unit": "micro-USDC"
   }
 }
