@@ -1,9 +1,11 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-23T11:32:47.856Z",
+  "status": "repairing",
+  "at": "2026-11-23T20:48:14.250Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-547-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -25,7 +27,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -53,7 +56,8 @@
         "consecutive": 0,
         "sameCause": 0,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 0
       },
       "delivery": {
         "state": "acknowledged",
@@ -81,7 +85,8 @@
         "consecutive": 0,
         "sameCause": 4,
         "acknowledgedFailed": 4,
-        "recurrences": 2
+        "recurrences": 2,
+        "sameCauseRun": 4
       },
       "delivery": {
         "state": "acknowledged",
@@ -109,7 +114,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -137,7 +143,8 @@
         "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 2
       },
       "delivery": {
         "state": "acknowledged",
@@ -165,7 +172,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -193,7 +201,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -221,7 +230,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -249,7 +259,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -277,7 +288,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -305,7 +317,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 1,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -333,7 +346,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -361,7 +375,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -389,7 +404,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -417,7 +433,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -445,7 +462,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -473,7 +491,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -483,34 +502,6 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44814109707)",
       "escalation": null,
       "lastTryAt": "2026-11-20T20:44:57.000Z",
-      "receiver": null
-    },
-    {
-      "id": "rp-547-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data.",
-      "firstFailureAt": "2026-11-20T23:57:05.729Z",
-      "lastObservedAt": "2026-11-23T11:17:52.833Z",
-      "counters": {
-        "observations": 707,
-        "failedAttempts": 3,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 2
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:682:1795432593625:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
-      "escalation": null,
-      "lastTryAt": "2026-11-23T11:17:52.833Z",
       "receiver": null
     },
     {
@@ -529,7 +520,8 @@
         "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 11,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 12
       },
       "delivery": {
         "state": "acknowledged",
@@ -557,7 +549,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -567,6 +560,35 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705)",
       "escalation": null,
       "lastTryAt": "2026-11-23T00:13:12.000Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-547-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it linked a page it did not read",
+      "firstFailureAt": "2026-11-23T20:47:03.694Z",
+      "lastObservedAt": "2026-11-23T20:47:03.694Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 3,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-23T20:47:03.694Z",
       "receiver": null
     }
   ],
