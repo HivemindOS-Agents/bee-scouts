@@ -1,11 +1,10 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-23T08:06:06.150Z",
+  "at": "2026-11-23T08:22:43.322Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset",
-    "rp-632-t-uniswap-v4-core-release-watch"
+    "rp-632-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -275,7 +274,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 474,
+        "observations": 476,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -381,16 +380,16 @@
       "id": "rp-632-t-uniswap-v4-core-release-watch",
       "artifact": "uniswap-v4-core-release-watch",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL STATUS.md says UNKNOWN is never zero/safe",
       "firstFailureAt": "2026-11-23T07:18:59.000Z",
-      "lastObservedAt": "2026-11-23T07:18:59.000Z",
+      "lastObservedAt": "2026-11-23T07:50:46.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 1
@@ -400,9 +399,9 @@
         "at": "2026-11-23T07:50:20.226Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45134012642)",
       "escalation": null,
-      "lastTryAt": "2026-11-23T07:50:20.226Z",
+      "lastTryAt": "2026-11-23T07:50:46.000Z",
       "receiver": null
     }
   ],
