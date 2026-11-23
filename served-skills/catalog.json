@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generatedAt": "2026-11-22T18:15:20.240Z",
+ "generatedAt": "2026-11-23T00:15:20.308Z",
  "spec": "ext-skills c1aa87e",
  "skills": [
   {
@@ -2395,6 +2395,20 @@
   },
   {
    "agent": "632",
+   "tool": "publish-attribution-run-lines-package",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "632",
+   "tool": "publish-preflight",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "632",
    "tool": "sas-phone-claim-check",
    "reasons": [
     "quickStart"
@@ -2410,6 +2424,13 @@
   {
    "agent": "632",
    "tool": "standalone-selftest-check",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "632",
+   "tool": "uniswap-v4-core-release-watch",
    "reasons": [
     "quickStart"
    ]
@@ -2523,6 +2544,13 @@
   },
   {
    "agent": "547",
+   "tool": "aerodrome-fee-watch-2026-11-22",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "547",
    "tool": "agent-memory-lint-fixture-catalog",
    "reasons": [
     "quickStart"
@@ -2607,6 +2635,8 @@
    "tool": "opp-547-824-uniswap-v4-upgrade-watch",
    "reasons": [
     "verdict",
+    "bundle",
+    "reproduced",
     "quickStart"
    ]
   },
@@ -2700,24 +2730,10 @@
    "reasons": [
     "quickStart"
    ]
-  },
-  {
-   "agent": "632",
-   "tool": "publish-attribution-run-lines-package",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "632",
-   "tool": "publish-preflight",
-   "reasons": [
-    "quickStart"
-   ]
   }
  ],
  "unable": {},
- "cursor": "632/parked-claim-check",
+ "cursor": "632/claim-ledger-checker",
  "adoption": {
   "skill://hivepunk-632/run-log-diff/SKILL.md": {
    "outsideFetchClients7d": 0,
