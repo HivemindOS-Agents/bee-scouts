@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-22T06:21:54.493Z",
+  "at": "2026-11-23T06:00:20.716Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -235,10 +235,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-22T00:01:44.673Z",
+    "at": "2026-11-23T00:03:36.145Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 6,
+    "findingsOpen": 5,
     "top": {
       "check": "D0",
       "subject": "bee-scouts MONITOR.md",
@@ -246,7 +246,7 @@
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2910,
+    "elapsedMs": 3996,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -255,7 +255,12 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "rested",
+      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout, hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases, hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+      "since": "2026-11-23T05:02:28.217Z",
+      "reopenOn": [
+        "outside need link (a public ask by a non-Hive account)"
+      ]
     },
     "propose": {
       "state": "offered"
