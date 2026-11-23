@@ -1,11 +1,10 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-23T06:00:20.716Z",
+  "at": "2026-11-23T06:47:02.028Z",
   "step": null,
   "reasons": [
-    "rp-547-s-publish-dataset",
-    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
+    "rp-547-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -495,13 +494,13 @@
       "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it described a dataset instead of holding its rows",
+      "cause": "fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data.",
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
-      "lastObservedAt": "2026-11-22T03:47:35.117Z",
+      "lastObservedAt": "2026-11-23T06:45:57.431Z",
       "counters": {
-        "observations": 660,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 669,
+        "failedAttempts": 3,
+        "consecutive": 3,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
@@ -514,23 +513,23 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-22T03:47:35.117Z",
+      "lastTryAt": "2026-11-23T06:45:57.431Z",
       "receiver": null
     },
     {
       "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
       "artifact": "fixprotocol-modifyliquidities-nonreentrant",
       "kind": "selfTest",
-      "state": "ESCALATED",
+      "state": "RELEASED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: missing modifyLiquidities-nonReentrant.patch",
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
-      "lastObservedAt": "2026-11-22T02:09:42.000Z",
+      "lastObservedAt": "2026-11-23T06:30:27.000Z",
       "counters": {
-        "observations": 190,
+        "observations": 192,
         "failedAttempts": 12,
-        "consecutive": 12,
+        "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 11,
         "recurrences": 0
@@ -540,9 +539,9 @@
         "at": "2026-11-21T03:42:53.331Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45124517471)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (12 in all, 11 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T18:44:23.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44937131965]\n- 2026-11-21T21:52:02.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44953725232]\n- 2026-11-21T22:23:55.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44956526668]\n- 2026-11-22T01:37:28.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44972300158]\n- 2026-11-22T02:09:42.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44974750249]\nEscalated 2026-11-23T02:19:37.199Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-22T02:09:42.000Z",
+      "lastTryAt": "2026-11-23T06:30:27.000Z",
       "receiver": null
     },
     {
@@ -628,13 +627,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "4 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-22T06:44:52.646Z",
-      "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-23T06:44:52.646Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
