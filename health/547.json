@@ -1,11 +1,9 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-23T06:47:02.028Z",
+  "status": "ok",
+  "at": "2026-11-23T11:32:47.856Z",
   "step": null,
-  "reasons": [
-    "rp-547-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -491,29 +489,28 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data.",
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
-      "lastObservedAt": "2026-11-23T06:45:57.431Z",
+      "lastObservedAt": "2026-11-23T11:17:52.833Z",
       "counters": {
-        "observations": 669,
+        "observations": 707,
         "failedAttempts": 3,
-        "consecutive": 3,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 2,
-        "policySkips": 4
+        "recurrences": 2
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:682:1795432593625:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
-      "lastTryAt": "2026-11-23T06:45:57.431Z",
+      "lastTryAt": "2026-11-23T11:17:52.833Z",
       "receiver": null
     },
     {
@@ -572,39 +569,6 @@
       "lastTryAt": "2026-11-23T00:13:12.000Z",
       "receiver": null
     }
-  ],
-  "policySkips": [
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-19T18:03:59.108Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-19T23:41:20.788Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-21T02:53:17.049Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-22T06:44:52.646Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [
-    "stuck play: 4 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
     "at": "2026-11-23T00:12:00.022Z",
