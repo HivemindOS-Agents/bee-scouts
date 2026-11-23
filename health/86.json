@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-23T00:10:17.639Z",
+  "at": "2026-11-23T06:00:20.716Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -163,7 +163,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 145,
+        "observations": 165,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -302,7 +302,7 @@
       "research",
       "agents"
     ],
-    "skips": 38,
+    "skips": 43,
     "refusals": 3,
     "resumedAt": null,
     "unit": "micro-USDC"
