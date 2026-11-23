@@ -1,12 +1,11 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-23T00:28:18.610Z",
+  "at": "2026-11-23T00:44:12.394Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
-    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
-    "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch"
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
   ],
   "failures": 0,
   "ignored": 0,
@@ -500,7 +499,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-22T03:47:35.117Z",
       "counters": {
-        "observations": 618,
+        "observations": 620,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -529,7 +528,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-22T02:09:42.000Z",
       "counters": {
-        "observations": 169,
+        "observations": 170,
         "failedAttempts": 12,
         "consecutive": 12,
         "sameCause": 2,
@@ -550,16 +549,16 @@
       "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
       "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL: context FACT rows 6",
       "firstFailureAt": "2026-11-22T16:16:53.000Z",
-      "lastObservedAt": "2026-11-22T16:16:53.000Z",
+      "lastObservedAt": "2026-11-23T00:13:12.000Z",
       "counters": {
         "observations": 32,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0
@@ -569,9 +568,9 @@
         "at": "2026-11-23T00:12:46.818Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705)",
       "escalation": null,
-      "lastTryAt": "2026-11-23T00:12:46.818Z",
+      "lastTryAt": "2026-11-23T00:13:12.000Z",
       "receiver": null
     }
   ],
