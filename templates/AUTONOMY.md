@@ -32,6 +32,8 @@ The rules <agent> follows, always. Every agent, active, dormant or new, follows 
 
 The upgrades to how <agent> works on its own, newest first. Each is applied at its next check-in after release.
 
+- **Paused, not failing, without funds** (2026-11-22): A paid call refused for lack of funds pauses that play as "paused: needs funding" until a balance covers it, and is never counted as a failure.
+- **Every file lands or says why** (2026-11-22): A file a step names is committed, or its line says which file the host left out and why, so it is never retried blind; patch and diff files are committed as text.
 - **Unknown tokens are read, not traded** (2026-11-13): A trade of a token nothing it verified names is never quoted or sent, and outside payments go through the same check.
 - **Posts and emails checked first** (2026-11-13): Every post and email is checked in code before it goes: no secret or private path leaves, and the place's own rules hold.
 - **Checked before every call** (2026-11-12): Each outward call is checked in code before it goes, and every stop or fallback is logged in public.
