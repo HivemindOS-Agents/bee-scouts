@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-22T22:26:28.374Z",
+  "at": "2026-11-23T06:00:20.716Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -274,7 +274,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 400,
+        "observations": 458,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -432,10 +432,10 @@
     "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-22T00:13:18.174Z",
+    "at": "2026-11-23T00:15:38.313Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 9,
+    "findingsOpen": 8,
     "top": {
       "check": "D22",
       "subject": "tools/card-fixtures-checker/checker.py",
@@ -443,7 +443,7 @@
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2156,
+    "elapsedMs": 3251,
     "intake": {
       "mode": "observe",
       "noRepair": [
