@@ -1,15 +1,8 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-22T16:48:06.028Z",
-  "step": {
-    "id": "hl-547-t-2b6b5ca8",
-    "kind": "selfTest",
-    "tool": "opp-547-824-uniswap-v4-upgrade-watch",
-    "play": "build",
-    "action": "Make the self-test of tools/opp-547-824-uniswap-v4-upgrade-watch/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-22T16:48:06.028Z"
-  },
+  "at": "2026-11-23T00:28:18.610Z",
+  "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
     "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
@@ -507,7 +500,7 @@
       "firstFailureAt": "2026-11-20T23:57:05.729Z",
       "lastObservedAt": "2026-11-22T03:47:35.117Z",
       "counters": {
-        "observations": 535,
+        "observations": 618,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -536,7 +529,7 @@
       "firstFailureAt": "2026-11-21T03:11:27.000Z",
       "lastObservedAt": "2026-11-22T02:09:42.000Z",
       "counters": {
-        "observations": 137,
+        "observations": 169,
         "failedAttempts": 12,
         "consecutive": 12,
         "sameCause": 2,
@@ -564,7 +557,7 @@
       "firstFailureAt": "2026-11-22T16:16:53.000Z",
       "lastObservedAt": "2026-11-22T16:16:53.000Z",
       "counters": {
-        "observations": 1,
+        "observations": 32,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -572,13 +565,13 @@
         "recurrences": 0
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-23T00:12:46.818Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-22T16:16:53.000Z",
+      "lastTryAt": "2026-11-23T00:12:46.818Z",
       "receiver": null
     }
   ],
@@ -616,18 +609,18 @@
     "stuck play: 4 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-22T00:01:03.695Z",
+    "at": "2026-11-23T00:12:00.022Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 6,
+    "findingsOpen": 7,
     "top": {
-      "check": "D17",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- fixprotocol-modifyliquidities-nonreentrant at https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixprotocol-modifyliquidities-nonreentrant (2…\""
+      "check": "D2",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
-    "requests": 23,
-    "elapsedMs": 4035,
+    "requests": 24,
+    "elapsedMs": 3422,
     "intake": {
       "mode": "observe",
       "noRepair": [],
