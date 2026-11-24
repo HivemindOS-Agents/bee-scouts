@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-23T06:00:20.716Z",
+  "at": "2026-11-24T00:25:07.393Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -28,7 +28,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -56,7 +57,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -84,7 +86,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -112,7 +115,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -140,7 +144,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -163,12 +168,13 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 165,
+        "observations": 241,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 2
+        "recurrences": 2,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -196,7 +202,8 @@
         "consecutive": 0,
         "sameCause": 4,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 4
       },
       "delivery": {
         "state": "unknown",
@@ -210,10 +217,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-23T00:08:53.488Z",
+    "at": "2026-11-24T00:25:02.562Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 4,
+    "findingsOpen": 3,
     "top": {
       "check": "D17",
       "subject": "ARTIFACTS.md",
@@ -221,7 +228,7 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 2918,
+    "elapsedMs": 2404,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -280,13 +287,7 @@
       "state": "offered"
     },
     "agents": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 6270 < quote 50000 micro-USDC",
-      "since": "2026-11-23T00:09:15.378Z",
-      "reopenOn": [
-        "balance covers quote",
-        "the free thinking allowance renews (next UTC day)"
-      ]
+      "state": "offered"
     }
   },
   "label": "paused: needs funding",
@@ -295,14 +296,13 @@
     "label": "paused: needs funding",
     "since": "2026-11-22T00:16:58.208Z",
     "balance": 6270,
-    "smallestQuote": 50000,
+    "smallestQuote": 110000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research",
-      "agents"
+      "research"
     ],
-    "skips": 43,
+    "skips": 62,
     "refusals": 3,
     "resumedAt": null,
     "unit": "micro-USDC"
