@@ -1,0 +1,67 @@
+{
+  "agent": "65",
+  "status": "ok",
+  "at": "2026-11-24T16:14:45.078Z",
+  "step": null,
+  "reasons": [],
+  "failures": 0,
+  "ignored": 0,
+  "pausedAt": null,
+  "ticket": null,
+  "repairs": [],
+  "watchdog": {
+    "at": "2026-11-24T16:14:38.974Z",
+    "version": "watchdog-v1",
+    "mode": "report",
+    "findingsOpen": 2,
+    "top": {
+      "check": "D0",
+      "subject": "bee-scouts MONITOR.md",
+      "detail": "MONITOR.md's Latest flags still says no scan has written there."
+    },
+    "notChecked": [
+      "D2",
+      "D8"
+    ],
+    "requests": 8,
+    "elapsedMs": 2985,
+    "intake": {
+      "mode": "observe",
+      "noRepair": [],
+      "contradictions": []
+    }
+  },
+  "plays": {
+    "publish-dataset": {
+      "state": "offered"
+    },
+    "propose": {
+      "state": "offered"
+    },
+    "research": {
+      "state": "offered"
+    },
+    "tell-agents": {
+      "state": "offered"
+    },
+    "build-tool": {
+      "state": "offered"
+    },
+    "media": {
+      "state": "paused",
+      "reason": "B-51: no picture before launch",
+      "reopenOn": [
+        "MEDIA_PLAY set to proven at launch, after B-67 and B-68"
+      ]
+    },
+    "pay-outside": {
+      "state": "offered"
+    },
+    "routine": {
+      "state": "offered"
+    },
+    "agents": {
+      "state": "offered"
+    }
+  }
+}
