@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-23T08:22:43.322Z",
+  "at": "2026-11-24T06:00:20.213Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -27,7 +27,8 @@
         "consecutive": 0,
         "sameCause": 0,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 0
       },
       "delivery": {
         "state": "acknowledged",
@@ -55,7 +56,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 3,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -83,7 +85,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -111,7 +114,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 4,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -139,7 +143,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -167,7 +172,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 3
+        "recurrences": 3,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -195,7 +201,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -223,7 +230,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -251,7 +259,8 @@
         "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 2
       },
       "delivery": {
         "state": "acknowledged",
@@ -268,18 +277,19 @@
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
       "state": "REPAIR_ATTEMPTED",
-      "failureClass": "MISSING_INPUT",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "its post about the dataset was missing or too short",
+      "cause": "it restated one vendor's documentation, which people can already read at the source",
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
-      "lastObservedAt": "2026-11-21T09:16:13.066Z",
+      "lastObservedAt": "2026-11-23T12:50:20.447Z",
       "counters": {
-        "observations": 476,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 675,
+        "failedAttempts": 3,
+        "consecutive": 3,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
+        "sameCauseRun": 1,
         "policySkips": 3
       },
       "delivery": {
@@ -289,7 +299,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-21T09:16:13.066Z",
+      "lastTryAt": "2026-11-23T12:50:20.447Z",
       "receiver": null
     },
     {
@@ -308,7 +318,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 2
+        "recurrences": 2,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -336,7 +347,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -364,7 +376,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -392,7 +405,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 1,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -432,31 +446,29 @@
     "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-23T00:15:38.313Z",
+    "at": "2026-11-24T00:08:37.945Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 8,
     "top": {
-      "check": "D22",
-      "subject": "tools/card-fixtures-checker/checker.py",
-      "detail": "A step said it built tools/card-fixtures-checker/checker.py; it is not in the commit."
+      "check": "D2",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3251,
+    "elapsedMs": 3569,
     "intake": {
       "mode": "observe",
-      "noRepair": [
-        "wd-632-D22-tools/card-fixtures-checker/checker.py"
-      ],
+      "noRepair": [],
       "contradictions": []
     }
   },
   "plays": {
     "publish-dataset": {
       "state": "rested",
-      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/selftest-outputmd-capture-requests-for-repo-tools-folders",
-      "since": "2026-11-22T07:34:03.842Z",
+      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-632-4934c76e/hugging-face-dataset-sharing-and-repo-structure-docs, hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/selftest-outputmd-capture-requests-for-repo-tools-folders",
+      "since": "2026-11-23T13:07:41.445Z",
       "reopenOn": [
         "outside need link (a public ask by a non-Hive account)"
       ]
