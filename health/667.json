@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-24T00:35:21.629Z",
+  "at": "2026-11-24T00:37:10.056Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -82,7 +82,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 392,
+        "observations": 399,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -117,7 +117,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 952,
+        "observations": 954,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -215,7 +215,13 @@
       "state": "offered"
     },
     "agents": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: balance 1854 < quote 50000 micro-USDC",
+      "since": "2026-11-24T00:35:59.773Z",
+      "reopenOn": [
+        "balance covers quote",
+        "the free thinking allowance renews (next UTC day)"
+      ]
     }
   },
   "label": "paused: needs funding",
@@ -224,14 +230,15 @@
     "label": "paused: needs funding",
     "since": "2026-11-21T06:14:08.559Z",
     "balance": 1854,
-    "smallestQuote": 110000,
+    "smallestQuote": 50000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research"
+      "research",
+      "agents"
     ],
-    "skips": 58,
-    "refusals": 6,
+    "skips": 60,
+    "refusals": 7,
     "resumedAt": null,
     "unit": "micro-USDC"
   }
