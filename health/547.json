@@ -1,9 +1,11 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-24T09:29:03.618Z",
+  "status": "repairing",
+  "at": "2026-11-24T21:43:21.149Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-547-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -564,31 +566,31 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "SKIPPED_POLICY",
-      "failureClass": "POLICY_SKIP",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-24T09:27:40.228Z",
-      "lastObservedAt": "2026-11-24T09:27:40.228Z",
+      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "firstFailureAt": "2026-11-24T21:41:58.520Z",
+      "lastObservedAt": "2026-11-24T21:41:58.520Z",
       "counters": {
         "observations": 1,
-        "failedAttempts": 0,
-        "consecutive": 0,
-        "sameCause": 0,
-        "sameCauseRun": 0,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0,
+        "recurrences": 5,
+        "sameCauseRun": 1,
         "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
-      "proof": "A later step of this play that ends done.",
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-24T09:27:40.228Z",
-      "hb062": "visible, not blocking until 2026-11-26T09:27:40.228Z"
+      "lastTryAt": "2026-11-24T21:41:58.520Z",
+      "receiver": null
     }
   ],
   "policySkips": [
