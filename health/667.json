@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-23T06:00:20.716Z",
+  "at": "2026-11-24T00:35:21.629Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -29,7 +29,8 @@
         "consecutive": 0,
         "sameCause": 2,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 2
       },
       "delivery": {
         "state": "acknowledged",
@@ -57,7 +58,8 @@
         "consecutive": 0,
         "sameCause": 0,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 0
       },
       "delivery": {
         "state": "acknowledged",
@@ -80,12 +82,13 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 259,
+        "observations": 392,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 3
       },
       "delivery": {
         "state": "unknown",
@@ -114,12 +117,13 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 914,
+        "observations": 952,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 6
       },
       "delivery": {
         "state": "unknown",
@@ -139,10 +143,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-23T00:16:39.038Z",
+    "at": "2026-11-24T00:35:16.319Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 8,
+    "findingsOpen": 9,
     "top": {
       "check": "D2",
       "subject": "propose",
@@ -150,7 +154,7 @@
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 1789,
+    "elapsedMs": 2096,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -211,13 +215,7 @@
       "state": "offered"
     },
     "agents": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 1854 < quote 50000 micro-USDC",
-      "since": "2026-11-23T03:20:20.291Z",
-      "reopenOn": [
-        "balance covers quote",
-        "the free thinking allowance renews (next UTC day)"
-      ]
+      "state": "offered"
     }
   },
   "label": "paused: needs funding",
@@ -226,14 +224,13 @@
     "label": "paused: needs funding",
     "since": "2026-11-21T06:14:08.559Z",
     "balance": 1854,
-    "smallestQuote": 50000,
+    "smallestQuote": 110000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research",
-      "agents"
+      "research"
     ],
-    "skips": 39,
+    "skips": 58,
     "refusals": 6,
     "resumedAt": null,
     "unit": "micro-USDC"
