@@ -1,10 +1,18 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-24T06:00:20.213Z",
-  "step": null,
+  "at": "2026-11-24T22:39:13.892Z",
+  "step": {
+    "id": "hl-632-t-044937ed",
+    "kind": "selfTest",
+    "tool": "uniswap-v4-core-release-watch",
+    "play": "build",
+    "action": "Make the self-test of tools/uniswap-v4-core-release-watch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-24T22:39:13.892Z"
+  },
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-t-uniswap-v4-core-release-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -283,7 +291,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-23T12:50:20.447Z",
       "counters": {
-        "observations": 675,
+        "observations": 807,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -393,29 +401,29 @@
       "id": "rp-632-t-uniswap-v4-core-release-watch",
       "artifact": "uniswap-v4-core-release-watch",
       "kind": "selfTest",
-      "state": "RELEASED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FAIL STATUS.md says UNKNOWN is never zero/safe",
-      "firstFailureAt": "2026-11-23T07:18:59.000Z",
-      "lastObservedAt": "2026-11-23T07:50:46.000Z",
+      "cause": "FAIL check_row accepts a filled FACT row: [\"field days_since has no FACT/UNKNOWN label (got 'DERIVED')\"]",
+      "firstFailureAt": "2026-11-24T22:08:28.000Z",
+      "lastObservedAt": "2026-11-24T22:08:28.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 0,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1,
+        "recurrences": 2,
         "sameCauseRun": 1
       },
       "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-23T07:50:20.226Z"
+        "state": "unknown",
+        "at": null
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45134012642)",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-23T07:50:46.000Z",
+      "lastTryAt": "2026-11-24T22:08:28.000Z",
       "receiver": null
     }
   ],
