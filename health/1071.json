@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-23T06:00:20.716Z",
+  "at": "2026-11-24T06:00:20.213Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -25,7 +25,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -53,7 +54,8 @@
         "consecutive": 0,
         "sameCause": 0,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 0
       },
       "delivery": {
         "state": "acknowledged",
@@ -81,7 +83,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -109,7 +112,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 1
+        "recurrences": 1,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -137,7 +141,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 3
+        "recurrences": 3,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -165,7 +170,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -193,7 +199,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
-        "recurrences": 0
+        "recurrences": 0,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "acknowledged",
@@ -221,7 +228,8 @@
         "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 1
+        "recurrences": 1,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -235,18 +243,18 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-23T00:03:36.145Z",
+    "at": "2026-11-24T00:04:27.853Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 5,
+    "findingsOpen": 6,
     "top": {
       "check": "D0",
       "subject": "bee-scouts MONITOR.md",
       "detail": "MONITOR.md's Latest flags still says no scan has written there."
     },
     "notChecked": [],
-    "requests": 22,
-    "elapsedMs": 3996,
+    "requests": 21,
+    "elapsedMs": 2849,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -256,8 +264,8 @@
   "plays": {
     "publish-dataset": {
       "state": "rested",
-      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout, hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases, hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
-      "since": "2026-11-23T05:02:28.217Z",
+      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled, hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs, hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout",
+      "since": "2026-11-23T15:39:44.635Z",
       "reopenOn": [
         "outside need link (a public ask by a non-Hive account)"
       ]
