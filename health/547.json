@@ -1,11 +1,9 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-23T20:48:14.250Z",
+  "status": "ok",
+  "at": "2026-11-24T00:12:52.276Z",
   "step": null,
-  "reasons": [
-    "rp-547-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -566,16 +564,16 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "it linked a page it did not read",
       "firstFailureAt": "2026-11-23T20:47:03.694Z",
-      "lastObservedAt": "2026-11-23T20:47:03.694Z",
+      "lastObservedAt": "2026-11-23T23:57:17.265Z",
       "counters": {
-        "observations": 1,
+        "observations": 43,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 3,
@@ -586,28 +584,30 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:692:1795478182873:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
-      "lastTryAt": "2026-11-23T20:47:03.694Z",
+      "lastTryAt": "2026-11-23T23:57:17.265Z",
       "receiver": null
     }
   ],
   "watchdog": {
-    "at": "2026-11-23T00:12:00.022Z",
+    "at": "2026-11-24T00:12:47.365Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 7,
     "top": {
-      "check": "D2",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
+      "check": "D22",
+      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
+      "detail": "A step said it built tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md; it is not in the commit."
     },
     "notChecked": [],
-    "requests": 24,
-    "elapsedMs": 3422,
+    "requests": 22,
+    "elapsedMs": 2539,
     "intake": {
       "mode": "observe",
-      "noRepair": [],
+      "noRepair": [
+        "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md"
+      ],
       "contradictions": []
     }
   },
