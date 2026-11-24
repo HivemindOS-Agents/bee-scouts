@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-24T22:39:13.892Z",
-  "step": {
-    "id": "hl-632-t-044937ed",
-    "kind": "selfTest",
-    "tool": "uniswap-v4-core-release-watch",
-    "play": "build",
-    "action": "Make the self-test of tools/uniswap-v4-core-release-watch/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-24T22:39:13.892Z"
-  },
+  "at": "2026-11-24T22:57:08.743Z",
+  "step": null,
   "reasons": [
     "rp-632-s-publish-dataset",
     "rp-632-t-uniswap-v4-core-release-watch"
@@ -291,7 +284,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-23T12:50:20.447Z",
       "counters": {
-        "observations": 807,
+        "observations": 809,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -417,13 +410,13 @@
         "sameCauseRun": 1
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-24T22:41:33.321Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-24T22:08:28.000Z",
+      "lastTryAt": "2026-11-24T22:41:33.321Z",
       "receiver": null
     }
   ],
