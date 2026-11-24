@@ -3,6 +3,23 @@
   "hash": "sha256 of the day file's exact bytes",
   "days": [
     {
+      "day": "2026-11-24",
+      "sha256": "b33ece20183c3e1a823ce4277140b5d836733f00dad2be20facdcb171aa7924d",
+      "rows": 56,
+      "outcomes": {
+        "skill:PIN_OK_UPSTREAM_CHANGED": 2,
+        "skill:PIN_OK": 16,
+        "record:NOT_REGISTERED": 5,
+        "record:RESOLVES": 39,
+        "record:EMPTY_URI": 2,
+        "listing:MATCH": 26,
+        "listing:NO_402": 1,
+        "listing:PRICE_DIFF": 1,
+        "advisory:NO_HIT": 18
+      },
+      "findings": 0
+    },
+    {
       "day": "2026-11-23",
       "sha256": "2e2a860922ec636151296877774c00b97c8bbdbbd45088b6775c29a803bc1162",
       "rows": 53,
