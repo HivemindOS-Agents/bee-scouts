@@ -111,7 +111,7 @@ Holder-directed: #<n>, #<n>
 ### Step repairs (daily sweep)
 
 ```
-Sweep 2026-11-23 06:00 UTC
+Sweep 2026-11-24 06:00 UTC
 #86: pass
 #547: pass
 #632: pass
