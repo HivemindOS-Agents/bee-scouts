@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "ok",
-  "at": "2026-11-24T06:33:00.872Z",
+  "at": "2026-11-24T09:29:03.618Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -564,32 +564,43 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
+      "state": "SKIPPED_POLICY",
+      "failureClass": "POLICY_SKIP",
       "runner": null,
-      "cause": "it linked a page it did not read",
-      "firstFailureAt": "2026-11-24T03:06:54.682Z",
-      "lastObservedAt": "2026-11-24T06:17:24.417Z",
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "firstFailureAt": "2026-11-24T09:27:40.228Z",
+      "lastObservedAt": "2026-11-24T09:27:40.228Z",
       "counters": {
-        "observations": 53,
-        "failedAttempts": 1,
+        "observations": 1,
+        "failedAttempts": 0,
         "consecutive": 0,
-        "sameCause": 1,
+        "sameCause": 0,
+        "sameCauseRun": 0,
         "acknowledgedFailed": 0,
-        "recurrences": 4,
-        "sameCauseRun": 1
+        "recurrences": 0,
+        "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:700:1795500978396:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
+      "proof": "A later step of this play that ends done.",
+      "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-24T06:17:24.417Z",
-      "receiver": null
+      "lastTryAt": "2026-11-24T09:27:40.228Z",
+      "hb062": "visible, not blocking until 2026-11-26T09:27:40.228Z"
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-547-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-24T09:27:40.228Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-24T00:12:47.365Z",
     "version": "watchdog-v1",
