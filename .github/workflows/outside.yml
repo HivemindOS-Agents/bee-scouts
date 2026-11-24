@@ -1,11 +1,14 @@
 # outside/ keeps its rules (the 15 Nov proposal bundle, BS18): pauses in one format, never deleted or rewritten,
 # a global one cleared by the host only, and outside/PAUSE present exactly while a global pause is open.
-# Reads the files only; no secrets.
+# HB-139: a deletion is checked against every earlier version of outside/pauses.jsonl in the whole history, not
+# against HEAD~1 alone, so an unparseable or missing previous file cannot hide one; an unparseable HEAD~1 file is
+# itself a failure. tests/test_check_outside.py holds the two-step deletion and the missing-parent case.
+# Reads the files and git history only; no secrets.
 name: outside
 on:
   push:
     branches: [main]
-    paths: ["outside/**", "scripts/check_outside.py", ".github/workflows/outside.yml"]
+    paths: ["outside/**", "scripts/check_outside.py", "scripts/security_input.py", "tests/test_check_outside.py", ".github/workflows/outside.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,8 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
-      - name: The rules
+          fetch-depth: 0
+      - name: The check's own cases
         run: |
-          git show HEAD~1:outside/pauses.jsonl > "$RUNNER_TEMP/before.jsonl" 2>/dev/null || : > "$RUNNER_TEMP/before.jsonl"
-          python3 scripts/check_outside.py "$RUNNER_TEMP/before.jsonl"
+          set -eu
+          python3 scripts/security_input.py --self-test
+          python3 -m unittest discover -s tests -p 'test_check_outside.py'
+      - name: The rules, against the whole history of outside/pauses.jsonl
+        run: python3 scripts/check_outside.py
