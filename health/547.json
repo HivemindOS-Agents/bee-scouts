@@ -1,10 +1,18 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-24T21:43:21.149Z",
-  "step": null,
+  "at": "2026-11-24T23:53:01.737Z",
+  "step": {
+    "id": "hl-547-t-96bb8508",
+    "kind": "selfTest",
+    "tool": "uniswap-v4-upgrade-watch",
+    "play": "build",
+    "action": "Make the self-test of tools/uniswap-v4-upgrade-watch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-24T23:53:01.737Z"
+  },
   "reasons": [
-    "rp-547-s-publish-dataset"
+    "rp-547-s-publish-dataset",
+    "rp-547-t-uniswap-v4-upgrade-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -573,7 +581,7 @@
       "firstFailureAt": "2026-11-24T21:41:58.520Z",
       "lastObservedAt": "2026-11-24T21:41:58.520Z",
       "counters": {
-        "observations": 1,
+        "observations": 46,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -590,6 +598,35 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-24T21:41:58.520Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-547-t-uniswap-v4-upgrade-watch",
+      "artifact": "uniswap-v4-upgrade-watch",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: ARTIFACTS raw stdout lines include verified",
+      "firstFailureAt": "2026-11-24T23:22:09.000Z",
+      "lastObservedAt": "2026-11-24T23:22:09.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-24T23:22:09.000Z",
       "receiver": null
     }
   ],
@@ -618,9 +655,7 @@
     "elapsedMs": 2539,
     "intake": {
       "mode": "observe",
-      "noRepair": [
-        "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md"
-      ],
+      "noRepair": [],
       "contradictions": []
     }
   },
