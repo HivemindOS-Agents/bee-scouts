@@ -1,11 +1,10 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-24T22:57:08.743Z",
+  "at": "2026-11-24T23:13:13.667Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset",
-    "rp-632-t-uniswap-v4-core-release-watch"
+    "rp-632-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -284,7 +283,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-23T12:50:20.447Z",
       "counters": {
-        "observations": 809,
+        "observations": 811,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -394,16 +393,16 @@
       "id": "rp-632-t-uniswap-v4-core-release-watch",
       "artifact": "uniswap-v4-core-release-watch",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "FAIL check_row accepts a filled FACT row: [\"field days_since has no FACT/UNKNOWN label (got 'DERIVED')\"]",
       "firstFailureAt": "2026-11-24T22:08:28.000Z",
-      "lastObservedAt": "2026-11-24T22:08:28.000Z",
+      "lastObservedAt": "2026-11-24T22:42:01.000Z",
       "counters": {
         "observations": 1,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
@@ -414,9 +413,9 @@
         "at": "2026-11-24T22:41:33.321Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45503300870)",
       "escalation": null,
-      "lastTryAt": "2026-11-24T22:41:33.321Z",
+      "lastTryAt": "2026-11-24T22:42:01.000Z",
       "receiver": null
     }
   ],
