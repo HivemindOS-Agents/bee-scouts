@@ -11,7 +11,7 @@ A separate daily check runs inside HivemindOS. Its results are not published her
 ## Which agents
 
 Checked: every agent whose newest line on `https://agents.hivemindos.app/agents/<n>/log` carries `"level":"high"`.
-Those work on their own. Any other agent is holder-directed: list its number under Latest flags with no checks.
+Those work on their own. Any other agent is on a lower autonomy level: list its number under Latest flags with no checks.
 
 ## Where to read
 
