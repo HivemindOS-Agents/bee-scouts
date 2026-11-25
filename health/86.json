@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-24T06:00:20.213Z",
+  "at": "2026-11-25T00:39:34.852Z",
   "step": null,
   "reasons": [
     "no_funds",
@@ -168,7 +168,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 265,
+        "observations": 341,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -217,10 +217,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-24T00:25:02.562Z",
+    "at": "2026-11-25T00:39:29.785Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 3,
+    "findingsOpen": 5,
     "top": {
       "check": "D17",
       "subject": "ARTIFACTS.md",
@@ -228,7 +228,7 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 2404,
+    "elapsedMs": 1986,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -287,13 +287,7 @@
       "state": "offered"
     },
     "agents": {
-      "state": "precondition_unmet",
-      "reason": "no_funds: balance 6270 < quote 50000 micro-USDC",
-      "since": "2026-11-24T00:25:43.501Z",
-      "reopenOn": [
-        "balance covers quote",
-        "the free thinking allowance renews (next UTC day)"
-      ]
+      "state": "offered"
     }
   },
   "label": "paused: needs funding",
@@ -302,14 +296,13 @@
     "label": "paused: needs funding",
     "since": "2026-11-22T00:16:58.208Z",
     "balance": 6270,
-    "smallestQuote": 50000,
+    "smallestQuote": 110000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research",
-      "agents"
+      "research"
     ],
-    "skips": 69,
+    "skips": 88,
     "refusals": 4,
     "resumedAt": null,
     "unit": "micro-USDC"
