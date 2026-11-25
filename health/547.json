@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-24T23:53:01.737Z",
+  "at": "2026-11-25T00:10:40.382Z",
   "step": {
     "id": "hl-547-t-96bb8508",
     "kind": "selfTest",
@@ -581,7 +581,7 @@
       "firstFailureAt": "2026-11-24T21:41:58.520Z",
       "lastObservedAt": "2026-11-24T21:41:58.520Z",
       "counters": {
-        "observations": 46,
+        "observations": 51,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -611,7 +611,7 @@
       "firstFailureAt": "2026-11-24T23:22:09.000Z",
       "lastObservedAt": "2026-11-24T23:22:09.000Z",
       "counters": {
-        "observations": 1,
+        "observations": 2,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -620,13 +620,13 @@
         "sameCauseRun": 1
       },
       "delivery": {
-        "state": "unknown",
-        "at": null
+        "state": "acknowledged",
+        "at": "2026-11-24T23:55:06.043Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-24T23:22:09.000Z",
+      "lastTryAt": "2026-11-24T23:55:06.043Z",
       "receiver": null
     }
   ],
@@ -641,18 +641,18 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-24T00:12:47.365Z",
+    "at": "2026-11-25T00:10:34.880Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 7,
     "top": {
       "check": "D22",
-      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
-      "detail": "A step said it built tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md; it is not in the commit."
+      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
+      "detail": "A step said it built tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json; it is not in the commit."
     },
     "notChecked": [],
-    "requests": 22,
-    "elapsedMs": 2539,
+    "requests": 23,
+    "elapsedMs": 2859,
     "intake": {
       "mode": "observe",
       "noRepair": [],
