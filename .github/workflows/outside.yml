@@ -3,6 +3,8 @@
 # HB-139: a deletion is checked against every earlier version of outside/pauses.jsonl in the whole history, not
 # against HEAD~1 alone, so an unparseable or missing previous file cannot hide one; an unparseable HEAD~1 file is
 # itself a failure. tests/test_check_outside.py holds the two-step deletion and the missing-parent case.
+# Row 41r4 (25 Nov 2026 update): scripts/security_input.py is the same bytes as bee-self-test's copy at its main, and
+# row 41r2: every security key a reader here takes with field() has an empty-state fixture (none today).
 # Reads the files and git history only; no secrets.
 name: outside
 on:
@@ -24,6 +26,10 @@ jobs:
         run: |
           set -eu
           python3 scripts/security_input.py --self-test
+          python3 scripts/security_input.py --keys scripts tests/test_check_outside.py
+          git clone --quiet --depth 1 --filter=blob:none --sparse "https://github.com/${GITHUB_REPOSITORY_OWNER}/bee-self-test.git" "$RUNNER_TEMP/bee-self-test-copy"
+          git -C "$RUNNER_TEMP/bee-self-test-copy" sparse-checkout set scripts
+          python3 scripts/security_input.py --same-as "$RUNNER_TEMP/bee-self-test-copy/scripts/security_input.py"
           python3 -m unittest discover -s tests -p 'test_check_outside.py'
       - name: The rules, against the whole history of outside/pauses.jsonl
         run: python3 scripts/check_outside.py
