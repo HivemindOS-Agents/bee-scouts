@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T07:05:12.898Z",
+  "at": "2026-11-25T07:06:46.071Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset"
@@ -573,13 +573,14 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-25T07:04:01.358Z",
       "counters": {
-        "observations": 1,
+        "observations": 6,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 6,
-        "sameCauseRun": 1
+        "sameCauseRun": 1,
+        "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
@@ -592,6 +593,16 @@
       "receiver": null
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-547-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-25T07:05:32.782Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-25T00:10:34.880Z",
     "version": "watchdog-v1",
