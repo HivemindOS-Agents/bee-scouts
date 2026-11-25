@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T22:03:00.401Z",
+  "at": "2026-11-25T22:04:49.478Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -563,14 +563,14 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-25T07:04:01.358Z",
       "counters": {
-        "observations": 101,
+        "observations": 105,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 6,
         "sameCauseRun": 1,
-        "policySkips": 1
+        "policySkips": 2
       },
       "delivery": {
         "state": "unknown",
@@ -594,7 +594,7 @@
       "firstFailureAt": "2026-11-25T20:27:53.000Z",
       "lastObservedAt": "2026-11-25T21:32:15.000Z",
       "counters": {
-        "observations": 3,
+        "observations": 4,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 2,
@@ -619,6 +619,13 @@
       "repair": "rp-547-s-publish-dataset",
       "play": "publish-dataset",
       "at": "2026-11-25T07:05:32.782Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-547-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-25T22:03:38.233Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
     }
@@ -647,7 +654,13 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-25T22:03:38.233Z",
+      "reopenOn": [
+        "a later step of this play that ends done",
+        "24 h (2026-11-26T22:03:38.233Z)"
+      ]
     },
     "propose": {
       "state": "offered"
