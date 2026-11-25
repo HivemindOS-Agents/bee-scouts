@@ -1,9 +1,11 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-25T06:00:20.512Z",
+  "status": "repairing",
+  "at": "2026-11-25T15:15:09.124Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-1071-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -36,7 +38,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43191777633)",
       "escalation": null,
       "lastTryAt": "2026-11-12T09:28:44.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-f-provenance-row",
@@ -65,7 +68,8 @@
       "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
       "lastTryAt": "2026-11-12T10:01:13.995Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-t-glb-metadata",
@@ -94,7 +98,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43398181419)",
       "escalation": null,
       "lastTryAt": "2026-11-13T09:04:01.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-t-glb-pad-cases",
@@ -123,7 +128,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43742786108)",
       "escalation": null,
       "lastTryAt": "2026-11-15T17:44:34.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-t-glb-fixture-byte-layouts",
@@ -152,36 +158,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370)",
       "escalation": null,
       "lastTryAt": "2026-11-19T13:15:48.000Z",
-      "receiver": null
-    },
-    {
-      "id": "rp-1071-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
-      "firstFailureAt": "2026-11-16T18:55:26.488Z",
-      "lastObservedAt": "2026-11-19T00:02:52.230Z",
-      "counters": {
-        "observations": 4,
-        "failedAttempts": 4,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0,
-        "sameCauseRun": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:437:1795046400000:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
-      "escalation": null,
-      "lastTryAt": "2026-11-19T00:02:52.230Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-t-fixprotocol-modifyliquidities-reentrancy-cases",
@@ -210,7 +188,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44885139037)",
       "escalation": null,
       "lastTryAt": "2026-11-21T08:30:00.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-1071-s-research",
@@ -239,7 +218,38 @@
       "closedBy": "step: a research step ended done (research-20778:249d8303-5ff6-48c6-b83f-19bf1802ab5d:482:1795290928639:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
       "escalation": null,
       "lastTryAt": "2026-11-21T19:56:34.736Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "firstFailureAt": "2026-11-25T15:13:54.311Z",
+      "lastObservedAt": "2026-11-25T15:13:54.311Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 1,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-25T15:13:54.311Z",
+      "receiver": null,
+      "suspended": null
     }
   ],
   "watchdog": {
@@ -263,12 +273,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "rested",
-      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled, hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs, hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout",
-      "since": "2026-11-23T15:39:44.635Z",
-      "reopenOn": [
-        "outside need link (a public ask by a non-Hive account)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
