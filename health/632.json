@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-24T23:13:13.667Z",
+  "at": "2026-11-25T06:00:20.512Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -283,7 +283,7 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-23T12:50:20.447Z",
       "counters": {
-        "observations": 811,
+        "observations": 861,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 1,
@@ -446,21 +446,23 @@
     "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-24T00:08:37.945Z",
+    "at": "2026-11-25T00:16:38.022Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 8,
     "top": {
       "check": "D2",
       "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
+      "detail": "Its repair of publish-dataset has 3 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3569,
+    "elapsedMs": 7316,
     "intake": {
       "mode": "observe",
-      "noRepair": [],
+      "noRepair": [
+        "wd-632-D22-tools/uniswap-v4-upgrade-watch/upgrade_watch.py"
+      ],
       "contradictions": []
     }
   },
