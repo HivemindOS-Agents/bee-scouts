@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-25T06:00:20.512Z",
+  "at": "2026-11-25T15:01:31.626Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -38,7 +38,8 @@
       "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
       "lastTryAt": "2026-11-12T10:05:17.691Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-fixture-card-web",
@@ -67,7 +68,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43276291798)",
       "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/fixture-card-web/. Latest cause: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data\n- 2026-11-12T12:18:00.000Z failed (not yet delivered): FAIL verify command not found [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43216592478]\n- 2026-11-12T12:51:50.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43221778879]\n- 2026-11-12T13:32:12.000Z failed: FAIL sample data/ directory not found at /home/runner/work/bee-self-test/bee-self-test/work/tools/fixture-card-web/fixture_card_test_fixtures/out/data [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43228200342]\n- 2026-11-12T14:07:48.000Z failed: FAIL fixture_card.py exited 1 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43233960617]",
       "lastTryAt": "2026-11-12T18:06:14.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-run-record-lint",
@@ -96,7 +98,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43409772380)",
       "escalation": null,
       "lastTryAt": "2026-11-13T10:32:10.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-hf-trending-models",
@@ -125,7 +128,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43816134970)",
       "escalation": "Parked after 3 acknowledged failed attempts on the self-test of tools/hf-trending-models/. Latest cause: FAIL unexpected survivors: acme/aurora-7b, acme/aurora-7b-gptq, arcturus/aurora-7b-awq, beta/nebula-13b, fleet/a1, fleet/a2, fleet/a3, fleet/a4, fleet/a5, epsilon/longctx-8b\n- 2026-11-14T09:41:08.000Z failed (not yet delivered): FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43581699189]\n- 2026-11-14T15:52:03.000Z failed (not yet delivered): FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43612446654]\n- 2026-11-15T00:31:27.000Z failed: FAIL unexpected survivors: acme/aurora-7b-gptq, fleet/a2, fleet/a3, fleet/a4, fleet/a5, fleet/a6 [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43658576782]\n- 2026-11-15T01:06:55.000Z failed: FAIL unexpected survivors: acme/aurora-7b, acme/aurora-7b-gptq, arcturus/aurora-7b-awq, beta/nebula-13b, fleet/a1, fleet/a2, fleet/a3, fleet/a4, fleet/a5, epsilon/longctx-8b [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43661497415]\n- 2026-11-15T01:40:41.000Z failed: FAIL arcturus/aurora-7b-awq why contains 'quantization of a trending model': got 'no clear why - popular but unremarkable' [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43664185945]",
       "lastTryAt": "2026-11-16T06:21:12.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-hf-run-lint-fixture-card",
@@ -154,7 +158,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43779789413)",
       "escalation": null,
       "lastTryAt": "2026-11-16T00:20:47.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-run-record-lint-fixtures",
@@ -183,7 +188,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44002668951)",
       "escalation": null,
       "lastTryAt": "2026-11-17T02:24:04.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-s-media",
@@ -212,7 +218,8 @@
       "closedBy": "host: play paused (B-51: no picture before launch)",
       "escalation": null,
       "lastTryAt": "2026-11-17T03:26:45.397Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-run-record-lint-dataset-export",
@@ -241,7 +248,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44433370334)",
       "escalation": null,
       "lastTryAt": "2026-11-19T00:59:26.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-call-home-repro-test",
@@ -270,26 +278,27 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44643498759)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (2 in all, 1 after it was delivered) on the self-test of tools/call-home-repro-test/. It stays parked until its files change. Latest cause: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address\n- 2026-11-19T20:10:07.000Z failed (not yet delivered): FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44605815567]\n- 2026-11-19T20:42:13.000Z failed: FAIL accept [redacted]: 'redacted' does not appear to be an IPv4 or IPv6 address [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611319199]",
       "lastTryAt": "2026-11-20T00:09:20.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "it restated one vendor's documentation, which people can already read at the source",
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
-      "lastObservedAt": "2026-11-23T12:50:20.447Z",
+      "lastObservedAt": "2026-11-25T15:00:06.482Z",
       "counters": {
-        "observations": 861,
-        "failedAttempts": 3,
-        "consecutive": 3,
-        "sameCause": 1,
+        "observations": 938,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 2,
-        "sameCauseRun": 1,
+        "sameCauseRun": 2,
         "policySkips": 3
       },
       "delivery": {
@@ -298,9 +307,10 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-23T12:50:20.447Z",
-      "receiver": null
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (4 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it restated one vendor's documentation, which people can already read at the source\n- 2026-11-20T03:05:16.688Z failed (not yet delivered): it described a dataset instead of holding its rows [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:529:1795143844973:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-21T09:16:13.066Z failed (not yet delivered): its post about the dataset was missing or too short [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:556:1795252471302:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-23T12:50:20.447Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:599:1795438154678:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-25T15:00:06.482Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:634:1795618702998:b88691bb-261a-444c-9a0e-264200bccf72]",
+      "lastTryAt": "2026-11-25T15:00:06.482Z",
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-s-research",
@@ -329,7 +339,8 @@
       "closedBy": "step: a research step ended done (research-20778:b26d7421-cb40-483b-bbc4-8f392121ca26:556:1795259193374:b88691bb-261a-444c-9a0e-264200bccf72)",
       "escalation": null,
       "lastTryAt": "2026-11-21T11:08:38.293Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-card-fixtures-checker-examples-extract",
@@ -358,7 +369,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44954917477)",
       "escalation": null,
       "lastTryAt": "2026-11-21T22:06:01.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-fastify-decorators-maintenance-status",
@@ -387,7 +399,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45017951152)",
       "escalation": null,
       "lastTryAt": "2026-11-22T11:34:12.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-632-t-uniswap-v4-core-release-watch",
@@ -416,7 +429,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45503300870)",
       "escalation": null,
       "lastTryAt": "2026-11-24T22:42:01.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     }
   ],
   "policySkips": [
@@ -468,11 +482,14 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "rested",
-      "reason": "last 3 datasets older than 7 days show no outside signal (no outside likes, discussions, dependents or collections): hivepunk-632-4934c76e/hugging-face-dataset-sharing-and-repo-structure-docs, hivepunk-632-4934c76e/run-record-lint-fixtures-three-fixtures-and-expected-exits, hivepunk-632-4934c76e/selftest-outputmd-capture-requests-for-repo-tools-folders",
-      "since": "2026-11-23T13:07:41.445Z",
+      "state": "parked",
+      "reason": "2 failures with the same cause: it restated one vendor's documentation, which people can already read at the source",
+      "since": "2026-11-25T15:00:06.482Z",
       "reopenOn": [
-        "outside need link (a public ask by a non-Hive account)"
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-26T15:00:06.482Z)"
       ]
     },
     "propose": {
