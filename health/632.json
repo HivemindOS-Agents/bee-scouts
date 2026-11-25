@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-25T15:48:40.035Z",
+  "at": "2026-11-25T21:19:17.007Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -292,14 +292,13 @@
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
       "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 3,
+        "observations": 25,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
-        "sameCauseRun": 1,
-        "policySkips": 3
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -432,32 +431,6 @@
       "receiver": null,
       "suspended": null
     }
-  ],
-  "policySkips": [
-    {
-      "repair": "rp-632-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-20T05:59:19.513Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-632-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-20T09:08:12.947Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-632-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-21T13:11:59.536Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [
-    "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
     "at": "2026-11-25T00:16:38.022Z",
