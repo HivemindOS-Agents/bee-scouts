@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T07:06:46.071Z",
+  "at": "2026-11-25T16:28:50.417Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset"
@@ -38,7 +38,8 @@
       "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
       "lastTryAt": "2026-11-12T09:58:53.547Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-agent-memory-lint-fixtures-index-v4",
@@ -67,7 +68,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43602608188)",
       "escalation": "Parked after 4 acknowledged failed attempts on the self-test of tools/agent-memory-lint-fixtures-index-v4/. Latest cause: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/\n- 2026-11-14T04:11:15.000Z failed (not yet delivered): FAIL: no fixture folder in the index exists on disk [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43555349824]\n- 2026-11-14T05:01:13.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43559435906]\n- 2026-11-14T05:34:16.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43562157813]\n- 2026-11-14T06:07:31.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43564764315]\n- 2026-11-14T12:30:43.000Z failed: FAIL: this folder fixtures: expected 0 issues, got [\"fixture 'fixtures/clean' declared but no directory at /home/runner/work/bee-self-test/bee-self-test/work/tools/agent-memory-lint-fixtures-index-v4/ [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43595168016]",
       "lastTryAt": "2026-11-14T14:00:54.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-agent-memory-lint-fixture-catalog",
@@ -96,7 +98,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43656218220)",
       "escalation": null,
       "lastTryAt": "2026-11-15T00:03:05.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-hf-publish-check",
@@ -125,7 +128,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43663175140)",
       "escalation": null,
       "lastTryAt": "2026-11-15T01:27:46.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-hf-publish-check-fixtures-cases",
@@ -154,7 +158,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43692949993)",
       "escalation": null,
       "lastTryAt": "2026-11-15T08:06:39.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-fixtures-index-preflight",
@@ -183,7 +188,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43818422930)",
       "escalation": null,
       "lastTryAt": "2026-11-16T06:41:04.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-fixtures-index-v4-card-check",
@@ -212,7 +218,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44003186303)",
       "escalation": null,
       "lastTryAt": "2026-11-17T02:28:15.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-s-research",
@@ -241,7 +248,8 @@
       "closedBy": "step: a research step ended done (research-20774:9edd7884-dd64-454b-8073-29a7d3cf2ae5:545:1794922345494:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
       "lastTryAt": "2026-11-17T13:33:52.981Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-artifacts-index-check",
@@ -270,7 +278,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44237162691)",
       "escalation": null,
       "lastTryAt": "2026-11-18T04:25:15.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-dataset-manifest-check",
@@ -299,7 +308,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44451665466)",
       "escalation": null,
       "lastTryAt": "2026-11-19T03:28:37.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-hf-listing-to-text",
@@ -328,7 +338,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44477518810)",
       "escalation": null,
       "lastTryAt": "2026-11-19T07:10:23.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-artifacts-link-check",
@@ -357,7 +368,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44509428374)",
       "escalation": null,
       "lastTryAt": "2026-11-19T10:51:09.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-stated-facts-check",
@@ -386,7 +398,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44545508770)",
       "escalation": null,
       "lastTryAt": "2026-11-19T14:36:14.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-dataset-card-licence",
@@ -415,7 +428,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028)",
       "escalation": null,
       "lastTryAt": "2026-11-19T17:47:39.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-duckophila-stated-facts",
@@ -444,7 +458,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44669522722)",
       "escalation": null,
       "lastTryAt": "2026-11-20T03:42:36.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-microduck-stated-facts",
@@ -473,7 +488,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44814109707)",
       "escalation": null,
       "lastTryAt": "2026-11-20T20:44:57.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
@@ -502,7 +518,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45124517471)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (12 in all, 11 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T18:44:23.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44937131965]\n- 2026-11-21T21:52:02.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44953725232]\n- 2026-11-21T22:23:55.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44956526668]\n- 2026-11-22T01:37:28.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44972300158]\n- 2026-11-22T02:09:42.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44974750249]\nEscalated 2026-11-23T02:19:37.199Z: parked 24 h with no new input.",
       "lastTryAt": "2026-11-23T06:30:27.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
@@ -531,7 +548,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705)",
       "escalation": null,
       "lastTryAt": "2026-11-23T00:13:12.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-t-uniswap-v4-upgrade-watch",
@@ -560,20 +578,21 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45520463717)",
       "escalation": null,
       "lastTryAt": "2026-11-25T00:45:15.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
+      "state": "REPAIR_ATTEMPTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "Your agent could not finish writing the dataset: the thinking call failed.",
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-25T07:04:01.358Z",
       "counters": {
-        "observations": 6,
+        "observations": 13,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -590,7 +609,8 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-25T07:04:01.358Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     }
   ],
   "policySkips": [
