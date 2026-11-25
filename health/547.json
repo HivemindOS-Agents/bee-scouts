@@ -1,9 +1,11 @@
 {
   "agent": "547",
-  "status": "ok",
-  "at": "2026-11-25T04:10:08.777Z",
+  "status": "repairing",
+  "at": "2026-11-25T07:05:12.898Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-547-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -532,35 +534,6 @@
       "receiver": null
     },
     {
-      "id": "rp-547-s-publish-dataset",
-      "artifact": "publish-dataset",
-      "kind": "step:publish-dataset",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": null,
-      "cause": "it restated one vendor's documentation, which people can already read at the source",
-      "firstFailureAt": "2026-11-24T21:41:58.520Z",
-      "lastObservedAt": "2026-11-25T03:55:15.330Z",
-      "counters": {
-        "observations": 126,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 5,
-        "sameCauseRun": 1
-      },
-      "delivery": {
-        "state": "unknown",
-        "at": null
-      },
-      "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:714:1795578754413:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
-      "escalation": null,
-      "lastTryAt": "2026-11-25T03:55:15.330Z",
-      "receiver": null
-    },
-    {
       "id": "rp-547-t-uniswap-v4-upgrade-watch",
       "artifact": "uniswap-v4-upgrade-watch",
       "kind": "selfTest",
@@ -587,6 +560,35 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45520463717)",
       "escalation": null,
       "lastTryAt": "2026-11-25T00:45:15.000Z",
+      "receiver": null
+    },
+    {
+      "id": "rp-547-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "RECURRENCE_DETECTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "Your agent could not finish writing the dataset: the thinking call failed.",
+      "firstFailureAt": "2026-11-25T07:04:01.358Z",
+      "lastObservedAt": "2026-11-25T07:04:01.358Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 6,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-25T07:04:01.358Z",
       "receiver": null
     }
   ],
