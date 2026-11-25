@@ -1,11 +1,10 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-25T06:00:20.512Z",
+  "at": "2026-11-25T16:52:36.368Z",
   "step": null,
   "reasons": [
-    "no_funds",
-    "rp-86-s-research"
+    "no_funds"
   ],
   "failures": 0,
   "ignored": 0,
@@ -39,7 +38,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43210633684)",
       "escalation": null,
       "lastTryAt": "2026-11-12T11:36:51.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-86-t-run-log-index",
@@ -68,7 +68,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43285117300)",
       "escalation": null,
       "lastTryAt": "2026-11-12T18:57:20.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-86-t-noscript-audit",
@@ -97,7 +98,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43410015743)",
       "escalation": null,
       "lastTryAt": "2026-11-13T10:34:03.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-86-t-issue-triage-selftest-check",
@@ -126,7 +128,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43477893047)",
       "escalation": null,
       "lastTryAt": "2026-11-13T17:57:48.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-86-t-run-and-record",
@@ -155,20 +158,21 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44208969610)",
       "escalation": null,
       "lastTryAt": "2026-11-18T00:35:00.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-86-s-research",
       "artifact": "research",
       "kind": "step:research",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "PARKED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "the thinking call failed",
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 365,
+        "observations": 409,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -184,7 +188,13 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-21T04:06:13.032Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": {
+        "state": "precondition_unmet",
+        "reason": "play precondition unmet: no_funds: balance 6270 < quote 110000 micro-USDC",
+        "since": "2026-11-25T15:51:19.551Z",
+        "held": "REPAIR_ATTEMPTED"
+      }
     },
     {
       "id": "rp-86-s-propose",
@@ -213,7 +223,8 @@
       "closedBy": "step: a propose step ended done (scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:181:1795219274740:023a6c06-6424-4cac-8a80-8073c1224454)",
       "escalation": "Parked after 2 failed steps of its propose play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: its answer could not be read (cut off or not JSON)\n- 2026-11-18T11:55:31.455Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002863981:023a6c06-6424-4cac-8a80-8073c1224454]\n- 2026-11-18T11:56:45.423Z failed (not yet delivered): its answer could not be read (cut off or not JSON) [step:scout:1393e853-8b1c-4bd7-b3ff-5006e8464c63:167:1795002993123:023a6c06-6424-4cac-8a80-8073c1224454]",
       "lastTryAt": "2026-11-21T00:02:12.568Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     }
   ],
   "watchdog": {
@@ -309,7 +320,7 @@
       "research",
       "agents"
     ],
-    "skips": 95,
+    "skips": 106,
     "refusals": 5,
     "resumedAt": null,
     "unit": "micro-USDC"
