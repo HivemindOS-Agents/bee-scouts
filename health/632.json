@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-25T15:01:31.626Z",
+  "at": "2026-11-25T15:48:40.035Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -285,20 +285,20 @@
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "PARKED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "MISSING_INPUT",
       "runner": null,
-      "cause": "it restated one vendor's documentation, which people can already read at the source",
+      "cause": "its post about the dataset was missing or too short",
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
-      "lastObservedAt": "2026-11-25T15:00:06.482Z",
+      "lastObservedAt": "2026-11-21T09:16:13.066Z",
       "counters": {
-        "observations": 938,
-        "failedAttempts": 4,
-        "consecutive": 4,
-        "sameCause": 2,
+        "observations": 3,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
-        "sameCauseRun": 2,
+        "sameCauseRun": 1,
         "policySkips": 3
       },
       "delivery": {
@@ -307,8 +307,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (4 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: it restated one vendor's documentation, which people can already read at the source\n- 2026-11-20T03:05:16.688Z failed (not yet delivered): it described a dataset instead of holding its rows [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:529:1795143844973:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-21T09:16:13.066Z failed (not yet delivered): its post about the dataset was missing or too short [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:556:1795252471302:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-23T12:50:20.447Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:599:1795438154678:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-25T15:00:06.482Z failed (not yet delivered): it restated one vendor's documentation, which people can already read at the source [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:634:1795618702998:b88691bb-261a-444c-9a0e-264200bccf72]",
-      "lastTryAt": "2026-11-25T15:00:06.482Z",
+      "escalation": null,
+      "lastTryAt": "2026-11-21T09:16:13.066Z",
       "receiver": null,
       "suspended": null
     },
@@ -482,15 +482,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: it restated one vendor's documentation, which people can already read at the source",
-      "since": "2026-11-25T15:00:06.482Z",
-      "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-26T15:00:06.482Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
