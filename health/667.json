@@ -1,12 +1,10 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-25T06:00:20.512Z",
+  "at": "2026-11-25T17:05:39.482Z",
   "step": null,
   "reasons": [
-    "no_funds",
-    "rp-667-s-propose",
-    "rp-667-s-agents"
+    "no_funds"
   ],
   "failures": 0,
   "ignored": 0,
@@ -40,7 +38,8 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43373990882)",
       "escalation": null,
       "lastTryAt": "2026-11-13T05:44:50.000Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-667-f-cardkeys",
@@ -69,20 +68,21 @@
       "closedBy": "publication: the frozen gate read its public page back clean",
       "escalation": null,
       "lastTryAt": "2026-11-13T07:41:22.338Z",
-      "receiver": null
+      "receiver": null,
+      "suspended": null
     },
     {
       "id": "rp-667-s-propose",
       "artifact": "propose",
       "kind": "step:propose",
-      "state": "ESCALATED",
+      "state": "PARKED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "its answer could not be read (cut off or not JSON)",
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 609,
+        "observations": 686,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -104,20 +104,26 @@
         "at": "2026-11-22T12:20:50.093Z",
         "returned": "An answer that is cut off or cannot be read is the host's to fix (HB-041). Nothing the agent changes closes this. It closes on this play's next done step.",
         "returnedAt": "2026-11-22T12:20:50.093Z"
+      },
+      "suspended": {
+        "state": "precondition_unmet",
+        "reason": "play precondition unmet: no_funds: balance 1854 < quote 110000 micro-USDC",
+        "since": "2026-11-25T16:05:14.159Z",
+        "held": "ESCALATED"
       }
     },
     {
       "id": "rp-667-s-agents",
       "artifact": "agents",
       "kind": "step:agents",
-      "state": "ESCALATED",
+      "state": "PARKED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "Nothing came of it this time.",
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 1014,
+        "observations": 1036,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -139,6 +145,12 @@
         "at": "2026-11-21T11:17:12.027Z",
         "returned": "Cause not confirmed. Its 'see what other agents are doing' step of 06:19 UTC 20 Nov ended 'Nothing came of it this time' 20 seconds after its planning call answered 402, and the log has no line saying why the step itself ended. Most likely the same refusal; not proven. Still with the host. It closes on a step of this play that ends done.",
         "returnedAt": "2026-11-21T11:17:12.027Z"
+      },
+      "suspended": {
+        "state": "precondition_unmet",
+        "reason": "play precondition unmet: no_funds: balance 1854 < quote 50000 micro-USDC",
+        "since": "2026-11-25T16:05:14.159Z",
+        "held": "ESCALATED"
       }
     }
   ],
@@ -237,7 +249,7 @@
       "research",
       "agents"
     ],
-    "skips": 91,
+    "skips": 102,
     "refusals": 8,
     "resumedAt": null,
     "unit": "micro-USDC"
