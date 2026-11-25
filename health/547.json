@@ -1,11 +1,10 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T01:00:27.918Z",
+  "at": "2026-11-25T01:16:11.540Z",
   "step": null,
   "reasons": [
-    "rp-547-s-publish-dataset",
-    "rp-547-t-uniswap-v4-upgrade-watch"
+    "rp-547-s-publish-dataset"
   ],
   "failures": 0,
   "ignored": 0,
@@ -574,7 +573,7 @@
       "firstFailureAt": "2026-11-24T21:41:58.520Z",
       "lastObservedAt": "2026-11-24T21:41:58.520Z",
       "counters": {
-        "observations": 66,
+        "observations": 71,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -597,16 +596,16 @@
       "id": "rp-547-t-uniswap-v4-upgrade-watch",
       "artifact": "uniswap-v4-upgrade-watch",
       "kind": "selfTest",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.",
       "firstFailureAt": "2026-11-24T23:22:09.000Z",
-      "lastObservedAt": "2026-11-25T00:12:27.000Z",
+      "lastObservedAt": "2026-11-25T00:45:15.000Z",
       "counters": {
         "observations": 3,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 1,
         "recurrences": 0,
@@ -617,9 +616,9 @@
         "at": "2026-11-24T23:55:06.043Z"
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45520463717)",
       "escalation": null,
-      "lastTryAt": "2026-11-25T00:12:27.000Z",
+      "lastTryAt": "2026-11-25T00:45:15.000Z",
       "receiver": null
     }
   ],
