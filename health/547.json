@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T21:47:07.737Z",
+  "at": "2026-11-25T22:03:00.401Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -563,7 +563,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-25T07:04:01.358Z",
       "counters": {
-        "observations": 97,
+        "observations": 101,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -587,20 +587,20 @@
       "id": "rp-547-t-uniswap-v4-upgrade-watch",
       "artifact": "uniswap-v4-upgrade-watch",
       "kind": "selfTest",
-      "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": "assertion_failure",
       "cause": "FAIL: verify_upload.py must not contain the word upload",
       "firstFailureAt": "2026-11-25T20:27:53.000Z",
-      "lastObservedAt": "2026-11-25T20:59:31.000Z",
+      "lastObservedAt": "2026-11-25T21:32:15.000Z",
       "counters": {
-        "observations": 2,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 1,
-        "acknowledgedFailed": 1,
+        "observations": 3,
+        "failedAttempts": 3,
+        "consecutive": 3,
+        "sameCause": 2,
+        "acknowledgedFailed": 2,
         "recurrences": 1,
-        "sameCauseRun": 1
+        "sameCauseRun": 2
       },
       "delivery": {
         "state": "acknowledged",
@@ -608,8 +608,8 @@
       },
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-25T20:59:31.000Z",
+      "escalation": "Parked after 2 failed attempts in a row with the same cause (3 in all, 2 after it was delivered) on the self-test of tools/uniswap-v4-upgrade-watch/. It stays parked until its files change. Latest cause: FAIL: verify_upload.py must not contain the word upload\n- 2026-11-25T20:27:53.000Z failed (not yet delivered): FAIL: verify_upload.py must not contain upload code [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45695133520]\n- 2026-11-25T20:59:31.000Z failed: FAIL: verify_upload.py must not contain the word upload [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45700066822]\n- 2026-11-25T21:32:15.000Z failed: FAIL: verify_upload.py must not contain the word upload [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45705175756]",
+      "lastTryAt": "2026-11-25T21:32:15.000Z",
       "receiver": null,
       "suspended": null
     }
