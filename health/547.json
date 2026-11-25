@@ -1,45 +1,14 @@
 {
   "agent": "547",
-  "status": "repairing",
-  "at": "2026-11-25T01:16:11.540Z",
+  "status": "ok",
+  "at": "2026-11-25T04:10:08.777Z",
   "step": null,
-  "reasons": [
-    "rp-547-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
   "ticket": null,
   "repairs": [
-    {
-      "id": "rp-547-t-agent-memory-lint-fixtures-index-v3",
-      "artifact": "agent-memory-lint-fixtures-index-v3",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": "assertion_failure",
-      "cause": "FAIL: clean sample: expected 0 issues, got 1",
-      "firstFailureAt": "2026-11-12T07:42:05.000Z",
-      "lastObservedAt": "2026-11-12T08:51:44.000Z",
-      "counters": {
-        "observations": 2,
-        "failedAttempts": 2,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 1,
-        "recurrences": 0,
-        "sameCauseRun": 1
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-12T08:15:44.369Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43186401037)",
-      "escalation": null,
-      "lastTryAt": "2026-11-12T08:51:44.000Z",
-      "receiver": null
-    },
     {
       "id": "rp-547-f-agent-memory-lint-fixtures",
       "artifact": "agent-memory-lint-fixtures",
@@ -566,30 +535,29 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "it restated one vendor's documentation, which people can already read at the source",
       "firstFailureAt": "2026-11-24T21:41:58.520Z",
-      "lastObservedAt": "2026-11-24T21:41:58.520Z",
+      "lastObservedAt": "2026-11-25T03:55:15.330Z",
       "counters": {
-        "observations": 71,
+        "observations": 126,
         "failedAttempts": 1,
-        "consecutive": 1,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 5,
-        "sameCauseRun": 1,
-        "policySkips": 1
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:714:1795578754413:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
-      "lastTryAt": "2026-11-24T21:41:58.520Z",
+      "lastTryAt": "2026-11-25T03:55:15.330Z",
       "receiver": null
     },
     {
@@ -622,16 +590,6 @@
       "receiver": null
     }
   ],
-  "policySkips": [
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-24T09:27:40.228Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [],
   "watchdog": {
     "at": "2026-11-25T00:10:34.880Z",
     "version": "watchdog-v1",
