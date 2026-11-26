@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-26T03:01:31.702Z",
+  "at": "2026-11-26T06:00:19.770Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -306,5 +306,17 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-25: red · build + verified ship 31%, under 50% · 77 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 77,
+        "buildShip": 0.3116883116883117
+      }
+    ]
   }
 }
