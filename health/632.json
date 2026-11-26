@@ -1,11 +1,9 @@
 {
   "agent": "632",
-  "status": "repairing",
-  "at": "2026-11-25T21:19:17.007Z",
+  "status": "ok",
+  "at": "2026-11-26T00:27:33.154Z",
   "step": null,
-  "reasons": [
-    "rp-632-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -285,16 +283,16 @@
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "MISSING_INPUT",
       "runner": null,
       "cause": "its post about the dataset was missing or too short",
       "firstFailureAt": "2026-11-20T03:05:16.688Z",
-      "lastObservedAt": "2026-11-21T09:16:13.066Z",
+      "lastObservedAt": "2026-11-26T00:12:28.607Z",
       "counters": {
-        "observations": 25,
+        "observations": 37,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 2,
@@ -305,9 +303,9 @@
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:637:1795651891100:b88691bb-261a-444c-9a0e-264200bccf72)",
       "escalation": null,
-      "lastTryAt": "2026-11-21T09:16:13.066Z",
+      "lastTryAt": "2026-11-26T00:12:28.607Z",
       "receiver": null,
       "suspended": null
     },
@@ -433,22 +431,22 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-25T00:16:38.022Z",
+    "at": "2026-11-26T00:11:49.807Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 8,
+    "findingsOpen": 11,
     "top": {
       "check": "D2",
       "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 3 failed attempts, 0 of them after it was delivered."
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 7316,
+    "elapsedMs": 3272,
     "intake": {
       "mode": "observe",
       "noRepair": [
-        "wd-632-D22-tools/uniswap-v4-upgrade-watch/upgrade_watch.py"
+        "wd-632-D2-undelivered:publish-dataset"
       ],
       "contradictions": []
     }
