@@ -1,0 +1,24 @@
+{
+  "agent": "91",
+  "status": "ok",
+  "at": "2026-11-26T06:00:19.770Z",
+  "step": null,
+  "reasons": [],
+  "failures": 0,
+  "ignored": 0,
+  "pausedAt": null,
+  "ticket": null,
+  "repairs": [],
+  "focus": {
+    "line": "Focus 2026-11-25: amber · build + verified ship 0%, under 50% · 1 commit",
+    "flagged": false,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "AMBER",
+        "commits": 1,
+        "buildShip": 0
+      }
+    ]
+  }
+}
