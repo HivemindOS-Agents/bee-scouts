@@ -1,7 +1,7 @@
 {
   "agent": "65",
   "status": "ok",
-  "at": "2026-11-25T06:00:20.512Z",
+  "at": "2026-11-26T06:00:19.770Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -10,7 +10,7 @@
   "ticket": null,
   "repairs": [],
   "watchdog": {
-    "at": "2026-11-25T00:01:43.027Z",
+    "at": "2026-11-26T00:18:36.897Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 2,
@@ -23,7 +23,7 @@
       "D8"
     ],
     "requests": 8,
-    "elapsedMs": 2782,
+    "elapsedMs": 3427,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -62,5 +62,17 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-25: amber · build + verified ship 0%, under 50% · 5 commits",
+    "flagged": false,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "AMBER",
+        "commits": 5,
+        "buildShip": 0
+      }
+    ]
   }
 }
