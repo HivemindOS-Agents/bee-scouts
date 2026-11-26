@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-26T06:00:19.770Z",
+  "at": "2026-11-26T06:19:49.373Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -412,13 +412,14 @@
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T02:20:24.525Z",
       "counters": {
-        "observations": 33,
+        "observations": 38,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 3,
-        "sameCauseRun": 1
+        "sameCauseRun": 1,
+        "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
@@ -432,6 +433,16 @@
       "suspended": null
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-632-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-26T06:18:38.803Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-26T00:11:49.807Z",
     "version": "watchdog-v1",
@@ -488,17 +499,5 @@
     "agents": {
       "state": "offered"
     }
-  },
-  "focus": {
-    "line": "Focus 2026-11-25: red · build + verified ship 27%, under 50% · 78 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 78,
-        "buildShip": 0.2692307692307692
-      }
-    ]
   }
 }
