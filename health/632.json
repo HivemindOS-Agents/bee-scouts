@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-26T02:21:38.067Z",
+  "at": "2026-11-26T06:00:19.770Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -412,7 +412,7 @@
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T02:20:24.525Z",
       "counters": {
-        "observations": 1,
+        "observations": 33,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -488,5 +488,17 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-25: red · build + verified ship 27%, under 50% · 78 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 78,
+        "buildShip": 0.2692307692307692
+      }
+    ]
   }
 }
