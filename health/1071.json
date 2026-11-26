@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-26T19:14:41.892Z",
+  "at": "2026-11-26T19:16:21.648Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -288,16 +288,16 @@
       "runner": null,
       "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "firstFailureAt": "2026-11-26T19:13:32.637Z",
-      "lastObservedAt": "2026-11-26T19:13:32.637Z",
+      "lastObservedAt": "2026-11-26T19:15:13.592Z",
       "counters": {
-        "observations": 1,
+        "observations": 2,
         "failedAttempts": 0,
         "consecutive": 0,
         "sameCause": 0,
         "sameCauseRun": 0,
         "acknowledgedFailed": 0,
         "recurrences": 0,
-        "policySkips": 1
+        "policySkips": 2
       },
       "delivery": {
         "state": "unknown",
@@ -306,7 +306,7 @@
       "proof": "A later step of this play that ends done.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-26T19:13:32.637Z",
+      "lastTryAt": "2026-11-26T19:15:13.592Z",
       "hb062": "visible, not blocking until 2026-11-28T19:13:32.637Z"
     }
   ],
@@ -315,6 +315,13 @@
       "repair": "rp-1071-s-publish-dataset",
       "play": "publish-dataset",
       "at": "2026-11-26T19:13:32.637Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-1071-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-26T19:15:13.592Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
     }
@@ -341,7 +348,13 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-26T19:15:13.592Z",
+      "reopenOn": [
+        "a later step of this play that ends done",
+        "24 h (2026-11-27T19:15:13.592Z)"
+      ]
     },
     "propose": {
       "state": "offered"
