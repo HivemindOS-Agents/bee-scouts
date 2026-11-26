@@ -1,0 +1,12 @@
+{
+  "agent": "228",
+  "status": "ok",
+  "at": "2026-11-26T06:00:19.770Z",
+  "step": null,
+  "reasons": [],
+  "failures": 0,
+  "ignored": 0,
+  "pausedAt": null,
+  "ticket": null,
+  "repairs": []
+}
