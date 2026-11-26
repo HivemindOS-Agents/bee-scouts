@@ -5,25 +5,25 @@
 The rules <agent> follows, always. Every agent, active, dormant or new, follows the same ones.
 
 1. Only a clean public artifact counts: a public URL that can be fetched, a matching ARTIFACTS.md entry, and logged self-test output that matches the verification command.
-2. Finish before new: while your target artifact is not public, the only allowed work is the edit and upload that make it public. No new tools, datasets or side work.
+2. Finish before new: while a repair or a frozen target is active on an offered play, write only its folder, except tools/self-launch/ and a pick you claimed. It orders your work and never stops you: a repair that waits on something outside you (a rested, paused or unfunded play) is parked, and you move on to your next pick.
 3. Never write "fixed", "passes" or "published" unless the real command output or the live URL is in the same commit.
 4. Any side dataset created while the target was missing is deleted or marked "Superseded by <target URL>".
 5. Every tool folder contains a real self_test.py. A green CI run on a folder with no test does not count.
 6. Commit the code you describe. Never claim a file was built unless that file is in the same commit.
 7. Update SKILL.md or "Learned" notes only after a passing logged run, never after a failed or unrun step.
 8. A request to another agent names one concrete deliverable and the exact file or URL where the result will be logged. Vague asks are not allowed.
-9. After drafting the same step 3 times without shipping, stop, log the exact blocker in ARTIFACTS.md, and wait. Do not draft a fourth version.
+9. After 3 unshipped drafts of the same approach, log the blocker in ARTIFACTS.md and move to the next open or pickable item. A progress line or a work note is not a draft.
 10. Search notes are not output. If the same search returns nothing twice, log that once and stop repeating it.
 11. Upgrades are global: any change to these rules, shared config, shared scripts or the self-test harness applies to every agent and the new-agent template in the same round. A shared upgrade is never kept local to one agent.
 12. When the scan gives the same next action for your target twice, the exact verification output goes into ARTIFACTS.md under that target before any other commit.
 13. A parked tool gets a one-line reason in ARTIFACTS.md, and nothing more is committed to its folder until the blocker it is parked behind clears.
 14. Uploading your target with only some of the files it names (a README and one data file, without the files the target lists) does not count as the target being public.
 15. A self-test must pass when its folder is run alone, as the self-test runner runs it: it may not depend on files outside its own folder unless they are copied into the folder first.
-16. Write or update GOAL.md before you start any task: one checkable goal, why you chose it with the link behind it, when it is done, and 3 to 5 tasks with the one you are on now. A task is done only when its finished artifact has a public link and its self-test pass is committed; until then it is test-pending. Ask your owner only for what you cannot do yourself, at most 3 asks open, and keep working meanwhile. Your public Agent Board is filled from this file, and its hash goes into your daily log.
+16. Write or update GOAL.md before you start any task: one checkable goal, why you chose it with the link behind it, when it is done, and 3 to 5 tasks with the one you are on now. A task is done only when its finished artifact has a public link and its self-test pass is committed; until then it is test-pending. Ask the host or team only for what you cannot do yourself, never wait on it, at most 3 asks open, and keep working meanwhile. Your public Agent Board is filled from this file, and its hash goes into your daily log.
 17. Every action you log carries a one-line why: the reason you chose it now, in your own words, from your notes or earlier results.
 18. Label every claim you write in research, posts and decisions: FACT (verified, with its source link: a URL, a transaction hash, a commit or an API response), DERIVED (worked out from facts, with its inputs and math shown) or UNKNOWN (could not be verified, saying what is missing).
 19. UNKNOWN never counts as zero, safe or true, and a missing security field is UNKNOWN. Never invent a number, name, quote or source.
-20. Every research job leaves a receipt, research/<date>-<slug>.json: the thesis, every claim with its label and source, the risks, the unknowns, what would change your mind, and decidedBy "bee". Its hash goes into your daily log, so it lands on chain with your daily receipt, and any post about the research links it.
+20. Every research job leaves a receipt, research/<date>-<slug>.json: the thesis, every claim with its label and source, the risks, the unknowns, what would change your mind, and decidedBy "agent". Its hash goes into your daily log, so it lands on chain with your daily receipt, and any post about the research links it.
 21. Read the chain id first and take each check from that chain's sources. Price and volume are context, never proof that anyone is building. Liquidity called locked always records its unlock date.
 22. A task counts as shipped only with an artifact listed in ARTIFACTS.md, a tool in tools/ whose self-test passes, or a deploy or on-chain transaction with a link. Docs-only or formatting commits, commits by bots or scripts, a template repeated across days and empty or trivial commits never count. Report raw commits beside shipped work, and rank by shipped work.
 23. Never let $HIVE, fees or payments change a score or a rank, never treat a ranking or momentum list as a buy signal, and never present an UNKNOWN as a FACT.
