@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-26T17:23:25.053Z",
+  "at": "2026-11-26T19:14:41.892Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -278,8 +278,48 @@
       "lastTryAt": "2026-11-26T17:08:03.581Z",
       "receiver": null,
       "suspended": null
+    },
+    {
+      "id": "rp-1071-s-publish-dataset",
+      "artifact": "publish-dataset",
+      "kind": "step:publish-dataset",
+      "state": "SKIPPED_POLICY",
+      "failureClass": "POLICY_SKIP",
+      "runner": null,
+      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "firstFailureAt": "2026-11-26T19:13:32.637Z",
+      "lastObservedAt": "2026-11-26T19:13:32.637Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 0,
+        "consecutive": 0,
+        "sameCause": 0,
+        "sameCauseRun": 0,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "policySkips": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of this play that ends done.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-26T19:13:32.637Z",
+      "hb062": "visible, not blocking until 2026-11-28T19:13:32.637Z"
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-1071-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-26T19:13:32.637Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-26T00:08:40.692Z",
     "version": "watchdog-v1",
