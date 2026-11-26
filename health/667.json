@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-26T00:09:59.483Z",
+  "at": "2026-11-26T06:00:19.770Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -82,7 +82,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 735,
+        "observations": 770,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -123,7 +123,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 1050,
+        "observations": 1060,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -257,9 +257,21 @@
       "propose",
       "research"
     ],
-    "skips": 109,
+    "skips": 114,
     "refusals": 8,
     "resumedAt": null,
     "unit": "micro-USDC"
+  },
+  "focus": {
+    "line": "Focus 2026-11-25: green · paused profile: 9 commits, repairs only · 9 commits",
+    "flagged": false,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "GREEN",
+        "commits": 9,
+        "buildShip": null
+      }
+    ]
   }
 }
