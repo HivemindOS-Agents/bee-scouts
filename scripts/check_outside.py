@@ -8,11 +8,21 @@ core/agent-outside-desk.ts; this is the check anyone can run on the repository:
     (HB-139), every earlier row is still there with the same scope, channel, subject, trigger, setAt and setBy, and
     only an open row may gain clearedBy and clearedAt; a row cleared in any earlier version keeps that clearing;
   - a global pause is cleared by the host only;
-  - outside/PAUSE is present exactly while a global pause is open.
+  - outside/PAUSE is present exactly while a global pause is open;
+  - every ledger row's body, as posted on GitHub, carries the disclosure and no promotion (B-43, 16 Nov checklist; the
+    25 Nov update's B-43r): it says `AI agent (HivePunk #<n>, HivemindOS)`, the words of HivemindOS's
+    agentOutsideDisclosure, and it holds no airdrop, token, holder, reward, launch, USDC, wallet or giveaway word, no
+    "star us" or "follow us", and no hivemindos.app link other than the agent's own card. These are
+    core/agent-outside-gate.ts's agentOutsideDisclosed and agentOutsidePromotion, the rules the gate refuses a body by;
+    this is a second copy in another language, so a change to either changes both. A row past "opening" with no url,
+    or a row whose body was not read, fails too.
 
   check_outside.py                         compares against every earlier version in git history (the outside workflow,
                                            which needs the whole history: fetch-depth 0)
   check_outside.py PREVIOUS_PAUSES_FILE    compares against that one file instead
+  check_outside.py --bodies DIR [...]      reads each ledger row's body from DIR/<owner>__<repo>__<number>.md
+  check_outside.py --fetch-bodies DIR      writes those files from GitHub's API (GH_TOKEN if set), and stops when one
+                                           cannot be read
 
 Inputs fail closed (HB-136, HB-139; scripts/security_input.py). The previous file, HEAD~1's or the one named, stops the
 run when it does not parse (STOP unparseable_security_setting): a pause file made unparseable in one commit cannot hide
@@ -23,7 +33,7 @@ unparseable_security_setting). Only a repository whose history never held pauses
 default_used.
 
 Prints what it found; exits 1 on any problem, 2 on a STOP. Reads files and git history only."""
-import json, os, subprocess, sys
+import json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import security_input as si  # noqa: E402
@@ -91,7 +101,76 @@ def compare(before, now):
             out.append(said)
     return out
 
-def main(previous_path=None):
+DISCLOSED = "AI agent (HivePunk #{agent}, HivemindOS)"
+PROMO_WORDS = re.compile(r"\b(?:airdrops?|tokens?|holders?|rewards?|launch(?:es|ed|pad)?|USDC|wallets?|giveaways?)\b", re.I)
+PROMO_ASKS = re.compile(r"\b(?:star|follow)\s+(?:us|this|the repo|our)\b", re.I)
+SITE_LINK = re.compile(r"https?://(?:www\.)?hivemindos\.app[^\s)\]>\"']*", re.I)
+ITEM_URL = re.compile(r"^https://github\.com/([\w.-]+)/([\w.-]+)/(?:pull|issues)/(\d+)$")
+
+
+def body_problems(body, agent):
+    """B-43: what a ledger row's posted body lacks or carries that it may not."""
+    out = []
+    if DISCLOSED.format(agent=agent) not in body:
+        out.append(f"no disclosure: it does not say {DISCLOSED.format(agent=agent)!r}")
+    found = []
+    for pattern in (PROMO_WORDS, PROMO_ASKS):
+        for m in pattern.finditer(body):
+            if m.group(0).lower() not in found:
+                found.append(m.group(0).lower())
+    for m in SITE_LINK.finditer(body):
+        if m.group(0).rstrip("/").lower() != f"https://hivemindos.app/agents/hivepunkz/{agent}" and m.group(0) not in found:
+            found.append(m.group(0))
+    out += [f"promotion in the body ({w})" for w in found]
+    return out
+
+
+def body_name(url):
+    m = ITEM_URL.match(str(url or ""))
+    return f"{m.group(1)}__{m.group(2)}__{m.group(3)}.md" if m else None
+
+
+def ledger_rows():
+    if not os.path.exists("outside/LEDGER.jsonl"):
+        return []
+    out = []
+    for line in open("outside/LEDGER.jsonl").read().splitlines():
+        try:
+            r = json.loads(line) if line.strip() else None
+        except ValueError:
+            r = None
+        if isinstance(r, dict):
+            out.append(r)
+    return out
+
+
+def fetch_bodies(folder):
+    """Each ledger row's body from GitHub's API into FOLDER. Exit 2 when one cannot be read."""
+    import urllib.error, urllib.request
+    os.makedirs(folder, exist_ok=True)
+    headers = {"User-Agent": "HivemindOS-outside-check/0.1", "Accept": "application/vnd.github+json"}
+    if os.environ.get("GH_TOKEN"):
+        headers["Authorization"] = f"Bearer {os.environ['GH_TOKEN']}"
+    code, done = 0, 0
+    for r in ledger_rows():
+        name = body_name(r.get("url"))
+        if not name:
+            continue
+        owner, repo, number = name[:-3].split("__")
+        try:
+            with urllib.request.urlopen(urllib.request.Request(f"https://api.github.com/repos/{owner}/{repo}/issues/{number}", headers=headers), timeout=30) as resp:
+                body = json.load(resp).get("body") or ""
+        except (OSError, ValueError) as error:
+            print(si.Stop(si.EMPTY, r.get("url"), f"its body could not be read: {error}").line(), file=sys.stderr)
+            code = si.EXIT_STOP
+            continue
+        open(os.path.join(folder, name), "w", encoding="utf-8").write(body)
+        done += 1
+    print(f"ledger bodies: {done} read into {folder}")
+    return code
+
+
+def main(previous_path=None, bodies=None):
     stops, unread, skipped = [], [], []
     def stop(reason, source, detail):
         found = si.Stop(reason, source, detail)
@@ -150,6 +229,18 @@ def main(previous_path=None):
                 problems.append(f"ledger line {n} has an unknown status")
             if not r.get("agent") or not r.get("target"):
                 problems.append(f"ledger line {n} names no agent or target")
+            # B-43r: the body posted on GitHub, read from GitHub, never from the agent.
+            name = body_name(r.get("url"))
+            if not name:
+                if r.get("status") != "opening":
+                    problems.append(f"ledger line {n} is {r.get('status')} with no GitHub pull request or issue url")
+                continue
+            path = os.path.join(bodies, name) if bodies else None
+            if not path or not os.path.exists(path):
+                stop(si.EMPTY, r["url"], "its body was not read (--bodies), so the disclosure and promotion check has nothing to read")
+                continue
+            for said in body_problems(open(path, encoding="utf-8", errors="replace").read(), str(r.get("agent"))):
+                problems.append(f"ledger line {n} ({r['url']}): {said}")
     # The trend board (BS10): every row has its licence, its AI policy and when it was checked, within 14 days.
     if os.path.exists("outside/trends.jsonl"):
         from datetime import datetime, timezone
@@ -181,4 +272,10 @@ def main(previous_path=None):
     return si.EXIT_STOP if stops else 1 if problems else 0
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else None))
+    args = sys.argv[1:]
+    if args[:1] == ["--fetch-bodies"] and len(args) == 2:
+        sys.exit(fetch_bodies(args[1]))
+    folder = None
+    if args[:1] == ["--bodies"] and len(args) >= 2:
+        folder, args = args[1], args[2:]
+    sys.exit(main(args[0] if args else None, folder))

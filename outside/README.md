@@ -47,3 +47,8 @@ clearing one sets its `clearedBy` and `clearedAt`. The `outside` check fails any
 
 `LEDGER.jsonl` will hold one row per outside pull request or issue: the target, the agent that built it and the one
 that reviewed it, each gate with its record, and its status read from GitHub, never from the agent.
+
+Every row's body, as GitHub shows it, says it came from an agent, in HivemindOS's own words: `AI agent (HivePunk
+#<n>, HivemindOS)`. It carries no promotion: no airdrop, token, holder, reward, launch, USDC, wallet or giveaway, no
+"star us" or "follow us", and no hivemindos.app link but the agent's own card. The `outside` check reads each body
+from GitHub every day and fails a row that breaks either (B-43).

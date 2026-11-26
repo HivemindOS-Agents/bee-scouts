@@ -5,13 +5,19 @@
 # itself a failure. tests/test_check_outside.py holds the two-step deletion and the missing-parent case.
 # Row 41r4 (25 Nov 2026 update): scripts/security_input.py is the same bytes as bee-self-test's copy at its main, and
 # row 41r2: every security key a reader here takes with field() has an empty-state fixture (none today).
-# Reads the files and git history only; no secrets.
+# B-43r (25 Nov 2026 update, rank 71): every LEDGER row's body, read from GitHub, carries the disclosure
+# ("AI agent (HivePunk #<n>, HivemindOS)") and no promotion; tests/test_check_outside.py holds a promo-word body and a
+# body with no disclosure, both refused. It runs daily too, so a body edited on GitHub after it opened is read again.
+# HB-071 E: every action is pinned to a commit SHA (Dependabot proposes new ones, .github/dependabot.yml).
+# Reads the files, git history and the ledger rows' public bodies only; GH_TOKEN is read-only, for the API's rate limit.
 name: outside
 on:
   push:
     branches: [main]
-    paths: ["outside/**", "scripts/check_outside.py", "scripts/security_input.py", "tests/test_check_outside.py", ".github/workflows/outside.yml"]
+    paths: ["outside/**", "scripts/check_outside.py", "scripts/security_input.py", "tests/test_check_outside.py", ".github/workflows/outside.yml", ".github/dependabot.yml"]
   workflow_dispatch:
+  schedule:
+    - cron: "50 7 * * *"
 permissions:
   contents: read
 jobs:
@@ -19,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
       - name: The check's own cases
@@ -31,5 +37,9 @@ jobs:
           git -C "$RUNNER_TEMP/bee-self-test-copy" sparse-checkout set scripts
           python3 scripts/security_input.py --same-as "$RUNNER_TEMP/bee-self-test-copy/scripts/security_input.py"
           python3 -m unittest discover -s tests -p 'test_check_outside.py'
-      - name: The rules, against the whole history of outside/pauses.jsonl
-        run: python3 scripts/check_outside.py
+      - name: Each ledger row's body, read from GitHub (a row whose body cannot be read stops the run)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/check_outside.py --fetch-bodies "$RUNNER_TEMP/bodies"
+      - name: The rules, against the whole history of outside/pauses.jsonl, and every ledger row's body
+        run: python3 scripts/check_outside.py --bodies "$RUNNER_TEMP/bodies"

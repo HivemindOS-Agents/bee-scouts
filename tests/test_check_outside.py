@@ -143,3 +143,53 @@ class Outside(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# B-43r (25 Nov 2026 update, rank 71): every ledger row's posted body carries the disclosure and no promotion. The
+# good body is HivemindOS's own agentOutsideDisclosure text (core/agent-outside-gate.ts) for agent 547.
+GOOD_BODY = ("Fixes the off-by-one in `parse_range` (reproducer below).\n\nThis PR was prepared by an AI agent (HivePunk #547, "
+             "HivemindOS) and independently reproduced by a second agent with a different owner. Reproducer and receipt: "
+             "https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/range-fix and "
+             "https://github.com/HivemindOS-Agents/bee-self-test/blob/main/results/hivepunk-547/range-fix.json. "
+             "If you'd rather not receive agent PRs, say so here and we'll close this and not send more.\n"
+             "Agent card: https://hivemindos.app/agents/hivepunkz/547\n")
+ROW = {"agent": "547", "target": "someone/somelib", "url": "https://github.com/someone/somelib/pull/12", "status": "opened",
+       "gate": "a" * 64, "openedAt": "2026-11-26T00:00:00Z", "closedAt": None, "firstResponseAt": None, "reviewed": False}
+
+
+class LedgerBodies(unittest.TestCase):
+    setUp, tearDown, git, commit, check, assertFails = (Outside.setUp, Outside.tearDown, Outside.git, Outside.commit,
+                                                        Outside.check, Outside.assertFails)
+
+    def ledger(self, body, row=ROW):
+        self.commit("outside: a global pause", line(GLOBAL), True)
+        (self.repo / "outside" / "LEDGER.jsonl").write_text(line(row))
+        bodies = self.repo.parent / (self.repo.name + "-bodies")
+        bodies.mkdir()
+        self.addCleanup(shutil.rmtree, bodies, ignore_errors=True)
+        if body is not None:
+            (bodies / "someone__somelib__12.md").write_text(body)
+        return self.check("--bodies", bodies)
+
+    def test_the_disclosed_body_passes(self):
+        code, out = self.ledger(GOOD_BODY)
+        self.assertEqual(code, 0, out)
+
+    def test_a_body_with_no_disclosure_is_refused(self):
+        self.assertFails(self.ledger(GOOD_BODY.replace("an AI agent (HivePunk #547, HivemindOS)", "a contributor")), "no disclosure")
+
+    def test_another_agents_disclosure_is_not_this_ones(self):
+        self.assertFails(self.ledger(GOOD_BODY.replace("#547", "#632")), "no disclosure")
+
+    def test_promo_words_are_refused(self):
+        self.assertFails(self.ledger(GOOD_BODY + "\nHolders of our token get an airdrop. Star us!\n"),
+                         "promotion in the body (holders)", "(token)", "(airdrop)", "(star us)")
+
+    def test_a_hivemindos_link_other_than_its_card_is_promotion(self):
+        self.assertFails(self.ledger(GOOD_BODY + "See https://hivemindos.app/launchpad/\n"), "promotion in the body (https://hivemindos.app/launchpad/)")
+
+    def test_a_row_whose_body_was_not_read_stops(self):
+        self.assertFails(self.ledger(None), EMPTY, "its body was not read")
+
+    def test_an_opened_row_with_no_url_is_named(self):
+        self.assertFails(self.ledger(GOOD_BODY, {**ROW, "url": None}), "opened with no GitHub pull request or issue url")
