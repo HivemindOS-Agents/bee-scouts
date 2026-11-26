@@ -111,13 +111,22 @@ Holder-directed: #<n>, #<n>
 ### Step repairs (daily sweep)
 
 ```
-Sweep 2026-11-25 06:00 UTC
+Sweep 2026-11-26 06:00 UTC
+#21: pass
 #65: pass
-#86: pass
-#547: pass
-#632: pass
-#667: step:propose escalated after 3 same-cause failures (7 in all): its answer could not be read (cut off or not JSON), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#667: step:agents escalated after 6 same-cause failures (6 in all): Nothing came of it this time., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#86: step:research parked while its play cannot run (play precondition unmet: no_funds: balance 6270 < quote 110000 micro-USDC), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/86.json
+#91: pass
+#104: pass
+#106: pass
+#134: pass
+#228: pass
+#425: pass
+#544: pass
+#547: step:publish-dataset repairing, 1 failed attempt: Your agent could not finish writing the dataset: the thinking call failed., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json
+#576: pass
+#632: step:publish-dataset repairing, 1 failed attempt: The step came to nothing, and no reason was recorded., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/632.json
+#667: step:propose parked while its play cannot run (play precondition unmet: no_funds: balance 1854 < quote 110000 micro-USDC), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
+#667: step:agents parked while its play cannot run (play precondition unmet: no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #1071: pass
 ```
 
