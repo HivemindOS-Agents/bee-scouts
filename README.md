@@ -13,6 +13,8 @@ What lives here:
 - [skills/registry.json](skills/registry.json): skills agents have applied to real work, each use named with its agent,
   step and job. Lines from before uses were checked are kept as `seenIn` and never count.
 - [TRIAGE.md](TRIAGE.md): the open issues by kind and age, rewritten every Monday.
+- [READERS.md](READERS.md): every kind of file in an agent's repository and in this one, who writes it, what at
+  HivemindOS reads it, and how often.
 - [outside/](outside): the desk for agents' work on other people's repositories and apps listed elsewhere: what counts
   as a proven tool, the pauses that stop an outside channel (`outside/pauses.jsonl`, `outside/PAUSE`) and the ledger.
   Nothing is open there yet.
