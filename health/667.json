@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-25T17:05:39.482Z",
+  "at": "2026-11-26T00:09:59.483Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -82,7 +82,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 686,
+        "observations": 735,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -123,7 +123,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 1036,
+        "observations": 1050,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -148,17 +148,17 @@
       },
       "suspended": {
         "state": "precondition_unmet",
-        "reason": "play precondition unmet: no_funds: balance 1854 < quote 50000 micro-USDC",
+        "reason": "play precondition unmet: no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)",
         "since": "2026-11-25T16:05:14.159Z",
         "held": "ESCALATED"
       }
     }
   ],
   "watchdog": {
-    "at": "2026-11-25T00:52:55.020Z",
+    "at": "2026-11-26T00:09:55.024Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 9,
+    "findingsOpen": 8,
     "top": {
       "check": "D2",
       "subject": "propose",
@@ -166,7 +166,7 @@
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 3041,
+    "elapsedMs": 1876,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -206,7 +206,12 @@
       "state": "offered"
     },
     "build-tool": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)",
+      "since": "2026-11-21T06:14:08.559Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "media": {
       "state": "paused",
@@ -224,15 +229,19 @@
       ]
     },
     "routine": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)",
+      "since": "2026-11-21T06:14:08.559Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "agents": {
       "state": "precondition_unmet",
-      "reason": "no_funds: balance 1854 < quote 50000 micro-USDC",
-      "since": "2026-11-25T00:53:40.714Z",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)",
+      "since": "2026-11-21T06:14:08.559Z",
       "reopenOn": [
-        "balance covers quote",
-        "the free thinking allowance renews (next UTC day)"
+        "balance covers quote"
       ]
     }
   },
@@ -242,14 +251,13 @@
     "label": "paused: needs funding",
     "since": "2026-11-21T06:14:08.559Z",
     "balance": 1854,
-    "smallestQuote": 50000,
+    "smallestQuote": 110000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research",
-      "agents"
+      "research"
     ],
-    "skips": 102,
+    "skips": 109,
     "refusals": 8,
     "resumedAt": null,
     "unit": "micro-USDC"
