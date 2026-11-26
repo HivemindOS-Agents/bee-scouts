@@ -1,9 +1,18 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-25T16:02:12.494Z",
-  "step": null,
-  "reasons": [],
+  "status": "repairing",
+  "at": "2026-11-26T01:57:56.169Z",
+  "step": {
+    "id": "hl-1071-t-36340307",
+    "kind": "selfTest",
+    "tool": "agent-dispatch",
+    "play": "build",
+    "action": "Make the self-test of tools/agent-dispatch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-26T01:57:56.169Z"
+  },
+  "reasons": [
+    "rp-1071-t-agent-dispatch"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -218,10 +227,40 @@
       "lastTryAt": "2026-11-21T19:56:34.736Z",
       "receiver": null,
       "suspended": null
+    },
+    {
+      "id": "rp-1071-t-agent-dispatch",
+      "artifact": "agent-dispatch",
+      "kind": "selfTest",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "FAIL: no live dataset URL claimed while NOT UPLOADED",
+      "firstFailureAt": "2026-11-26T01:27:41.000Z",
+      "lastObservedAt": "2026-11-26T01:27:41.000Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-26T01:27:41.000Z",
+      "receiver": null,
+      "suspended": null
     }
   ],
   "watchdog": {
-    "at": "2026-11-25T00:14:33.122Z",
+    "at": "2026-11-26T00:08:40.692Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 7,
@@ -232,7 +271,7 @@
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3656,
+    "elapsedMs": 4656,
     "intake": {
       "mode": "observe",
       "noRepair": [],
