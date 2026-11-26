@@ -1,8 +1,15 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-26T02:14:24.849Z",
-  "step": null,
+  "at": "2026-11-26T02:30:01.352Z",
+  "step": {
+    "id": "hl-1071-t-36340307",
+    "kind": "selfTest",
+    "tool": "agent-dispatch",
+    "play": "build",
+    "action": "Make the self-test of tools/agent-dispatch/ pass with the smallest change to that folder.",
+    "openedAt": "2026-11-26T02:30:01.352Z"
+  },
   "reasons": [
     "rp-1071-t-agent-dispatch"
   ],
@@ -228,15 +235,15 @@
       "state": "REPAIR_ATTEMPTED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
-      "cause": "FAIL: no live dataset URL claimed while NOT UPLOADED",
+      "cause": "FAIL: GOAL.md names the verified data file",
       "firstFailureAt": "2026-11-26T01:27:41.000Z",
-      "lastObservedAt": "2026-11-26T01:27:41.000Z",
+      "lastObservedAt": "2026-11-26T01:59:12.000Z",
       "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 2,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
-        "acknowledgedFailed": 0,
+        "acknowledgedFailed": 1,
         "recurrences": 0,
         "sameCauseRun": 1
       },
@@ -247,7 +254,7 @@
       "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-26T01:58:41.561Z",
+      "lastTryAt": "2026-11-26T01:59:12.000Z",
       "receiver": null,
       "suspended": null
     }
