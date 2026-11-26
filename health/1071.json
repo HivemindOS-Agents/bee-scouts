@@ -1,15 +1,8 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-26T02:30:01.352Z",
-  "step": {
-    "id": "hl-1071-t-36340307",
-    "kind": "selfTest",
-    "tool": "agent-dispatch",
-    "play": "build",
-    "action": "Make the self-test of tools/agent-dispatch/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-26T02:30:01.352Z"
-  },
+  "at": "2026-11-26T02:46:08.284Z",
+  "step": null,
   "reasons": [
     "rp-1071-t-agent-dispatch"
   ],
