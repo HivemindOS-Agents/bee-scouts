@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-25T22:04:49.478Z",
+  "at": "2026-11-26T06:00:19.770Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -563,7 +563,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-25T07:04:01.358Z",
       "counters": {
-        "observations": 105,
+        "observations": 237,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -594,7 +594,7 @@
       "firstFailureAt": "2026-11-25T20:27:53.000Z",
       "lastObservedAt": "2026-11-25T21:32:15.000Z",
       "counters": {
-        "observations": 4,
+        "observations": 37,
         "failedAttempts": 3,
         "consecutive": 3,
         "sameCause": 2,
@@ -632,23 +632,21 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-25T00:10:34.880Z",
+    "at": "2026-11-26T00:08:53.208Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 7,
     "top": {
-      "check": "D22",
-      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
-      "detail": "A step said it built tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json; it is not in the commit."
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- Stuck after 7 drafts, it chose to publish it as it is (2026-11-25): The folder only needs its self-test rewritten to assert on the tool's own output instead …\""
     },
     "notChecked": [],
     "requests": 23,
-    "elapsedMs": 2859,
+    "elapsedMs": 3605,
     "intake": {
       "mode": "observe",
-      "noRepair": [
-        "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json"
-      ],
+      "noRepair": [],
       "contradictions": []
     }
   },
@@ -695,5 +693,17 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-25: red · build + verified ship 24%, under 50% · 127 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 127,
+        "buildShip": 0.23622047244094488
+      }
+    ]
   }
 }
