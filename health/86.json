@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-25T16:52:36.368Z",
+  "at": "2026-11-26T00:59:10.861Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -172,7 +172,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 409,
+        "observations": 441,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -228,10 +228,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-25T00:39:29.785Z",
+    "at": "2026-11-26T00:59:06.216Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 5,
+    "findingsOpen": 3,
     "top": {
       "check": "D17",
       "subject": "ARTIFACTS.md",
@@ -239,7 +239,7 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 1986,
+    "elapsedMs": 2115,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -277,7 +277,12 @@
       "state": "offered"
     },
     "build-tool": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 6270 micro-USDC)",
+      "since": "2026-11-22T00:16:58.208Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "media": {
       "state": "paused",
@@ -295,15 +300,19 @@
       ]
     },
     "routine": {
-      "state": "offered"
+      "state": "precondition_unmet",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 6270 micro-USDC)",
+      "since": "2026-11-22T00:16:58.208Z",
+      "reopenOn": [
+        "balance covers quote"
+      ]
     },
     "agents": {
       "state": "precondition_unmet",
-      "reason": "no_funds: balance 6270 < quote 50000 micro-USDC",
-      "since": "2026-11-25T00:40:18.371Z",
+      "reason": "no_funds: paused for funding, so no play is offered (balance 6270 micro-USDC)",
+      "since": "2026-11-22T00:16:58.208Z",
       "reopenOn": [
-        "balance covers quote",
-        "the free thinking allowance renews (next UTC day)"
+        "balance covers quote"
       ]
     }
   },
@@ -313,14 +322,13 @@
     "label": "paused: needs funding",
     "since": "2026-11-22T00:16:58.208Z",
     "balance": 6270,
-    "smallestQuote": 50000,
+    "smallestQuote": 110000,
     "heldPlays": [
       "publish-dataset",
       "propose",
-      "research",
-      "agents"
+      "research"
     ],
-    "skips": 106,
+    "skips": 114,
     "refusals": 5,
     "resumedAt": null,
     "unit": "micro-USDC"
