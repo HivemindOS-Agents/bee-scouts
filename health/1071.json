@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-26T06:00:19.770Z",
+  "at": "2026-11-26T17:23:25.053Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -248,6 +248,36 @@
       "lastTryAt": "2026-11-26T02:31:19.000Z",
       "receiver": null,
       "suspended": null
+    },
+    {
+      "id": "rp-1071-s-build-tool",
+      "artifact": "build-tool",
+      "kind": "step:build-tool",
+      "state": "RELEASED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-26T17:08:03.581Z",
+      "lastObservedAt": "2026-11-26T17:08:03.581Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": "step: a build-tool step ended done (its note of 2026-11-26T17:08:03.581Z) at 2026-11-26T17:08:03.581Z",
+      "escalation": null,
+      "lastTryAt": "2026-11-26T17:08:03.581Z",
+      "receiver": null,
+      "suspended": null
     }
   ],
   "watchdog": {
@@ -306,17 +336,5 @@
     "agents": {
       "state": "offered"
     }
-  },
-  "focus": {
-    "line": "Focus 2026-11-25: red · build + verified ship 31%, under 50% · 77 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 77,
-        "buildShip": 0.3116883116883117
-      }
-    ]
   }
 }
