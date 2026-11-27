@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-26T10:04:24.440Z",
+  "at": "2026-11-27T04:08:27.128Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset"
@@ -558,18 +558,18 @@
       "state": "REPAIR_ATTEMPTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "Your agent could not finish writing the dataset: the thinking call failed.",
+      "cause": "it described a dataset instead of holding its rows",
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
-      "lastObservedAt": "2026-11-25T07:04:01.358Z",
+      "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 301,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 606,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 6,
         "sameCauseRun": 1,
-        "policySkips": 2
+        "policySkips": 3
       },
       "delivery": {
         "state": "unknown",
@@ -578,7 +578,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-25T07:04:01.358Z",
+      "lastTryAt": "2026-11-26T22:05:59.183Z",
       "receiver": null,
       "suspended": null
     },
@@ -627,22 +627,31 @@
       "at": "2026-11-25T22:03:38.233Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
+    },
+    {
+      "repair": "rp-547-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-27T04:06:47.477Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
     }
   ],
-  "notices": [],
+  "notices": [
+    "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
+  ],
   "watchdog": {
-    "at": "2026-11-26T00:08:53.208Z",
+    "at": "2026-11-27T00:12:48.100Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 7,
+    "findingsOpen": 10,
     "top": {
       "check": "D17",
       "subject": "ARTIFACTS.md",
-      "detail": "\"- Stuck after 7 drafts, it chose to publish it as it is (2026-11-25): The folder only needs its self-test rewritten to assert on the tool's own output instead …\""
+      "detail": "\"- uniswap-v4-upgrade-watch (2026-11-26): It chose to publish it as it is on 2026-11-25 (The folder only needs its self-test rewritten to assert on the tool's o…\""
     },
     "notChecked": [],
-    "requests": 23,
-    "elapsedMs": 3605,
+    "requests": 22,
+    "elapsedMs": 2978,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -652,11 +661,11 @@
   "plays": {
     "publish-dataset": {
       "state": "parked",
-      "reason": "2 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-25T22:03:38.233Z",
+      "reason": "3 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "since": "2026-11-27T04:06:47.477Z",
       "reopenOn": [
         "a later step of this play that ends done",
-        "24 h (2026-11-26T22:03:38.233Z)"
+        "24 h (2026-11-28T04:06:47.477Z)"
       ]
     },
     "propose": {
