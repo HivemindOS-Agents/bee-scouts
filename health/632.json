@@ -1,10 +1,11 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-27T06:00:19.783Z",
+  "at": "2026-11-27T09:46:30.929Z",
   "step": null,
   "reasons": [
-    "rp-632-s-publish-dataset"
+    "rp-632-s-publish-dataset",
+    "rp-632-t-uniswap-v4-core-release-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -372,36 +373,6 @@
       "suspended": null
     },
     {
-      "id": "rp-632-t-uniswap-v4-core-release-watch",
-      "artifact": "uniswap-v4-core-release-watch",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": "assertion_failure",
-      "cause": "FAIL check_row accepts a filled FACT row: [\"field days_since has no FACT/UNKNOWN label (got 'DERIVED')\"]",
-      "firstFailureAt": "2026-11-24T22:08:28.000Z",
-      "lastObservedAt": "2026-11-24T22:42:01.000Z",
-      "counters": {
-        "observations": 1,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 2,
-        "sameCauseRun": 1
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-24T22:41:33.321Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45503300870)",
-      "escalation": null,
-      "lastTryAt": "2026-11-24T22:42:01.000Z",
-      "receiver": null,
-      "suspended": null
-    },
-    {
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
@@ -412,7 +383,7 @@
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T11:39:13.067Z",
       "counters": {
-        "observations": 211,
+        "observations": 243,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -429,6 +400,36 @@
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: It cited a source it had not read.\n- 2026-11-26T02:20:24.525Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:641:1795659564903:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-26T11:39:13.067Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:644:1795693008232:b88691bb-261a-444c-9a0e-264200bccf72]",
       "lastTryAt": "2026-11-26T11:39:13.067Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-632-t-uniswap-v4-core-release-watch",
+      "artifact": "uniswap-v4-core-release-watch",
+      "kind": "selfTest",
+      "state": "OPEN",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "Closed fixed-verified on a runner pass that its own fix's test edit made green (e2, e3). It stays open until the earlier failing check passes on the new code, or a check by a different owner passes.",
+      "firstFailureAt": "2026-11-24T22:08:28.000Z",
+      "lastObservedAt": "2026-11-27T09:46:30.353Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 2,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "the earlier failing check passes on the new code, or a check by a different owner passes",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-24T22:42:01.000Z",
       "receiver": null,
       "suspended": null
     }
@@ -507,24 +508,5 @@
     "agents": {
       "state": "offered"
     }
-  },
-  "focus": {
-    "line": "Focus 2026-11-26: red · build + verified ship 19%, under 50% · 100 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 78,
-        "buildShip": 0.2692307692307692
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 100,
-        "buildShip": 0.19
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
   }
 }
