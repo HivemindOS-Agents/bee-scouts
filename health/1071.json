@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-27T06:00:19.783Z",
+  "at": "2026-11-27T11:17:12.177Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -395,23 +395,25 @@
       "state": "offered"
     }
   },
-  "focus": {
-    "line": "Focus 2026-11-26: red · build + verified ship 41%, under 50% · 117 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 77,
-        "buildShip": 0.3116883116883117
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 117,
-        "buildShip": 0.41025641025641024
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
-  }
+  "computers": [
+    {
+      "name": "issue-watch",
+      "status": "error",
+      "size": "standard-4",
+      "region": "hel1",
+      "since": "2026-11-12T01:45:14.822Z",
+      "errorSince": null,
+      "reason": "capacity"
+    },
+    {
+      "name": "provenance-row",
+      "status": "stopped",
+      "size": "standard-4",
+      "region": "hel1",
+      "since": "2026-11-10T03:32:47.082Z",
+      "errorSince": null,
+      "reason": null
+    }
+  ],
+  "computersAt": "2026-11-27T11:17:11.410Z"
 }
