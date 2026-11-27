@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-27T10:17:25.890Z",
+  "at": "2026-11-27T11:03:36.933Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -382,7 +382,7 @@
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T11:39:13.067Z",
       "counters": {
-        "observations": 247,
+        "observations": 253,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -507,5 +507,7 @@
     "agents": {
       "state": "offered"
     }
-  }
+  },
+  "computers": [],
+  "computersAt": "2026-11-27T11:03:36.123Z"
 }
