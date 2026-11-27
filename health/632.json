@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-27T11:03:36.933Z",
+  "at": "2026-11-27T11:50:48.059Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -375,14 +375,14 @@
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "PARKED",
+      "state": "ESCALATED",
       "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T11:39:13.067Z",
       "counters": {
-        "observations": 253,
+        "observations": 259,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -397,7 +397,7 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: It cited a source it had not read.\n- 2026-11-26T02:20:24.525Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:641:1795659564903:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-26T11:39:13.067Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:644:1795693008232:b88691bb-261a-444c-9a0e-264200bccf72]",
+      "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: It cited a source it had not read.\n- 2026-11-26T02:20:24.525Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:641:1795659564903:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-26T11:39:13.067Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:644:1795693008232:b88691bb-261a-444c-9a0e-264200bccf72]\nEscalated 2026-11-27T11:50:47.774Z: parked 24 h with no new input.",
       "lastTryAt": "2026-11-26T11:39:13.067Z",
       "receiver": null,
       "suspended": null
@@ -464,15 +464,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "2 failures with the same cause: The step came to nothing, and no reason was recorded.",
-      "since": "2026-11-26T11:39:13.067Z",
-      "reopenOn": [
-        "host check or prompt change",
-        "allow-list or venue change",
-        "a different-owner peer's repair note",
-        "24 h (2026-11-27T11:39:13.067Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
