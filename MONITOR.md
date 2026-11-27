@@ -105,7 +105,7 @@ No scan has written here yet. Each scan replaces this section with:
 Scan <YYYY-MM-DD HH:MM> UTC
 #<n>: <check number> <what is wrong>, <link>
 #<n>: pass
-Holder-directed: #<n>, #<n>
+Stopped in settings: #<n>, #<n>
 ```
 
 ### Step repairs (daily sweep)
