@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-27T11:50:48.059Z",
+  "at": "2026-11-27T18:05:27.644Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -376,19 +376,19 @@
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
       "state": "ESCALATED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "failureClass": "INVALID_FORMAT",
       "runner": null,
-      "cause": "The step came to nothing, and no reason was recorded.",
+      "cause": "The host's check refused the answer's format.",
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
-      "lastObservedAt": "2026-11-26T11:39:13.067Z",
+      "lastObservedAt": "2026-11-27T11:54:51.355Z",
       "counters": {
-        "observations": 259,
-        "failedAttempts": 2,
-        "consecutive": 2,
-        "sameCause": 2,
+        "observations": 294,
+        "failedAttempts": 4,
+        "consecutive": 4,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 3,
-        "sameCauseRun": 2,
+        "sameCauseRun": 1,
         "policySkips": 1
       },
       "delivery": {
@@ -398,7 +398,7 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": "Parked after 2 failed steps of its publish-dataset play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: It cited a source it had not read.\n- 2026-11-26T02:20:24.525Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:641:1795659564903:b88691bb-261a-444c-9a0e-264200bccf72]\n- 2026-11-26T11:39:13.067Z failed (not yet delivered): It cited a source it had not read. [step:dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:644:1795693008232:b88691bb-261a-444c-9a0e-264200bccf72]\nEscalated 2026-11-27T11:50:47.774Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-26T11:39:13.067Z",
+      "lastTryAt": "2026-11-27T11:54:51.355Z",
       "receiver": null,
       "suspended": null
     },
@@ -487,10 +487,9 @@
     },
     "pay-outside": {
       "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
       "reopenOn": [
-        "payer added",
-        "allow-list commit"
+        "holder accepts High again"
       ]
     },
     "routine": {
