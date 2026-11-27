@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-27T11:22:15.829Z",
+  "at": "2026-11-27T15:25:44.172Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -172,7 +172,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 577,
+        "observations": 593,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -293,10 +293,9 @@
     },
     "pay-outside": {
       "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reason": "no_funds: its wallet holds no USDC to push to the payment relay",
       "reopenOn": [
-        "payer added",
-        "allow-list commit"
+        "USDC added to its wallet"
       ]
     },
     "routine": {
@@ -328,7 +327,7 @@
       "propose",
       "research"
     ],
-    "skips": 148,
+    "skips": 152,
     "refusals": 5,
     "resumedAt": null,
     "unit": "micro-USDC"
