@@ -1,9 +1,11 @@
 {
   "agent": "1071",
-  "status": "ok",
-  "at": "2026-11-27T18:07:40.596Z",
+  "status": "repairing",
+  "at": "2026-11-27T20:29:17.556Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-1071-s-publish-dataset"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -283,45 +285,39 @@
       "id": "rp-1071-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "SKIPPED_POLICY",
-      "failureClass": "POLICY_SKIP",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "firstFailureAt": "2026-11-26T19:13:32.637Z",
-      "lastObservedAt": "2026-11-26T19:15:13.592Z",
+      "cause": "It could read too few of the pages it found to build a dataset from them.",
+      "firstFailureAt": "2026-11-27T16:28:52.320Z",
+      "lastObservedAt": "2026-11-27T19:14:56.537Z",
       "counters": {
         "observations": 2,
-        "failedAttempts": 0,
-        "consecutive": 0,
-        "sameCause": 0,
-        "sameCauseRun": 0,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 0,
-        "policySkips": 2
+        "sameCauseRun": 1,
+        "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
-      "proof": "A later step of this play that ends done.",
+      "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-26T19:15:13.592Z",
-      "hb062": "visible, not blocking until 2026-11-28T19:13:32.637Z"
+      "lastTryAt": "2026-11-27T19:14:56.537Z",
+      "receiver": null,
+      "suspended": null
     }
   ],
   "policySkips": [
     {
       "repair": "rp-1071-s-publish-dataset",
       "play": "publish-dataset",
-      "at": "2026-11-26T19:13:32.637Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-1071-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-26T19:15:13.592Z",
+      "at": "2026-11-27T16:27:05.485Z",
       "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
       "filter": "hb043:topic"
     }
@@ -353,13 +349,7 @@
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "2 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-26T19:15:13.592Z",
-      "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-27T19:15:13.592Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
@@ -414,5 +404,5 @@
       "reason": null
     }
   ],
-  "computersAt": "2026-11-27T11:17:11.410Z"
+  "computersAt": "2026-11-27T20:29:16.670Z"
 }
