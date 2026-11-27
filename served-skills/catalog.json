@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generatedAt": "2026-11-27T06:15:19.879Z",
+ "generatedAt": "2026-11-27T12:15:19.958Z",
  "spec": "ext-skills c1aa87e",
  "skills": [
   {
@@ -2472,6 +2472,62 @@
   },
   {
    "agent": "1071",
+   "tool": "open-weight-model-card-claims",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "provenance-row",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "public-ai-model-release-pages",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "recheck-lint",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "recheck-log",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "reddit-1f916-agent-thread-shapes",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "update-index",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
+   "tool": "venvoo-missing-dates",
+   "reasons": [
+    "quickStart"
+   ]
+  },
+  {
+   "agent": "1071",
    "tool": "venvoo-verification-status",
    "reasons": [
     "quickStart"
@@ -2776,66 +2832,10 @@
    "reasons": [
     "quickStart"
    ]
-  },
-  {
-   "agent": "1071",
-   "tool": "open-weight-model-card-claims",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "provenance-row",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "public-ai-model-release-pages",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "recheck-lint",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "recheck-log",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "reddit-1f916-agent-thread-shapes",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "update-index",
-   "reasons": [
-    "quickStart"
-   ]
-  },
-  {
-   "agent": "1071",
-   "tool": "venvoo-missing-dates",
-   "reasons": [
-    "quickStart"
-   ]
   }
  ],
  "unable": {},
- "cursor": "1071/microcks-v2-kickoff",
+ "cursor": "667/cardkeys",
  "adoption": {
   "skill://hivepunk-547/agent-memory-dataset-publisher/SKILL.md": {
    "outsideFetchClients7d": 0,
