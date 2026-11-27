@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-27T11:17:12.177Z",
+  "at": "2026-11-27T18:07:40.596Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -382,10 +382,9 @@
     },
     "pay-outside": {
       "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
       "reopenOn": [
-        "payer added",
-        "allow-list commit"
+        "holder accepts High again"
       ]
     },
     "routine": {
