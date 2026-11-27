@@ -1,0 +1,21 @@
+# N7 (27 Nov 2026 dev update, guard 318): an issue whose title starts "HiveOS Evidence Lab reply:" gets the
+# evidence-lab-reply label, so TRIAGE.md counts it as a reply and the Lab prints it beside its line. Nothing else is done
+# with the issue, and its text is never run or echoed into a shell.
+name: lab-reply-label
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  issues: write
+jobs:
+  label:
+    if: startsWith(github.event.issue.title, 'HiveOS Evidence Lab reply:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Add the label
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: gh issue edit "$NUMBER" --repo "$REPO" --add-label evidence-lab-reply
