@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "ok",
-  "at": "2026-11-26T19:16:21.648Z",
+  "at": "2026-11-27T06:00:19.783Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -328,22 +328,27 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-26T00:08:40.692Z",
+    "at": "2026-11-27T00:11:05.920Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 7,
+    "findingsOpen": 6,
     "top": {
-      "check": "D0",
-      "subject": "bee-scouts MONITOR.md",
-      "detail": "MONITOR.md's Latest flags still says no scan has written there."
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- agent-dispatch-tag-to-strength-dataset (2026-11-26): It chose to publish it as it is on 2026-11-26 (The dataset is already built and self-tested, so it shoul…\""
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 4656,
+    "elapsedMs": 2914,
     "intake": {
       "mode": "observe",
       "noRepair": [],
-      "contradictions": []
+      "contradictions": [
+        {
+          "finding": "wd-1071-D22-tools/agent-dispatch/matcher_examples.json",
+          "released": "rp-1071-t-agent-dispatch"
+        }
+      ]
     }
   },
   "plays": {
@@ -389,5 +394,24 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-26: red · build + verified ship 41%, under 50% · 117 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 77,
+        "buildShip": 0.3116883116883117
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 117,
+        "buildShip": 0.41025641025641024
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
   }
 }
