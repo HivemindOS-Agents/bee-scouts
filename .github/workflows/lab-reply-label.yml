@@ -1,4 +1,5 @@
-# N7 (27 Nov 2026 dev update, guard 318): an issue whose title starts "HiveOS Evidence Lab reply:" gets the
+# N7 and row 134 (27 Nov 2026 dev update, guards 318, 298): an issue titled "HiveOS Evidence Lab reply:", "claim:",
+# "removal:" or "correction:" gets the
 # evidence-lab-reply label, so TRIAGE.md counts it as a reply and the Lab prints it beside its line. Nothing else is done
 # with the issue, and its text is never run or echoed into a shell.
 name: lab-reply-label
@@ -9,7 +10,7 @@ permissions:
   issues: write
 jobs:
   label:
-    if: startsWith(github.event.issue.title, 'HiveOS Evidence Lab reply:')
+    if: startsWith(github.event.issue.title, 'HiveOS Evidence Lab reply:') || startsWith(github.event.issue.title, 'HiveOS Evidence Lab claim:') || startsWith(github.event.issue.title, 'HiveOS Evidence Lab removal:') || startsWith(github.event.issue.title, 'HiveOS Evidence Lab correction:')
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:

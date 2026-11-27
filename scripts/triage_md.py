@@ -25,7 +25,7 @@ issues = [i for i in get("issues?state=all&sort=created&direction=desc") if "pul
 labels = lambda i: {l["name"] for l in i["labels"]}
 LAB_REPLY = "evidence-lab-reply"
 # N7 (27 Nov 2026 dev update, guard 318): a reply to a HiveOS Evidence Lab line is its own kind, by label or by title.
-is_lab_reply = lambda i: LAB_REPLY in labels(i) or (i.get("title") or "").startswith("HiveOS Evidence Lab reply:")
+is_lab_reply = lambda i: LAB_REPLY in labels(i) or any((i.get("title") or "").startswith(f"HiveOS Evidence Lab {k}:") for k in ("reply", "claim", "removal", "correction"))
 kind = lambda i: LAB_REPLY if is_lab_reply(i) else "outside-pr-candidate" if "outside-pr-candidate" in labels(i) else "hivemind-decision" if "hivemind-decision" in labels(i) or "triaged" in labels(i) else "other"
 
 def md(text):
