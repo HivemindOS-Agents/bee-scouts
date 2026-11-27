@@ -1,7 +1,7 @@
 {
   "agent": "65",
   "status": "ok",
-  "at": "2026-11-27T06:00:19.783Z",
+  "at": "2026-11-27T11:07:32.908Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -63,23 +63,6 @@
       "state": "offered"
     }
   },
-  "focus": {
-    "line": "Focus 2026-11-26: amber · build + verified ship 0%, under 50% · 6 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "AMBER",
-        "commits": 5,
-        "buildShip": 0
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "AMBER",
-        "commits": 6,
-        "buildShip": 0
-      }
-    ],
-    "cost": "Last 7 days: 0 steps, $0.00 known."
-  }
+  "computers": [],
+  "computersAt": "2026-11-27T11:07:32.404Z"
 }
