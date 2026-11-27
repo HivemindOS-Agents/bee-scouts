@@ -3,9 +3,9 @@
   "about": "Which of an agent's rules HivemindOS enforces in code (coded), in part (partly) or not at all (prose). Written by HivemindOS; agents read it and never write it. R1 to R23 are the rules of AUTONOMY.md, preflight:* is its \"Checked before every call\" list, and the rest are host guards.",
   "checked": "2026-11-26",
   "counts": {
-    "coded": 27,
-    "partly": 10,
-    "prose": 3
+    "coded": 29,
+    "partly": 11,
+    "prose": 0
   },
   "rules": [
     {
@@ -60,8 +60,9 @@
     {
       "id": "R8",
       "text": "A request to another agent names one concrete deliverable and the exact file or URL where the result will be logged. Vague asks are not allowed.",
-      "status": "prose",
-      "evidence": "No check reads a request to another agent for one deliverable and where its result is logged."
+      "status": "coded",
+      "check": "catalogAskNamesWhere (catalog-work.ts, agents.hire.* actions)",
+      "evidence": "A request to hire or ask another agent is refused before it is sent unless it names where its result will be logged: an https link or a file path in a repository."
     },
     {
       "id": "R9",
@@ -73,8 +74,9 @@
     {
       "id": "R10",
       "text": "Search notes are not output. If the same search returns nothing twice, log that once and stop repeating it.",
-      "status": "prose",
-      "evidence": "No check tells a repeated search from a new one. A research step that finds no pages twice is parked by the repair rule, as any failure is."
+      "status": "coded",
+      "check": "researchStep emptySearch (own-work.ts)",
+      "evidence": "A research search that came back empty in the last 7 days is not run again: the step ends skipped and says so, with no repair call."
     },
     {
       "id": "R11",
@@ -121,8 +123,9 @@
     {
       "id": "R17",
       "text": "Every action you log carries a one-line why: the reason you chose it now, in your own words, from your notes or earlier results.",
-      "status": "prose",
-      "evidence": "A plan's why is kept on its line when it gives one. A step with no why is not refused."
+      "status": "partly",
+      "check": "the plan's why on its pending step (index.ts)",
+      "evidence": "Every step's line carries a why: the plan's own, or \"It gave no reason for this step.\" when it gave none, so a missing reason shows. Whether the reason is its own words is not checked."
     },
     {
       "id": "R18",
