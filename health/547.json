@@ -1,10 +1,12 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-27T06:00:19.783Z",
+  "at": "2026-11-27T09:51:37.948Z",
   "step": null,
   "reasons": [
-    "rp-547-s-publish-dataset"
+    "rp-547-s-publish-dataset",
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+    "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch"
   ],
   "failures": 0,
   "ignored": 0,
@@ -492,66 +494,6 @@
       "suspended": null
     },
     {
-      "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
-      "artifact": "fixprotocol-modifyliquidities-nonreentrant",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "REPEATED_UNCHANGED_FAILURE",
-      "runner": "assertion_failure",
-      "cause": "FAIL: missing modifyLiquidities-nonReentrant.patch",
-      "firstFailureAt": "2026-11-21T03:11:27.000Z",
-      "lastObservedAt": "2026-11-23T06:30:27.000Z",
-      "counters": {
-        "observations": 192,
-        "failedAttempts": 12,
-        "consecutive": 0,
-        "sameCause": 2,
-        "acknowledgedFailed": 11,
-        "recurrences": 0,
-        "sameCauseRun": 12
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-21T03:42:53.331Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45124517471)",
-      "escalation": "Parked after 2 failed attempts in a row with the same cause (12 in all, 11 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T18:44:23.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44937131965]\n- 2026-11-21T21:52:02.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44953725232]\n- 2026-11-21T22:23:55.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44956526668]\n- 2026-11-22T01:37:28.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44972300158]\n- 2026-11-22T02:09:42.000Z failed: FAIL: missing modifyLiquidities-nonReentrant.patch [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44974750249]\nEscalated 2026-11-23T02:19:37.199Z: parked 24 h with no new input.",
-      "lastTryAt": "2026-11-23T06:30:27.000Z",
-      "receiver": null,
-      "suspended": null
-    },
-    {
-      "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
-      "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
-      "kind": "selfTest",
-      "state": "RELEASED",
-      "failureClass": "TEST_FAILED",
-      "runner": "assertion_failure",
-      "cause": "FAIL: context FACT rows 6",
-      "firstFailureAt": "2026-11-22T16:16:53.000Z",
-      "lastObservedAt": "2026-11-23T00:13:12.000Z",
-      "counters": {
-        "observations": 32,
-        "failedAttempts": 1,
-        "consecutive": 0,
-        "sameCause": 1,
-        "acknowledgedFailed": 0,
-        "recurrences": 0,
-        "sameCauseRun": 1
-      },
-      "delivery": {
-        "state": "acknowledged",
-        "at": "2026-11-23T00:12:46.818Z"
-      },
-      "proof": "A passing run of its self-test on the self-test runner, newer than every failing run.",
-      "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705)",
-      "escalation": null,
-      "lastTryAt": "2026-11-23T00:13:12.000Z",
-      "receiver": null,
-      "suspended": null
-    },
-    {
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
@@ -562,7 +504,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 634,
+        "observations": 702,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -609,6 +551,66 @@
       "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45793099066)",
       "escalation": "Parked after 2 failed attempts in a row with the same cause (3 in all, 2 after it was delivered) on the self-test of tools/uniswap-v4-upgrade-watch/. It stays parked until its files change. Latest cause: FAIL: verify_upload.py must not contain the word upload\n- 2026-11-25T20:27:53.000Z failed (not yet delivered): FAIL: verify_upload.py must not contain upload code [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45695133520]\n- 2026-11-25T20:59:31.000Z failed: FAIL: verify_upload.py must not contain the word upload [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45700066822]\n- 2026-11-25T21:32:15.000Z failed: FAIL: verify_upload.py must not contain the word upload [https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45705175756]",
       "lastTryAt": "2026-11-26T09:33:56.000Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+      "artifact": "fixprotocol-modifyliquidities-nonreentrant",
+      "kind": "selfTest",
+      "state": "OPEN",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
+      "runner": "assertion_failure",
+      "cause": "Closed fixed-verified on a runner pass that its own fix's test edit made green (e1). It stays open until the earlier failing check passes on the new code, or a check by a different owner passes.",
+      "firstFailureAt": "2026-11-21T03:11:27.000Z",
+      "lastObservedAt": "2026-11-27T09:51:37.119Z",
+      "counters": {
+        "observations": 192,
+        "failedAttempts": 12,
+        "consecutive": 0,
+        "sameCause": 2,
+        "acknowledgedFailed": 11,
+        "recurrences": 0,
+        "sameCauseRun": 12
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "the earlier failing check passes on the new code, or a check by a different owner passes",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-23T06:30:27.000Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
+      "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
+      "kind": "selfTest",
+      "state": "OPEN",
+      "failureClass": "TEST_FAILED",
+      "runner": "assertion_failure",
+      "cause": "Closed fixed-verified on a runner pass that its own fix's test edit made green (e1). It stays open until the earlier failing check passes on the new code, or a check by a different owner passes.",
+      "firstFailureAt": "2026-11-22T16:16:53.000Z",
+      "lastObservedAt": "2026-11-27T09:51:37.119Z",
+      "counters": {
+        "observations": 32,
+        "failedAttempts": 1,
+        "consecutive": 0,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "the earlier failing check passes on the new code, or a check by a different owner passes",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-23T00:13:12.000Z",
       "receiver": null,
       "suspended": null
     }
@@ -701,24 +703,5 @@
     "agents": {
       "state": "offered"
     }
-  },
-  "focus": {
-    "line": "Focus 2026-11-26: red · build + verified ship 4%, under 50% · 68 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 127,
-        "buildShip": 0.23622047244094488
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 68,
-        "buildShip": 0.04411764705882353
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
   }
 }
