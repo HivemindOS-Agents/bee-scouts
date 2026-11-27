@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-27T04:08:27.128Z",
+  "at": "2026-11-27T06:00:19.783Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset"
@@ -562,7 +562,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 606,
+        "observations": 634,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -701,5 +701,24 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-26: red · build + verified ship 4%, under 50% · 68 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 127,
+        "buildShip": 0.23622047244094488
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 68,
+        "buildShip": 0.04411764705882353
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
   }
 }
