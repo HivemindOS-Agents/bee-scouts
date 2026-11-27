@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-27T11:08:59.238Z",
+  "at": "2026-11-27T14:49:33.535Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -503,7 +503,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 722,
+        "observations": 782,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -690,10 +690,9 @@
     },
     "pay-outside": {
       "state": "precondition_unmet",
-      "reason": "no payer that can sign a USDC authorization (EIP-3009) on Base for this agent: its own agent wallet cannot, and neither its holder's Bankr wallet nor the push relay is available to it",
+      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
       "reopenOn": [
-        "payer added",
-        "allow-list commit"
+        "holder accepts High again"
       ]
     },
     "routine": {
