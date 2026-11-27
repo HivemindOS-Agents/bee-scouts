@@ -1,12 +1,11 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-27T09:51:37.948Z",
+  "at": "2026-11-27T10:22:44.027Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
-    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
-    "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch"
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
   ],
   "failures": 0,
   "ignored": 0,
@@ -504,7 +503,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 702,
+        "observations": 710,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -588,12 +587,12 @@
       "id": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
       "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
       "kind": "selfTest",
-      "state": "OPEN",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": "assertion_failure",
       "cause": "Closed fixed-verified on a runner pass that its own fix's test edit made green (e1). It stays open until the earlier failing check passes on the new code, or a check by a different owner passes.",
       "firstFailureAt": "2026-11-22T16:16:53.000Z",
-      "lastObservedAt": "2026-11-27T09:51:37.119Z",
+      "lastObservedAt": "2026-11-23T03:23:42.000Z",
       "counters": {
         "observations": 32,
         "failedAttempts": 1,
@@ -608,9 +607,9 @@
         "at": null
       },
       "proof": "the earlier failing check passes on the new code, or a check by a different owner passes",
-      "closedBy": null,
+      "closedBy": "code: self-test runner passed on the base commit's check (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45105693886)",
       "escalation": null,
-      "lastTryAt": "2026-11-23T00:13:12.000Z",
+      "lastTryAt": "2026-11-23T03:23:42.000Z",
       "receiver": null,
       "suspended": null
     }
