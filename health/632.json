@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-26T11:40:27.584Z",
+  "at": "2026-11-27T06:00:19.783Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -412,7 +412,7 @@
       "firstFailureAt": "2026-11-26T02:20:24.525Z",
       "lastObservedAt": "2026-11-26T11:39:13.067Z",
       "counters": {
-        "observations": 63,
+        "observations": 211,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -444,10 +444,10 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-26T00:11:49.807Z",
+    "at": "2026-11-27T00:10:44.937Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 11,
+    "findingsOpen": 8,
     "top": {
       "check": "D2",
       "subject": "publish-dataset",
@@ -455,7 +455,7 @@
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 3272,
+    "elapsedMs": 2953,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -507,5 +507,24 @@
     "agents": {
       "state": "offered"
     }
+  },
+  "focus": {
+    "line": "Focus 2026-11-26: red · build + verified ship 19%, under 50% · 100 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 78,
+        "buildShip": 0.2692307692307692
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 100,
+        "buildShip": 0.19
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
   }
 }
