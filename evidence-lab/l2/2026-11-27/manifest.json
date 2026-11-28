@@ -40,12 +40,12 @@
   ],
   "day_root": "69673a5a9d68fe0023a1446518c4a6cced46294c81949b111e32371ff7796da7",
   "anchor": {
-    "eip155:8453": null
+    "eip155:8453": "0xfd3f55644a86bf0674fc26b43e416a1650db47bb747dcb2ed19e3f19455923b1"
   },
   "key": {
     "keyid": "a74a5deda85b995e",
     "alg": "ed25519",
     "public_key": "ge6FW52372IPTnveGzhZ9YDAdsvcHBtGSWKQt7yRgnY="
   },
-  "statement": "Not anchored yet."
+  "statement": "Anchored on Base."
 }
