@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-28T14:15:33.174Z",
+  "at": "2026-11-28T15:51:34.556Z",
   "step": null,
   "reasons": [
     "rp-1071-s-publish-dataset",
@@ -293,7 +293,7 @@
       "firstFailureAt": "2026-11-28T10:41:16.224Z",
       "lastObservedAt": "2026-11-28T14:14:24.388Z",
       "counters": {
-        "observations": 54,
+        "observations": 89,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 2,
@@ -316,20 +316,20 @@
       "id": "rp-1071-s-pay-outside",
       "artifact": "pay-outside",
       "kind": "step:pay-outside",
-      "state": "REPAIR_ATTEMPTED",
-      "failureClass": "TEST_FAILED",
+      "state": "PARKED",
+      "failureClass": "REPEATED_UNCHANGED_FAILURE",
       "runner": null,
       "cause": "The step came to nothing, and no reason was recorded.",
       "firstFailureAt": "2026-11-28T12:07:17.436Z",
-      "lastObservedAt": "2026-11-28T12:07:17.436Z",
+      "lastObservedAt": "2026-11-28T15:50:24.848Z",
       "counters": {
-        "observations": 11,
-        "failedAttempts": 1,
-        "consecutive": 1,
-        "sameCause": 1,
+        "observations": 19,
+        "failedAttempts": 2,
+        "consecutive": 2,
+        "sameCause": 2,
         "acknowledgedFailed": 0,
         "recurrences": 0,
-        "sameCauseRun": 1
+        "sameCauseRun": 2
       },
       "delivery": {
         "state": "unknown",
@@ -337,8 +337,8 @@
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
-      "escalation": null,
-      "lastTryAt": "2026-11-28T12:07:17.436Z",
+      "escalation": "Parked after 2 failed steps of its pay-outside play in a row with the same cause (2 in all). The play is not offered for 24 hours unless the host's check, the venue or the allow-list changes. Latest cause: The step came to nothing, and no reason was recorded.\n- 2026-11-28T12:07:17.436Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:own-outside-20261128T120710Z]\n- 2026-11-28T15:50:24.848Z failed (not yet delivered): The step came to nothing, and no reason was recorded. [step:own-outside-20261128T155019Z]",
+      "lastTryAt": "2026-11-28T15:50:24.848Z",
       "receiver": null,
       "suspended": null
     }
@@ -399,7 +399,15 @@
       ]
     },
     "pay-outside": {
-      "state": "offered"
+      "state": "parked",
+      "reason": "2 failures with the same cause: The step came to nothing, and no reason was recorded.",
+      "since": "2026-11-28T15:50:24.848Z",
+      "reopenOn": [
+        "host check or prompt change",
+        "allow-list or venue change",
+        "a different-owner peer's repair note",
+        "24 h (2026-11-29T15:50:24.848Z)"
+      ]
     },
     "routine": {
       "state": "offered"
