@@ -1,11 +1,9 @@
 {
   "agent": "632",
-  "status": "repairing",
-  "at": "2026-11-28T06:16:18.173Z",
+  "status": "ok",
+  "at": "2026-11-28T09:54:32.020Z",
   "step": null,
-  "reasons": [
-    "rp-632-s-publish-dataset"
-  ],
+  "reasons": [],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -405,44 +403,33 @@
       "id": "rp-632-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "RECURRENCE_DETECTED",
+      "state": "RELEASED",
       "failureClass": "INVALID_FORMAT",
       "runner": null,
       "cause": "The host's check refused the answer's format.",
       "firstFailureAt": "2026-11-27T23:58:23.885Z",
-      "lastObservedAt": "2026-11-28T06:13:36.294Z",
+      "lastObservedAt": "2026-11-28T09:39:00.891Z",
       "counters": {
-        "observations": 159,
+        "observations": 264,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 4,
-        "sameCauseRun": 1,
-        "policySkips": 1
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:665:1795858692990:b88691bb-261a-444c-9a0e-264200bccf72)",
       "escalation": null,
-      "lastTryAt": "2026-11-28T06:13:36.294Z",
+      "lastTryAt": "2026-11-28T09:39:00.891Z",
       "receiver": null,
       "suspended": null
     }
   ],
-  "policySkips": [
-    {
-      "repair": "rp-632-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-28T06:15:06.471Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [],
   "watchdog": {
     "at": "2026-11-28T00:15:00.417Z",
     "version": "watchdog-v1",
