@@ -1,9 +1,11 @@
 {
   "agent": "632",
-  "status": "ok",
-  "at": "2026-11-28T12:06:04.514Z",
+  "status": "repairing",
+  "at": "2026-11-28T12:07:53.868Z",
   "step": null,
-  "reasons": [],
+  "reasons": [
+    "rp-632-s-pay-outside"
+  ],
   "failures": 0,
   "ignored": 0,
   "pausedAt": null,
@@ -426,6 +428,36 @@
       "closedBy": "step: a publish-dataset step ended done (dataset:b26d7421-cb40-483b-bbc4-8f392121ca26:665:1795858692990:b88691bb-261a-444c-9a0e-264200bccf72)",
       "escalation": null,
       "lastTryAt": "2026-11-28T09:39:00.891Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-632-s-pay-outside",
+      "artifact": "pay-outside",
+      "kind": "step:pay-outside",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-28T12:06:42.943Z",
+      "lastObservedAt": "2026-11-28T12:06:42.943Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-28T12:06:42.943Z",
       "receiver": null,
       "suspended": null
     }
