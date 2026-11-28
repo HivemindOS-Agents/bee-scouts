@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-28T10:52:13.040Z",
+  "at": "2026-11-28T12:03:11.762Z",
   "step": null,
   "reasons": [
     "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
@@ -658,11 +658,7 @@
       ]
     },
     "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
-      "reopenOn": [
-        "holder accepts High again"
-      ]
+      "state": "offered"
     },
     "routine": {
       "state": "offered"
@@ -672,5 +668,5 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-28T05:41:14.721Z"
+  "computersAt": "2026-11-28T11:54:55.310Z"
 }
