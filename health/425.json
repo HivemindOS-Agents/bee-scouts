@@ -1,7 +1,7 @@
 {
   "agent": "425",
   "status": "ok",
-  "at": "2026-11-27T06:00:19.783Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -10,7 +10,7 @@
   "ticket": null,
   "repairs": [],
   "focus": {
-    "line": "Focus 2026-11-26: amber · build + verified ship 0%, under 50% · 3 commits",
+    "line": "Focus 2026-11-27: amber · build + verified ship 0%, under 50% · 2 commits",
     "flagged": true,
     "days": [
       {
@@ -23,6 +23,12 @@
         "day": "2026-11-26",
         "verdict": "AMBER",
         "commits": 3,
+        "buildShip": 0
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "AMBER",
+        "commits": 2,
         "buildShip": 0
       }
     ],
