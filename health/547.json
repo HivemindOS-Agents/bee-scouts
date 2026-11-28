@@ -1,7 +1,7 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-27T14:49:33.535Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [
     "rp-547-s-publish-dataset",
@@ -503,7 +503,7 @@
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
       "lastObservedAt": "2026-11-26T22:05:59.183Z",
       "counters": {
-        "observations": 782,
+        "observations": 1022,
         "failedAttempts": 2,
         "consecutive": 2,
         "sameCause": 1,
@@ -641,33 +641,30 @@
     "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
   ],
   "watchdog": {
-    "at": "2026-11-27T00:12:48.100Z",
+    "at": "2026-11-28T00:10:09.234Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 10,
+    "findingsOpen": 9,
     "top": {
-      "check": "D17",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- uniswap-v4-upgrade-watch (2026-11-26): It chose to publish it as it is on 2026-11-25 (The folder only needs its self-test rewritten to assert on the tool's o…\""
+      "check": "D22",
+      "subject": "tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py",
+      "detail": "A step said it built tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2978,
+    "elapsedMs": 2350,
     "intake": {
       "mode": "observe",
-      "noRepair": [],
+      "noRepair": [
+        "wd-547-D22-tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py",
+        "wd-547-D22-tools/opp-547-38-gfx950-mi355x-summary/SUMMARY.md"
+      ],
       "contradictions": []
     }
   },
   "plays": {
     "publish-dataset": {
-      "state": "parked",
-      "reason": "3 refusals in a row by the topic filter: it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "since": "2026-11-27T04:06:47.477Z",
-      "reopenOn": [
-        "a later step of this play that ends done",
-        "24 h (2026-11-28T04:06:47.477Z)"
-      ]
+      "state": "offered"
     },
     "propose": {
       "state": "offered"
@@ -703,5 +700,30 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-27T11:08:58.428Z"
+  "computersAt": "2026-11-28T05:41:14.721Z",
+  "focus": {
+    "line": "Focus 2026-11-27: red · build + verified ship 12%, under 50% · 59 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 127,
+        "buildShip": 0.23622047244094488
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 68,
+        "buildShip": 0.04411764705882353
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "RED",
+        "commits": 59,
+        "buildShip": 0.11864406779661017
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
+  }
 }
