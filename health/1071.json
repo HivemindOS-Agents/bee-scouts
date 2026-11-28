@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-28T06:00:19.731Z",
+  "at": "2026-11-28T11:37:18.693Z",
   "step": null,
   "reasons": [
     "rp-1071-s-publish-dataset"
@@ -285,21 +285,20 @@
       "id": "rp-1071-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RECURRENCE_DETECTED",
       "failureClass": "TEST_FAILED",
       "runner": null,
-      "cause": "It could read too few of the pages it found to build a dataset from them.",
-      "firstFailureAt": "2026-11-27T16:28:52.320Z",
-      "lastObservedAt": "2026-11-27T19:14:56.537Z",
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-28T10:41:16.224Z",
+      "lastObservedAt": "2026-11-28T10:41:16.224Z",
       "counters": {
-        "observations": 2,
-        "failedAttempts": 2,
-        "consecutive": 2,
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
         "sameCause": 1,
         "acknowledgedFailed": 0,
-        "recurrences": 0,
-        "sameCauseRun": 1,
-        "policySkips": 1
+        "recurrences": 2,
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
@@ -308,21 +307,11 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-27T19:14:56.537Z",
+      "lastTryAt": "2026-11-28T10:41:16.224Z",
       "receiver": null,
       "suspended": null
     }
   ],
-  "policySkips": [
-    {
-      "repair": "rp-1071-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-27T16:27:05.485Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [],
   "watchdog": {
     "at": "2026-11-28T00:00:50.307Z",
     "version": "watchdog-v1",
@@ -404,30 +393,5 @@
       "reason": null
     }
   ],
-  "computersAt": "2026-11-27T20:29:16.670Z",
-  "focus": {
-    "line": "Focus 2026-11-27: red · build + verified ship 30%, under 50% · 97 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 77,
-        "buildShip": 0.3116883116883117
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 117,
-        "buildShip": 0.41025641025641024
-      },
-      {
-        "day": "2026-11-27",
-        "verdict": "RED",
-        "commits": 97,
-        "buildShip": 0.29896907216494845
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
-  }
+  "computersAt": "2026-11-28T11:37:17.597Z"
 }
