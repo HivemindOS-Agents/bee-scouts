@@ -1,10 +1,11 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-28T12:06:55.708Z",
+  "at": "2026-11-28T12:08:24.960Z",
   "step": null,
   "reasons": [
-    "rp-1071-s-publish-dataset"
+    "rp-1071-s-publish-dataset",
+    "rp-1071-s-pay-outside"
   ],
   "failures": 0,
   "ignored": 0,
@@ -292,7 +293,7 @@
       "firstFailureAt": "2026-11-28T10:41:16.224Z",
       "lastObservedAt": "2026-11-28T10:41:16.224Z",
       "counters": {
-        "observations": 9,
+        "observations": 13,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -308,6 +309,36 @@
       "closedBy": null,
       "escalation": null,
       "lastTryAt": "2026-11-28T10:41:16.224Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-1071-s-pay-outside",
+      "artifact": "pay-outside",
+      "kind": "step:pay-outside",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-28T12:07:17.436Z",
+      "lastObservedAt": "2026-11-28T12:07:17.436Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-28T12:07:17.436Z",
       "receiver": null,
       "suspended": null
     }
