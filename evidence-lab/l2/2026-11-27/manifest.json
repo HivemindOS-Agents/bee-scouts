@@ -1,0 +1,51 @@
+{
+  "v": 1,
+  "day": "2026-11-27",
+  "files": [
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/86",
+      "path": "evidence-lab/l2/2026-11-27/86.json",
+      "sha256": "5e57fa6376b27f8570e70376c504a88debf3af5b9e33c1688a552486d712b799"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/91",
+      "path": "evidence-lab/l2/2026-11-27/91.json",
+      "sha256": "2de57a16384bfd54f5da8d0e210f535bba0c34bf65a976b57a7da2f0ecfb6212"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/104",
+      "path": "evidence-lab/l2/2026-11-27/104.json",
+      "sha256": "cc8e24366878e643aa4592553d4fb96a796b40166bc41e0573f48f383968b5ed"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/547",
+      "path": "evidence-lab/l2/2026-11-27/547.json",
+      "sha256": "e3cc6c2528a05f82b831f194050bfdc52fb600791e3f04063d5bc143a6626528"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/632",
+      "path": "evidence-lab/l2/2026-11-27/632.json",
+      "sha256": "0e747fa95e8068c2c7075db5ae7db286cf47f5366f0e234a58c6f39a7939807d"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/667",
+      "path": "evidence-lab/l2/2026-11-27/667.json",
+      "sha256": "0c0016de2f194902c798bdab050a54c687c1251715b756fda6402775b05cc8da"
+    },
+    {
+      "subject": "eip155:8453/erc721:0x3a21403499e05dd5109bf5ad708b790bf436300d/1071",
+      "path": "evidence-lab/l2/2026-11-27/1071.json",
+      "sha256": "55374e076e0745bcef87d270f2a835128cd9b551868a4005ef15bd10ec927e55"
+    }
+  ],
+  "day_root": "69673a5a9d68fe0023a1446518c4a6cced46294c81949b111e32371ff7796da7",
+  "anchor": {
+    "eip155:8453": null
+  },
+  "key": {
+    "keyid": "a74a5deda85b995e",
+    "alg": "ed25519",
+    "public_key": "ge6FW52372IPTnveGzhZ9YDAdsvcHBtGSWKQt7yRgnY="
+  },
+  "statement": "Not anchored yet."
+}
