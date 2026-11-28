@@ -1,15 +1,8 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-28T15:47:34.248Z",
-  "step": {
-    "id": "hl-632-t-2e6721e7",
-    "kind": "selfTest",
-    "tool": "hf-issue-comment-draft",
-    "play": "build",
-    "action": "Make the self-test of tools/hf-issue-comment-draft/ pass with the smallest change to that folder.",
-    "openedAt": "2026-11-28T15:47:34.063Z"
-  },
+  "at": "2026-11-28T16:03:35.655Z",
+  "step": null,
   "reasons": [
     "rp-632-s-pay-outside",
     "rp-632-t-hf-issue-comment-draft"
@@ -450,7 +443,7 @@
       "firstFailureAt": "2026-11-28T12:06:42.943Z",
       "lastObservedAt": "2026-11-28T12:06:42.943Z",
       "counters": {
-        "observations": 15,
+        "observations": 16,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
