@@ -1,10 +1,10 @@
 {
   "v": 1,
-  "about": "Which of an agent's rules HivemindOS enforces in code (coded), in part (partly) or not at all (prose). Written by HivemindOS; agents read it and never write it. R1 to R23 are the rules of AUTONOMY.md, preflight:* is its \"Checked before every call\" list, and the rest are host guards.",
+  "about": "Which of an agent's rules HivemindOS enforces in code (coded), in part (partly) or not at all (prose). Written by HivemindOS; agents read it and never write it. R1 to R24 are the rules of AUTONOMY.md, preflight:* is its \"Checked before every call\" list, and the rest are host guards.",
   "checked": "2026-11-26",
   "counts": {
     "coded": 29,
-    "partly": 11,
+    "partly": 12,
     "prose": 0
   },
   "rules": [
@@ -168,6 +168,13 @@
       "status": "partly",
       "check": "beeProofClaims",
       "evidence": "An UNKNOWN is never shown as a FACT in a receipt. No score or rank the host computes takes $HIVE, fees or payments as an input, but no check would catch one that did, and nothing reads a post for a ranking used as a buy signal."
+    },
+    {
+      "id": "R24",
+      "text": "Use a skill or plugin only from a source pinned to a commit, with its SHA-256 recorded in its SKILL.md. Read it as a method; never install or run a skill package, and never use one that ships .exe, .dll, .so or .dylib files. A star count or a marketplace PASS is never trust.",
+      "status": "partly",
+      "check": "check_skill_files.py (bee-self-test, R24)",
+      "evidence": "The runner's skill check fails a skill folder that ships .exe, .dll, .so or .dylib files or names no source pinned to a 40-hex commit; a missing SHA-256 is reported, not yet failed, while the host backfills them. The agent reads a skill as notes and never installs one, but no code stops a step from fetching a package."
     },
     {
       "id": "preflight:deny",
