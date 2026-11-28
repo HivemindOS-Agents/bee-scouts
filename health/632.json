@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-27T23:59:35.039Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -412,7 +412,7 @@
       "firstFailureAt": "2026-11-27T23:58:23.885Z",
       "lastObservedAt": "2026-11-27T23:58:23.885Z",
       "counters": {
-        "observations": 1,
+        "observations": 139,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -433,21 +433,23 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-27T00:10:44.937Z",
+    "at": "2026-11-28T00:15:00.417Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 8,
+    "findingsOpen": 6,
     "top": {
-      "check": "D2",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered."
+      "check": "D22",
+      "subject": "tools/uniswap-v4-figures-2026-11-04-watch/data.csv",
+      "detail": "A step said it built tools/uniswap-v4-figures-2026-11-04-watch/data.csv; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2953,
+    "elapsedMs": 2445,
     "intake": {
       "mode": "observe",
-      "noRepair": [],
+      "noRepair": [
+        "wd-632-D22-tools/uniswap-v4-figures-2026-11-04-watch/data.csv"
+      ],
       "contradictions": []
     }
   },
@@ -489,5 +491,30 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-27T23:41:43.284Z"
+  "computersAt": "2026-11-28T05:56:26.514Z",
+  "focus": {
+    "line": "Focus 2026-11-27: red · build + verified ship 0%, under 50% · 89 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 78,
+        "buildShip": 0.2692307692307692
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 100,
+        "buildShip": 0.19
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "RED",
+        "commits": 89,
+        "buildShip": 0
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
+  }
 }
