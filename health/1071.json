@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-28T11:37:18.693Z",
+  "at": "2026-11-28T12:06:55.708Z",
   "step": null,
   "reasons": [
     "rp-1071-s-publish-dataset"
@@ -292,7 +292,7 @@
       "firstFailureAt": "2026-11-28T10:41:16.224Z",
       "lastObservedAt": "2026-11-28T10:41:16.224Z",
       "counters": {
-        "observations": 1,
+        "observations": 9,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -360,11 +360,7 @@
       ]
     },
     "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
-      "reopenOn": [
-        "holder accepts High again"
-      ]
+      "state": "offered"
     },
     "routine": {
       "state": "offered"
