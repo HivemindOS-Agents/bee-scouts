@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "ok",
-  "at": "2026-11-28T09:54:32.020Z",
+  "at": "2026-11-28T12:06:04.514Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -475,11 +475,7 @@
       ]
     },
     "pay-outside": {
-      "state": "precondition_unmet",
-      "reason": "high_terms: its holder has not accepted High as it reads since 26 Oct 2026 (vetted outside services, $1 or less a call, from its own budget); it pays none until they tick what High means again and save",
-      "reopenOn": [
-        "holder accepts High again"
-      ]
+      "state": "offered"
     },
     "routine": {
       "state": "offered"
@@ -489,5 +485,5 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-28T05:56:26.514Z"
+  "computersAt": "2026-11-28T11:58:50.322Z"
 }
