@@ -1,7 +1,7 @@
 {
   "agent": "1071",
   "status": "repairing",
-  "at": "2026-11-27T20:29:17.556Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [
     "rp-1071-s-publish-dataset"
@@ -324,18 +324,18 @@
   ],
   "notices": [],
   "watchdog": {
-    "at": "2026-11-27T00:11:05.920Z",
+    "at": "2026-11-28T00:00:50.307Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 6,
+    "findingsOpen": 4,
     "top": {
-      "check": "D17",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- agent-dispatch-tag-to-strength-dataset (2026-11-26): It chose to publish it as it is on 2026-11-26 (The dataset is already built and self-tested, so it shoul…\""
+      "check": "D22",
+      "subject": "tools/agent-dispatch/matcher_examples.json",
+      "detail": "A step said it built tools/agent-dispatch/matcher_examples.json; it is not in the commit."
     },
     "notChecked": [],
     "requests": 22,
-    "elapsedMs": 2914,
+    "elapsedMs": 3934,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -404,5 +404,30 @@
       "reason": null
     }
   ],
-  "computersAt": "2026-11-27T20:29:16.670Z"
+  "computersAt": "2026-11-27T20:29:16.670Z",
+  "focus": {
+    "line": "Focus 2026-11-27: red · build + verified ship 30%, under 50% · 97 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "RED",
+        "commits": 77,
+        "buildShip": 0.3116883116883117
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "RED",
+        "commits": 117,
+        "buildShip": 0.41025641025641024
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "RED",
+        "commits": 97,
+        "buildShip": 0.29896907216494845
+      }
+    ],
+    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
+  }
 }
