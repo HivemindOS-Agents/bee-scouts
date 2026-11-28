@@ -1,10 +1,11 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-28T12:03:11.762Z",
+  "at": "2026-11-28T12:20:45.480Z",
   "step": null,
   "reasons": [
-    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
+    "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+    "rp-547-s-pay-outside"
   ],
   "failures": 0,
   "ignored": 0,
@@ -608,6 +609,36 @@
       "closedBy": "code: self-test runner passed on the base commit's check (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45105693886)",
       "escalation": null,
       "lastTryAt": "2026-11-23T03:23:42.000Z",
+      "receiver": null,
+      "suspended": null
+    },
+    {
+      "id": "rp-547-s-pay-outside",
+      "artifact": "pay-outside",
+      "kind": "step:pay-outside",
+      "state": "REPAIR_ATTEMPTED",
+      "failureClass": "TEST_FAILED",
+      "runner": null,
+      "cause": "The step came to nothing, and no reason was recorded.",
+      "firstFailureAt": "2026-11-28T12:19:32.194Z",
+      "lastObservedAt": "2026-11-28T12:19:32.194Z",
+      "counters": {
+        "observations": 1,
+        "failedAttempts": 1,
+        "consecutive": 1,
+        "sameCause": 1,
+        "acknowledgedFailed": 0,
+        "recurrences": 0,
+        "sameCauseRun": 1
+      },
+      "delivery": {
+        "state": "unknown",
+        "at": null
+      },
+      "proof": "A later step of the same play that ended done, from the host's step record.",
+      "closedBy": null,
+      "escalation": null,
+      "lastTryAt": "2026-11-28T12:19:32.194Z",
       "receiver": null,
       "suspended": null
     }
