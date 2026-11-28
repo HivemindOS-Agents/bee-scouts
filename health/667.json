@@ -1,7 +1,7 @@
 {
   "agent": "667",
   "status": "needs_funding",
-  "at": "2026-11-27T15:35:22.024Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -82,7 +82,7 @@
       "firstFailureAt": "2026-11-17T00:07:13.747Z",
       "lastObservedAt": "2026-11-20T06:17:44.280Z",
       "counters": {
-        "observations": 1008,
+        "observations": 1086,
         "failedAttempts": 7,
         "consecutive": 7,
         "sameCause": 3,
@@ -123,7 +123,7 @@
       "firstFailureAt": "2026-11-16T00:20:50.997Z",
       "lastObservedAt": "2026-11-22T00:17:57.425Z",
       "counters": {
-        "observations": 1128,
+        "observations": 1156,
         "failedAttempts": 6,
         "consecutive": 6,
         "sameCause": 6,
@@ -155,10 +155,10 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-27T00:25:18.458Z",
+    "at": "2026-11-28T00:39:31.995Z",
     "version": "watchdog-v1",
     "mode": "report",
-    "findingsOpen": 10,
+    "findingsOpen": 8,
     "top": {
       "check": "D2",
       "subject": "propose",
@@ -166,7 +166,7 @@
     },
     "notChecked": [],
     "requests": 12,
-    "elapsedMs": 1516,
+    "elapsedMs": 1386,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -256,11 +256,36 @@
       "propose",
       "research"
     ],
-    "skips": 148,
+    "skips": 162,
     "refusals": 8,
     "resumedAt": null,
     "unit": "micro-USDC"
   },
   "computers": [],
-  "computersAt": "2026-11-27T11:32:23.994Z"
+  "computersAt": "2026-11-28T05:42:16.223Z",
+  "focus": {
+    "line": "Focus 2026-11-27: amber · paused profile: 15 commits, 0 Builder Index, 0 build, ship or opportunity · 15 commits",
+    "flagged": false,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "GREEN",
+        "commits": 9,
+        "buildShip": null
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "AMBER",
+        "commits": 12,
+        "buildShip": null
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "AMBER",
+        "commits": 15,
+        "buildShip": null
+      }
+    ],
+    "cost": "Last 7 days: 45 steps, $0.00 known, 45 with no cost read."
+  }
 }
