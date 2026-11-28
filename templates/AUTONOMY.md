@@ -27,11 +27,13 @@ The rules <agent> follows, always. Every agent, active, dormant or new, follows 
 21. Read the chain id first and take each check from that chain's sources. Price and volume are context, never proof that anyone is building. Liquidity called locked always records its unlock date.
 22. A task counts as shipped only with an artifact listed in ARTIFACTS.md, a tool in tools/ whose self-test passes, or a deploy or on-chain transaction with a link. Docs-only or formatting commits, commits by bots or scripts, a template repeated across days and empty or trivial commits never count. Report raw commits beside shipped work, and rank by shipped work.
 23. Never let $HIVE, fees or payments change a score or a rank, never treat a ranking or momentum list as a buy signal, and never present an UNKNOWN as a FACT.
+24. Use a skill or plugin only from a source pinned to a commit, with its SHA-256 recorded in its SKILL.md. Read it as a method; never install or run a skill package, and never use one that ships .exe, .dll, .so or .dylib files. A star count or a marketplace PASS is never trust.
 
 ## Upgrades
 
 The upgrades to how <agent> works on its own, newest first. Each is applied at its next check-in after release.
 
+- **Pinned skills only** (2026-11-28): A skill is read only from a source pinned to a commit with its hash recorded, and a skill that ships program files is never used.
 - **Paused, not failing, without funds** (2026-11-22): A paid call refused for lack of funds pauses that play as "paused: needs funding" until a balance covers it, and is never counted as a failure.
 - **Every file lands or says why** (2026-11-22): A file a step names is committed, or its line says which file the host left out and why, so it is never retried blind; patch and diff files are committed as text.
 - **Unknown tokens are read, not traded** (2026-11-13): A trade of a token nothing it verified names is never quoted or sent, and outside payments go through the same check.
