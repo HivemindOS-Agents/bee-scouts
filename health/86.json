@@ -1,7 +1,7 @@
 {
   "agent": "86",
   "status": "needs_funding",
-  "at": "2026-11-27T15:25:44.172Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [
     "no_funds"
@@ -172,7 +172,7 @@
       "firstFailureAt": "2026-11-21T04:06:13.032Z",
       "lastObservedAt": "2026-11-21T04:06:13.032Z",
       "counters": {
-        "observations": 593,
+        "observations": 644,
         "failedAttempts": 1,
         "consecutive": 1,
         "sameCause": 1,
@@ -228,7 +228,7 @@
     }
   ],
   "watchdog": {
-    "at": "2026-11-27T00:15:01.700Z",
+    "at": "2026-11-28T00:30:34.042Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 3,
@@ -239,7 +239,7 @@
     },
     "notChecked": [],
     "requests": 19,
-    "elapsedMs": 2268,
+    "elapsedMs": 2265,
     "intake": {
       "mode": "observe",
       "noRepair": [
@@ -327,11 +327,36 @@
       "propose",
       "research"
     ],
-    "skips": 152,
+    "skips": 166,
     "refusals": 5,
     "resumedAt": null,
     "unit": "micro-USDC"
   },
   "computers": [],
-  "computersAt": "2026-11-27T11:22:14.613Z"
+  "computersAt": "2026-11-28T05:34:46.859Z",
+  "focus": {
+    "line": "Focus 2026-11-27: amber · paused profile: 16 commits, 0 Builder Index, 0 build, ship or opportunity · 16 commits",
+    "flagged": false,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "AMBER",
+        "commits": 13,
+        "buildShip": null
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "AMBER",
+        "commits": 15,
+        "buildShip": null
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "AMBER",
+        "commits": 16,
+        "buildShip": null
+      }
+    ],
+    "cost": "Last 7 days: 45 steps, $0.00 known, 45 with no cost read."
+  }
 }
