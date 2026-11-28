@@ -111,7 +111,7 @@ Stopped in settings: #<n>, #<n>
 ### Step repairs (daily sweep)
 
 ```
-Sweep 2026-11-27 06:00 UTC
+Sweep 2026-11-28 06:00 UTC
 #21: pass
 #65: pass
 #86: step:research parked while its play cannot run (play precondition unmet: no_funds: balance 6270 < quote 110000 micro-USDC), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/86.json
@@ -124,10 +124,10 @@ Sweep 2026-11-27 06:00 UTC
 #544: pass
 #547: step:publish-dataset repairing, 2 failed attempts: it described a dataset instead of holding its rows, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json
 #576: pass
-#632: step:publish-dataset parked after 2 same-cause failures (2 in all): The step came to nothing, and no reason was recorded., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/632.json
+#632: step:publish-dataset repairing, 1 failed attempt: Your agent could not finish writing the dataset: the thinking call failed., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/632.json
 #667: step:propose parked while its play cannot run (play precondition unmet: no_funds: balance 1854 < quote 110000 micro-USDC), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
 #667: step:agents parked while its play cannot run (play precondition unmet: no_funds: paused for funding, so no play is offered (balance 1854 micro-USDC)), https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/667.json
-#1071: step:publish-dataset repairing, 0 failed attempts: it was about HivemindOS's own issues or self-tests, not something people outside need, https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json
+#1071: step:publish-dataset repairing, 2 failed attempts: It could read too few of the pages it found to build a dataset from them., https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json
 ```
 
 ## Changes to the checks
