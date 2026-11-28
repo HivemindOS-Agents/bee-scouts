@@ -1,10 +1,9 @@
 {
   "agent": "547",
   "status": "repairing",
-  "at": "2026-11-28T06:00:19.731Z",
+  "at": "2026-11-28T10:52:13.040Z",
   "step": null,
   "reasons": [
-    "rp-547-s-publish-dataset",
     "rp-547-t-fixprotocol-modifyliquidities-nonreentrant"
   ],
   "failures": 0,
@@ -496,30 +495,29 @@
       "id": "rp-547-s-publish-dataset",
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
-      "state": "REPAIR_ATTEMPTED",
+      "state": "RELEASED",
       "failureClass": "TEST_FAILED",
       "runner": null,
       "cause": "it described a dataset instead of holding its rows",
       "firstFailureAt": "2026-11-25T07:04:01.358Z",
-      "lastObservedAt": "2026-11-26T22:05:59.183Z",
+      "lastObservedAt": "2026-11-28T10:36:35.596Z",
       "counters": {
-        "observations": 1022,
+        "observations": 1098,
         "failedAttempts": 2,
-        "consecutive": 2,
+        "consecutive": 0,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 6,
-        "sameCauseRun": 1,
-        "policySkips": 3
+        "sameCauseRun": 1
       },
       "delivery": {
         "state": "unknown",
         "at": null
       },
       "proof": "A later step of the same play that ended done, from the host's step record.",
-      "closedBy": null,
+      "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:748:1795862129873:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
       "escalation": null,
-      "lastTryAt": "2026-11-26T22:05:59.183Z",
+      "lastTryAt": "2026-11-28T10:36:35.596Z",
       "receiver": null,
       "suspended": null
     },
@@ -614,32 +612,6 @@
       "suspended": null
     }
   ],
-  "policySkips": [
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-25T07:05:32.782Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-25T22:03:38.233Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    },
-    {
-      "repair": "rp-547-s-publish-dataset",
-      "play": "publish-dataset",
-      "at": "2026-11-27T04:06:47.477Z",
-      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
-      "filter": "hb043:topic"
-    }
-  ],
-  "notices": [
-    "stuck play: 3 policy skips of publish-dataset in a row, no later done step"
-  ],
   "watchdog": {
     "at": "2026-11-28T00:10:09.234Z",
     "version": "watchdog-v1",
@@ -700,30 +672,5 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-28T05:41:14.721Z",
-  "focus": {
-    "line": "Focus 2026-11-27: red · build + verified ship 12%, under 50% · 59 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 127,
-        "buildShip": 0.23622047244094488
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 68,
-        "buildShip": 0.04411764705882353
-      },
-      {
-        "day": "2026-11-27",
-        "verdict": "RED",
-        "commits": 59,
-        "buildShip": 0.11864406779661017
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
-  }
+  "computersAt": "2026-11-28T05:41:14.721Z"
 }
