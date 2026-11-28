@@ -1,7 +1,7 @@
 {
   "agent": "65",
   "status": "ok",
-  "at": "2026-11-27T15:40:02.895Z",
+  "at": "2026-11-28T06:00:19.731Z",
   "step": null,
   "reasons": [],
   "failures": 0,
@@ -10,7 +10,7 @@
   "ticket": null,
   "repairs": [],
   "watchdog": {
-    "at": "2026-11-27T00:01:33.287Z",
+    "at": "2026-11-28T00:14:35.962Z",
     "version": "watchdog-v1",
     "mode": "report",
     "findingsOpen": 2,
@@ -22,8 +22,8 @@
     "notChecked": [
       "D8"
     ],
-    "requests": 8,
-    "elapsedMs": 2890,
+    "requests": 9,
+    "elapsedMs": 4283,
     "intake": {
       "mode": "observe",
       "noRepair": [],
@@ -64,5 +64,30 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-27T11:07:32.404Z"
+  "computersAt": "2026-11-28T05:17:25.821Z",
+  "focus": {
+    "line": "Focus 2026-11-27: amber · build + verified ship 0%, under 50% · 9 commits",
+    "flagged": true,
+    "days": [
+      {
+        "day": "2026-11-25",
+        "verdict": "AMBER",
+        "commits": 5,
+        "buildShip": 0
+      },
+      {
+        "day": "2026-11-26",
+        "verdict": "AMBER",
+        "commits": 6,
+        "buildShip": 0
+      },
+      {
+        "day": "2026-11-27",
+        "verdict": "AMBER",
+        "commits": 9,
+        "buildShip": 0
+      }
+    ],
+    "cost": "Last 7 days: 0 steps, $0.00 known."
+  }
 }
