@@ -1,7 +1,7 @@
 {
   "agent": "632",
   "status": "repairing",
-  "at": "2026-11-28T06:00:19.731Z",
+  "at": "2026-11-28T06:16:18.173Z",
   "step": null,
   "reasons": [
     "rp-632-s-publish-dataset"
@@ -406,19 +406,20 @@
       "artifact": "publish-dataset",
       "kind": "step:publish-dataset",
       "state": "RECURRENCE_DETECTED",
-      "failureClass": "TEST_FAILED",
+      "failureClass": "INVALID_FORMAT",
       "runner": null,
-      "cause": "Your agent could not finish writing the dataset: the thinking call failed.",
+      "cause": "The host's check refused the answer's format.",
       "firstFailureAt": "2026-11-27T23:58:23.885Z",
-      "lastObservedAt": "2026-11-27T23:58:23.885Z",
+      "lastObservedAt": "2026-11-28T06:13:36.294Z",
       "counters": {
-        "observations": 139,
-        "failedAttempts": 1,
-        "consecutive": 1,
+        "observations": 159,
+        "failedAttempts": 2,
+        "consecutive": 2,
         "sameCause": 1,
         "acknowledgedFailed": 0,
         "recurrences": 4,
-        "sameCauseRun": 1
+        "sameCauseRun": 1,
+        "policySkips": 1
       },
       "delivery": {
         "state": "unknown",
@@ -427,11 +428,21 @@
       "proof": "A later step of the same play that ended done, from the host's step record.",
       "closedBy": null,
       "escalation": null,
-      "lastTryAt": "2026-11-27T23:58:23.885Z",
+      "lastTryAt": "2026-11-28T06:13:36.294Z",
       "receiver": null,
       "suspended": null
     }
   ],
+  "policySkips": [
+    {
+      "repair": "rp-632-s-publish-dataset",
+      "play": "publish-dataset",
+      "at": "2026-11-28T06:15:06.471Z",
+      "reason": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+      "filter": "hb043:topic"
+    }
+  ],
+  "notices": [],
   "watchdog": {
     "at": "2026-11-28T00:15:00.417Z",
     "version": "watchdog-v1",
@@ -491,30 +502,5 @@
     }
   },
   "computers": [],
-  "computersAt": "2026-11-28T05:56:26.514Z",
-  "focus": {
-    "line": "Focus 2026-11-27: red · build + verified ship 0%, under 50% · 89 commits",
-    "flagged": true,
-    "days": [
-      {
-        "day": "2026-11-25",
-        "verdict": "RED",
-        "commits": 78,
-        "buildShip": 0.2692307692307692
-      },
-      {
-        "day": "2026-11-26",
-        "verdict": "RED",
-        "commits": 100,
-        "buildShip": 0.19
-      },
-      {
-        "day": "2026-11-27",
-        "verdict": "RED",
-        "commits": 89,
-        "buildShip": 0
-      }
-    ],
-    "cost": "Last 7 days: 60 steps, $0.00 known, 60 with no cost read."
-  }
+  "computersAt": "2026-11-28T05:56:26.514Z"
 }
